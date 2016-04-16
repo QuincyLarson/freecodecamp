@@ -10,7 +10,7 @@ import { Render } from 'thundercats-react';
 import { app$ } from '../common/app';
 
 const debug = debugFactory('fcc:client');
-const DOMContianer = document.getElementById('fcc');
+const DOMContainer = document.getElementById('fcc');
 const catState = window.__fcc__.data || {};
 const services = new Fetchr({
   xhrPath: '/services'
@@ -32,7 +32,7 @@ app$(history)
     return Render(
       appCat,
       React.createElement(Router, initialState),
-      DOMContianer
+      DOMContainer
     );
   })
   .subscribe(
