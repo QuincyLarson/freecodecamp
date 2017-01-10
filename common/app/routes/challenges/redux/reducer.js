@@ -42,7 +42,10 @@ const initialUiState = {
   isPressed: false,
   isCorrect: false,
   shouldShakeQuestion: false,
-  shouldShowQuestions: false
+  shouldShowQuestions: false,
+  isChallengeModalOpen: false,
+  successMessage: 'Happy Coding!',
+  unlockedSteps: []
 };
 const initialState = {
   isCodeLocked: false,
@@ -81,7 +84,19 @@ const mainReducer = handleActions(
     }),
     [types.updateTests]: (state, { payload: tests }) => ({
       ...state,
-      tests
+      tests,
+      isChallengeModalOpen: (
+        tests.length > 0 &&
+        tests.every(test => test.pass && !test.err)
+      )
+    }),
+    [types.closeChallengeModal]: state => ({
+      ...state,
+      isChallengeModalOpen: false
+    }),
+    [types.updateSuccessMessage]: (state, { payload }) => ({
+      ...state,
+      successMessage: payload
     }),
     [types.updateHint]: state => ({
       ...state,
@@ -129,16 +144,19 @@ const mainReducer = handleActions(
     }),
 
     // step
-    [types.goToStep]: (state, { payload: step = 0 }) => ({
+    [types.goToStep]: (state, { payload: { step = 0, isUnlocked }}) => ({
       ...state,
       currentIndex: step,
       previousIndex: state.currentIndex,
-      isActionCompleted: false
+      isActionCompleted: isUnlocked
     }),
-
     [types.completeAction]: state => ({
       ...state,
       isActionCompleted: true
+    }),
+    [types.updateUnlockedSteps]: (state, { payload }) => ({
+      ...state,
+      unlockedSteps: payload
     }),
     [types.openLightBoxImage]: state => ({
       ...state,

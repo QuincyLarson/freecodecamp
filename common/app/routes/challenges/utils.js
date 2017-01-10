@@ -46,16 +46,37 @@ export function createTests({ tests = [] }) {
     });
 }
 
+function logReplacer(value) {
+  if (Array.isArray(value)) {
+    const replaced = value.map(logReplacer);
+    return '[' + replaced.join(', ') + ']';
+  }
+  if (typeof value === 'string' && !value.startsWith('//')) {
+    return '"' + value + '"';
+  }
+  if (typeof value === 'number' && isNaN(value)) {
+    return value.toString();
+  }
+  if (typeof value === 'undefined') {
+    return 'undefined';
+  }
+  if (value === null) {
+    return 'null';
+  }
+  if (typeof value === 'function') {
+    return value.name;
+  }
+  if (typeof value === 'object') {
+    return JSON.stringify(value, null, 2);
+  }
+
+  return value;
+}
+
 export function loggerToStr(args) {
   args = Array.isArray(args) ? args : [args];
   return args
-    .map(arg => typeof arg === 'undefined' ? 'undefined' : arg)
-    .map(arg => {
-      if (typeof arg !== 'string') {
-        return JSON.stringify(arg);
-      }
-      return arg;
-    })
+    .map(logReplacer)
     .reduce((str, arg) => str + arg + '\n', '');
 }
 
@@ -257,7 +278,7 @@ export function getMouse(e, [dx, dy]) {
   return [pageX - dx, pageY - dy];
 }
 
-export function filterCommingSoonBetaChallenge(
+export function filterComingSoonBetaChallenge(
   isDev = false,
   { isComingSoon, isBeta }
 ) {
@@ -269,7 +290,7 @@ export function filterComingSoonBetaFromEntities(
   { challenge: challengeMap, ...rest },
   isDev = false
 ) {
-  const filter = filterCommingSoonBetaChallenge.bind(null, isDev);
+  const filter = filterComingSoonBetaChallenge.bind(null, isDev);
   return {
     ...rest,
     challenge: Object.keys(challengeMap)
@@ -280,6 +301,16 @@ export function filterComingSoonBetaFromEntities(
         return challengeMap;
       }, {})
   };
+}
+
+export function searchableChallengeTitles({ challenge: challengeMap } = {}) {
+  return Object.keys(challengeMap)
+    .map(dashedName => challengeMap[dashedName])
+    .reduce((accu, current) => {
+        accu[current.dashedName] = current.title;
+        return accu;
+      }
+    , {});
 }
 
 // interface Node {
@@ -307,7 +338,8 @@ export function filterComingSoonBetaFromEntities(
 // }
 export function createMapUi(
   { superBlock: superBlockMap, block: blockMap } = {},
-  superBlocks
+  superBlocks,
+  searchNameMap
 ) {
   if (!superBlocks || !superBlockMap || !blockMap) {
     return {};
@@ -326,6 +358,7 @@ export function createMapUi(
             children: protect(blockMap[block]).challenges.map(challenge => {
               return {
                 name: challenge,
+                title: searchNameMap[challenge],
                 isHidden: false,
                 children: null
               };
@@ -434,7 +467,7 @@ export function applyFilterToMap(tree, filterRegex) {
       // if leaf (challenge) then test if regex is a match
       if (!Array.isArray(node.children)) {
         // does challenge name meet filter criteria?
-        if (filterRegex.test(node.name)) {
+        if (filterRegex.test(node.title)) {
           // is challenge currently hidden?
           if (node.isHidden) {
             // unhide challenge, it matches

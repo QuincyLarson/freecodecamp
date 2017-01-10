@@ -1,4 +1,4 @@
-import createTypes from '../utils/create-types';
+import { createTypes } from 'redux-create-types';
 
 export default createTypes([
   'analytics',
@@ -30,22 +30,12 @@ export default createTypes([
   'updateChallengesData',
   'updateHikesData',
 
-  // drawers
-  'toggleMapDrawer',
-  'closeMapDrawer',
-  'toggleWikiDrawer',
-
-  // chat
-  'openMainChat',
-  'closeMainChat',
-  'toggleMainChat',
-
-  'openHelpChat',
-  'closeHelpChat',
-  'toggleHelpChat',
-
   // night mode
   'toggleNightMode',
   'updateTheme',
-  'addThemeToBody'
+  'addThemeToBody',
+
+  // nav
+  'openDropdown',
+  'closeDropdown'
 ], 'app');

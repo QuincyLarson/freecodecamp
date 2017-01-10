@@ -7,6 +7,8 @@ import Codemirror from 'react-codemirror';
 import NoSSR from 'react-no-ssr';
 import PureComponent from 'react-pure-render/component';
 
+import CodeMirrorSkeleton from '../skeleton/CodeMirrorSkeleton.jsx';
+
 const mapStateToProps = createSelector(
   state => state.app.windowHeight,
   state => state.app.navHeight,
@@ -77,6 +79,12 @@ export class Editor extends PureComponent {
         'Cmd-Enter': function() {
           executeChallenge();
           return false;
+        },
+        'Ctrl-/': function(cm) {
+          cm.toggleComment();
+        },
+        'Cmd-/': function(cm) {
+          cm.toggleComment();
         }
       }
     })
@@ -117,7 +125,7 @@ export class Editor extends PureComponent {
         className='challenges-editor'
         style={ style }
         >
-        <NoSSR>
+        <NoSSR onSSR={ <CodeMirrorSkeleton content={ content } /> }>
           <Codemirror
             onChange={ this.handleChange }
             options={ this.createOptions({ executeChallenge, mode, options }) }

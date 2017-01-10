@@ -8,8 +8,8 @@
       "id": "aff0395860f5d3034dc0bfc9",
       "title": "Validate US Telephone Numbers",
       "description": [
-        "Return <code>true</code> if the passed string is a valid US phone number.",
-        "The user may fill out the form field any way they choose as long as it is a valid US number. The following are examples of valid formats for US numbers (refer to the tests below for other variants):",
+        "Return <code>true</code> if the passed string looks like a valid US phone number.",
+        "The user may fill out the form field any way they choose as long as it has the format of a valid US number. The following are examples of valid formats for US numbers (refer to the tests below for other variants):",
         "<blockquote>555-555-5555\n(555)555-5555\n(555) 555-5555\n555 555 5555\n5555555555\n1 555 555 5555</blockquote>",
         "For this challenge you will be presented with a string such as <code>800-692-7753</code> or <code>8oo-six427676;laskdjf</code>. Your job is to validate or reject the US phone number based on any combination of the formats provided above. The area code is required. If the country code is provided, you must confirm that the country code is <code>1</code>. Return <code>true</code> if the string is a valid US phone number; otherwise return <code>false</code>.",
         "Remember to use <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
@@ -42,7 +42,7 @@
         "assert(telephoneCheck(\"1 456 789 4444\") === true, 'message: <code>telephoneCheck(\"1 456 789 4444\")</code> should return true.');",
         "assert(telephoneCheck(\"123**&!!asdf#\") === false, 'message: <code>telephoneCheck(\"123**&!!asdf#\")</code> should return false.');",
         "assert(telephoneCheck(\"55555555\") === false, 'message: <code>telephoneCheck(\"55555555\")</code> should return false.');",
-        "assert(telephoneCheck(\"(6505552368)\") === false, 'message: <code>telephoneCheck(\"(6505552368)\")</code> should return false');",
+        "assert(telephoneCheck(\"(6054756961)\") === false, 'message: <code>telephoneCheck(\"(6054756961)\")</code> should return false');",
         "assert(telephoneCheck(\"2 (757) 622-7382\") === false, 'message: <code>telephoneCheck(\"2 (757) 622-7382\")</code> should return false.');",
         "assert(telephoneCheck(\"0 (757) 622-7382\") === false, 'message: <code>telephoneCheck(\"0 (757) 622-7382\")</code> should return false.');",
         "assert(telephoneCheck(\"-1 (757) 622-7382\") === false, 'message: <code>telephoneCheck(\"-1 (757) 622-7382\")</code> should return false');",
@@ -65,8 +65,8 @@
         "es": {
           "title": "Valida Números Telefónicos de los EEUU",
           "description": [
-            "Haz que la función devuelva true (verdadero) si el texto introducido es un número válido en los EEUU.",
-            "El usuario debe llenar el campo del formulario de la forma que desee siempre y cuando sea un número válido en los EEUU. Los números mostrados a continuación tienen formatos válidos en los EEUU:",
+            "Haz que la función devuelva true (verdadero) si el texto introducido parece un número válido en los EEUU.",
+            "El usuario debe llenar el campo del formulario de la forma que desee siempre y cuando tenga el formato de un número válido en los EEUU. Los números mostrados a continuación tienen formatos válidos en los EEUU:",
             "<blockquote>555-555-5555\n(555)555-5555\n(555) 555-5555\n555 555 5555\n5555555555\n1 555 555 5555</blockquote>",
             "Para esta prueba se te presentará una cadena de texto como por ejemplo: <code>800-692-7753</code> o <code>8oo-six427676;laskdjf</code>. Tu trabajo consiste en validar o rechazar el número telefónico tomando como base cualquier combinación de los formatos anteriormente presentados. El código de área es requrido. Si el código de país es provisto, debes confirmar que este es <code>1</code>. La función debe devolver true si la cadena de texto es un número telefónico válido en los EEUU; de lo contrario, debe devolver false.",
             "Recuerda utilizar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
@@ -80,6 +80,16 @@
             "<blockquote>555-555-5555\n(555)555-5555\n(555) 555-5555\n555 555 5555\n5555555555\n1 555 555 5555</blockquote>",
             "In questo problema ti saranno presentate delle stringe come <code>800-692-7753</code> o <code>8oo-six427676;laskdjf</code>. Il tuo obiettivo è di validare o rigettare il numero di telefono basato su una qualunque combinazione dei formati specificati sopra. Il prefisso di zona è obbligatorio. Se il prefisso nazionale è presente, devi confermare che corrisponda a <code>1</code>. Ritorna <code>true</code> se la stringa è un numero di telefono valido negli Stati Uniti; altrimenti ritorna <code>false</code>.",
             "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
+          ]
+        },
+        "pt-br": {
+          "title": "Valida números telefônicos dos EUA",
+          "description": [
+            "Retorna <code>true</code> se a string passada é um número telefônico válido nos EUA.",
+            "O usuário pode preencher o campo de qualquer maneira com tanto que seja um número válido nos EUA. Os seguintes exemplos são formatos válidos para números de telefone nos EUA (baseie-se nos testes abaixo para outras variações):",
+            "<blockquote>555-555-5555\n(555)555-5555\n(555) 555-5555\n555 555 5555\n5555555555\n1 555 555 5555</blockquote>",
+            "Para esse desafio será dado a você uma string como <code>800-692-7753</code> ou <code>8oo-six427676;laskdjf</code>. Seu trabalho é validar ou rejeitar o número de telefone dos EUA baseado nos exmplos de formatos fornecidos acima. O código de área é obrigatório. Se o código do país for fornecido, você deve confirmar que o código do país é <code>1</code>. Retorne <code>true</code> se a string é um número válido nos EUA; caso contrário retorne <code>false</code>.",
+            "Lembre-se de usar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
           ]
         }
       }
@@ -126,7 +136,7 @@
       "challengeType": 5,
       "translations": {
         "es": {
-          "title": "Diferencia simétrica",
+          "title": "Diferencia Simétrica",
           "description": [
             "Crea una función que acepte dos o más arreglos y que devuelva un arreglo conteniendo la diferenia simétrica entre ambos",
             "En Matemáticas, el término 'diferencia simétrica' se refiere a los elementos en dos conjuntos que están en el primer conjunto o en el segundo, pero no en ambos.",
@@ -134,11 +144,19 @@
           ]
         },
         "it": {
-          "title": "Differenza simmetrica",
+          "title": "Differenza Simmetrica",
           "description": [
             "Crea una funzione che accetti due o più array e che ritorni un array contenente la <dfn>differenza simmetrica</dfn> (<code>&xutri;</code> o <code>&oplus;</code>) degli stessi.",
             "Dati due insiemi (per esempio l'insieme <code>A = {1, 2, 3}<code> e l'insieme <code>B = {2, 3, 4}</code>, il termine matematico \"differenza simmetrica\" di due insiemi è l'insieme degli elementi che sono in almeno uno dei due insiemi, ma non in entrambi (<code>A &xutri; B = C = {1, 4}</code>). Per ogni differenza simmetrica aggiuntiva che fai (per esempio su un insieme <code>D = {2, 3}</code>), devi prendere l'insieme degli elementi che sono in almeno uno dei due insiemi ma non in entrambi (<code>C &xutri; D = {1, 4} &xutri; {2, 3} = {1, 2, 3, 4}</code>).",
             "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
+          ]
+        },
+        "pt-br": {
+          "title": "Diferença Simétrica",
+          "description": [
+            "Crie uma função que recebe duas ou mais matrizes e retorna a matriz <dfn>diferença simétrica</dfn> (<code>&xutri;</code> ou <code>&oplus;</code>) das matrizes fornecidas.",
+            "Dado dois conjuntos (por exemplo conjunto <code>A = {1, 2, 3}</code> e conjunto <code>B = {2, 3, 4}</code>), o termo matemático \"diferença simétrica\" dos dois cojuntos é o conjunto dos elementos que estão em um dos conjuntos, mas não nos dois (<code>A &xutri; B = C = {1, 4}</code>). Para cada diferença simétrica adicional que você faz (digamos em um terceiro conjunto <code>D = {2, 3}</code>), voce deve retornar o conjunto no qual os elementos estão em um dos conjuntos mas não nos dois (<code>C &xutri; D = {1, 4} &xutri; {2, 3} = {1, 2, 3, 4}</code>). O conjunto final deve ter somentes valores únicos (<em>sem números repetidos</em>).",
+            "Lembre-se de usar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
           ]
         }
       }
@@ -152,7 +170,7 @@
         "Return the string <code>\"Insufficient Funds\"</code> if cash-in-drawer is less than the change due or if you cannot return the exact change. Return the string <code>\"Closed\"</code> if cash-in-drawer is equal to the change due.",
         "Otherwise, return change in coin and bills, sorted in highest to lowest order.",
         "Remember to use <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.",
-        "<table class='table table-striped'><tr><th>Currency Unit</th><th>Amount</th></tr><tr><td>Penny</td><td>$0.01 (PENNY)</td></tr><tr><td>Nickel</td><td>$0.05 (NICKEL)</td></tr><tr><td>Dime</td><td>$0.10 (DIME)</td></tr><tr><td>Quarter</td><td>$0.25 (QUARTER)</td></tr><tr><td>Dollar</td><td>$1.00 (DOLLAR)</td></tr><tr><td>Five Dollars</td><td>$5.00 (FIVE)</td></tr><tr><td>Ten Dollars</td><td>$10.00 (TEN)</td></tr><tr><td>Twenty Dollars</td><td>$20.00 (TWENTY)</td></tr><tr><td>One-hundred Dollars</td><td>$100.00 (ONE HUNDRED)</td></tr></table>"
+        "<table class='table table-striped'><tr><th>Currency Unit</th><th>Amount</th></tr><tr><td>Penny</td><td>$0.01 (PENNY)</td></tr><tr><td>Nickel</td><td>$0.05 (NICKEL)</td></tr><tr><td>Dime</td><td>$0.1 (DIME)</td></tr><tr><td>Quarter</td><td>$0.25 (QUARTER)</td></tr><tr><td>Dollar</td><td>$1 (DOLLAR)</td></tr><tr><td>Five Dollars</td><td>$5 (FIVE)</td></tr><tr><td>Ten Dollars</td><td>$10 (TEN)</td></tr><tr><td>Twenty Dollars</td><td>$20 (TWENTY)</td></tr><tr><td>One-hundred Dollars</td><td>$100 (ONE HUNDRED)</td></tr></table>"
       ],
       "challengeSeed": [
         "function checkCashRegister(price, cash, cid) {",
@@ -164,28 +182,28 @@
         "// Example cash-in-drawer array:",
         "// [[\"PENNY\", 1.01],",
         "// [\"NICKEL\", 2.05],",
-        "// [\"DIME\", 3.10],",
+        "// [\"DIME\", 3.1],",
         "// [\"QUARTER\", 4.25],",
-        "// [\"ONE\", 90.00],",
-        "// [\"FIVE\", 55.00],",
-        "// [\"TEN\", 20.00],",
-        "// [\"TWENTY\", 60.00],",
-        "// [\"ONE HUNDRED\", 100.00]]",
+        "// [\"ONE\", 90],",
+        "// [\"FIVE\", 55],",
+        "// [\"TEN\", 20],",
+        "// [\"TWENTY\", 60],",
+        "// [\"ONE HUNDRED\", 100]]",
         "",
-        "checkCashRegister(19.50, 20.00, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.10], [\"QUARTER\", 4.25], [\"ONE\", 90.00], [\"FIVE\", 55.00], [\"TEN\", 20.00], [\"TWENTY\", 60.00], [\"ONE HUNDRED\", 100.00]]);"
+        "checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]]);"
       ],
       "solutions": [
-        "var denom = [\n\t{ name: 'ONE HUNDRED', val: 100.00},\n\t{ name: 'TWENTY', val: 20.00},\n\t{ name: 'TEN', val: 10.00},\n\t{ name: 'FIVE', val: 5.00},\n\t{ name: 'ONE', val: 1.00},\n\t{ name: 'QUARTER', val: 0.25},\n\t{ name: 'DIME', val: 0.10},\n\t{ name: 'NICKEL', val: 0.05},\n\t{ name: 'PENNY', val: 0.01}\n];\n\nfunction checkCashRegister(price, cash, cid) {\n    var change = cash - price;\n    var register = cid.reduce(function(acc, curr) {\n        acc.total += curr[1];\n        acc[curr[0]] = curr[1];\n        return acc;\n    }, {total: 0});\n    if(register.total === change) {\n        return 'Closed';\n    }\n    if(register.total < change) {\n        return 'Insufficient Funds';\n    }\n    var change_arr = denom.reduce(function(acc, curr) {\n        var value = 0;\n        while(register[curr.name] > 0 && change >= curr.val) {\n           change -= curr.val;\n           register[curr.name] -= curr.val;\n           value += curr.val;\n           change = Math.round(change * 100) / 100;\n        }\n        if(value > 0) {\n            acc.push([ curr.name, value ]);\n        }\n        return acc;\n    }, []);\n  if(change_arr.length < 1 || change > 0) {\n    return \"Insufficient Funds\";\n  }\n  return change_arr;\n}"
+        "var denom = [\n\t{ name: 'ONE HUNDRED', val: 100},\n\t{ name: 'TWENTY', val: 20},\n\t{ name: 'TEN', val: 10},\n\t{ name: 'FIVE', val: 5},\n\t{ name: 'ONE', val: 1},\n\t{ name: 'QUARTER', val: 0.25},\n\t{ name: 'DIME', val: 0.1},\n\t{ name: 'NICKEL', val: 0.05},\n\t{ name: 'PENNY', val: 0.01}\n];\n\nfunction checkCashRegister(price, cash, cid) {\n    var change = cash - price;\n    var register = cid.reduce(function(acc, curr) {\n        acc.total += curr[1];\n        acc[curr[0]] = curr[1];\n        return acc;\n    }, {total: 0});\n    if(register.total === change) {\n        return 'Closed';\n    }\n    if(register.total < change) {\n        return 'Insufficient Funds';\n    }\n    var change_arr = denom.reduce(function(acc, curr) {\n        var value = 0;\n        while(register[curr.name] > 0 && change >= curr.val) {\n           change -= curr.val;\n           register[curr.name] -= curr.val;\n           value += curr.val;\n           change = Math.round(change * 100) / 100;\n        }\n        if(value > 0) {\n            acc.push([ curr.name, value ]);\n        }\n        return acc;\n    }, []);\n  if(change_arr.length < 1 || change > 0) {\n    return \"Insufficient Funds\";\n  }\n  return change_arr;\n}"
       ],
       "tests": [
-        "assert.isArray(checkCashRegister(19.50, 20.00, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.10], [\"QUARTER\", 4.25], [\"ONE\", 90.00], [\"FIVE\", 55.00], [\"TEN\", 20.00], [\"TWENTY\", 60.00], [\"ONE HUNDRED\", 100.00]]), 'message: <code>checkCashRegister(19.50, 20.00, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.10], [\"QUARTER\", 4.25], [\"ONE\", 90.00], [\"FIVE\", 55.00], [\"TEN\", 20.00], [\"TWENTY\", 60.00], [\"ONE HUNDRED\", 100.00]])</code> should return an array.');",
-        "assert.isString(checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), 'message: <code>checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return a string.');",
-        "assert.isString(checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.50], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), 'message: <code>checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.50], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return a string.');",
-        "assert.deepEqual(checkCashRegister(19.50, 20.00, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.10], [\"QUARTER\", 4.25], [\"ONE\", 90.00], [\"FIVE\", 55.00], [\"TEN\", 20.00], [\"TWENTY\", 60.00], [\"ONE HUNDRED\", 100.00]]), [[\"QUARTER\", 0.50]], 'message: <code>checkCashRegister(19.50, 20.00, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.10], [\"QUARTER\", 4.25], [\"ONE\", 90.00], [\"FIVE\", 55.00], [\"TEN\", 20.00], [\"TWENTY\", 60.00], [\"ONE HUNDRED\", 100.00]])</code> should return <code>[[\"QUARTER\", 0.50]]</code>.');",
-        "assert.deepEqual(checkCashRegister(3.26, 100.00, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.10], [\"QUARTER\", 4.25], [\"ONE\", 90.00], [\"FIVE\", 55.00], [\"TEN\", 20.00], [\"TWENTY\", 60.00], [\"ONE HUNDRED\", 100.00]]), [[\"TWENTY\", 60.00], [\"TEN\", 20.00], [\"FIVE\", 15.00], [\"ONE\", 1.00], [\"QUARTER\", 0.50], [\"DIME\", 0.20], [\"PENNY\", 0.04]], 'message: <code>checkCashRegister(3.26, 100.00, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.10], [\"QUARTER\", 4.25], [\"ONE\", 90.00], [\"FIVE\", 55.00], [\"TEN\", 20.00], [\"TWENTY\", 60.00], [\"ONE HUNDRED\", 100.00]])</code> should return <code>[[\"TWENTY\", 60.00], [\"TEN\", 20.00], [\"FIVE\", 15.00], [\"ONE\", 1.00], [\"QUARTER\", 0.50], [\"DIME\", 0.20], [\"PENNY\", 0.04]]</code>.');",
-        "assert.deepEqual(checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Insufficient Funds\", 'message: <code>checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Insufficient Funds\".');",
-        "assert.deepEqual(checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 1.00], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Insufficient Funds\", 'message: <code>checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 1.00], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Insufficient Funds\".');",
-        "assert.deepEqual(checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.50], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Closed\", 'message: <code>checkCashRegister(19.50, 20.00, [[\"PENNY\", 0.50], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Closed\".');"
+        "assert.isArray(checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]]), 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]])</code> should return an array.');",
+        "assert.isString(checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return a string.');",
+        "assert.isString(checkCashRegister(19.5, 20, [[\"PENNY\", 0.5], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.5], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return a string.');",
+        "assert.deepEqual(checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]]), [[\"QUARTER\", 0.5]], 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]])</code> should return <code>[[\"QUARTER\", 0.5]]</code>.');",
+        "assert.deepEqual(checkCashRegister(3.26, 100, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]]), [[\"TWENTY\", 60], [\"TEN\", 20], [\"FIVE\", 15], [\"ONE\", 1], [\"QUARTER\", 0.5], [\"DIME\", 0.2], [\"PENNY\", 0.04]], 'message: <code>checkCashRegister(3.26, 100, [[\"PENNY\", 1.01], [\"NICKEL\", 2.05], [\"DIME\", 3.1], [\"QUARTER\", 4.25], [\"ONE\", 90], [\"FIVE\", 55], [\"TEN\", 20], [\"TWENTY\", 60], [\"ONE HUNDRED\", 100]])</code> should return <code>[[\"TWENTY\", 60], [\"TEN\", 20], [\"FIVE\", 15], [\"ONE\", 1], [\"QUARTER\", 0.5], [\"DIME\", 0.2], [\"PENNY\", 0.04]]</code>.');",
+        "assert.deepEqual(checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Insufficient Funds\", 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Insufficient Funds\".');",
+        "assert.deepEqual(checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 1], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Insufficient Funds\", 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.01], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 1], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Insufficient Funds\".');",
+        "assert.deepEqual(checkCashRegister(19.5, 20, [[\"PENNY\", 0.5], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]]), \"Closed\", 'message: <code>checkCashRegister(19.5, 20, [[\"PENNY\", 0.5], [\"NICKEL\", 0], [\"DIME\", 0], [\"QUARTER\", 0], [\"ONE\", 0], [\"FIVE\", 0], [\"TEN\", 0], [\"TWENTY\", 0], [\"ONE HUNDRED\", 0]])</code> should return \"Closed\".');"
       ],
       "type": "bonfire",
       "MDNlinks": [
@@ -195,7 +213,7 @@
       "challengeType": 5,
       "translations": {
         "es": {
-          "title": "Cambio exacto",
+          "title": "Cambio Exacto",
           "description": [
             "Crea una función que simule una caja registradora que acepte el precio de compra como el primer argumento, la cantidad recibida como el segundo argumento, y la cantidad de dinero disponible en la registradora (cid) como tercer argumento",
             "cid es un arreglo bidimensional que lista la cantidad de dinero disponible",
@@ -205,13 +223,24 @@
           ]
         },
         "it": {
-          "title": "Cambio esatto",
+          "title": "Cambio Esatto",
           "description": [
             "Scrivi una funzione che simuli un registro di cassa chiamata <code>checkCashRegister()</code> che accetti il prezzo degli articoli come primo argomento (<code>price</code>), la somma pagata (<code>cash</code>), e la somma disponibile nel registratore di cassa (<code>cid</code>) come terzo argomento.",
             "<code>cid</code> è un array a due dimensioni che contiene la quantità di monete e banconote disponibili.",
             "Ritorna la stringa <code>\"Insufficient Funds\"</code> se la quantità di denaro disponibile nel registratore di cassa non è abbastanza per restituire il resto. Ritorna la stringa <code>\"Closed\"</code> se il denaro disponibile è esattamente uguale al resto.",
             "Altrimenti, ritorna il resto in monete e banconote, ordinate da quelle con valore maggiore a quelle con valore minore.",
             "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
+          ]
+        },
+        "pt-br": {
+          "title": "Troco Exato",
+          "description": [
+            "Crie uma função que simula uma caixa registradora chamada <code>checkCashRegister()</code> e aceita o valor da compra como primeiro argumento (<code>price</code>), pagamento como segundo argumento (<code>cash</code>), e o dinheiro na caixa registradora (<code>cid</code>) como terceiro argumento.",
+            "<code>cid</code> é uma matriz bidimensional que lista o dinheiro disponível.",
+            "Retorne a string <code>\"Insufficient Funds\"</code> se o dinheiro na caixa registradora é menor do que o troco ou se não é possível retornar o troco exato. Retorne a string <code>\"Closed\"</code> se o dinheiro na caixa é igual ao troco.",
+            "Case cotrário, retorne o troco em moedas e notas, ordenado do maior para menor.",
+            "Lembre-se de usar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código.",
+            "<table class='table table-striped'><tr><th>Currency Unit</th><th>Amount</th></tr><tr><td>Penny</td><td>$0.01 (PENNY)</td></tr><tr><td>Nickel</td><td>$0.05 (NICKEL)</td></tr><tr><td>Dime</td><td>$0.1 (DIME)</td></tr><tr><td>Quarter</td><td>$0.25 (QUARTER)</td></tr><tr><td>Dollar</td><td>$1 (DOLLAR)</td></tr><tr><td>Five Dollars</td><td>$5 (FIVE)</td></tr><tr><td>Ten Dollars</td><td>$10 (TEN)</td></tr><tr><td>Twenty Dollars</td><td>$20 (TWENTY)</td></tr><tr><td>One-hundred Dollars</td><td>$100 (ONE HUNDRED)</td></tr></table>"
           ]
         }
       }
@@ -264,24 +293,31 @@
       "challengeType": 5,
       "translations": {
         "es": {
-          "title": "Actualizando el inventario",
+          "title": "Actualizando el Inventario",
           "description": [
             "Compara y actualiza el inventario actual, almacenado en un arreglo bidimensional, contra otro arreglo bidimensional de inventario nuevo. Actualiza las cantidades en el inventario actual y, en caso de recibir una nueva mercancía, añade su nombre y la cantidad recibida al arreglo del inventario en orden alfabético.",
             "Recuerda utilizar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
           ]
         },
         "it": {
-          "title": "Aggiornamento dell'inventario",
+          "title": "Aggiornamento dell'Inventario",
           "description": [
             "Confronta e aggiorna l'inventario, contenuto in un array bidimensionale, con un secondo array bidimensionale relativo ad una nuova consegna. Aggiorna le quantità disponibili in inventario (dentro <code>arr1</code>). Se uno degli articoli non è presente nell'inventario, aggiungi allo stesso il nuovo articolo e la sua quantità. Ritorna un array con l'inventario aggiornato, che deve essere ordinato alfabeticamente per articolo.",
             "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
+          ]
+        },
+        "pt-br": {
+          "title": "Atualizando Inventário",
+          "description": [
+            "Compare e atualize o inventário armazenado em um matriz 2D contra uma segunda matriz 2D de uma entrega recente. Atualize a quantidade de itens no inventário atual (em <code>arr1</code>). Se um item não pode ser encontrado, adicione um novo item e a sua quantidade na matriz do inventário. O inventário retornado deve estar em ordem alfabética por item.",
+            "Lembre-se de usar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
           ]
         }
       }
     },
     {
       "id": "a7bf700cd123b9a54eef01d5",
-      "title": "No repeats please",
+      "title": "No Repeats Please",
       "description": [
         "Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.",
         "For example, <code>aab</code> should return 2 because it has 6 total permutations (<code>aab</code>, <code>aab</code>, <code>aba</code>, <code>aba</code>, <code>baa</code>, <code>baa</code>), but only 2 of them (<code>aba</code> and <code>aba</code>) don't have the same letter (in this case <code>a</code>) repeating.",
@@ -317,7 +353,7 @@
       "challengeType": 5,
       "translations": {
         "es": {
-          "title": "Sin repeticiones, por favor",
+          "title": "Sin Repeticiones, por Favor",
           "description": [
             "Crea una función que devuelva el número total de permutaciones de las letras en la cadena de texto provista, en las cuales no haya letras consecutivas repetidas",
             "Por ejemplo, 'aab' debe retornar 2 porque, del total de 6 permutaciones posibles, solo 2 de ellas no tienen repetida la misma letra (en este caso 'a').",
@@ -325,78 +361,19 @@
           ]
         },
         "it": {
-          "title": "Niente ripetizioni, per favore",
+          "title": "Niente Ripetizioni, per Favore",
           "description": [
             "Ritorna il numero totale di permutazioni della stringa passata che non hanno lettere consecutive riptetute. Assumi che tutti i caratteri nella stringa passata siano unici.",
             "Per esempio, <code>aab</code> deve ritornare 2, perchè la stringa ha 6 permutazioni possibili in totale (<code>aab</code>, <code>aab</code>, <code>aba</code>, <code>aba</code>, <code>baa</code>, <code>baa</code>), ma solo 2 di loro (<code>aba</code> e <code>aba</code>) non contengono la stessa lettera (in questo caso <code>a</code> ripetuta).",
             "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
           ]
-        }
-      }
-    },
-    {
-      "id": "a19f0fbe1872186acd434d5a",
-      "title": "Friendly Date Ranges",
-      "description": [
-        "Convert a date range consisting of two dates formatted as <code>YYYY-MM-DD</code> into a more readable format.",
-        "The friendly display should use month names instead of numbers and ordinal dates instead of cardinal (<code>1st</code> instead of <code>1</code>).",
-        "Do not display information that is redundant or that can be inferred by the user: if the date range ends in <em>less than a year</em> from when it begins, do not display the <em>ending year</em>.",
-        "Additionally, if the date range begins in the <em>current year</em> (i.e. it is currently the year 2016) and ends within one year, the year should not be displayed at the <em>beginning</em> of the friendly range.",
-        "If the range ends in the <em>same month</em> that it begins, do not display the <em>ending year or month</em>.",
-        "Examples:",
-        "<code>makeFriendlyDates([\"2016-07-01\", \"2016-07-04\"])</code> should return <code>[\"July 1st\",\"4th\"]</code>",
-        "<code>makeFriendlyDates([\"2016-07-01\", \"2018-07-04\"])</code> should return <code>[\"July 1st, 2016\", \"July 4th, 2018\"]</code>.",
-        "Remember to use <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
-      ],
-      "challengeSeed": [
-        "function makeFriendlyDates(arr) {",
-        "  return arr;",
-        "}",
-        "",
-        "makeFriendlyDates(['2016-07-01', '2016-07-04']);"
-      ],
-      "solutions": [
-        "function makeFriendlyDates(str) {\n  var thisYear = new Date().getFullYear();\n  var dates = str.map(function(s) {return s.split('-').map(Number);});\n  var start = dates[0];\n  var end = dates[1];\n  if (str[0] === str[1]) {\n     return [readable(start)];\n  }\n  if (start[0] !== end[0]) {\n    if (start[0] + 1 === end[0]){\n      if (start[1] > end[1]){\n        end[0] = undefined;\n      }\n      if (start[1] === end[1] && start[2] > end[2]){\n        end[0] = undefined;\n      }\n      if (start[0] === thisYear){\n        start[0] = undefined;\n      }\n    }\n    return dates.map(readable);\n  }\n  end[0] = undefined;\n  if (start[0] === thisYear){\n    start[0] = undefined;\n  }\n  if (start[1] === end[1]) {\n    end[1] = undefined;\n  }\n  return dates.map(readable);\n}\n\nfunction readable(arr) {\n  var ordD = arr[2] + nth(arr[2]);\n  if (!arr[1]) {\n    return ordD;\n  }\n  return MONTH[arr[1]] + \" \" + ordD + (!arr[0] ? \"\" : \", \" + arr[0]);\n}\n\nvar MONTH = {1: \"January\",\n             2: \"February\",\n             3: \"March\",\n             4: \"April\",\n             5: \"May\",\n             6: \"June\",\n             7: \"July\",\n             8: \"August\",\n             9: \"September\",\n             10: \"October\",\n             11: \"November\",\n             12: \"December\"};\n\nfunction nth(d) {\n  if(d>3 && d<21) return 'th';\n  switch (d % 10) {\n    case 1: return \"st\";\n    case 2: return \"nd\";\n    case 3: return \"rd\";\n    default: return \"th\";\n  }\n}"
-      ],
-      "tests": [
-        "assert.deepEqual(makeFriendlyDates(['2016-07-01', '2016-07-04']), ['July 1st','4th'], 'message: <code>makeFriendlyDates([\"2016-07-01\", \"2016-07-04\"])</code> should return <code>[\"July 1st\",\"4th\"]</code>.');",
-        "assert.deepEqual(makeFriendlyDates(['2016-12-01', '2017-02-03']), ['December 1st','February 3rd'], 'message: <code>makeFriendlyDates([\"2016-12-01\", \"2017-02-03\"])</code> should return <code>[\"December 1st\",\"February 3rd\"]</code>.');",
-        "assert.deepEqual(makeFriendlyDates(['2016-12-01', '2018-02-03']), ['December 1st, 2016','February 3rd, 2018'], 'message: <code>makeFriendlyDates([\"2016-12-01\", \"2018-02-03\"])</code> should return <code>[\"December 1st, 2016\",\"February 3rd, 2018\"]</code>.');",
-        "assert.deepEqual(makeFriendlyDates(['2017-03-01', '2017-05-05']), ['March 1st, 2017','May 5th'], 'message: <code>makeFriendlyDates([\"2017-03-01\", \"2017-05-05\"])</code> should return <code>[\"March 1st, 2017\",\"May 5th\"]</code>');",
-        "assert.deepEqual(makeFriendlyDates(['2018-01-13', '2018-01-13']), ['January 13th, 2018'], 'message: <code>makeFriendlyDates([\"2018-01-13\", \"2018-01-13\"])</code> should return <code>[\"January 13th, 2018\"]</code>.');",
-        "assert.deepEqual(makeFriendlyDates(['2022-09-05', '2023-09-04']), ['September 5th, 2022','September 4th'], 'message: <code>makeFriendlyDates([\"2022-09-05\", \"2023-09-04\"])</code> should return <code>[\"September 5th, 2022\",\"September 4th\"]</code>.');",
-        "assert.deepEqual(makeFriendlyDates(['2022-09-05', '2023-09-05']), ['September 5th, 2022','September 5th, 2023'], 'message: <code>makeFriendlyDates([\"2022-09-05\", \"2023-09-05\"])</code> should return <code>[\"September 5th, 2022\",\"September 5th, 2023\"]</code>.');"
-      ],
-      "type": "bonfire",
-      "MDNlinks": [
-        "String.prototype.split()",
-        "String.prototype.substr()",
-        "parseInt()"
-      ],
-      "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Rangos de fechas amigables",
-          "description": [
-            "Convierte un rango de fecha que conste de dos fechas en formato AAAA-MM-DD a un formato más legible",
-            "",
-            "La presentación amigable debería usar nombres de meses en inglés en lugar de números y fechas ordinales en lugar de cardinales (\"1st\" en lugar de \"1\").",
-            "No presentes información redundante o que pueda ser inferida por el usuario: si el rango de fechas termina en menos de un año desde la fecha incial, no presentes el año final.  Si el rango termina en el mismo mes de la fecha inicial, no presentes ni el mes ni el año final.",
-            "Además, si el rango de fechas comienza en el año actual y termina en un año o menos, no debes presentar el año al comienzo del rango amigable."
-          ]
         },
-        "it": {
-          "title": "Intervalli di date leggibili",
+        "pt-br": {
+          "title": "Sem repetição, por favor",
           "description": [
-            "Converti un intervallo di date composto da due date in formato <code>YYYY-MM-DD</code> in un formato più leggibile.",
-            "Il formato leggibile deve usare i nomi dei mesi (in inglese) e le i numeri dei giorni in formato ordinale invece che cardinale (sempre in inglese. Ad esempio <code>1st</code> invece di <code>1</code>).",
-            "Non mostrare informazioni ridondanti o che siano ricavabili dall'utente: se l'intervallo di date termina in <em>meno di un anno</em> da quando inizia, non mostrare l'<em>anno in cui l'intervallo termina</em>.",
-            "In più, se l'intervallo di date incomincia nell'<em>anno corrente</em> (siamo nell'anno 2016) e finisce nel giro di un anno, l'anno non deve essere mostrato all'<em>inizio</em> del risultato.",
-            "Se l'intervallo di date finisce nello <em>stesso mese</em> in cui incomincia, non mostrare l'<em>anno di termine nè il mese</em>.",
-            "Esempi:",
-            "<code>makeFriendlyDates([\"2016-07-01\", \"2016-07-04\"])</code> deve ritornare <code>[\"July 1st\",\"4th\"]</code>",
-            "<code>makeFriendlyDates([\"2016-07-01\", \"2018-07-04\"])</code> deve ritornare <code>[\"July 1st, 2016\", \"July 4th, 2018\"]</code>.",
-            "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
+            "Retorne o número total de permutações da string fornecida que não tem letras consecutivas repetidas. Assuma que todos os caracteres na string fornecida são únicos.",
+            "Por exemplo, <code>aab</code> deve retornar 2 porque tem um total de 6 permutações (<code>aab</code>, <code>aab</code>, <code>aba</code>, <code>aba</code>, <code>baa</code>, <code>baa</code>), mas somente duas delas (<code>aba</code> and <code>aba</code>) não tem a mesma letra (nesse caso <code>a</code>) se repetindo.",
+            "Lembre-se de usar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
           ]
         }
       }
@@ -465,6 +442,17 @@
             "Questi metodi devono essere l'unica maniera possibile di interagire con l'oggetto.",
             "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
           ]
+        },
+        "pt-br": {
+          "title": "Faça uma Pessoa",
+          "description": [
+            "Preencha o contrutor do objeto com seguintes métodos:",
+            "<blockquote>getFirstName()\ngetLastName()\ngetFullName()\nsetFirstName(first)\nsetLastName(last)\nsetFullName(firstAndLast)</blockquote>",
+            "Rode os testes para ver o resultado esperado de cada método.",
+            "Os métodos que recebem um argumento deve aceitar somente um argumento e deve ser uma string.",
+            "Esses métodos devem ser o único meio de interação com o objeto.",
+            "Lembre-se de usar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
+          ]
         }
       }
     },
@@ -502,7 +490,7 @@
       "challengeType": 5,
       "translations": {
         "es": {
-          "title": "Ubica los escombros",
+          "title": "Ubica los Escombros",
           "description": [
             "Crea una función que devuelva un nuevo arreglo que transforme la altitud promedio del elemento en su período orbital.",
             "El arreglo debe contener objetos en el formato <code>{name: 'name', avgAlt: avgAlt}</code>.",
@@ -513,7 +501,7 @@
           ]
         },
         "it": {
-          "title": "Mappa i detriti",
+          "title": "Mappa i Detriti",
           "description": [
             "Ritorna un nuovo array che trasformi l'altitudine media degli elementi nel loro periodo orbitale.",
             "L'array conterrà oggetti in formato <code>{name: 'name', avgAlt: avgAlt}</code>.",
@@ -521,6 +509,17 @@
             "I valori devono essere arrotondati al numero intero più vicino. Il corpo attorno a cui orbitano gli elementi è la Terra.",
             "Il raggio della Terra è di 6367.4447 kilometri, e il valore GM della Terra è di 398600.4418 km<sup>3</sup>s<sup>-2</sup>.",
             "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
+          ]
+        },
+        "pt-br": {
+          "title": "Mapeie o Lixo espacial",
+          "description": [
+            "Retorne uma nova matriz que transforma a altitude média do elemento em seu período orbital.",
+            "A matriz vai conter objetos no formato <code>{name: 'name', avgAlt: avgAlt}</code>.",
+            "Você pode ler sobre período orbital <a href=\"https://pt.wikipedia.org/wiki/Per%C3%ADodo_orbital\" target='_blank'>na wikipedia</a>.",
+            "Os valores devem ser arredondados para número inteiro mais próximo. O corpe sendo orbitado é a Terra.",
+            "O raio da terra é 6367.4447 quilômetros, e o valor GM da terra é 398600.4418 km<sup>3</sup>s<sup>-2</sup>.",
+            "Lembre-se de usar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
           ]
         }
       }
@@ -530,7 +529,7 @@
       "title": "Pairwise",
       "description": [
         "Given an array <code>arr</code>, find element pairs whose sum equal the second argument <code>arg</code> and return the sum of their indices.",
-        "If multiple pairs are possible that have the same numeric elements but different indices, return the smallest sum of indices. Once an element has been used, it cannot be reused to pair with another.",
+        "You may use multiple pairs that have the same numeric elements but different indices. Each pair should use the lowest possible available indices. Once an element has been used it cannot be reused to pair with another element.",
         "For example <code>pairwise([7, 9, 11, 13, 15], 20)</code> returns <code>6</code>. The pairs that sum to 20 are <code>[7, 13]</code> and <code>[9, 11]</code>. We can then write out the array with their indices and values.",
         "<table class=\"table\"><tr><th><b>Index</b></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Value</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
         "Below we'll take their corresponding indices and add them.",
@@ -561,7 +560,7 @@
       "challengeType": 5,
       "translations": {
         "es": {
-          "title": "En parejas",
+          "title": "En Parejas",
           "description": [
             "Crea una función que devuelva la suma de todos los índices de los elementos de 'arr' que pueden ser emparejados con otro elemento de tal forma que la suma de ambos equivalga al valor del segundo argumento, 'arg'. Si varias combinaciones son posibles, devuelve la menor suma de índices. Una vez un elemento ha sido usado, no puede ser usado de nuevo para emparejarlo con otro elemento.",
             "Por ejemplo, pairwise([1, 4, 2, 3, 0, 5], 7) debe devolver 11 porque 4, 2, 3 y 5 pueden ser emparejados para obtener una suma de 7",
@@ -570,7 +569,7 @@
           ]
         },
         "it": {
-          "title": "A coppie",
+          "title": "A Coppie",
           "description": [
             "Dato un array <code>arr</code>, trova le coppie di elementi la cui somma è uguale al secondo argomento passato <code>arg</code>. Ritorna quindi la somma dei loro indici.",
             "Se ci sono più coppie possibili che hanno lo stesso valore numerico ma indici differenti, ritorna la somma degli indici minore. Una volta usato un elemento, lo stesso non può essere riutilizzato per essere accoppiato con un altro.",
@@ -579,6 +578,18 @@
             "Qui sotto prendiamo gli indici corrispondenti e li sommiamo.",
             "7 + 13 = 20 &#8594; Indici 0 + 3 = 3<br>9 + 11 = 20 &#8594; Indici 1 + 2 = 3<br>3 + 3 = 6 &#8594 Ritorna <code>6</code>",
             "Ricorda di usare <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
+          ]
+        },
+        "pt-br": {
+          "title": "Emparelhados",
+          "description": [
+            "Dado uma matriz <code>arr</code>, encontre pares de elementos no qual a soma é igual ao segundo argumento <code>arg</code> e retorne a soma dos seus indices.",
+            "Se multiplos pares tem o mesmo elemento numérico mas indices diferentes, retorne a soma dos menores indices. Uma vez que um elemento é usado, este não pode ser emparelhado novamente com outro elemento.",
+            "Por exemplo <code>pairwise([7, 9, 11, 13, 15], 20)</code> retorna <code>6</code>. Os pares que somam 20 são <code>[7, 13]</code> e <code>[9, 11]</code>. Nós podemos então criar a matriz com seus indices e valores.",
+            "<table class=\"table\"><tr><th><b>Index</b></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Value</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
+            "Abaixo nós pegamos os índices correspondentes e somá-los.",
+            "7 + 13 = 20 &#8594; Indices 0 + 3 = 3<br>9 + 11 = 20 &#8594; Indices 1 + 2 = 3<br>3 + 3 = 6 &#8594 Retorna <code>6</code>",
+            "Lembre-se de usar <a href='http://forum.freecodecamp.com/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
           ]
         }
       }

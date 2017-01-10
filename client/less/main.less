@@ -627,7 +627,7 @@ form.update-email .btn{
 }
 
 .testimonial-copy {
-  text-align: justify;
+  text-align: center;
   font-size: 18px !important;
   margin-left: 20px;
   margin-right: 20px;
@@ -1140,9 +1140,65 @@ and (max-width : 400px)  {
   font-size: 17px;
 }
 
-@import "chat.less";
-@import 'code-mirror.less';
+
+.editorScrollDiv {
+  -webkit-overflow-scrolling: touch;
+}
+
+// Reset/Delete Account Modal Styles
+.modal-dialog {
+  margin: 80px;
+
+  .modal-content {
+    background-color: #f9f9f9;
+  }
+
+  .modal-header .close {
+    font-size: 30px;
+    padding-left: 10px;
+  }
+
+  .modal-header {
+    text-align: center;
+    padding: 5px 20px;
+  }
+
+  .modal-footer {
+    .spacer {
+      padding: 8px 0 8px 0;
+    }
+
+    .btn {
+      padding: 12px;
+    }
+
+    .btn-success {
+      color: darkgreen;
+      border-color: darkgreen;
+    }
+
+    .btn-success:hover,
+    .btn-success:focus,
+    .btn-success:active {
+      color: #eee;
+      background-color: #208e36;
+      border-color: darkgreen;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 620px;
+    margin: 150px auto;
+  }
+}
+
+
+@import "code-mirror.less";
 @import "challenge.less";
 @import "toastr.less";
 @import "map.less";
-@import "drawers.less";
+@import "sk-wave.less";
+@import "classic-modal.less";
+@import "skeleton-shimmer.less";
