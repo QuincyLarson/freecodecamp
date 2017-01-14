@@ -6,33 +6,33 @@
   "challenges": [
     {
       "id": "ca8123c8c441eddfae95bdef",
-        "title": "Introduction to the Applied Visual Design Challenges",
-        "description": [
-          [
-            "",
-            "",
-            "Visual Design in web development is a broad topic. It combines typography, color theory, graphics, animation, and page layout to help deliver a site's message. The definition of good design is a well-discussed subject, with many books on the theme.<br><br>At a basic level, most web content provides a user with information. The visual design of the page can influence its presentation and a user's experience. In web development, HTML gives structure and semantics to a page's content, and CSS controls the layout and appearance of it.<br><br>This section covers some of the basic tools developers use to create their own visual designs.",
-            ""
-          ]
-        ],
-        "releasedOn": "",
-        "challengeSeed": [],
-        "tests": [],
-        "type": "Waypoint",
-        "challengeType": 7,
-        "isRequired": false,
-        "titleEs": "",
-        "descriptionEs": [
-          []
-        ],
-        "titleFr": "",
-        "descriptionFr": [
-          []
-        ],
-        "titleDe": "",
-        "descriptionDe": [
-          []
+      "title": "Introduction to the Applied Visual Design Challenges",
+      "description": [
+        [
+          "",
+          "",
+          "Visual Design in web development is a broad topic. It combines typography, color theory, graphics, animation, and page layout to help deliver a site's message. The definition of good design is a well-discussed subject, with many books on the theme.<br><br>At a basic level, most web content provides a user with information. The visual design of the page can influence its presentation and a user's experience. In web development, HTML gives structure and semantics to a page's content, and CSS controls the layout and appearance of it.<br><br>This section covers some of the basic tools developers use to create their own visual designs.",
+          ""
         ]
+      ],
+      "releasedOn": "",
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7,
+      "isRequired": false,
+      "titleEs": "",
+      "descriptionEs": [
+        []
+      ],
+      "titleFr": "",
+      "descriptionFr": [
+        []
+      ],
+      "titleDe": "",
+      "descriptionDe": [
+        []
+      ]
     },
     {
       "id": "c00123c8c441eddfaeb5bdef",
@@ -1136,7 +1136,7 @@
     {
       "id": "c72123c8c441e9efaebebdef",
       "title": "Use a Google Font",
-	    "required": [
+      "required": [
         {
           "link": "https://fonts.googleapis.com/css?family=Open+Sans",
           "raw": true
@@ -2100,7 +2100,7 @@
         }
       }
     },
-        {
+    {
       "id": "c51123c7c442eddfaeb57def",
       "title": "Adjusting the Color of Various Elements to Complementary Colors",
       "description": [
@@ -3332,21 +3332,21 @@
         "    border-radius: 50%;",
         "    animation-iteration-count: infinite;",
         "  }",
-		    "",
+        "",
         "  .star-1 {",
         "    margin-top: 15%; ",
         "    margin-left: 60%;",
         "    animation-duration: 1s;",
         "    animation-name: twinkle-1;",
         "  }",
-		    "",
+        "",
         "  .star-2 {",
         "    margin-top: 25%;",
         "    margin-left: 25%;",
         "    animation-duration: 1s;",
         "    animation-name: twinkle-2;",
         "  }",
-		    "",
+        "",
         "  @keyframes twinkle-1 {",
         "    20% {",
         "      transform: scale(.5);",
@@ -3360,7 +3360,7 @@
         "      opacity: 0.5;",
         "    }",
         "  }",
-		    "",
+        "",
         "  #back {",
         "    position: fixed;",
         "    padding: 0;",
@@ -3423,35 +3423,35 @@
         "    border-radius: 50%;",
         "    animation-iteration-count: infinite;",
         "  }",
-		    "",
+        "",
         "  .star-1 {",
         "    margin-top: 15%; ",
         "    margin-left: 60%;",
         "    animation-duration: 1s;",
         "    animation-name: twinkle;",
         "  }",
-		    "",
+        "",
         "  .star-2 {",
         "    margin-top: 25%;",
         "    margin-left: 25%;",
         "    animation-duration: 1s;",
         "    animation-name: twinkle;",
         "  }",
-		    "",
+        "",
         "  .star-3 {",
         "    margin-top: 10%;",
         "    margin-left: 50%;",
         "    animation-duration: 1s;",
         "    animation-name: twinkle;",
         "  }",
-		    "",
+        "",
         "  @keyframes twinkle {",
         "    20% {",
         "      transform: scale(.5);",
         "      opacity: 0.5;",
         "    }",
         "  }",
-		    "",
+        "",
         "  #back {",
         "    position: fixed;",
         "    padding: 0;",
