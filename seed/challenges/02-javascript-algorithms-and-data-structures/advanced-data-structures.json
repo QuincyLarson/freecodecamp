@@ -1322,75 +1322,59 @@
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "Typed Arrays",
       "description": [
-Arrays are JavaScript objects that can hold a lot of different elements.
-
-var complexArr = [1, 5, "2", "Word", {"name": "James"}];
-Basically what happens in the background is that your browser will automatically give the right amount of memory space for that array. It will also change as needed if you add or remove data.
-
-However, in the world of high performance and different element types, sometimes you need to be more specific on how much memory is given to an array.
-
-Typed arrays are the answer to this problem. You are now able to say how much memory you want to give an array. Below is a basic overview of the different types of arrays available and the size in bytes for each element in that array.
-
-Type  Each element size in bytes
-Int8Array 1
-Uint8Array  1
-Uint8ClampedArray 1
-Int16Array  2
-Uint16Array 2
-Int32Array  4
-Uint32Array 4
-Float32Array  4
-Float64Array  8
-There are two ways in creating these kind of arrays. One way is to create it directly. Below is how to create a 7 length Int16Array.
-
-var i8 = new Int16Array(3);
-console.log(i8);
-// Returns [0, 0, 0]
-You can also create a buffer to assign how much data (in bytes) you want the array to take up.
-
-Note
-To create typed arrays using buffers, you need to assign the number of bytes to be a multiple of the bytes listed above.
-
-// Create same Int16Array array differently
-var byteSize = 6; // Needs to be multiple of 2
-var buffer = new ArrayBuffer(byteSize);
-var i8View = new Int16Array(buffer);
-buffer.byteLength; // Returns 6
-i8View.byteLength; // Returns 6
-console.log(i8View); // Returns [0, 0, 0]
-Buffers are general purpose objects that just carry data. You cannot access them normally. To access them, you need to first create a view.
-
-i8View[0] = 42;
-console.log(i8View); // Returns [42, 0, 0]
-Note
-Typed arrays do not have some of the methods traditional arrays have such as .pop() or .push(). Typed arrays also fail Array.isArray() that checks if something is an array. Although simplier, this can be an advantage for less-sophisticated JavaScript engines to implement them.
-
-Instructions
-
-First create a buffer that is 64-bytes. Then create a Int32Array typed array with a view of it called int32View.
-
-Here are some helpful links:
-
-Typed arrays
-The code for the table used above is:
-
-<table class='table table-striped'><tr><th>Type</th><th>Each element size in bytes</th></tr><tr><td><code>Int8Array</code></td><td>1</td></tr><tr><td><code>Uint8Array</code></td><td>1</td></tr><tr><td><code>Uint8ClampedArray</code></td><td>1</td></tr><tr><td><code>Int16Array</code></td><td>2</td></tr><tr><td><code>Uint16Array</code></td><td>2</td></tr><tr><td><code>Int32Array</code></td><td>4</td></tr><tr><td><code>Uint32Array</code></td><td>4</td></tr><tr><td><code>Float32Array</code></td><td>4</td></tr><tr><td><code>Float64Array</code></td><td>8</td></tr></table>
-The class='table table-striped' is specific to FreeCodeCamp's CSS style.
-
-
+"Arrays are JavaScript objects that can hold a lot of different elements.",
+"<code>var complexArr = [1, 5, \"2\", \"Word\", {\"name\": \"James\"}];</code>",
+"Basically what happens in the background is that your browser will automatically give the right amount of memory space for that array. It will also change as needed if you add or remove data.",
+"However, in the world of high performance and different element types, sometimes you need to be more specific on how much memory is given to an array.",
+"Typed arrays are the answer to this problem. You are now able to say how much memory you want to give an array. Below is a basic overview of the different types of arrays available and the size in bytes for each element in that array.",
+"<code>Type  Each element size in bytes</code>",
+"<code>Int8Array 1</code>",
+"<code>Uint8Array  1</code>",
+"<code>Uint8ClampedArray 1</code>",
+"<code>Int16Array  2</code>",
+"<code>Uint16Array 2</code>",
+"<code>Int32Array  4</code>",
+"<code>Uint32Array 4</code>",
+"<code>Float32Array  4</code>",
+"<code>Float64Array  8</code>",
+"There are two ways in creating these kind of arrays. One way is to create it directly. Below is how to create a 7 length Int16Array.",
+"<code>var i8 = new Int16Array(3);</code>",
+"<code>console.log(i8);</code>",
+"<code>// Returns [0, 0, 0]</code>",
+"You can also create a buffer to assign how much data (in bytes) you want the array to take up.",
+"Note",
+"To create typed arrays using buffers, you need to assign the number of bytes to be a multiple of the bytes listed above.",
+"<code>// Create same Int16Array array differently</code>",
+"<code>var byteSize = 6; // Needs to be multiple of 2</code>",
+"<code>var buffer = new ArrayBuffer(byteSize);</code>",
+"<code>var i8View = new Int16Array(buffer);</code>",
+"<code>buffer.byteLength; // Returns 6</code>",
+"<code>i8View.byteLength; // Returns 6</code>",
+"<code>console.log(i8View); // Returns [0, 0, 0]</code>",
+"Buffers are general purpose objects that just carry data. You cannot access them normally. To access them, you need to first create a view.",
+"<code>i8View[0] = 42;</code>",
+"<code>console.log(i8View); // Returns [42, 0, 0]</code>",
+"Note",
+"Typed arrays do not have some of the methods traditional arrays have such as .pop() or .push(). Typed arrays also fail Array.isArray() that checks if something is an array. Although simplier, this can be an advantage for less-sophisticated JavaScript engines to implement them.",
+"Instructions",
+"First create a buffer that is 64-bytes. Then create a Int32Array typed array with a view of it called int32View.",
+"Here are some helpful links:",
+"Typed arrays",
+"The code for the table used above is:",
+"<table class='table table-striped'><tr><th>Type</th><th>Each element size in bytes</th></tr><tr><td><code>Int8Array</code></td><td>1</td></tr><tr><td><code>Uint8Array</code></td><td>1</td></tr><tr><td><code>Uint8ClampedArray</code></td><td>1</td></tr><tr><td><code>Int16Array</code></td><td>2</td></tr><tr><td><code>Uint16Array</code></td><td>2</td></tr><tr><td><code>Int32Array</code></td><td>4</td></tr><tr><td><code>Uint32Array</code></td><td>4</td></tr><tr><td><code>Float32Array</code></td><td>4</td></tr><tr><td><code>Float64Array</code></td><td>8</td></tr></table>",
+"The class='table table-striped' is specific to FreeCodeCamp's CSS style."
       ],
       "challengeSeed": [
-var buffer;
-var i32View;
+"var buffer;",
+"var i32View;"
       ],
       "tests": [
-assert(buffer.byteLength === 64, 'message: Your `buffer` should be 64 bytes large.');
-assert(i32View.byteLength === 64, 'message: Your `i32View` view of your buffer should be 64 bytes large.');
-assert(i32View.length === 16, 'message: Your `i32View` view of your buffer should be 16 elements long.');
+"assert(buffer.byteLength === 64, 'message: Your `buffer` should be 64 bytes large.');",
+"assert(i32View.byteLength === 64, 'message: Your `i32View` view of your buffer should be 64 bytes large.');",
+"assert(i32View.length === 16, 'message: Your `i32View` view of your buffer should be 16 elements long.');"
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -1399,56 +1383,44 @@ assert(i32View.length === 16, 'message: Your `i32View` view of your buffer shoul
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "Creating a Set Class",
       "description": [
-In the next few exercises we are going to create a function to emulate a data structure called a "Set". A Set is like an array, but it cannot contain duplicate values. The typical use for a Set is to simply check for the presence of an item. This can be implemented with an object, for instance:
-var set = new Object();
-
-set.foo = true;
-
-// See if foo exists in our set:
-console.log(set.foo) // true
-In the next few exercises, we will build a full featured Set from scratch.
-
-In this exercise you will add a function to add a value to our set collection:
-
-this.add = function(){
-  //some code to add value to the set
-}
-
+"In the next few exercises we are going to create a function to emulate a data structure called a \"Set\". A Set is like an array, but it cannot contain duplicate values. The typical use for a Set is to simply check for the presence of an item. This can be implemented with an object, for instance:",
+"<code>var set = new Object();</code>",
+"<code>set.foo = true;</code>",
+"<code>// See if foo exists in our set:</code>",
+"<code>console.log(set.foo) // true</code>",
+"In the next few exercises, we will build a full featured Set from scratch.",
+"In this exercise you will add a function to add a value to our set collection:",
+"<code>this.add = function(){</code>",
+"<code>  //some code to add value to the set</code>",
+"<code>}</code>"
       ],
       "challengeSeed": [
-function Set() {
-    // the var collection will hold our set
-    var collection = [];
-
-    // this method will check for the presence of an element and return true or false
-    this.has = function(element) {
-        return (collection.indexOf(element) !== -1);
-    };
-
-    // this method will return all the values in the set
-    this.values = function() {
-        return collection;
-    };
-
-    // change code below this line
-
-    // change code above this line
-
-};
-
-var setA = new Set();
-setA.add("a");
-setA.add("b");
-setA.add("b");
-console.log(setA.values() // should be [ 'a', 'b'];
+"function Set() {",
+"    // the var collection will hold our set",
+"    var collection = [];",
+"    // this method will check for the presence of an element and return true or false",
+"    this.has = function(element) {",
+"        return (collection.indexOf(element) !== -1);",
+"    };",
+"    // this method will return all the values in the set",
+"    this.values = function() {",
+"        return collection;",
+"    };",
+"    // change code below this line",
+"    // change code above this line",
+"};",
+"var setA = new Set();",
+"setA.add(\"a\");",
+"setA.add(\"b\");",
+"setA.add(\"b\");",
+"console.log(setA.values() // should be [ 'a', 'b'];"
       ],
       "tests": [
-assert((function(){var test = new Set(); return (typeof test.add === 'function')}()), 'message: Your <code>Set</code> class should have a <code>add</code> method.');
-assert(function(){var test = new Set; test.add("a");test.add("b";test.add("a");return test.values() === [ 'a', 'b' ])}(), 'message: Your code needs to prevent duplicates.');
+"assert((function(){var test = new Set(); return (typeof test.add === 'function')}()), 'message: Your <code>Set</code> class should have a <code>add</code> method.');",
+"assert(function(){var test = new Set; test.add(\"a\");test.add(\"b\";test.add(\"a\");return test.values() === [ 'a', 'b' ])}(), 'message: Your code needs to prevent duplicates.');"
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -1457,51 +1429,43 @@ assert(function(){var test = new Set; test.add("a");test.add("b";test.add("a");r
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "Remove from a Set",
       "description": [
-In this exercises we are going to create a delete function for our Set. The function should be named this.remove
+"In this exercises we are going to create a delete function for our Set. The function should be named this.remove"
       ],
       "challengeSeed": [
-function Set() {
-    // the var collection will hold the set
-    var collection = [];
-
-    // this method will check for the presence of an element and return true or false
-    this.has = function(element) {
-        return (collection.indexOf(element) !== -1);
-    };
-
-    // this method will return all the values in the set
-    this.values = function() {
-        return collection;
-    };
-
-    // this method will add an element to the set
-    this.add = function(element) {
-        if(!this.has(element)){
-            collection.push(element);
-            return true;
-        }
-        return false;
-    };
-
-    // change code below this line
-
-    // change code above this line
-
-};
-
-var setA = new Set();
-setA.add("a");
-setA.add("b");
-setA.remove("b");
-console.log(setA.values())//should be [ 'a' ];
+"function Set() {",
+"    // the var collection will hold the set",
+"    var collection = [];",
+"    // this method will check for the presence of an element and return true or false",
+"    this.has = function(element) {",
+"        return (collection.indexOf(element) !== -1);",
+"    };",
+"    // this method will return all the values in the set",
+"    this.values = function() {",
+"        return collection;",
+"    };",
+"    // this method will add an element to the set",
+"    this.add = function(element) {",
+"        if(!this.has(element)){",
+"            collection.push(element);",
+"            return true;",
+"        }",
+"        return false;",
+"    };",
+"    // change code below this line",
+"    // change code above this line",
+"};",
+"var setA = new Set();",
+"setA.add(\"a\");",
+"setA.add(\"b\");",
+"setA.remove(\"b\");",
+"console.log(setA.values())//should be [ 'a' ];"
       ],
       "tests": [
-assert((function(){var test = new Set(); return (typeof test.remove === 'function')}, 'message: Your <code>Set</code> class should have a <code>remove</code> method.');
-assert(function(){var test = new Set; test.add("a");test.add("b");test.remove("a");return (test.values() === [ 'b' ])}), 'message: Your code should remove the item from');
+"assert((function(){var test = new Set(); return (typeof test.remove === 'function')}, 'message: Your <code>Set</code> class should have a <code>remove</code> method.');",
+"assert(function(){var test = new Set; test.add(\"a\");test.add(\"b\");test.remove(\"a\");return (test.values() === [ 'b' ])}), 'message: Your code should remove the item from');"
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -1510,62 +1474,51 @@ assert(function(){var test = new Set; test.add("a");test.add("b");test.remove("a
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "Size of the set",
       "description": [
-In this exercise we are going to create a size function for our Set. This function should be named this.size and it should return the size of the collection.
-
-
+"In this exercise we are going to create a size function for our Set. This function should be named this.size and it should return the size of the collection."
       ],
       "challengeSeed": [
-function Set() {
-    // the var collection will hold the set
-    var collection = [];
-
-    // this method will check for the presence of an element and return true or false
-    this.has = function(element) {
-        return (collection.indexOf(element) !== -1);
-    };
-
-    // this method will return all the values in the set
-    this.values = function() {
-        return collection;
-    };
-    // this method will add an element to the set
-    this.add = function(element) {
-        if(!this.has(element)){
-            collection.push(element);
-            return true;
-        }
-        return false;
-    };
-
-    // this method will remove an element from a set
-    this.remove = function(element) {
-        if(this.has(element)){
-            index = collection.indexOf(element);
-            collection.splice(index,1);
-            return true;
-        }
-        return false;
-    };
-
-    // change code below this line
-
-    // change code above this line
-
-}
-
-var setA = new Set();
-setA.add("a");
-setA.add("b");
-
-console.log(setA.size()) // should be 2;
+"function Set() {",
+"    // the var collection will hold the set",
+"    var collection = [];",
+"    // this method will check for the presence of an element and return true or false",
+"    this.has = function(element) {",
+"        return (collection.indexOf(element) !== -1);",
+"    };",
+"    // this method will return all the values in the set",
+"    this.values = function() {",
+"        return collection;",
+"    };",
+"    // this method will add an element to the set",
+"    this.add = function(element) {",
+"        if(!this.has(element)){",
+"            collection.push(element);",
+"            return true;",
+"        }",
+"        return false;",
+"    };",
+"    // this method will remove an element from a set",
+"    this.remove = function(element) {",
+"        if(this.has(element)){",
+"            index = collection.indexOf(element);",
+"            collection.splice(index,1);",
+"            return true;",
+"        }",
+"        return false;",
+"    };",
+"    // change code below this line",
+"    // change code above this line",
+"}",
+"var setA = new Set();",
+"setA.add(\"a\");",
+"setA.add(\"b\");",
+"console.log(setA.size()) // should be 2;"
       ],
       "tests": [
-assert((function(){var test = new Set(); return (typeof test.size === 'function')}, 'message: Your <code>Set</code> class should have a <code>size</code> method.');
-assert(function(){var test = new Set; test.add("a");test.add("b");test.remove("a");return (test.size() === 2)}), 'message: return the number of elements in the collection.');
+"assert((function(){var test = new Set(); return (typeof test.size === 'function')}, 'message: Your <code>Set</code> class should have a <code>size</code> method.');",
+"assert(function(){var test = new Set; test.add("a");test.add("b");test.remove("a");return (test.size() === 2)}), 'message: return the number of elements in the collection.');"
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -1574,73 +1527,60 @@ assert(function(){var test = new Set; test.add("a");test.add("b");test.remove("a
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "Perform a union on 2 Sets of data",
       "description": [
-In this exercise we are going to perform a union on 2 sets of data. We will create a method on our Set data structure called union. This method should take another set as an argument and update the set you called the method on to be the union of the two sets, excluding any duplicate values.
-
-
+"In this exercise we are going to perform a union on 2 sets of data. We will create a method on our Set data structure called union. This method should take another set as an argument and update the set you called the method on to be the union of the two sets, excluding any duplicate values."
       ],
       "challengeSeed": [
-function Set() {
-    // the var collection will hold the set
-    var collection = [];
-
-    // this method will check for the presence of an element and return true or false
-    this.has = function(element) {
-        return (collection.indexOf(element) !== -1);
-    };
-
-    // this method will return all the values in the set
-    this.values = function() {
-        return collection;
-    };
-
-    // this method will add an element to the set
-    this.add = function(element) {
-        if(!this.has(element)){
-            collection.push(element);
-            return true;
-        }
-        return false;
-    };
-
-   // this method will remove an element from a set
-    this.remove = function(element) {
-        if(this.has(element)){
-            index = collection.indexOf(element);
-            collection.splice(index,1);
-            return true;
-        }
-        return false;
-    };
-
-    // this method will return the size of the set
-    this.size = function() {
-        return collection.length;
-    };
-
-    // change code below this line
-
-    // change code above this line
-
-};
-
-  var setA = new Set();
-  var setB = new Set();
-  setA.add("a");
-  setA.add("b");
-  setA.add("c");
-  setB.add("c");
-  setB.add("d");
-  var unionSetAB = setA.union(setB);
-
-  console.log(unionSetAB.values())//should be [ 'a', 'b', 'c', 'd' ];
+"function Set() {",
+"    // the var collection will hold the set",
+"    var collection = [];",
+"    // this method will check for the presence of an element and return true or false",
+"    this.has = function(element) {",
+"        return (collection.indexOf(element) !== -1);",
+"    };",
+"    // this method will return all the values in the set",
+"    this.values = function() {",
+"        return collection;",
+"    };",
+"    // this method will add an element to the set",
+"    this.add = function(element) {",
+"        if(!this.has(element)){",
+"            collection.push(element);",
+"            return true;",
+"        }",
+"        return false;",
+"    };",
+"   // this method will remove an element from a set",
+"    this.remove = function(element) {",
+"        if(this.has(element)){",
+"            index = collection.indexOf(element);",
+"            collection.splice(index,1);",
+"            return true;",
+"        }",
+"        return false;",
+"    };",
+"    // this method will return the size of the set",
+"    this.size = function() {",
+"        return collection.length;",
+"    };",
+"    // change code below this line",
+"    // change code above this line",
+"};",
+"  var setA = new Set();",
+"  var setB = new Set();",
+"  setA.add("a");",
+"  setA.add("b");",
+"  setA.add("c");",
+"  setB.add("c");",
+"  setB.add("d");",
+"  var unionSetAB = setA.union(setB);",
+"  console.log(unionSetAB.values())//should be [ 'a', 'b', 'c', 'd' ];"
       ],
       "tests": [
-assert((function(){var test = new Set(); return (typeof test.union === 'function')}, 'message: Your <code>Set</code> class should have a <code>union</code> method.');
-assert(function(){  var setA = new Set();  var setB = new Set();  setA.add("a");  setA.add("b");  setA.add("c");  setB.add("c");  setB.add("d");  var unionSetAB = setA.union(setB);return (unionSetAB.values() === [ 'a', 'b', 'c', 'd' ])}), 'message: The proper collection was returned');
+"assert((function(){var test = new Set(); return (typeof test.union === 'function')}, 'message: Your <code>Set</code> class should have a <code>union</code> method.');",
+"assert(function(){  var setA = new Set();  var setB = new Set();  setA.add("a");  setA.add("b");  setA.add("c");  setB.add("c");  setB.add("d");  var unionSetAB = setA.union(setB);return (unionSetAB.values() === [ 'a', 'b', 'c', 'd' ])}), 'message: The proper collection was returned');"
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -1649,91 +1589,73 @@ assert(function(){  var setA = new Set();  var setB = new Set();  setA.add("a");
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "Perform an Intersection on two Sets of Data",
       "description": [
-In this exercise we are going to perform an intersection on 2 sets of data. An intersection of sets represents all values that are common to two or more sets. This method should be called this.intersection. This method should return a new set containing the intersection of the sets the method was called against.
-
-
+"In this exercise we are going to perform an intersection on 2 sets of data. An intersection of sets represents all values that are common to two or more sets. This method should be called this.intersection. This method should return a new set containing the intersection of the sets the method was called against."
       ],
       "challengeSeed": [
-function Set() {
-    // the var collection will hold the set
-    var collection = [];
-
-    // this method will check for the presence of an element and return true or false
-    this.has = function(element) {
-        return (collection.indexOf(element) !== -1);
-    };
-
-    // this method will return all the values in the set
-    this.values = function() {
-        return collection;
-    };
-
-   // this method will add an element to the set
-    this.add = function(element) {
-        if(!this.has(element)){
-            collection.push(element);
-            return true;
-        }
-        return false;
-    };
-
-    // this method will remove an element from a set
-    this.remove = function(element) {
-        if(this.has(element)){
-            index = collection.indexOf(element);
-            collection.splice(index,1);
-            return true;
-        }
-        return false;
-    };
-
-    // this method will return the size of the collection
-    this.size = function() {
-        return collection.length;
-    };
-
-    // this method will return the union of two sets
-    this.union = function(otherSet) {
-        var unionSet = new Set();
-
-        var firstSet = this.values();
-        var secondSet = otherSet.values();
-
-        firstSet.forEach(function(e){
-            unionSet.add(e);
-        });
-
-        secondSet.forEach(function(e){
-            unionSet.add(e);
-        });
-
-        return unionSet;
-    };
-
-    // change code below this line
-
-    // change code above this line
-
-};
-
-  var setA = new Set();
-  var setB = new Set();
-  setA.add("a");
-  setA.add("b");
-  setA.add("c");
-  setB.add("c");
-  setB.add("d");
-  var intersectionSetAB = setA.intersection(setB);
-
-  console.log(intersectionSetAB.values())//should be [ 'c' ];
+"function Set() {",
+"    // the var collection will hold the set",
+"    var collection = [];",
+"    // this method will check for the presence of an element and return true or false",
+"    this.has = function(element) {",
+"        return (collection.indexOf(element) !== -1);",
+"    };",
+"    // this method will return all the values in the set",
+"    this.values = function() {",
+"        return collection;",
+"    };",
+"   // this method will add an element to the set",
+"    this.add = function(element) {",
+"        if(!this.has(element)){",
+"            collection.push(element);",
+"            return true;",
+"        }",
+"        return false;",
+"    };",
+"    // this method will remove an element from a set",
+"    this.remove = function(element) {",
+"        if(this.has(element)){",
+"            index = collection.indexOf(element);",
+"            collection.splice(index,1);",
+"            return true;",
+"        }",
+"        return false;",
+"    };",
+"    // this method will return the size of the collection",
+"    this.size = function() {",
+"        return collection.length;",
+"    };",
+"    // this method will return the union of two sets",
+"    this.union = function(otherSet) {",
+"        var unionSet = new Set();",
+"        var firstSet = this.values();",
+"        var secondSet = otherSet.values();",
+"        firstSet.forEach(function(e){",
+"            unionSet.add(e);",
+"        });",
+"        secondSet.forEach(function(e){",
+"            unionSet.add(e);",
+"        });",
+"        return unionSet;",
+"    };",
+"    // change code below this line",
+"    // change code above this line",
+"};",
+"  var setA = new Set();",
+"  var setB = new Set();",
+"  setA.add(\"a\");",
+"  setA.add(\"b\");",
+"  setA.add(\"c\");",
+"  setB.add(\"c\");",
+"  setB.add(\"d\");",
+"  var intersectionSetAB = setA.intersection(setB);",
+"  console.log(intersectionSetAB.values())//should be [ 'c' ];"
       ],
       "tests": [
-assert((function(){var test = new Set(); return (typeof test.intersection === 'function')}, 'message: Your <code>Set</code> class should have a <code>intersection</code> method.');
-assert(function(){  var setA = new Set();  var setB = new Set();  setA.add("a");  setA.add("b");  setA.add("c");  setB.add("c");  setB.add("d");  var intersectionSetAB = setA.intersection(setB);return (intersectionSetAB.values() === [ 'c' ])}), 'message: The proper collection was returned');
+"assert((function(){var test = new Set(); return (typeof test.intersection === 'function')}, 'message: Your <code>Set</code> class should have a <code>intersection</code> method.');",
+"assert(function(){  var setA = new Set();  var setB = new Set();  setA.add(\"a\");  setA.add(\"b\");  setA.add(\"c\");  setB.add(\"c\");  setB.add(\"d\");  var intersectionSetAB = setA.intersection(setB);return (intersectionSetAB.values() === [ 'c' ])}), 'message: The proper collection was returned');"
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -1743,24 +1665,19 @@ assert(function(){  var setA = new Set();  var setB = new Set();  setA.add("a");
       "title": "Perform a difference on two Sets of data",
       "description": [
 In this exercise we are going to perform a difference on 2 sets of data. A difference of sets should compare two sets and return the items present in the first set that are absent in the second. This method should be called this.difference and should return a new set containing only the items that result from taking the difference of two sets.
-
-
       ],
       "challengeSeed": [
 function Set() {
     // the var collection will hold the set
     var collection = [];
-
     // this method will check for the presence of an element and return true or false
     this.has = function(element) {
         return (collection.indexOf(element) !== -1);
     };
-
     // this method will return all the values in the set
     this.values = function() {
         return collection;
     };
-
     // this method will add an element to the set
     this.add = function(element) {
         if(!this.has(element)){
@@ -1769,7 +1686,6 @@ function Set() {
         }
         return false;
     };
-
     // this method will remove an element from a set
     this.remove = function(element) {
         if(this.has(element)){
@@ -1779,51 +1695,37 @@ function Set() {
         }
         return false;
     };
-
     // this method will return the size of the collection
     this.size = function() {
         return collection.length;
     };
-
     // this method will return the union of two sets
     this.union = function(otherSet) {
         var unionSet = new Set();
-
         var firstSet = this.values();
         var secondSet = otherSet.values();
-
         firstSet.forEach(function(e){
             unionSet.add(e);
         });
-
         secondSet.forEach(function(e){
             unionSet.add(e);
         });
-
         return unionSet;
     };
-
     // this method will return the intersection of two sets as a new set
     this.intersection = function(otherSet) {
         var intersectionSet = new Set();
-
         var firstSet = this.values();
-
         firstSet.forEach(function(e){
             if(otherSet.has(e)){
                 intersectionSet.add(e);
             }
         });
-
         return intersectionSet;
     };
-
     // change code below this line
-
     // change code above this line
-
 };
-
   var setA = new Set();
   var setB = new Set();
   setA.add("a");
@@ -1832,7 +1734,6 @@ function Set() {
   setB.add("c");
   setB.add("d");
   var differenceSetAB = setA.difference(setB);
-
   console.log(differenceSetAB.values()) // should be [ 'a', 'b' ];
       ],
       "tests": [
@@ -1841,7 +1742,6 @@ assert(function(){  var setA = new Set();  var setB = new Set();  setA.add("a");
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -1851,8 +1751,6 @@ assert(function(){  var setA = new Set();  var setB = new Set();  setA.add("a");
       "title": "Perform a subset check on two Sets of data",
       "description": [
 In this exercise we are going to perform a subset test on 2 sets of data. This will compare the first set, against the second and if the first set is fully contained within the Second then it will return true. This method should be called this.subset. At this point, we have added a lot of useful functionality to our Set data structure. This will complete the challenges for the set data structure.
-
-
       ],
       "challengeSeed": [
 assert((function(){var test = new Set(); return (typeof test.subset === 'function')}, 'message: Your <code>Set</code> class should have a <code>union</code> method.');
@@ -1862,17 +1760,14 @@ assert(function(){  var setA = new Set();  var setB = new Set();  setA.add("a");
 function Set() {
     // the var collection will hold the set
     var collection = [];
-
     // this method will check for the presence of an element and return true or false
     this.has = function(element) {
         return (collection.indexOf(element) !== -1);
     };
-
     // this method will return all the values in the set
     this.values = function() {
         return collection;
     };
-
     // this method will add an element to the set
     this.add = function(element) {
         if(!this.has(element)){
@@ -1881,7 +1776,6 @@ function Set() {
         }
         return false;
     };
-
     // this method will remove an element from a set
     this.remove = function(element) {
         if(this.has(element)){
@@ -1891,66 +1785,48 @@ function Set() {
         }
         return false;
     };
-
     // this method will return the size of the collection
     this.size = function() {
         return collection.length;
     };
-
     // this method will return the union of two sets
     this.union = function(otherSet) {
         var unionSet = new Set();
-
         var firstSet = this.values();
         var secondSet = otherSet.values();
-
         firstSet.forEach(function(e){
             unionSet.add(e);
         });
-
         secondSet.forEach(function(e){
             unionSet.add(e);
         });
-
         return unionSet;
     };
-
     // this method will return the intersection of two sets as a new set
     this.intersection = function(otherSet) {
         var intersectionSet = new Set();
-
         var firstSet = this.values();
-
         firstSet.forEach(function(e){
             if(otherSet.has(e)){
                 intersectionSet.add(e);
             }
         });
-
         return intersectionSet;
     };
-
     // this method will return the difference of two sets as a new set
     this.difference = function(otherSet) {
         var differenceSet = new Set();
-
         var firstSet = this.values();
-
         firstSet.forEach(function(e){
             if(!otherSet.has(e)){
                 differenceSet.add(e);
             }
         });
-
         return differenceSet;
     };
-
     // change code below this line
-
     // change code above this line
-
 };
-
   var setA = new Set();
   var setB = new Set();
   setA.add("a");
@@ -1959,12 +1835,10 @@ function Set() {
   setB.add("a");
   setB.add("d");
   var subSetSetAB = setA.subset(setB);
-
   console.log(subSetSetAB) // should be true;
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -1974,22 +1848,16 @@ function Set() {
       "title": "Creating and adding to sets in ES6",
       "description": [
 Now we have worked through ES5, we are going to perform similar actions in ES6. This will be considerably easier. Set is now now a provided data structure like Object, Array, etc. so many of the operations we wrote by hand are now included for us. Let's take a look:
-
 To create a new empty set:
-
 let set = new Set();
 You can create a set with a value:
-
 let set = new Set(1);
 You can create a set with an array:
-
 let set = new Set([1,2,3]);
 Once you have created a set, you can add the values you wish using set.add:
-
 let set = new Set([1,2,3]);
 set.add([4,5,6]);
 For this exercise, we will return a set with the following values: 1, 2, 3, 'Taco', 'Cat', 'Awesome'
-
 Test suite (using the assert method)
 assert((function(){let test = checkSet(); let testArr = [...test];  testArr === [ 1, 2, 3, 'Taco', 'Cat', 'Awesome'])}, 'message: Your Set was returned correctly!');
       ],
@@ -1997,7 +1865,6 @@ assert((function(){let test = checkSet(); let testArr = [...test];  testArr === 
 function checkSet(){
    let set = new Set([1,2,3,3,2,1,2,3,1]);
    // change code below this line
-
    // change code above this line
    console.log(set)
 };
@@ -2005,11 +1872,9 @@ checkSet();
       ],
       "tests": [
 assert((function(){let test = checkSet(); let testArr = [...test];  testArr === [ 1, 2, 3, 'Taco', 'Cat', 'Awesome'])}, 'message: Your Set was returned correctly!');
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2019,24 +1884,18 @@ assert((function(){let test = checkSet(); let testArr = [...test];  testArr === 
       "title": "Removing items from a set in ES6",
       "description": [
 Now we will see how we can remove items from an ES6 Set.
-
 Let's create a Set:
-
 let set = new Set([1,2,3]);
 Once you have created a set object, you can remove values you no longer want with delete. For example:
-
 let set = new Set([1,2,3]);
 set.delete(1);
 console.log([...set]) // should return [ 2, 3 ]
 In this exercise we will return a Set with the passed parameter.
-
-
       ],
       "challengeSeed": [
 function checkSet(itemToRemove){
    let set = new Set([1,2,3,3,2,1,2,3,1]);
    // change code below this line
-
    // change code above this line
    console.log(set)
 }
@@ -2044,11 +1903,9 @@ checkSet(1);
       ],
       "tests": [
 assert((function(){let test = checkSet(); let testArr = [...test];  testArr === [ 2, 3 ])}, 'message: Your Set was returned correctly!');
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2058,23 +1915,17 @@ assert((function(){let test = checkSet(); let testArr = [...test];  testArr === 
       "title": "Using .has and .size on an ES6 Set",
       "description": [
 Now we will look at the .has and .size methods available on the Set object.
-
 let set = new Set([1,2,3]);
 let hasTwo = set.has(2); // will return true or false
 let howBig = set.size; // will return an integer representing the size of the Array
 console.log("Has a 2: " + hasTwo); // should be true
 console.log("Length of Set: " + howBig); // should show 3
 In this exercise we will pass in an array of a values and a value to check for. We will return a new array with (true or false) for the presence of the value and the size of the Set.
-
-
       ],
       "challengeSeed": [
 function checkSet(arrToBeSet, checkValue){
-
    // change code below this line
-
    // change code above this line
-
    console.log(set)
 }
 let checkSetOutput = checkSet([1,3,5],5);
@@ -2085,7 +1936,6 @@ assert((function(){let test = checkSet([1,2,3], 2); test === [ true, 3 ])}, 'mes
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2095,40 +1945,28 @@ assert((function(){let test = checkSet([1,2,3], 2); test === [ true, 3 ])}, 'mes
       "title": "Using Spread and Notes for ES5 Set() Integration",
       "description": [
 Next up is one of the coolest things in ES6!
-
 The noble spread operator! '...' can take iterable objects in ES6 and turn them into arrays
-
 Let's create a Set, and check out the spread function.
-
 let set = new Set([1,2,3]);
 let setToArr = [...set]
 console.log(setToArr) // returns [ 1, 2, 3 ]
 Awesome, right!?
-
 In this exercise we will pass in a set object. We will return an array with the values of the Set.
-
 The ES5 Set() function we created, can be used to perform union, intersection, difference and subset functions using the new ES6 Sets with very little modification.
-
-
       ],
       "challengeSeed": [
 function checkSet(set){
-
    // change code below this line
-
    // change code above this line
-
 };
 let checkSetOutput = checkSet(new Set([1, 2, 3, 4, 5, 6, 27]));
 console.log(checkSetOutput);
       ],
       "tests": [
 assert((function(){let test = checkSet(new Set([1,2,3,4,5,6,7])); test === [ 1, 2, 3, 4, 5, 6, 7 ])}, 'message: Your Set was returned correctly!');
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2138,10 +1976,8 @@ assert((function(){let test = checkSet(new Set([1,2,3,4,5,6,7])); test === [ 1, 
       "title": "Methods for queuing with priority using the Priority Queue",
       "description": [
 In this challenge you will be creating a Priority Queue. A Priority Queue is a special type of Queue with one primary difference, that you can set the priority in the queue as either high represented by 0 or low represented by an integer greater than 0 during the enqueue process. Item priority will override the placement order: that is, an item enqueue with a higher priority than any preceding items will be moved to the front of the queue. If items have equal priority, then placement order will decide their dequeue order. For instance:
-
 collection = [['taco',1]]
 PriorityQueue.enqueue(['kitten', 1]);
-
 console.log([...PriorityQueue])
 // would be [['taco', 1], ['kitten', 1]]
 // not [['kitten', 1], ['taco', 1]]
@@ -2154,10 +1990,8 @@ function PriorityQueue () {
       (console.log(collection));
     };
     // Only change code below this line
-
     // Only change code above this line
   }
-
 // Test your queue class
 var DMV = new PriorityQueue();
 DMV.enqueue(['David Brown', 2]);
@@ -2183,7 +2017,6 @@ assert((function(){var test = new PriorityQueue(); DMV.enqueue(['David Brown', 1
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2193,34 +2026,25 @@ assert((function(){var test = new PriorityQueue(); DMV.enqueue(['David Brown', 1
       "title": "How to Create a Circular Queue",
       "description": [
 In this challenge you will be creating a Circular Queue. A circular queue is basically a queue that writes to the end of a collection then begins over writing itself at the beginning of the collection. This is type of data structure has some useful applications in certain situations. For example, a circular buffer can be used in streaming media. Once the queue is full, new media data simply begins to overwrite old data.
-
 A good way to illustrate this concept is with an array:
-
 [1, 2, 3, 4, 5]
 ^Read @ 0
 ^Write @ 0
 Here the read and write are both at position 0. Now the queue gets 3 new records a, b, and c. Our queue now looks like:
-
 [a, b, c, 4, 5]
 ^Read @ 0
        ^write @ 3
 As the read head reads, it can remove values or keep them:
-
 [, , , 4, 5]
     ^Read @ 3
     ^write @ 3
 Once the write reaches the end of the array it loops back to the beginning:
-
 [f, , , d, e]
     ^Read @ 3
   ^write @ 1
 So as you can see the buffer consumes less memory, this can be useful for processing large data file conversions and prevent a memory leak from slowing down a conversion process.
-
 Instructions:
-
 In this challenge you will implement a 5 element circular buffer. Your component will maintain a read pointer and a write pointer. New items can be added singly or as an array of items (Hint, use Array.isArray()). New items will be added to the collection starting at position 0, advancing the write pointer. As the queue is dequeued it will delete the data and advance the read pointer. We will also create methods to return the entire queue and the front of the queue.
-
-
       ],
       "challengeSeed": [
 function CircularQueue () {
@@ -2230,10 +2054,8 @@ function CircularQueue () {
       return collection;
     };
     // Only change code below this line
-
     // Only change code above this line
   }
-
 // Test your queue class
 var CircQue = new CircularQueue();
 CircQue.enqueue([1,2,3,4,5,6]);
@@ -2255,7 +2077,6 @@ assert((function(){var test = new CircularQueuee(); test.enqueue('a'); test.enqu
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2265,19 +2086,12 @@ assert((function(){var test = new CircularQueuee(); test.enqueue('a'); test.enqu
       "title": "Directed and Undirected Graphs",
       "description": [
 This challenge starts a series of challenges that will teach graph data structures and some algorithms involving graphs. You may be familiar with graphs with an x- and y-axis found in your math classes. However, here graphs mean a different thing.
-
 The data structure of graphs are collections of things and the relationships or connections among them. Graphs are also known as networks.
-
 When talking about graphs, the precise term for "objects" are nodes or vertices. Similarly, the precise term for "connections" is edges.
-
 One example of graphs is a social network where the nodes are you and other people, and the edges are whether two people are friends with each other.
-
 There are two major types of graphs: directed and undirected. Undirected graphs are graphs without any direction on the edges between nodes. Directed graphs, in contrast, are graphs with a direction in its edges.
-
 An example of an undirected graph could be a social network. The nodes are people and the edges are friendship. An example of a directed network could be the internet and web page links. Here, the nodes are web pages and the directed edges are links to other pages, which might not necessarily point the other way.
-
 Instructions
-
 Click "Run tests" to go to the next challenge to find out how different ways to represent graphs in JavaScript like the one in the editor.
       ],
       "challengeSeed": [
@@ -2288,11 +2102,9 @@ var undirected = {
       ],
       "tests": [
 assert(Object.keys(undirected).length === 2, 'message: <code>undirected</code> should only contain two nodes.');
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2302,35 +2114,28 @@ assert(Object.keys(undirected).length === 2, 'message: <code>undirected</code> s
       "title": "Adjacency List",
       "description": [
 Graphs can be represented in different ways. Here we describe one way, which is called an adjacency list.
-
 An adjacency list is essentially a bulleted list where the left side is the node and the right side lists all the other nodes it's connected to. Below is a representation of an adjacency list.
-
 Node1: Node2, Node3
 Node2: Node1
 Node3: Node1
 Above is an undirected graph because Node1 is connected to Node2 and Node3, and that information is consistent with the connections Node2 and Node3 show. An adjacency list for a directed graph would mean each row of the list shows direction. If the above was directed, then Node2: Node1 would mean there the directed edge is pointing from Node2 towards Node1.
-
 We can represent the undirected graph above as an adjacency list by putting it within a JavaScript object.
-
 var undirectedG = {
   Node1: ["Node2", "Node3"],
   Node2: ["Node1"],
   Node3: ["Node3"]
 };
 This can also be more simply represented as an array where the nodes just have numbers rather than string labels.
-
 var undirectedGArr = [
   [1, 2], # Node1
   [0],    # Node2
   [2]     # Node3
 ];
 Instructions
-
 Create a social network as an undirected graph with 4 nodes/people named James, Jill, Jenny, and Jeff. There are edges/relationships between James and Jeff, Jill and Jenny, and Jeff and Jenny.
       ],
       "challengeSeed": [
 var undirectedAdjList = {
-
 };
       ],
       "tests": [
@@ -2341,7 +2146,6 @@ assert(undirectedAdjList.Jeff.includes("Jenny") && undirectedAdjList.Jenny.inclu
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2351,41 +2155,32 @@ assert(undirectedAdjList.Jeff.includes("Jenny") && undirectedAdjList.Jenny.inclu
       "title": "Adjacency Matrix",
       "description": [
 Another way to represent a graph is to put it in an adjacency matrix.
-
 An adjacency matrix is a two-dimensional (2D) array where each nested array has the same number of elements as the outer array. In other words, it is a matrix or grid of numbers, where the numbers represent the edges. Zeros mean there is no edge or relationship.
-
     1 2 3
    ------
 1 | 0 1 1
 2 | 1 0 0
 3 | 1 0 0
 Above is a very simple, undirected graph where you have three nodes, where the first node is connected to the second and third node. Note: The numbers to the top and left of the matrix are just labels for the nodes.
-
 Below is a JavaScript implementation of the same thing.
-
 var adjMat = [
   [0, 1, 1],
   [1, 0, 0],
   [1, 0, 0]
 ];
 Unlike an adjacency list, each "row" of the matrix has to have the same number of elements as nodes in the graph. Here we have a three by three matrix, which means we have three nodes in our graph.
-
 A directed graph would look similar. Below is a graph where the first node has an edge pointing toward the second node, and then the second node has an edge pointing to the third node.
-
 var adjMatDirected = [
   [0, 1, 0],
   [0, 0, 1],
   [0, 0, 0]
 ];
 Graphs can also have weights on their edges. So far, we have unweighted edges where just the presence and lack of edge is binary (0 or 1). You can have different weights depending on your application.
-
 Instructions
-
 Create an adjacency matrix of an undirected graph with five nodes. This matrix should be in a multi-dimensional array. These five nodes have relationships between the first and fourth node, the first and third node, the third and fifth node, and the fourth and fifth node. All edge weights are one.
       ],
       "challengeSeed": [
 var adjMatUndirected = [
-
 ];
       ],
       "tests": [
@@ -2397,7 +2192,6 @@ assert((adjMatUndirected[3][4] === 1) && (adjMatUndirected[4][3] === 1), 'messag
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2407,20 +2201,15 @@ assert((adjMatUndirected[3][4] === 1) && (adjMatUndirected[4][3] === 1), 'messag
       "title": "Incidence matrix",
       "description": [
 Yet another way to represent a graph is to put it in an incidence matrix.
-
 An incidence matrix is a two-dimensional (2D) array. Generally speaking, an incidence matrix relates two different classes of objects between its two dimensions. This kind of matrix is similar to an adjacency matrix. However, the rows and columns mean something else here.
-
 In graphs, we have edges and nodes. These will be our "two different classes of objects". This matrix will have the rows be the nodes and columns be the edges. This means that we can have an uneven number of rows and columns.
-
 Each column will represent a unique edge. Also, each edge connects two nodes. To show that there is an edge between two nodes, you will put a 1 in the two rows of a particular column. Below is a 3 node graph with one edge between node 1 and node 3.
-
     1
    ---
 1 | 1
 2 | 0
 3 | 1
 Here is an example of an incidence matrix with 4 edges and 4 nodes. Remember, the columns are the edges and rows are the nodes themselves.
-
     1 2 3 4
    --------
 1 | 0 1 1 1
@@ -2428,7 +2217,6 @@ Here is an example of an incidence matrix with 4 edges and 4 nodes. Remember, th
 3 | 1 0 0 1
 4 | 0 0 1 0
 Below is a JavaScript implementation of the same thing.
-
 var incMat = [
   [0, 1, 1, 1],
   [1, 1, 0, 0],
@@ -2436,7 +2224,6 @@ var incMat = [
   [0, 0, 1, 0]
 ];
 To make a directed graph, use -1 for an edge leaving a particular node and 1 for an edge entering a node.
-
 var incMatDirected = [
   [ 0, -1,  1, -1],
   [-1,  1,  0,  0],
@@ -2444,16 +2231,12 @@ var incMatDirected = [
   [ 0,  0, -1,  0]
 ];
 Graphs can also have weights on their edges. So far, we have unweighted edges where just the presence and lack of edge is binary (0 or 1). You can have different weights depending on your application. A different weight is represented as numbers greater than 1.
-
 Instructions
-
 Create an incidence matrix of an undirected graph with five nodes and four edges. This matrix should be in a multi-dimensional array.
-
 These five nodes have relationships following relationships. The first edge is between the first and second node. The second edge is between the second and third node. The third edge is between the third and fifth node. And four edge is between the fourth and second node. All edge weights are one and the edge order matters.
       ],
       "challengeSeed": [
 var incMatUndirected = [
-
 ];
       ],
       "tests": [
@@ -2465,7 +2248,6 @@ assert((incMatUndirected[1][3] === 1) && (incMatUndirected[3][3] === 1), 'messag
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2475,28 +2257,22 @@ assert((incMatUndirected[1][3] === 1) && (incMatUndirected[3][3] === 1), 'messag
       "title": "Find the Minimum and Maximum Value in a Binary Search Tree",
       "description": [
 This series of challenges will introduce the tree data structure. Trees are an important and versatile data structure in computer science. Of course, their name comes from the fact that when visualized they look much like the trees we are familiar with in the natural world. A tree data structure begins with one node, typically referred to as the root, and from here branches out to additional nodes, each of which may have more child nodes, and so on and so forth. The data structure is usually visualized with the root node at the top; you can think of it as a natural tree flipped upside down.
-
 First, let's describe some common terminology we will encounter with trees. The root node is the top of the tree. Data points in the tree are called nodes. Nodes with branches leading to other nodes are referred to as the parent of the node the branch leads to (the child). Other more complicated familial terms apply as you might expect. A subtree refers to all the descendants of a particular node, branches may be referred to as edges, and leaf nodes are nodes at the end of the tree that have no children. Finally, note that trees are inherently recursive data structures. That is, any children of a node are parents of their own subtree, and so on. The recursive nature of trees is important to understand when designing algorithms for common tree operations.
-
 To begin, we will discuss a particular type of a tree, the binary tree. In fact, we will actually discuss a particular binary tree, a binary search tree. Let's describe what this means. While the tree data structure can have any number of branches at a single node, a binary tree can only have two branches for every node. Furthermore, a binary search tree is ordered with respective to the child subtrees, such that each left subtree is less than or equal to the parent node, and each right subtree is greater than or equal to the parent node. Binary search trees are very common and useful data structures because they provide logarithmic time in the average case for several common operations such as lookup, insertion, and deletion.
-
 Instructions: We'll start simple. We've defined the skeleton of a binary search tree structure here in addition to a function to create nodes for our tree. Observe that each node may have a left and right value. These will be assigned child subtrees if they exist. In our binary search tree, define two methods,
 findMin and findMax. These methods should return the minimum and maximum value held in the binary search tree. If you get stuck, reflect on the invariant that must be true for binary search trees: each left subtree is less than or equal to its parent and each right subtree is greater than or equal to
 its parent. Let's also say that our tree can only store integer values. If the tree is empty, either method should return null.
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
     this.right = null;
 };
-
 function BinarySearchTree() {
     this.root = null;
     // change code below this line
-
     // change code above this line
 };
       ],
@@ -2542,7 +2318,6 @@ BinarySearchTree.prototype = {
       ]
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2553,26 +2328,21 @@ BinarySearchTree.prototype = {
       "description": [
 Now that we have an idea of the basics lets write a more complex method.
 In this challenge, we will create a method to add new values to our binary search tree. The method should be called add and it should accept an integer value to add to the tree. Take care to maintain the invariant of a binary search tree: the value in each left child should be less than or equal to the parent value, and the value in each right child should be greater than or equal to the parent value. Here, let's make it so our tree cannot hold duplicate values. If we try to add a value that already exists, the method should return null. Otherwise, if the addition is successful, undefined should be returned.
-
 Hint: trees are naturally recursive data structures!
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
     this.right = null;
 };
-
 function BinarySearchTree() {
     this.root = null;
     // change code below this line
-
     // change code above this line
 };
       ],
-
       "tail": [
 BinarySearchTree.prototype = {
     isBinarySearchTree() {
@@ -2603,7 +2373,6 @@ BinarySearchTree.prototype = {
         };
     }
 };
-
       ]
       "tests": [
 assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefined') { test = new BinarySearchTree() }; return (typeof test == 'object')})(), 'The BinarySearchTree data structure exists.');
@@ -2613,7 +2382,6 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2623,29 +2391,21 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       "title": "Check if an Element is Present in a Binary Search Tree",
       "description": [
 Now that we have a general sense of what a binary search tree is let's talk about it in a little more detail. Binary search trees provide logarithmic time for the common operations of lookup, insertion, and deletion in the average case, and linear time in the worst case. Why is this? Each of those basic operations requires us to find an item in the tree (or in the case of insertion to find where it should go) and because of the tree structure at each parent node we are branching left or right and effectively excluding half the size of the remaining tree. This makes the search proportional to the logarithm of the number of nodes in the tree, which creates logarithmic time for these operations in the average case.
-
 Ok, but what about the worst case? Well, consider constructing a tree from the following values, adding them left to right: 10, 12, 17, 25. Following our rules for a binary search tree, we will add 12 to the right of 10, 17 to the right of this, and 25 to the right of this. Now our tree resembles a linked list and traversing it to find 25 would require us to traverse all the items in linear fashion. Hence, linear time in the worst case. The problem here is that the tree is unbalanced. We'll look a little more into what this means in the following challenges.
-
 Instructions: In this challenge, we will create a utility for our tree. Write a method isPresent which takes an integer value as input and returns a boolean value for the presence or absence of that value in the binary search tree.
-
-
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
     this.right = null;
 };
-
 function BinarySearchTree() {    
     this.root = null;
     // change code below this line
-
     // change code above this line
 };
-
       ],
       "tail": [
 BinarySearchTree.prototype = {
@@ -2687,7 +2447,6 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2697,32 +2456,22 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       "title": "Find the Minimum and Maximum Height of a Binary Search Tree",
       "description": [
 In the last challenge we described a scenario in which a tree could become unbalanced. To understand the concept of balance, let's take a look at another tree property: height. Height in a tree represents the distance from the root node to any given leaf node. Different paths in a highly branched tree structure may have different heights, but for a given tree there will be a minimum and maximum height. If the tree is balanced, these values will differ at most by one. This means that in a balanced tree, all the leaf nodes exist within the same level, or if they are not within the same level they are at most one level apart.
-
 The property of balance is important for trees because it is what determines the efficiency of tree operations. As we explained in the last challenge, we face worst case time complexity for heavily unbalanced trees. Self-balancing trees are commonly used to account for this issue in trees with dynamic data sets. Common examples of these include AVL trees, red-black trees, and B-trees. These trees all contain additional internal logic which re-balance the tree when insertions or deletions create a state of imbalance.
-
 Note: A similar property to height is depth, which refers to how far a given node is from the root node.
-
 Instructions: Write two methods for our binary tree: findMinHeight and findMaxHeight. These methods should return an integer value for the minimum and maximum height within a given binary tree, respectively. If the node is empty let's assign it a height of -1 (that's the base case). Finally, add a third method isBalanced which returns a true or false depending on whether the tree is balanced or not. You can use the first two methods you just wrote to determine this.
-
-
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
     this.right = null;
 };
-
 function BinarySearchTree() {
     this.root = null;
     // change code below this line
-
     // change code above this line
 };
-
-
       ],
       "tail": [
 BinarySearchTree.prototype = {
@@ -2768,7 +2517,6 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2778,34 +2526,25 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       "title": "Use Depth First Search in a Binary Search Tree",
       "description": [
 We know how to search a binary search tree for a specific value. But what if we just want to explore the entire tree? Or what if we don't have an ordered tree and we need to just search for a value? Here we will introduce some tree traversal methods which can be used to explore tree data structures. First up is depth-first search. In depth-first search, a given subtree is explored as deeply as possible before the search continues on to another subtree. There are three ways this can be done:
-
 In-order: Begin the search at the left-most node and end at the right-most node.
 Pre-order: Explore all the roots before the leaves.
 Post-order: Explore all the leaves before the roots.
 As you may guess, you may choose different search methods depending on what type of data your tree is storing and what you are looking for. For a binary search tree, an inorder traversal returns the nodes in sorted order.
-
 Instructions: Here we will create these three search methods on our binary search tree. Depth-first search is an inherently recursive operation which continues to explore further subtrees so long as child nodes are present. Once you understand this basic concept, you can simply rearrange the order in which you explore the nodes and subtrees to produce any of the three searches above. For example, in post-order search we would want to recurse all the way to a leaf node before we begin to return any of the nodes themselves, whereas in pre-order search we would want to return the nodes first, and then continue recursing down the tree.
-
 Define inorder, preorder, and postorder methods on our tree. Each of these methods should return an array of items which represent the tree traversal. Be sure to return the integer values at each node in the array, not the nodes themselves. Finally, return null if the tree is empty.
-
-
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
     this.right = null;
 };
-
 function BinarySearchTree() {
     this.root = null;
     // change code below this line
-
     // change code above this line
 };
-
       ],
       "tail": [
 BinarySearchTree.prototype = {
@@ -2853,7 +2592,6 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2863,27 +2601,20 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       "title": "Use Breadth First Search in a Binary Search Tree",
       "description": [
  Here we will introduce another tree traversal method: breadth-first search. In contrast to the depth-first search methods from the last challenge, breadth-first search explores all the nodes in a given level within a tree before continuing on to the next level. Typically, queues are utilized as helper data structures in the design of breadth-first search algorithms.
-
 In this method, we start by adding the root node to a queue. Then we begin a loop where we dequeue the first item in the queue, add it to a new array, and then inspect both its child subtrees. If it's children are not null, they are each enqueued. This process continues until the queue is empty.
-
 Instructions: Let's create a breadth-first search method in our tree called levelOrder. This method should return an array containing the values of all the tree nodes, explored in a breadth-first manner. Be sure to return the values in the array, not the nodes themselves. A level should be
 traversed from left to right. Next, let's write a similar method called reverseLevelOrder which performs the same search but in the reverse direction (right to left) at each level.
-
-
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
     this.right = null;
 };
-
 function BinarySearchTree() {
     this.root = null;
     // change code below this line
-
     // change code above this line
 };
       ],
@@ -2930,7 +2661,6 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -2940,20 +2670,16 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       "title": "Delete a Leaf Node in a Binary Search Tree",
       "description": [
 This is the first of three challenges where we will implement a more difficult operation in binary search trees: deletion. Deletion is difficult because removing nodes breaks links in the tree. These links must be carefully reestablished to ensure the binary tree structure is maintained. For some deletions, this means the tree must be rearranged. In general, you will encounter one of three cases when trying to delete a node:
-
 Leaf Node: The target to delete has zero children.
 One Child: The target to delete only has one child.
 Two Children: The target to delete has two child nodes.
 Removing a leaf node is easy, we simply remove it. Deleting a node with one child is also relatively easy, we simply remove it and link its parent to child of the node we deleted. Removing a node with two children is more difficult, however, because this creates two child nodes that need to be reconnected to the parent tree. We'll see how to deal with this case in the third challenge. Additionally, you need to be mindful of some edge cases when handling deletion. What if the tree is empty? What if the node to delete is the root node? What if there are only two elements in the tree? For now, let's handle the first case where we delete a leaf node.
-
 Instructions: Create a method on our binary tree called remove. We'll build the logic for our deletion operation in here. First, you'll want to create a function within remove that finds the node we are trying to delete in the current tree. If the node is not present in the tree, remove should return null. Now, if the target node is a leaf node with no children, then the parent reference to it should be set to null. This effectively deletes the node from the tree. To do this, you will have to keep track of
 the parent of the node we are trying to delete as well. It will also be useful to create a way to track the number of children the target node has, as this will determine which case our deletion falls under.
-
 We will handle the second and third cases in the next challenges. Good luck!
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
@@ -3051,7 +2777,6 @@ BinarySearchTree.prototype = {
       ]
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3062,13 +2787,11 @@ BinarySearchTree.prototype = {
       "description": [
 Now that we can delete leaf nodes let's move on to the second case: deleting a node with one child. For this case, say we have a tree with the following nodes 1 — 2 — 3 where 1 is the root. To delete 2, we simply need to make the right reference in 1 point to 3. More generally,
 to delete a node with only one child, we make that node's parent reference the next node in the tree.
-
 Instructions: We've provided some code in our remove method that accomplishes the tasks from the last challenge. We find the target to delete and its parent and define the number of children
 the target node has. Let's add the next case here for target nodes with only one child. Here, we'll have to determine if the single child is a left or right branch in the tree and then set the correct reference in the parent to point to this node. In addition, let's account for the case where the target is the root node (this means the parent node will be null). Feel free to replace all the starter code with your own as long as it passes the tests.
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
@@ -3077,16 +2800,12 @@ function Node(value) {
 // SEED CODE --------------------------------
 function BinarySearchTree() {
     this.root = null;
-
     this.remove = function(value) {
-
         if (this.root == null) {
             return null;
         };
-
         let target;
         let parent = null;
-
         // find the target value and its parent
         (function findValue(node = this.root) {
             if (value == node.value) {
@@ -3103,14 +2822,11 @@ function BinarySearchTree() {
                 return null;
             };
         }).bind(this)();
-
         if (target == null) {
             return null;
         }
-
         // count the children of the target to delete
         let children = (target.left != null ? 1 : 0) + (target.right != null ? 1 : 0);
-
         // case 1: target has no children
         if (children == 0) {
             if (target == this.root) {
@@ -3124,7 +2840,6 @@ function BinarySearchTree() {
                 };
             };
         }
-
         // case 2: target has one child, change code below this line
 };
       ],
@@ -3216,7 +2931,6 @@ BinarySearchTree.prototype = {
       ]
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3226,14 +2940,11 @@ BinarySearchTree.prototype = {
       "title": "Delete a Node with Two Children in a Binary Search Tree",
       "description": [
 Removing nodes that have two children is the hardest case to implement. Removing a node like this produces two subtrees that are no longer connected to the original tree structure. How can we reconnect them? One method is to find the smallest value in the right subtree of the target node and replace the target node with this value. Selecting the replacement in this way ensures that it is greater than every node in the left subtree it becomes the new parent of but also less than every node in the right subtree it becomes the new parent of.
-
 Once this replacement is made the replacement node must be removed from the right subtree. Even this operation is tricky because the replacement may be a leaf or it may itself be the parent of a right subtree. If it is a leaf we must remove its parent's reference to it. Otherwise, it must be the right child of the target. In this case, we must replace the target value with the replacement value and make the target reference the replacement's right child.
-
 Instructions: Let's finish our remove method by handling the third case. We've provided some code again for the first two cases. Add some code now to handle target nodes with two children. Any edge cases to be aware of? What if the tree has only three nodes? Once you are finished this will complete our deletion operation for binary search trees. Nice job, this is a pretty hard problem!
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
@@ -3241,18 +2952,13 @@ function Node(value) {
 };
 // SEED CODE --------------------------------
 function BinarySearchTree() {
-
     this.root = null;
-
     this.remove = function(value) {
-
         if (this.root == null) {
             return null;
         };
-
         let target;
         let parent = null;
-
         // find the target value and its parent
         (function findValue(node = this.root) {
             if (value == node.value) {
@@ -3269,14 +2975,11 @@ function BinarySearchTree() {
                 return null;
             };
         }).bind(this)();
-
         if (target == null) {
             return null;
         }
-
         // count the children of the target to delete
         let children = (target.left != null ? 1 : 0) + (target.right != null ? 1 : 0);
-
         // case 1: target has no children
         if (children == 0) {
             if (target == this.root) {
@@ -3290,7 +2993,6 @@ function BinarySearchTree() {
                 };
             };
         }
-
         // case 2: target has one child
         else if (children == 1) {
             let newChild = (target.left != null) ? target.left : target.right;
@@ -3305,11 +3007,8 @@ function BinarySearchTree() {
             }
             target = null;
         }
-
         // case 3: target has two children, change code below this line
-
     };
-
 };
       ],
       "tests": [
@@ -3400,10 +3099,8 @@ BinarySearchTree.prototype = {
     }
 };
       ]
-
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3416,17 +3113,14 @@ Here will we create a function to invert a binary tree. Given a binary tree, we 
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 function Node(value) {
     this.value = value;
     this.left = null;
     this.right = null;
 };
-
 function BinarySearchTree() {
     this.root = null;
     // change code below this line
-
     // change code above this line
 };
       ],
@@ -3480,7 +3174,6 @@ BinarySearchTree.prototype = {
     }
 };
       ]
-
       "tests": [
 assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefined') { test = new BinarySearchTree() }; return (typeof test == 'object')})(), 'The BinarySearchTree data structure exists.');
 assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefined') { test = new BinarySearchTree() } else { return false; }; return (typeof test.invert == 'function')})(), 'The binary search tree has a method called invert.');
@@ -3489,7 +3182,6 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3500,22 +3192,15 @@ assert((function() { let test = false; if (typeof BinarySearchTree !== 'undefine
       "description": [
 Here we will move on from binary search trees and take a look at another type of tree structure called a trie. A trie is an ordered search tree commonly used to hold strings, or more generically associative arrays or dynamic datasets in which the keys are strings. They are very good at storing sets of data when many keys will have overlapping prefixes, for example, all
 the words in a dictionary.
-
 Unlike a binary tree, nodes are not associated with actual values. Instead, the path to a node represents a specific key. For instance, if we wanted to store the string code in a trie, we would have four nodes, one for each letter: c — o — d — e. Following that path through all these nodes will then create code as a string — that path is the key we stored. Then, if we wanted to add the string coding, it would share the first three nodes of code before branching away after the d. In this way, large datasets can be stored very compactly. In addition, search can be very quick because it is effectively limited to the length of the string you are storing. Furthermore, unlike binary trees a node can store any number of child nodes.
-
 As you might have guessed from the above example, some metadata is commonly stored at nodes that hold the end of a key so that on later traversals that key can still be retrieved. For instance, if we added codes in our example above we would need some way to know that the e in code represents the end of a key that was previously entered. Otherwise, this information would effectively be lost when we add codes.
-
 Instructions: Let's create a trie to store words. It will accept words through an add method and store these in a trie data structure. It will also allow us to query if a given string is a word with an isWord method, and retrieve all the words entered into the trie with a print method. isWord should return a
 boolean value and print should return an array of all these words as string values.
-
 In order for us to verify that this data structure is implemented correctly, we've provided a Node structure for each node in the tree. Each node will be an object with a keys property which is a JavaScript Map object. This will hold the individual letters that are valid keys of each node. We've also
 created an end property on the nodes that can be set to true if the node represents the termination of a word.
-
-
       ],
       "challengeSeed": [
 const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
-
 let Node = function() {
   this.keys = new Map();
   this.end = false;
@@ -3528,7 +3213,6 @@ let Node = function() {
 };
 let Trie = function() {
   // change code below this line
-
   // change code above this line
 };
       ],
@@ -3541,7 +3225,6 @@ assert((function testTrie() { let test = false; if (typeof Trie !== 'undefined')
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3551,10 +3234,8 @@ assert((function testTrie() { let test = false; if (typeof Trie !== 'undefined')
       "title": "Implement Bubble Sort",
       "description": [
 This is the first of several challenges on sorting algorithms. Given an array of unsorted items, we want to be able to return a sorted array. We will see several different methods to do this and learn some tradeoffs between these different approaches. While most modern languages have built-in sorting methods for operations like this, it is still important to understand some of the common basic approaches and learn how they can be implemented.
-
 Here we will see bubble sort. The bubble sort method starts at the beginning of an unsorted array and 'bubbles up' unsorted values towards the end, iterating through the array until it is completely sorted. It does this by comparing adjacent items and swapping them if they are out of order. The method continues looping through the array until no swaps occur at which point the array is sorted.
 This method requires multiple iterations through the array and for average and worst cases has quadratic time complexity. While simple, it is usually impractical in most situations.
-
 Instructions: Write a function bubbleSort which takes an array of integers as input and returns an array of these integers in sorted order. We've provided a helper method to generate a random array of integer values.
       ],
       "challengeSeed": [
@@ -3564,10 +3245,8 @@ let array = new Array();
   array.push(+(Math.random() * 100).toFixed(0));
   return (size > 1) ? createArray(size - 1) : undefined;
 })(12);
-
 function bubbleSort(array) {
   // change code below this line
-
   // change code above this line
   return array;
 };
@@ -3584,7 +3263,6 @@ console.assert(isSorted(bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3594,7 +3272,6 @@ console.assert(isSorted(bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,
       "title": "Implement Selection Sort",
       "description": [
 Here we will implement selection sort. Selection sort works by selecting the minimum value in a list and swapping it with the first value in the list. It then starts at the second position, selects the smallest value in the remaining list, and swaps it with the second element. It continues iterating through the list and swapping elements until it reaches the end of the list. Now the list is sorted. Selection sort has quadratic time complexity in all cases.
-
 Instructions: Write a function selectionSort which takes an array of integers as input and returns an array of these integers in sorted order.
       ],
       "challengeSeed": [
@@ -3604,10 +3281,8 @@ let array = new Array();
   array.push(+(Math.random() * 100).toFixed(0));
   return (size > 1) ? createArray(size - 1) : undefined;
 })(12);
-
 function selectionSort(array) {
   // change code below this line
-
   // change code above this line
   return array;
 };
@@ -3618,14 +3293,12 @@ function isSorted(arr) {
   return check(0);
 };
 ]
-
       "tests": [
 console.assert(typeof selectionSort == 'function', 'selectionSort is a function');
 console.assert(isSorted(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), 'selectionSort returns a sorted array');
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3635,7 +3308,6 @@ console.assert(isSorted(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55
       "title": "Implement Insertion Sort",
       "description": [
  The next sorting method we'll look at is insertion sort. This method works by building up a sorted array at the beginning of the list. It begins the sorted array with the first element. Then it inspects the next element and swaps it backwards into the sorted array until it is in sorted position. It continues iterating through the list and swapping new items backwards into the sorted portion until it reaches the end. This algorithm has quadratic time complexity in the average and worst cases.
-
 Instructions: Write a function insertionSort which takes an array of integers as input and returns an array of these integers in sorted order.
       ],
       "challengeSeed": [
@@ -3645,10 +3317,8 @@ let array = new Array();
   array.push(+(Math.random() * 100).toFixed(0));
   return (size > 1) ? createArray(size - 1) : undefined;
 })(12);
-
 function insertionSort(array) {
   // change code below this line
-
   // change code above this line
   return array;
 };
@@ -3665,7 +3335,6 @@ console.assert(isSorted(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3676,10 +3345,8 @@ console.assert(isSorted(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55
       "description": [
  All of the linked lists we've created so far are singly linked lists. Here, we'll create
 a doubly linked list. As the name implies, nodes in a doubly linked list have references to the next and previous node in the list. This allows us to traverse the list in both directions but it also requires more memory to be used because every node must contain an additional reference to the previous node in the list.
-
 Instructions: We've provided a Node object and started our DoublyLinkedList. Let's
 add two methods to our doubly linked list called add and remove. The add method should accept integers or strings and add them to the list and remove should accept an integer or string and remove all copies of this integer or string that exist in the list. Be careful to handle any possible edge cases when writing these methods, such as deletions for the first or last element. Also, removing any item on an empty list should return null.
-
       ],
       "challengeSeed": [
 let Node = function(data, prev) {
@@ -3687,19 +3354,13 @@ let Node = function(data, prev) {
   this.prev = prev;
   this.next = null;
 };
-
 let DoublyLinkedList = function() {
-
   this.head = null;
   this.tail = null;
-
   // change code below this line
-
   // change code above this line
-
 };
       ],
-
       "tail": [
 DoublyLinkedList.prototype = {
   print() {
@@ -3730,7 +3391,6 @@ DoublyLinkedList.prototype = {
       return result;
     };
   } 
-
 };
       ]
       "tests": [
@@ -3745,7 +3405,6 @@ assert((function() { let test = false; if (typeof DoublyLinkedList !== 'undefine
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3762,16 +3421,11 @@ let Node = function(data, prev) {
   this.prev = prev;
   this.next = null;
 };
-
 let DoublyLinkedList = function() {
-
   this.head = null;
   this.tail = null;
-
   // change code below this line
-
   // change code above this line
-
 };
       ],
       "tests": [
@@ -3782,7 +3436,6 @@ assert((function() { let test = false; if (typeof DoublyLinkedList !== 'undefine
 assert((function() { let test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(58); test.add(61); test.add(32); test.reverse(); return (test.print().join('') == '326158'); })(), 'The reverse method reverses the list.');
 assert((function() { let test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(11); test.add(22); test.add(33); test.reverse(); return (test.printReverse().join('') == '112233'); })(), 'The next and previous references are correctly maintained when a list is reversed.');
       ],
-
       "tail": [
 DoublyLinkedList.prototype = {
   add(data) {
@@ -3833,7 +3486,6 @@ DoublyLinkedList.prototype = {
       ]
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3844,9 +3496,7 @@ DoublyLinkedList.prototype = {
       "description": [
 Here we will move on to an intermediate sorting algorithm: quick sort. Quick sort is an
 efficient, recursive divide-and-conquer approach to sorting an array. In this method, a pivot value is chosen in the original array. The array is then partitioned into two subarrays of values less than and greater than the pivot value. We then combine the result of recursively calling the quick sort algorithm on both sub-arrays. This continues until the base case of an empty or single-item array is reached, which we return. The unwinding of the recursive calls return us the sorted array.
-
 Quick sort is a very efficient sorting method, providing O(nlog(n)) performance on average. It is also relatively easy to implement. These attributes make it a popular and useful sorting method.
-
 Instructions: Write a function quickSort which takes an array of integers as input and returns an array of these integers in sorted order. While the choice of the pivot value is important, any pivot will do for our purposes here. For simplicity, the first or last element could be used.
       ],
       "challengeSeed": [
@@ -3856,10 +3506,8 @@ let array = new Array();
   array.push(+(Math.random() * 100).toFixed(0));
   return (size > 1) ? createArray(size - 1) : undefined;
 })(12);
-
 function quickSort(array) {
   // change code below this line
-
   // change code above this line
   return array;
 };
@@ -3876,7 +3524,6 @@ function isSorted(arr) {
 ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3886,11 +3533,8 @@ function isSorted(arr) {
       "title": "Create a Map Data Structure",
       "description": [
 The next few challenges will cover maps and hash tables. Maps are data structurs that store key-value pairs. In JavaScript, these are available to us as objects. Maps provide rapid lookup of stored items based on key values and are very common and useful data structures.
-
 Instructions: Let's get some practice creating our own map. Because JavaScript objects provide a much more efficient map structure than anything we could write here, this is intended primarily as a learning exercise. However, JavaScript objects only provide us with certain operations. What if we wanted to define custom operations?
-
 Use the Map object provided here as a wrapper around a JavaScript object. Create the following methods and operations on the Map object:
-
 add accepts a key, value pair to add to the map
 remove accepts a key and removes the associated key, value pair
 get accepts a key and returns the stored value
@@ -3903,7 +3547,6 @@ clear empties the map
 let Map = function() {
   this.collection = {}
   // change code below this line
-
   // change code above this line
 };
       ],
@@ -3918,7 +3561,6 @@ assert((function() { let test = false; if (typeof Map !== 'undefined') { test = 
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3928,24 +3570,16 @@ assert((function() { let test = false; if (typeof Map !== 'undefined') { test = 
       "title": "Insert an Element into a Max Heap",
       "description": [
 Now we will move on to another tree data structure, the binary heap. A binary heap is a partially ordered binary tree which satisfies the heap property. The heap property specifies a relationship between parent and child nodes. You may have a max heap, in which all parent nodes are greater than or equal to their child nodes, or a min heap, in which the reverse is true. Binary heaps are also complete binary trees. This means that all levels of the tree are fully filled and if the last level is partially filled it is filled from left to right.
-
 While binary heaps may be implemented as tree structures with nodes that contain left and right references, the partial ordering according to the heap property allows us to represent the heap with an array. The parent-children relationship is what we're interested in and with simple arithmetic we can compute the children of any parent and the parent of any child node.
-
 For instance, consider this array representation of a binary max heap:
-
 [ 6, 22, 30, 37, 63, 48, 42, 76 ]
-
 The root node is the first element, 6. Its children are 22 and 30. If we look at the relationship between the array indices of these values, for index i the children are 2 * i + 1 and 2 * i + 2. Similarly, the element at index 0 is the parent of these two children at indices 1 and 2. More generally, we can find the parent of a node at any index with the following: i - 1 / 2. These patterns will hold true as the binary tree grows to any size. Finally, we can make a slight adjustment to make this arithmetic even easier by skipping the first element in the array. Doing this creates the following relationship for any element at a given index i:
-
 Example Array representation: [ null, 22, 30, 37, 63, 48, 42, 76 ]
 An element's left child: i * 2
 An element's right child: i * 2 + 1
 An element's parent: i / 2
-
 Once you wrap your head around the math, using an array representation is very useful because node locations can be quickly determined with this arithmetic and memory usage is diminished because you don't need to maintain references to child nodes.
-
 Instructions: Here we will create a max heap. Start by just creating an insert method which adds elements to our heap. During insertion, it is important to always maintain the heap property. For a max heap this means the root element should always have the greatest value in the tree and all parent nodes should be greater than their children. For an array implementation of a heap, this is typically accomplished in three steps:
-
 Add the new element to the end of the array.
 If the element is larger than its parents, switch them.
 Continue switching until the new element is either smaller than its parent or you reach the root of the tree.
@@ -3954,7 +3588,6 @@ Finally, add a print method which returns an array of all the items that have be
       "challengeSeed": [
 let MaxHeap = function() {
   // change code below this line
-
   // change code above this line
 };
       ],
@@ -3966,7 +3599,6 @@ assert((function() { let test = false; if (typeof MaxHeap !== 'undefined') { tes
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -3976,18 +3608,14 @@ assert((function() { let test = false; if (typeof MaxHeap !== 'undefined') { tes
       "title": "Remove an Element from a Max Heap",
       "description": [
 Now that we can add elements to our heap let's see how we can remove elements. Removing and inserting elements both require similar logic. In a max heap you will usually want to remove the greatest value, so this involves simply extracting it from the root of our tree. This will break the heap property of our tree, so we must reestablish it in some way. Typically, for a max heap this is done in the following way:
-
 Move the last element in the heap into the root position.
 If either child of the root is greater than it, swap the root with the child of greater value.
 Continue swapping until the parent is greater than both children, or you reach the last level in the tree.
 Instructions: Add a method to our max heap called remove. This method should return the greatest value that has been added to our max heap and remove it from the heap. It should also reorder the heap so the heap property is maintained. After removing an element, the next greatest element remaining in the heap should become the root. Add your insert method again here as well.
-
-
       ],
       "challengeSeed": [
 let MaxHeap = function() {
   // change code below this line
-
   // change code above this line
 };
       ],
@@ -4000,7 +3628,6 @@ assert((function() { let test = false; if (typeof MaxHeap !== 'undefined') { tes
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4010,9 +3637,7 @@ assert((function() { let test = false; if (typeof MaxHeap !== 'undefined') { tes
       "title": "Implement Heap Sort with a Min Heap",
       "description": [
 Now that we can add and remove elements let's see some of the applications heaps can be used for. Heaps are commonly used to implement priority queues because they always store an item of greatest or least value in first position. In addition, they are used to implement a sorting algorithm called heap sort. We'll see how to do this here. Heap sort uses a min heap, the reverse of a max heap. A min heap always stores the element of least value in the root position.
-
 Heap sort works by taking an unsorted array, adding each item in the array into a min heap, and then extracting every item out of the min heap into a new array. The min heap structure ensures that the new array will contain the original items in least to greatest order. This is one of the most efficient sorting algorithms with average and worst case performance of O(nlog(n)).
-
 Instructions: Let's implement heap sort with a min heap. Feel free to adapt your max heap code here. Create an object MinHeap with insert, remove, and sort methods. The sort method should return an array of all the elements in the min heap sorted from smallest to largest.
       ],
       "challengeSeed": [
@@ -4021,17 +3646,14 @@ function isSorted(arr) {
   let check = (i) => (i == arr.length - 1) ? true : (arr[i] > arr[i + 1]) ? false : check(i + 1);
   return check(0);
 };
-
 // generate a randomly filled array
 let array = new Array();
 (function createArray(size = 5) {
   array.push(+(Math.random() * 100).toFixed(0));
   return (size > 1) ? createArray(size - 1) : undefined;
 })(25);
-
 let MinHeap = function() {
   // change code below this line
-
   // change code above this line
 };
       ],
@@ -4044,7 +3666,6 @@ assert((function() { let test = false; if (typeof MinHeap !== 'undefined') { tes
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4054,7 +3675,6 @@ assert((function() { let test = false; if (typeof MinHeap !== 'undefined') { tes
       "title": "Create an ES6 JavaScript Map",
       "description": [
 The new version of JavaScript provides us with a built-in Map object which provides much of the functionality we wrote by hand in the last challenge. This Map object, although similar to regular JavaScript objects, provides some useful functionality that normal objects lack. For example, an ES6 Map tracks the insertion order of items that are added to it. Here is a more complete overview of its methods:
-
 .has(key) returns true or false based on the presence of a key
 .get(key) returns the value associated with a key
 .set(key, value) sets a new key, value pair
@@ -4062,7 +3682,6 @@ The new version of JavaScript provides us with a built-in Map object which provi
 .clear() removes all key, value pairs
 .entries() returns an array of all the keys in insertion order
 .values() returns an array of all the values in insertion order
-
 Instructions: Define a JavaScript Map object and assign to it a variable called myMap. Add the key, value pair 'Free Code Camp', 'Awesome!' to it.
       ],
       "challengeSeed": [
@@ -4074,7 +3693,6 @@ assert(myMap.get('Free Code Camp') == 'Awesome!', 'myMap contains the key value 
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4084,13 +3702,9 @@ assert(myMap.get('Free Code Camp') == 'Awesome!', 'myMap contains the key value 
       "title": "Create a Hash Table",
       "description": [
  In this challenge we will learn about hash tables. A Hash table is used to implement associative arrays, or mappings of key-value pairs, like the objects and Maps we have just been studying. A JavaScript object could be implemented as a hash table, for instance (its actual implementation will depend on the environment it's running in). The way a hash table works is that it takes a key input and hashes this key in a deterministic way to some numerical value. This numerical value is then used as the actual key the associated value is stored by. Then, if you try to access the same key again, the hashing function will process the key, return the same numerical result, which will then be used to look up the associated value. This provides very efficient O(n) lookup time on average.
-
 Hash tables can be implemented as arrays with hash functions producing array indices within a specified range. In this method, the choice of the array size is important, as is the hashing function. For instance, what if the hashing function produces the same value for two different keys? This is called a collision. One way to handle collisions is to just store both key-value pairs at that index. Then, upon lookup of either, you would have to iterate through the bucket of items to find the key you are looking for. A good hashing function will minimize collisions to maintain efficient search time.
-
 Here, we won't be concerned with the details of hashing or hash table implementation, we will just try to get a general sense of how they work.
-
 Instructions: Let's create the basic functionality of a hash table. We've created a naive hashing function for you to use. You can pass a string value to the function hash and it will return a hashed value you can use as a key for storage. Store items based on this hashed value in the this.collection object. Create these three methods: add, remove, and lookup. The first should accept a key value pair to add to the hash table. The second should remove a key-value pair when passed a key. The third should accept a key and return the associated value or null if the key is not present.
-
 Be sure to write your code to account for collisions!
       ],
       "challengeSeed": [
@@ -4101,14 +3715,11 @@ let hash = (string) => {
   for (let i = 0; i < string.length; i++) { hash += string.charCodeAt(i); };
   return hash;
 };
-
 let HashTable = function() {
   this.collection = {};
   // change code below this line
-
   // change code above this line
 };
-
       ],
       "tests": [
 console.assert((function() { let test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return (typeof test == 'object')})(), 'The HashTable data structure exists.');
@@ -4122,7 +3733,6 @@ console.assert((function() { let test = false; if (typeof HashTable !== 'undefin
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4132,13 +3742,10 @@ console.assert((function() { let test = false; if (typeof HashTable !== 'undefin
       "title": "Implement Merge Sort",
       "description": [
 Another intermediate sorting algorithm that is very common is merge sort. Like quick sort, merge sort also uses a divide-and-conquer, recursive methodology to sort an array. It takes advantage of the fact that it is relatively easy to sort two arrays as long as each is sorted in the first place. But we'll start with only one array as input, so how do we get to two sorted arrays from that? Well, we can recursively divide the original input in two until we reach the base case of an array with one item. A single-item array is naturally sorted, so then we can start combining. This combination will unwind the recursive calls that split the original array, eventually producing a final sorted array of all the elements. The steps of merge sort, then, are:
-
 Recursively split the input array in half until a sub-array with only one element is produced.
 Merge each sorted sub-array together to produce the final sorted array.
 Merge sort is an efficient sorting method, with time complexity of O(nlog(n)). This algorithm is popular because it is performant and relatively easy to implement.
-
 As an aside, this will be the last sorting algorithm we cover here. However, later in the section on tree data structures we will describe heap sort, another efficient sorting method that requires a binary heap in its implementation.
-
 Instructions: Write a function mergeSort which takes an array of integers as input and returns an array of these integers in sorted order. A good way to implement this is to write one function, for instance merge, which is responsible for merging two sorted arrays, and another function, for instance mergeSort, which is responsible for the recursion that produces single-item arrays to feed into merge. Good luck!
       ],
       "challengeSeed": [
@@ -4148,7 +3755,6 @@ let array = new Array();
   array.push(+(Math.random() * 100).toFixed(0));
   return (size > 1) ? createArray(size - 1) : undefined;
 })(25);
-
 // change code below this line
       ],
       "tests": [
@@ -4163,7 +3769,6 @@ function isSorted(arr) {
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4173,27 +3778,16 @@ function isSorted(arr) {
       "title": "Breadth-First Search",
       "description": [
 So far, we've learned different ways of creating representations of graphs. What now? One natural question to have is what are the distances between any two nodes in the graph? Enter graph traversal algorithms.
-
 Traversal algorithms are algorithms to traverse or visit nodes in a graph. One type of traversal algorithm is the breadth-first search algorithm.
-
 This algorithm starts at one node, first visits all its neighbors that are one edge away, then goes on to visiting each of their neighbors.
-
 Visually, this is what the algorithm is doing.
-
 <img src='https://camo.githubusercontent.com/2f57e6239884a1a03402912f13c49555dec76d06/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f342f34362f416e696d617465645f4246532e676966'>
-
 To implement this algorithm, you'll need to input a graph structure and a node you want to start at.
-
 First, you'll want to be aware of the distances from the start node. This you'll want to start all your distances initially some large number, like Infinity. This gives a reference for the case where a node may not be reachable from your start node.
-
 Next, you'll want to go from the start node to its neighbors. These neighbors are one edge away and at this point you should add one unit of distance to the distances you're keeping track of.
-
 Last, an important data structure that will help implement the breadth-first search algorithm is the queue. This is an array where you can add elements to one end and remove elements from the other end. This is also known as a FIFO or First-In-First-Out data structure.
-
 Instructions
-
 Write a function bfs() that takes an adjacency matrix graph (a two-dimensional array) and a node label root as parameters. The node label will just be the integer value of the node between 0 and n - 1, where n is the total number of nodes in the graph.
-
 Your function will output a JavaScript object key-value pairs with the node and its distance from the root. If the node could not be reached, it should have a distance of Infinity.
       ],
       "challengeSeed": [
@@ -4203,7 +3797,6 @@ function bfs(graph, root) {
   
   return nodesLen;
 };
-
 var exBFSGraph = [
   [0, 1, 0, 0],
   [1, 0, 1, 0],
@@ -4224,23 +3817,19 @@ function isEquivalent(a, b) {
     // Create arrays of property names
     var aProps = Object.getOwnPropertyNames(a);
     var bProps = Object.getOwnPropertyNames(b);
-
     // If number of properties is different,
     // objects are not equivalent
     if (aProps.length != bProps.length) {
         return false;
     }
-
     for (var i = 0; i < aProps.length; i++) {
         var propName = aProps[i];
-
         // If values of same property are not equal,
         // objects are not equivalent
         if (a[propName] !== b[propName]) {
             return false;
         }
     }
-
     // If we made it this far, objects
     // are considered equivalent
     return true;
@@ -4248,7 +3837,6 @@ function isEquivalent(a, b) {
       ]
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4261,7 +3849,6 @@ A doubly linked list is similar to a linked list. The difference between these d
 Imagine that you're a moutaineer in a team that's trying to summit a mountain. There's a rope that connects you to the person in front of you and a rope that connects you to the person after you in the line. However, due to fog, you can only see the person directly ahead of you and the person directly behind you.
 A doubly linked list node is similar to a person in this line. The person represents the element of the node and the rope connections between the mountaineers represent the references to the previous and next nodes of the list.
 Instructions
-
 We have created two nodes that represent the first two mountaineers (Joe and Cameron).
 Create one new node that represents a new mountaineer (Donna) and manually add it to the line.
       ],
@@ -4271,13 +3858,11 @@ var Node = function(element){
   this.prev = null;
   this.next = null;
 }
-
 var Joe = new Node("Joe");
 var Cameron = new Node("Cameron");
 Joe.next = Cameron;
 Cameron.prev = Joe;
 // only add code below this line
-
 // test your code
 console.log("After Joe is " + Joe.next.element);
 console.log("Before Cameron is " + Cameron.prev.element);
@@ -4285,11 +3870,9 @@ console.log("Before Cameron is " + Cameron.prev.element);
       "tests": [
 assert(Cameron.next.element === "Donna", 'message: The <code>Cameron</code> node should reference to a <code>Donna</code> next node.');
 assert(Donna.prev.element === "Cameron", 'message: The <code>Donna</code> node should reference to a <code>Cameron</code> prev node.');
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4299,22 +3882,16 @@ assert(Donna.prev.element === "Cameron", 'message: The <code>Donna</code> node s
       "title": "Inserting Nodes in a Doubly Linked List",
       "description": [
 One of the most important methods in a Doubly Linked List implementation is the insert method. When a new node is inserted into the doubly linked list, the list's size is increased by one.
-
 If the new node is the first element of the list, it should be referenced as the next element of the head and the previous element of the tail. If there are already nodes in the list, the new node should be referenced as the previous node of the tail and the next of the penultimate node of the list.
-
 Instructions
-
 Create a method that inserts nodes to the list.
-
 We've created the auxiliary methods:
-
 getSizeOfList - returns the size of the list.
 isListEmpty - returns true if the list is empty.
 printList - prints the list.
 getHeadNode - returns the head node of the list.
 getTailNode - returns the tail node of the list.
 Note
-
 The size of the list should increase when you insert a new node.
       ],
       "challengeSeed": [
@@ -4341,7 +3918,6 @@ function DoublyLinkedList(){
   this.getTailNode = function(){
     return tail;
   }
-
   // get the size of the list
   this.getSizeOfList = function(){
     return length;
@@ -4385,11 +3961,9 @@ assert((function(){var conga = new DoublyLinkedList(); return (typeof conga.inse
 assert((function(){var conga = new DoublyLinkedList(); conga.insert('Joe'); return conga.getHeadNode().next.element === 'Joe'}()), 'message: Your <code>DoublyLinkedList</code> class should contain the node <code>Joe</code>.');
 assert((function(){var conga = new DoublyLinkedList(); conga.insert('Joe'); return conga.isListEmpty() === false}()), 'message: Your <code>DoublyLinkedList</code> should not be empty.');
 assert((function(){var conga = new DoublyLinkedList(); conga.insert('Joe'); return conga.getSizeOfList() > 0}()), 'message: Your <code>DoublyLinkedList</code> class should contain at least 1 node.');
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4399,23 +3973,18 @@ assert((function(){var conga = new DoublyLinkedList(); conga.insert('Joe'); retu
       "title": "Removing Nodes From a Doubly Linked List",
       "description": [
 A method that removes items is an essential component of every Doubly Linked List implementation.
-
 When a node is removed from a Doubly Linked List, the references that connect it to its neighbors should be updated and the number of elements of the list should be decremented.
-
 For example:
 You have the nodes {cat, dog, bird} in a Doubly Linked List and you remove the dog node. The cat.next reference should now point to the bird node and the bird.prev reference should now point to the cat node. Then, the size of the list should decrease by 1.
 Instructions
-
 Create a method that removes a node from the list.
 We've created the auxiliary methods:
-
 getSizeOfList - returns the size of the list
 isListEmpty - returns true if the list is empty.
 printList - prints the list.
 getHeadNode - returns the head node of the list.
 getTailNode - returns the tail node of the list.
 Note
-
 The size of the list should be decremented when you remove a node.
       ],
       "challengeSeed": [
@@ -4503,11 +4072,9 @@ function DoublyLinkedList(){
 assert((function(){var conga = new DoublyLinkedList(); return (typeof conga.remove === 'function')}()), 'message: Your <code>DoublyLinkedList</code> class should have a <code>remove</code> method.');
 assert((function(){var conga = new DoublyLinkedList(); conga.insert('Joe'); conga.remove('Joe'); return conga.getSizeOfList() === 0}()), 'message: Your <code>DoublyLinkedList</code> class should have 0 elements.');
 assert((function(){var conga = new DoublyLinkedList(); conga.insert('Joe'); conga.remove('Joe'); return conga.isListEmpty() === true}()), 'message: Your <code>DoublyLinkedList</code> should be empty.');
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4517,23 +4084,18 @@ assert((function(){var conga = new DoublyLinkedList(); conga.insert('Joe'); cong
       "title": "Searching For Nodes In a Doubly Linked List",
       "description": [
 When you have a lot of nodes in a Doubly Linked List, you'll likely need a method to search for a node in your list.
-
 Since Doubly Linked Lists can be traversed from front to back or from back to front, you can search for nodes in both directions.
 Instructions
-
 Create a method that searches for a node in the list and returns its index on the list.
 We've created the auxiliary methods:
-
 getSizeOfList - returns the size of the list
 isListEmpty - returns true if the list is empty.
 printList - prints the list.
 getHeadNode - returns the head node of the list.
 getTailNode - returns the tail node of the list.
 Note
-
 If the node you're looking for is not in the Doubly Linked List, your search method should return -1.
 The head of the list has index 0.
-
       ],
       "challengeSeed": [
 function DoublyLinkedList(){
@@ -4600,7 +4162,6 @@ function DoublyLinkedList(){
     
     length--;
   }
-
     // only add code below this line
   
   // only add code above this line
@@ -4628,17 +4189,14 @@ function DoublyLinkedList(){
   conga.insert("Joe");
     console.log(conga.search("Joe"));
 }
-
       ],
       "tests": [
 assert((function(){var conga = new DoublyLinkedList(); return (typeof conga.search === 'function')}()), 'message: Your <code>DoublyLinkedList</code> class should have a <code>search</code> method.');
 assert((function(){var conga = new DoublyLinkedList(); conga.add('Joe'); return conga.search('Joe') === 1}()), 'message: Your <code>DoublyLinkedList</code> search method should find <code>Joe</code> at index 1.');
 assert((function(){var conga = new DoublyLinkedList(); conga.add('Joe'); return conga.search('Cameron') === -1}()), 'message: Your <code>DoublyLinkedList</code> search method should return -1 (element not found).');
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4648,28 +4206,19 @@ assert((function(){var conga = new DoublyLinkedList(); conga.add('Joe'); return 
       "title": "Depth-First Search",
       "description": [
 Similar to breadth-first search, here we will learn about another graph traversal algorithm called depth-first search.
-
 Whereas the breadth-first search searches incremental edge lengths away from the source node, depth-first search first goes down a path of edges as far as it can.
-
 Once it reaches one end of a path, the search will backtrack to the last node with an un-visited edge path and continue searching.
-
 Visually, this is what the algorithm is doing where the top node is the starting point of the search.
-
 <img src='https://camo.githubusercontent.com/aaad9e39961daf34d967c616edeb50abf3bf1235/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f372f37662f44657074682d46697273742d5365617263682e676966'>
-
 A simple output of this algorithm is a list of nodes which are reachable from a given node. So when implementing this algorithm, you'll need to keep track of the nodes you visit.
-
 Instructions
-
 Write a function dfs() that takes an undirected, adjacency matrix graph and a node label root as parameters. The node label will just be the numeric value of the node between 0 and n - 1, where n is the total number of nodes in the graph.
-
 Your function should output an array of all nodes reachable from root.
       ],
       "challengeSeed": [
 function dfs(graph, root) {
   
 };
-
 var exDFSGraph = [
   [0, 1, 0, 0],
   [1, 0, 1, 0],
@@ -4686,7 +4235,6 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4695,17 +4243,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4714,17 +4258,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4733,17 +4273,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4752,17 +4288,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4771,17 +4303,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4790,17 +4318,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4809,17 +4333,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4828,17 +4348,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4847,17 +4363,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4866,17 +4378,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4885,17 +4393,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4904,17 +4408,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4923,17 +4423,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4942,17 +4438,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4961,17 +4453,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4980,17 +4468,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -4999,17 +4483,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5018,17 +4498,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5037,17 +4513,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5056,17 +4528,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5075,17 +4543,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5094,17 +4558,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5113,17 +4573,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5132,17 +4588,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5151,17 +4603,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5170,17 +4618,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5189,17 +4633,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5208,17 +4648,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5227,17 +4663,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5246,17 +4678,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5265,17 +4693,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5284,17 +4708,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5303,17 +4723,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5322,17 +4738,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5341,17 +4753,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5360,17 +4768,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5379,17 +4783,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5398,17 +4798,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5417,17 +4813,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5436,17 +4828,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5455,17 +4843,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5474,17 +4858,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5493,17 +4873,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5512,17 +4888,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5531,17 +4903,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5550,17 +4918,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5569,17 +4933,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5588,17 +4948,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5607,17 +4963,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5626,17 +4978,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5645,17 +4993,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5664,17 +5008,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5683,17 +5023,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5702,17 +5038,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5721,17 +5053,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5740,17 +5068,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5759,17 +5083,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5778,17 +5098,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5797,17 +5113,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5816,17 +5128,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5835,17 +5143,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5854,17 +5158,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5873,17 +5173,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5892,17 +5188,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5911,17 +5203,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5930,17 +5218,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5949,17 +5233,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5968,17 +5248,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -5987,17 +5263,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6006,17 +5278,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6025,17 +5293,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6044,17 +5308,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6063,17 +5323,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6082,17 +5338,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6101,17 +5353,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6120,17 +5368,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6139,17 +5383,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6158,17 +5398,13 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
@@ -6177,21 +5413,16 @@ assert.deepEqual((function() { var graph = [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0
       "id": "8d7123c8c441eddfaeb5bdef",
       "title": "",
       "description": [
-
       ],
       "challengeSeed": [
-
       ],
       "tests": [
-
       ],
       "type": "waypoint",
             "solutions": [],
-
       "challengeType": 0,
       "translations": {
         }
       },
-
   ]
 }

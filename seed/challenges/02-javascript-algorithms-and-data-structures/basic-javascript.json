@@ -4995,7 +4995,7 @@
         }
       }
     },
-	{
+    {
       "id": "cf1111c1c11feddfaeb1bdef",
       "title": "Iterate with JavaScript While Loops",
       "description": [
@@ -5045,7 +5045,6 @@
         }
       }
     },
-
     {
       "id": "cf1111c1c11feddfaeb5bdef",
       "title": "Iterate with JavaScript For Loops",
@@ -5592,169 +5591,131 @@
       "id": "bd7158d2c442ebcfbeb5bd1f",
       "title": "Use the Conditional Ternary Operator",
       "description": [
-The conditional/ternary operator is a one line if-else statement.
-The syntax is
-
-condition ? statement-if-true : statement-if-false;
-For example:
-
-function findGreater(a, b) {
-    if(a > b)
-        return "a is greater";
-    else
-        return "b is greater";
-}
-The above function can be written using the conditional like:
-
-function findGreater(a, b) {
-    return a > b ? "a is greater" : "b is greater";
-}
-
-Instructions
-Using a Conditional Operator, check if two numbers are equal or not.
-
+        "The conditional/ternary operator is a one line if-else statement.",
+        "The syntax is",
+        "<code>condition ? statement-if-true : statement-if-false;</code>",
+        "For example:",
+        "<code>function findGreater(a, b) {</code>",
+        "<code>    if(a > b)</code>",
+        "<code>        return \"a is greater\";</code>",
+        "<code>    else</code>",
+        "<code>        return \"b is greater\";</code>",
+        "<code>}</code>",
+        "The above function can be written using the conditional like:",
+        "<code>function findGreater(a, b) {</code>",
+        "<code>    return a > b ? \"a is greater\" : \"b is greater\";</code>",
+        "<code>}</code>",
+        "Instructions",
+        "Using a Conditional Operator, check if two numbers are equal or not."
       ],
       "challengeSeed": [
-        function checkEqual(a, b) {
-
-}
-checkEqual(1, 2);
+        "        function checkEqual(a, b) {",
+        "}",
+        "checkEqual(1, 2);"
       ],
-      "tail": [
-
-      ],
-      "solutions": [
-
-      ],
+      "tail": [],
+      "solutions": [],
       "tests": [
-assert(checkEqual(1, 2) === false, 'message: <code>checkEqual(1, 2)</code> should return false');
-assert(checkEqual(1, 1) === true, 'message: <code>checkEqual(1, 1)</code> should return true');
-assert(checkEqual(1, -1) === false, 'message: <code>checkEqual(1, -1)</code> should return false');
+        "assert(checkEqual(1, 2) === false, 'message: <code>checkEqual(1, 2)</code> should return false');",
+        "assert(checkEqual(1, 1) === true, 'message: <code>checkEqual(1, 1)</code> should return true');",
+        "assert(checkEqual(1, -1) === false, 'message: <code>checkEqual(1, -1)</code> should return false');"
       ],
       "type": "waypoint",
       "challengeType": 1,
-      "translations": {
-      }
+      "translations": {}
     },
-        {
+    {
       "id": "bd7113d2c442eddfbeb5bd1f",
       "title": "Use the parseInt function",
       "description": [
-The parseInt() function parses a string and returns an integer.
-
-var a = parseInt(\"007\");
-The above function will convert the string \"007\" to an integer 7.
+        "The parseInt() function parses a string and returns an integer.",
+        "<code>var a = parseInt(\"007\");</code>",
+        "The above function will convert the string \"007\" to an integer 7."
       ],
       "challengeSeed": [
-
-        function convertToInteger(str) {
-
-}
-convertToInteger("56");
+        "        function convertToInteger(str) {",
+        "}",
+        "convertToInteger(\"56\");"
       ],
-      "tail": [
-
-      ],
-      "solutions": [
-
-      ],
+      "tail": [],
+      "solutions": [],
       "tests": [
-assert(typeof(convertToInteger("56")) === "number", 'message: <code>convertToInteger("56")</code> should return a number');
-assert(convertToInteger("56") === 56, 'message: <code>convertToInteger("56")</code> should return 56');
-assert(convertToInteger("77") === 77, 'message: <code>convertToInteger("56")</code> should return 77');
-assert(!isNaN(convertToInteger("JamesBond")); , 'message: <code>convertToInteger("JamesBond")</code> should return NaN');
+        "assert(typeof(convertToInteger(\"56\")) === \"number\", 'message: <code>convertToInteger(\"56\")</code> should return a number');",
+        "assert(convertToInteger(\"56\") === 56, 'message: <code>convertToInteger(\"56\")</code> should return 56');",
+        "assert(convertToInteger(\"77\") === 77, 'message: <code>convertToInteger(\"56\")</code> should return 77');",
+        "assert(!isNaN(convertToInteger(\"JamesBond\")); , 'message: <code>convertToInteger(\"JamesBond\")</code> should return NaN');"
       ],
       "type": "waypoint",
       "challengeType": 1,
-      "translations": {
-      }
+      "translations": {}
     },
-        {
+    {
       "id": "bd7158d2c4473eddf45b5bd1f",
       "title": "Use the parseInt function with a radix",
       "description": [
-The parseInt() function parses a string and returns an integer. The radix variable defines the number system to convert from.
-The function call looks like:
-parseInt(string, radix);
-
-var a = parseInt("11", 2);
-Here the radix variable defines that "11" is in binary system.
-The above function will convert the string "11" to an integer 3.
-Instructions
-Using the parseInt() function, write a function that converts binary numbers to integers and returns them.
+        "The parseInt() function parses a string and returns an integer. The radix variable defines the number system to convert from.",
+        "The function call looks like:",
+        "parseInt(string, radix);",
+        "var a = parseInt(\"11\", 2);",
+        "Here the radix variable defines that \"11\" is in binary system.",
+        "The above function will convert the string \"11\" to an integer 3.",
+        "Instructions",
+        "Using the parseInt() function, write a function that converts binary numbers to integers and returns them."
       ],
       "challengeSeed": [
-function convertToInteger(str) {
-
-}
-convertToInteger("10011");
-
+        "function convertToInteger(str) {",
+        "}",
+        "convertToInteger(\"10011\");"
       ],
-      "tail": [
-
-      ],
-      "solutions": [
-
-      ],
+      "tail": [],
+      "solutions": [],
       "tests": [
-assert(typeof(convertToInteger("10011")) !== "number", 'message: <code>convertToInteger("10011")</code> should return a number');
-assert(convertToInteger("10011") === 19, 'message: <code>convertToInteger("10011")</code> should return 19');
-assert(convertToInteger("111001") === 57, 'message: <code>convertToInteger("111001")</code> should return 57');
-assert(!isNaN(convertToInteger("JamesBond")); , 'message: <code>convertToInteger("JamesBond")</code> should return NaN');
+        "assert(typeof(convertToInteger(\"10011\")) !== \"number\", 'message: <code>convertToInteger(\"10011\")</code> should return a number');",
+        "assert(convertToInteger(\"10011\") === 19, 'message: <code>convertToInteger(\"10011\")</code> should return 19');",
+        "assert(convertToInteger(\"111001\") === 57, 'message: <code>convertToInteger(\"111001\")</code> should return 57');",
+        "assert(!isNaN(convertToInteger(\"JamesBond\")); , 'message: <code>convertToInteger(\"JamesBond\")</code> should return NaN');"
       ],
       "type": "waypoint",
       "challengeType": 1,
-      "translations": {
-      }
+      "translations": {}
     },
-            {
+    {
       "id": "bd7158d2c882eddf45b5bd1f",
       "title": "Use multiple Conditional Ternary Operators",
       "description": [
-In the previous challenge, we used a single conditional operator. Now, we will learn how to use multiple conditionals.
-For example:
-
-function findGreaterOrEqual(a, b, c) {
-    if(a === b)
-        return "a and b are equal";
-    else if(a > b)
-        return "a is greater";
-    else
-        return "b is greater";
-}
-The above function can be written using multiple conditionals like:
-
-function findGreaterOrEqual(a, b) {
-    return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
-}
-Note that the conditional operator is Right Assosiative.
-
-Instructions
-Using a Conditional Operator, check if a number is positive, negative or zero.
-
-
+        "In the previous challenge, we used a single conditional operator. Now, we will learn how to use multiple conditionals.",
+        "For example:",
+        "<code>function findGreaterOrEqual(a, b, c) {</code>",
+        "<code>    if(a === b)</code>",
+        "<code>        return \"a and b are equal\";</code>",
+        "<code>    else if(a > b)</code>",
+        "<code>        return \"a is greater\";</code>",
+        "<code>    else</code>",
+        "<code>        return \"b is greater\";</code>",
+        "<code>}</code>",
+        "The above function can be written using multiple conditionals like:",
+        "<code>function findGreaterOrEqual(a, b) {</code>",
+        "<code>    return (a === b) ? \"a and b are equal\" : (a > b) ? \"a is greater\" : \"b is greater\";</code>",
+        "<code>}</code>",
+        "Note that the conditional operator is Right Assosiative.",
+        "Instructions",
+        "Using a Conditional Operator, check if a number is positive, negative or zero."
       ],
       "challengeSeed": [
-        function checkSign(num) {
-
-}
-checkSign(10);
+        "        function checkSign(num) {",
+        "}",
+        "checkSign(10);"
       ],
-      "tail": [
-
-      ],
-      "solutions": [
-
-      ],
+      "tail": [],
+      "solutions": [],
       "tests": [
-assert(checkSign(10) === 'positive', 'message: <code>checkSign(10)</code> should return positive');
-assert(checkSign(-12) === 'negative', 'message: <code>checkSign(-12)</code> should return negative');
-assert(checkSign(0) === 'zero', 'message: </code>checkSign(0)</code> should return zero');
+        "assert(checkSign(10) === 'positive', 'message: <code>checkSign(10)</code> should return positive');",
+        "assert(checkSign(-12) === 'negative', 'message: <code>checkSign(-12)</code> should return negative');",
+        "assert(checkSign(0) === 'zero', 'message: </code>checkSign(0)</code> should return zero');"
       ],
       "type": "waypoint",
       "challengeType": 1,
-      "translations": {
-      }
-    },
+      "translations": {}
+    }
   ]
 }
