@@ -4,7 +4,9 @@
   "time": "3 hours",
   "helpRoom": "Help",
   "required": [
-   { "link": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" }
+    {
+      "link": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
+    }
   ],
   "challenges": [
     {
