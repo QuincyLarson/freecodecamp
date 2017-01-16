@@ -50,24 +50,24 @@
       ],
       "tests": [
         {
-          "id": "bd7158d8c443eddfaeb5bdef",
-          "title": "Build a Voting App"
+          "id": "bd7158d8c443edcfaeb5bdef",
+          "title": "Issue Tracker"
         },
         {
-          "id": "bd7158d8c443eddfaeb5bdff",
-          "title": "Build a Nightlife Coordination App"
+          "id": "bd7158d8c443ebdfaeb5bdff",
+          "title": "Metric-Imperial Converter"
         },
         {
-          "id": "bd7158d8c443eddfaeb5bd0e",
-          "title": "Chart the Stock Market"
+          "id": "bd7158d8c443addfaeb5bd0e",
+          "title": "Personal Library"
         },
         {
-          "id": "bd7158d8c443eddfaeb5bd0f",
-          "title": "Manage a Book Trading Club"
+          "id": "bd7158d8c443efdfaeb5bd0f",
+          "title": "Stock Price Checker"
         },
         {
-          "id": "bd7158d8c443eddfaeb5bdee",
-          "title": "Build a Pinterest Clone"
+          "id": "bd7158d8c443eedfaeb5bdee",
+          "title": "Anonymous Message Board"
         }
       ],
       "type": "Waypoint",

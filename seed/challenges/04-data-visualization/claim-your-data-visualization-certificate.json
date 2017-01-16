@@ -50,24 +50,24 @@
       ],
       "tests": [
         {
-          "id": "bd7168d8c242eddfaeb5bd13",
-          "title": "Visualize Data with a Bar Chart"
+          "id": "bd710888c242eddfaeb5bd13",
+          "title": "Visualize Data with a Treemap Diagram"
         },
         {
-          "id": "bd7178d8c242eddfaeb5bd13",
-          "title": "Visualize Data with a Scatterplot Graph"
+          "id": "bd7117d8c242eddfaeb5bd13",
+          "title": "Visualize Data with a Choropleth Map"
         },
         {
           "id": "bd7188d8c242eddfaeb5bd13",
           "title": "Visualize Data with a Heat Map"
         },
         {
-          "id": "bd7198d8c242eddfaeb5bd13",
-          "title": "Show National Contiguity with a Force Directed Graph"
+          "id": "bd7178d8c242eddfaeb5bd13",
+          "title": "Visualize Data with a Scatterplot Graph"
         },
         {
-          "id": "bd7108d8c242eddfaeb5bd13",
-          "title": "Map Data Across the Globe"
+          "id": "bd7168d8c242eddfaeb5bd13",
+          "title": "Visualize Data with a Bar Chart"
         }
       ],
       "type": "Waypoint",

@@ -50,24 +50,24 @@
       ],
       "tests": [
         {
-          "id": "bd7158d8c442eddfbeb5bd1f",
-          "title": "Get Set for our Front End Development Projects"
+          "id": "bd7158d8c992eddfaeb5bd18",
+          "title": "Build a Survey Form"
         },
         {
           "id": "bd7158d8c442eddfaeb5bd18",
           "title": "Build a Tribute Page"
         },
         {
-          "id": "bd7158d8c992eddfaeb5bd18",
-          "title": "Build a Survey Form"
-        },
-        {
-          "id": "a26cbbe9ad8655a977e1ceb5",
+          "id": "bd7158d8c982eddfaeb5bd18",
           "title": "Build a Product Landing Page"
         },
         {
           "id": "bd7158d8c972eddfaeb5bd18",
           "title": "Build a Technical Documentation Page"
+        },
+        {
+          "id": "bd7158d8c242eddfaeb5bd13",
+          "title": "Build a Personal Portfolio Webpage"
         }
       ],
       "type": "Waypoint",

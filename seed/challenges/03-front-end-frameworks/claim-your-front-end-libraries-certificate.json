@@ -50,24 +50,24 @@
       ],
       "tests": [
         {
-          "id": "bd7158d8c442eddfaeb5bd13",
-          "title": "Build a Random Quote Machine"
+          "id": "bd7158d8c442eddfaeb5bd0f",
+          "title": "Build a Pomodoro Clock"
         },
         {
           "id": "bd7158d8c442eddfaeb5bd17",
           "title": "Build a JavaScript Calculator"
         },
         {
-          "id": "bd7158d8c442eddfaeb5bd0f",
-          "title": "Build a Pomodoro Clock"
-        },
-        {
-          "id": "bd7155d8c242eddfaeb5bd13",
-          "title": "Build a Recipe Box"
-        },
-        {
           "id": "bd7154d8c242eddfaeb5bd13",
-          "title": "Build the Game of Life"
+          "title": "Build a Drum Machine"
+        },
+        {
+          "id": "bd7157d8c242eddfaeb5bd13",
+          "title": "Build a Markdown Previewer"
+        },
+        {
+          "id": "bd7158d8c442eddfaeb5bd13",
+          "title": "Build a Random Quote Machine"
         }
       ],
       "type": "Waypoint",

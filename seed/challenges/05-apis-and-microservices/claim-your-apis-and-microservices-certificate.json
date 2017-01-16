@@ -62,12 +62,12 @@
           "title": "URL Shortener Microservice"
         },
         {
-          "id": "bd7158d8c443edefaeb5bdee",
-          "title": "Image Search Abstraction Layer"
-        },
-        {
           "id": "bd7158d8c443edefaeb5bd0f",
           "title": "File Metadata Microservice"
+        },
+        {
+          "id": "bd7158d8c443edefaeb5bdee",
+          "title": "Exercise Tracker"
         }
       ],
       "type": "Waypoint",
