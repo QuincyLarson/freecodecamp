@@ -5588,7 +5588,7 @@
       }
     },
     {
-      "id": "bd7158d2c442ebcfbeb5bd1f",
+      "id": "587d7b7e367417b2b2512b24",
       "title": "Use the Conditional Ternary Operator",
       "description": [
         "The conditional/ternary operator is a one line if-else statement.",
@@ -5609,7 +5609,8 @@
         "Using a Conditional Operator, check if two numbers are equal or not."
       ],
       "challengeSeed": [
-        "        function checkEqual(a, b) {",
+        "function checkEqual(a, b) {",
+        "",
         "}",
         "checkEqual(1, 2);"
       ],
@@ -5625,7 +5626,7 @@
       "translations": {}
     },
     {
-      "id": "bd7113d2c442eddfbeb5bd1f",
+      "id": "587d7b7e367417b2b2512b23",
       "title": "Use the parseInt function",
       "description": [
         "The parseInt() function parses a string and returns an integer.",
@@ -5633,7 +5634,8 @@
         "The above function will convert the string \"007\" to an integer 7."
       ],
       "challengeSeed": [
-        "        function convertToInteger(str) {",
+        "function convertToInteger(str) {",
+        "",
         "}",
         "convertToInteger(\"56\");"
       ],
@@ -5650,7 +5652,7 @@
       "translations": {}
     },
     {
-      "id": "bd7158d2c4473eddf45b5bd1f",
+      "id": "587d7b7e367417b2b2512b22",
       "title": "Use the parseInt function with a radix",
       "description": [
         "The parseInt() function parses a string and returns an integer. The radix variable defines the number system to convert from.",
@@ -5664,6 +5666,7 @@
       ],
       "challengeSeed": [
         "function convertToInteger(str) {",
+        "",
         "}",
         "convertToInteger(\"10011\");"
       ],
@@ -5680,7 +5683,7 @@
       "translations": {}
     },
     {
-      "id": "bd7158d2c882eddf45b5bd1f",
+      "id": "587d7b7e367417b2b2512b21",
       "title": "Use multiple Conditional Ternary Operators",
       "description": [
         "In the previous challenge, we used a single conditional operator. Now, we will learn how to use multiple conditionals.",
@@ -5702,7 +5705,8 @@
         "Using a Conditional Operator, check if a number is positive, negative or zero."
       ],
       "challengeSeed": [
-        "        function checkSign(num) {",
+        "function checkSign(num) {",
+        "",
         "}",
         "checkSign(10);"
       ],

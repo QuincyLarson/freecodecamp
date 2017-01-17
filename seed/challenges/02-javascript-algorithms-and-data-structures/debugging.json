@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "9d7053c8c441eddfaeb5bdef",
+      "id": "587d7b83367417b2b2512b32",
       "title": "Introduction to the Debugging Challenges",
       "description": [
         [
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "id": "9d7013c8c441eddfaeb5bdef",
+      "id": "587d7b83367417b2b2512b33",
       "title": "Use the JavaScript Console to Check the Value of a Variable",
       "description": [
         "Both Chrome and Firefox have excellent JavaScript consoles, also known as DevTools, for debugging your JavaScript.",
@@ -97,7 +97,7 @@
       }
     },
     {
-      "id": "9d7023c8c441eddfaeb5bdef",
+      "id": "587d7b84367417b2b2512b34",
       "title": "Use typeof to Check the Type of a Variable",
       "description": [
         "You can use <code>typeof</code> to check the data structure, or type, of a variable. This is useful in debugging when working with multiple data types. If you think you're adding two numbers, but one is actually a string, the results can be unexpected. Type errors can lurk in calculations or function calls. Especially take care when you're accessing and working with external data in the form of a JavaScript object (JSON).",
@@ -145,7 +145,7 @@
       }
     },
     {
-      "id": "9d7033c8c441eddfaeb5bdef",
+      "id": "587d7b84367417b2b2512b35",
       "title": "Catch Misspelled Variable and Function Names",
       "description": [
         "The <code>console.log()</code> and <code>typeof</code> methods are the two primary ways to check intermediate values and types of program output. Now it's time to get into the common forms that bugs take. One syntax-level issue that fast typers can commiserate with is the humble spelling error.",
@@ -192,7 +192,7 @@
       }
     },
     {
-      "id": "9d7043c8c441eddfaeb5bdef",
+      "id": "587d7b84367417b2b2512b36",
       "title": "Catch Unclosed Parentheses, Brackets, Braces and Quotes",
       "description": [
         "Another syntax error to be aware of is that all opening parentheses, brackets, curly braces, and quotes have a closing pair. Forgetting a piece tends to happen when you're editing existing code and inserting items with one of the pair types. Also, take care when nesting code blocks into others, such as adding a callback function as an argument to a method.",
@@ -235,7 +235,7 @@
       }
     },
     {
-      "id": "9d7073c8c441eddfaeb5bdef",
+      "id": "587d7b84367417b2b2512b37",
       "title": "Catch Mixed Usage of Single and Double Quotes",
       "description": [
         "JavaScript allows the use of both single ('') and double (\"\") quotes to declare a string. Deciding which one to use generally comes down to personal preference, with some exceptions.",
@@ -281,7 +281,7 @@
       }
     },
     {
-      "id": "9d7083c8c441eddfaeb5bdef",
+      "id": "587d7b85367417b2b2512b38",
       "title": "Catch Use of Assignment Operator Instead of Equality Operator",
       "description": [
         "Branching programs, i.e. ones that do different things if certain conditions are met, rely on <code>if</code>, <code>else if</code>, and <code>else</code> statements in JavaScript. The condition sometimes takes the form of testing whether a result is equal to a value.",
@@ -335,7 +335,7 @@
       }
     },
     {
-      "id": "9d7093c8c441eddfaeb5bdef",
+      "id": "587d7b85367417b2b2512b39",
       "title": "Catch Missing Open and Closing Parenthesis After a Function Call",
       "description": [
         "When a function or method doesn't take any arguments, you may forget to include the (empty) opening and closing parentheses when calling it. Often times the result of a function call is saved in a variable for other use in your code. This error can be detected by logging variable values (or their types) to the console and seeing that one is set to a function reference, instead of the expected value the function returns.",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "9d7103c8c441eddfaeb5bdef",
+      "id": "587d7b85367417b2b2512b3a",
       "title": "Catch Arguments Passed in the Wrong Order When Calling a Function",
       "description": [
         "Continuing the discussion on calling functions, the next bug to watch out for is when a function's arguments are supplied in the incorrect order. If the arguments are different types, such as a function expecting an array and an integer, this will likely throw a runtime error. If the arguments are the same type (all integers, for example), then the logic of the code won't make sense. Make sure to supply all required arguments, in the proper order to avoid these issues.",
@@ -436,7 +436,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eddfaeb5bdef",
+      "id": "587d7b86367417b2b2512b3b",
       "title": "Catch Off By One Errors When Using Indexing",
       "description": [
         "<code>Off by one errors</code> (sometimes called OBOE) crop up when you're trying to target a specific index of a string or array (to slice or access a segment), or when looping over the indices of them. JavaScript indexing starts at zero, not one, which means the last index is always one less than the length of the item. If you try to access an index equal to the length, the program may throw an \"index out of range\" reference error or print <code>undefined</code>.",
@@ -488,7 +488,7 @@
       }
     },
     {
-      "id": "9d7113c8c441eddfaeb5bdef",
+      "id": "587d7b86367417b2b2512b3c",
       "title": "Use Caution When Reinitializing Variables Inside a Loop",
       "description": [
         "Sometimes it's necessary to save information, increment counters, or re-set variables within a loop. A potential issue is when variables either should be reinitialized, and aren't, or vice versa. This is particularly dangerous if you accidentally reset the variable being used for the terminal condition, causing an infinite loop.",
@@ -548,7 +548,7 @@
       }
     },
     {
-      "id": "9d7133c8c441eddfaeb5bdef",
+      "id": "587d7b86367417b2b2512b3d",
       "title": "Prevent Infinite Loops with a Valid Terminal Condition",
       "description": [
         "The final topic is the dreaded infinite loop. Loops are great tools when you need your program to run a code block a certain number of times or until a condition is met, but they need a terminal condition that ends the looping. Infinite loops are likely to freeze or crash the browser, and cause general program execution mayhem, which no one wants.",

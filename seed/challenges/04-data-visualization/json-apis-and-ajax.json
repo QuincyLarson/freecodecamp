@@ -10,7 +10,7 @@
   ],
   "challenges": [
     {
-      "id": "9d7123c8c441eb9faeb5b986",
+      "id": "587d7fad367417b2b2512be0",
       "title": "Introduction to the JSON APIs and Ajax Challenges",
       "description": [
         [
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "id": "9d7123c8c441eb9faeb5bdef",
+      "id": "587d7fad367417b2b2512be1",
       "title": "Trigger Click Events with JavaScript",
       "description": [
         "This section covers how to get data from APIs. APIs - or Application Programming Interfaces - are tools that computers use to communicate with one another.",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eb9faeb5ea0f",
+      "id": "587d7fad367417b2b2512be2",
       "title": "Change Text with Click Events",
       "description": [
         "When the click event happens, you can use JavaScript to update an HTML element.",
@@ -209,7 +209,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ebdfaeb5bdef",
+      "id": "587d7fae367417b2b2512be3",
       "title": "Get JSON with the JavaScript XMLHttpRequest Method",
       "description": [
         "You can also request data from an external source. This is where APIs come into play.",
@@ -307,7 +307,7 @@
       }
     },
     {
-      "id": "9d8393c8c441ebffaeb5bdef",
+      "id": "587d7fae367417b2b2512be4",
       "title": "Access the JSON Data from an API",
       "description": [
         "In the previous challenge, you saw how to get JSON data from the Free Code Camp Cat Photo API.",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ebffaeb5bdef",
+      "id": "587d7fae367417b2b2512be5",
       "title": "Convert JSON Data to HTML",
       "description": [
         "Now that you're getting data from a JSON API, you can display it in the HTML.",
@@ -499,7 +499,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eb0faeb5bdef",
+      "id": "587d7fae367417b2b2512be6",
       "title": "Render Images from Data Sources",
       "description": [
         "The last few challenges showed that each object in the JSON array contains an <code>imageLink</code> key with a value that is the URL of a cat's image.",
@@ -595,7 +595,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eb7faeb5bdef",
+      "id": "587d7fae367417b2b2512be7",
       "title": "Pre-filter JSON",
       "description": [
         "If you don't want to render every cat photo you get from the Free Code Camp Cat Photo API, you can pre-filter the JSON before looping through it.",
@@ -694,7 +694,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eb5faeb5bdef",
+      "id": "587d7faf367417b2b2512be8",
       "title": "Get Geolocation Data",
       "description": [
         "Another cool thing you can do is access your user's current location. Every browser has a built in navigator that can give you this information.",
@@ -749,7 +749,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eb6faeb5bdef",
+      "id": "587d7faf367417b2b2512be9",
       "title": "Post Data with the JavaScript XMLHttpRequest Method",
       "description": [
         "In the previous examples, you received data from an external resource. You can also send data to an external resource, as long as that resource supports Ajax requests and you know the URL.",

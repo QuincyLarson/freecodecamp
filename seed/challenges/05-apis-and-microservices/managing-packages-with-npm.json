@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "9d7646c8c857eddfaeb5bdef",
+      "id": "587d7fb3367417b2b2512bfa",
         "title": "Introduction to the Managing Packages with npm Challenges",
         "description": [
           [
@@ -35,7 +35,7 @@
         ]
     },
     {
-      "id": "9d7646c8c441eddfaeb5bdef",
+      "id": "587d7fb3367417b2b2512bfb",
       "title": "Using Package.json, The Core of Any Node.js Project or npm Package",
       "description": [
         "The file package.json is the center of any Node.js project or npm package. It stores information about your project just like the <head>-section in a HTML document describes the content of a webpage. The package.json consists of a single JSON-object where information is stored in \"key\": value-pairs. There are only two required fields in a minimal package.json - name and version - but it’s a good practice to provide additional information about your project that could be useful to future users or maintainers.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb5edef",
+      "id": "587d7fb3367417b2b2512bfc",
       "title": "Add a Description to Your package.json",
       "description": [
         "The next part of a good package.json is the description-field, where a short but informative description about your project belongs.",
@@ -122,7 +122,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb5fdef",
+      "id": "587d7fb4367417b2b2512bfd",
       "title": "Add Keywords to Your package.json",
       "description": [
         "The keywords-field is where you can describe your project using related keywords.",
@@ -172,7 +172,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb50def",
+      "id": "587d7fb4367417b2b2512bfe",
       "title": "Add a license to your package.json",
       "description": [
         "TODO: This challenge could be used to inspire more people to develop OSS - we should really improve this description.",
@@ -215,7 +215,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb51def",
+      "id": "587d7fb4367417b2b2512bff",
       "title": "Add a Version to Your package.json",
       "description": [
         "The version is together with name one of the required fields in a package.json. This field describes the current version of your project.",
@@ -255,7 +255,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb52def",
+      "id": "587d7fb4367417b2b2512c00",
       "title": "Expand your project with external packages from npm",
       "description": [
         "One of the biggest reasons to use a package manager is their powerful dependency management. Instead of manually having to make sure that you get all dependencies whenever you set up a project on a new computer, npm automatically installs everything for you. But how can npm know exactly what your project needs? Meet the dependencies-section of your package.json.",
@@ -303,7 +303,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb53def",
+      "id": "587d7fb5367417b2b2512c01",
       "title": "Manage npm Dependencies By Understanding Semantic Versioning",
       "description": [
         "Versions of the npm packages in the dependencies-section of your package.json follow what’s called Semantic Versioning (SemVer), an industry standard for software versioning aiming to make it easier to manage dependencies. Libraries, frameworks or other tools published on npm should use SemVer in order to clearly communicate what kind of changes that projects who depend on the package can expect if they update.",
@@ -356,7 +356,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb54def",
+      "id": "587d7fb5367417b2b2512c02",
       "title": "Use the tilde-character to always use the latest patch version of a dependency",
       "description": [
         "In the last challenge, we told npm to only include a specific version of a package. That’s a useful way to freeze your dependencies if you need to make sure that different parts of your project stay compatible with each other. But in most use cases you don’t want to miss bug fixes, since they often include important security patches and (hopefully) don’t break things in doing so.",
@@ -402,7 +402,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb55def",
+      "id": "587d7fb5367417b2b2512c03",
       "title": "Use the caret-character to use the latest minor version of a dependency",
       "description": [
         "Similar to how the tilde (~) we learned about in the last challenge allow npm to install the latest PATCH for a dependency, the caret (^) allows npm to install future updates as well. The difference is that the caret will allow both MINOR updates and PATCHes.",
@@ -448,7 +448,7 @@
       }
     },
     {
-      "id": "9d7646c8c441eddfaeb56def",
+      "id": "587d7fb5367417b2b2512c04",
       "title": "Remove a package from your dependencies",
       "description": [
         "Now you’ve tested a few ways you can manage dependencies of your project by using the package.json's dependencies-section. You’ve included external packages by adding them to the file and even told npm what types of versions you want by using special characters as the tilde (~) or the caret (^).",

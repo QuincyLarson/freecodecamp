@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "bc7123c8ccc1edd6aeb5bdef",
+      "id": "587d78b0367417b2b2512b07",
       "title": "Introduction to the Responsive Web Design Challenges",
       "description": [
           [
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "id": "bc7123c8c441eddfaeb5bdef",
+      "id": "587d78b0367417b2b2512b08",
       "title": "Create a Media Query",
       "description": [
         "Media Queries are a new technique introduced in CSS3 that change the presentation of content based on different viewport sizes. The viewport is a user's visible area of a web page, and is different depending on the device used to access the site.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "bd7123c8c441eddfaeb5bdec",
+      "id": "587d78b1367417b2b2512b09",
       "title": "Make an Image Responsive",
       "description": [
         "Making images responsive with CSS is actually very simple. Instead of applying an absolute width to an element:",
@@ -150,7 +150,7 @@
       }
     },
     {
-      "id": "bd7123c8c441eddfaeb5bded",
+      "id": "587d78b1367417b2b2512b0a",
       "title": "Use a Retina Image for Higher Resolution Displays",
       "description": [
         "The simplest way to make your images appear \"retina\" (and optimize them for retina displays) is to define their <code>width</code> and <code>height</code> values as only half of what the original file is.",
@@ -196,7 +196,7 @@
       }
     },
     {
-      "id": "bd7123c8c441eddfaeb5bdee",
+      "id": "587d78b1367417b2b2512b0c",
       "title": "Make Typography Responsive",
       "description": [
         "Instead of using <code>em</code> or <code>px</code> to size text, you can use viewport units for responsive typography. Viewport units, like percentages, are relative units, but they are based off different items. Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element.",

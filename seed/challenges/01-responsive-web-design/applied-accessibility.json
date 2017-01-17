@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "ad7123c8c441ea0faeb5bdef",
+      "id": "587d774b367417b2b2512a9b",
       "title": "Introduction to the Applied Accessibility Challenges",
       "description": [
         [
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "id": "ad7123c8c441ea1faeb5bdef",
+      "id": "587d774c367417b2b2512a9c",
       "title": "Add Alt Text to Images for Visually Impaired Accessibility",
       "description": [
         "It's likely you've seen an <code>alt</code> attribute on an <code>img</code> tag in other challenges. <code>Alt</code> text describes the content of the image and provides a text-alternative. This helps in case the image fails to load or can't be seen by a user. It's also used by search engines to understand what an image contains to include it in search results. Here's an example:",
@@ -89,7 +89,7 @@
       }
     },
     {
-      "id": "ad7123c8c441ea2faeb5bdef",
+      "id": "587d774c367417b2b2512a9d",
       "title": "Know When Alt Text Should be Left Blank",
       "description": [
         "In the last challenge, you learned that including an <code>alt</code> attribute on img tags is mandatory. However, sometimes images are grouped with a caption already describing them, or are used for decoration only. In these cases <code>alt</code> text may seem redundant or unnecessary.",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "ad7123c8c441ea3faeb5bdef",
+      "id": "587d774d367417b2b2512a9e",
       "title": "Use Headings to Show Hierarchical Relationships of Content",
       "description": [
         "Headings (<code>h1</code> through <code>h6</code> elements) are workhorse tags that help provide structure and labeling to your content. Screen readers can be set to read only the headings on a page so the user gets a summary. This means it is important for the heading tags in your markup to have semantic meaning and relate to each other, not be picked merely for their size values.",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "ad7123c8c441ea4faeb5bdef",
+      "id": "587d774e367417b2b2512a9f",
       "title": "Jump Straight to the Content Using the Main Element",
       "description": [
         "HTML5 introduced a number of new elements that give developers more options while also incorporating accessibility features. These tags include <code>main</code>, <code>header</code>, <code>footer</code>, <code>nav</code>, <code>article</code>, and <code>section</code>, among others.",
@@ -253,7 +253,7 @@
       }
     },
     {
-      "id": "ad7123c8c441ea5faeb5bdef",
+      "id": "587d774e367417b2b2512aa0",
       "title": "Wrap Content in the Article Element",
       "description": [
         "<code>Article</code> is another one of the new HTML5 elements that adds semantic meaning to your markup. <code>Article</code> is a sectioning element, and is used to wrap independent, self-contained content. The tag works well with blog entries, forum posts, or news articles.",
@@ -317,7 +317,7 @@
       }
     },
     {
-      "id": "ad7123c8c441ea6faeb5bdef",
+      "id": "587d7787367417b2b2512aa1",
       "title": "Make Screen Reader Navigation Easier with the Header Landmark",
       "description": [
         "The next HTML5 element that adds semantic meaning and improves accessibility is the <code>header</code> tag. It's used to wrap introductory information or navigation links for its parent tag, and works well around content that's repeated at the top on multiple pages.",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "ad7123c8c441ea7faeb5bdef",
+      "id": "587d7788367417b2b2512aa2",
       "title": "Make Screen Reader Navigation Easier with the Nav Landmark",
       "description": [
         "The <code>nav</code> element is another HTML5 item with the embedded landmark feature for easy screen reader navigation. This tag is meant to wrap around the main navigation links in your page.",
@@ -456,7 +456,7 @@
       }
     },
     {
-      "id": "ad7123c8c441ea8faeb5bdef",
+      "id": "587d7788367417b2b2512aa3",
       "title": "Make Screen Reader Navigation Easier with the Footer Landmark",
       "description": [
         "Similar to <code>header</code> and <code>nav</code>, the <code>footer</code> element has a built-in landmark feature that allows assistive devices to quickly navigate to it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page.",
@@ -529,7 +529,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e86faeb5bdef",
+      "id": "587d7789367417b2b2512aa4",
       "title": "Improve Accessibility of Audio Content with the Audio Element",
       "description": [
         "HTML5's <code>audio</code> element gives semantic meaning when it wraps sound or audio stream content in your markup. Audio content also needs a text alternative to be accessible to the deaf or hard of hearing. This can be done with nearby text on the page or a link to a transcript.",
@@ -587,7 +587,7 @@
       }
     },
     {
-      "id": "ad7123c8c441ea9faeb5bdef",
+      "id": "587d778a367417b2b2512aa5",
       "title": "Improve Chart Accessibility with the Figure Element",
       "description": [
         "HTML5 introduced the <code>figure</code> element, along with the related <code>figcaption</code>. Used together, these items wrap a visual representation (like an image, diagram, or chart) along with its caption. This gives a two-fold accessibility boost by both semantically grouping related content, and providing a text alternative that explains the <code>figure</code>.",
@@ -673,7 +673,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e99faeb5bdef",
+      "id": "587d778a367417b2b2512aa6",
       "title": "Improve Form Field Accessibility with the Label Element",
       "description": [
         "Improving accessibility with semantic HTML markup applies to using both appropriate tag names as well as attributes. The next several challenges cover some important scenarios using attributes in forms.",
@@ -747,7 +747,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e98faeb5bdef",
+      "id": "587d778b367417b2b2512aa7",
       "title": "Wrap Radio Buttons in a Fieldset Element for Better Accessibility",
       "description": [
         "The next form topic covers accessibility of radio buttons. Each choice is given a <code>label</code> with a <code>for</code> attribute tying to the <code>id</code> of the corresponding item as covered in the last challenge. Since radio buttons often come in a group where the user must choose one, there's a way to semantically show the choices are part of a set.",
@@ -835,7 +835,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e96faeb5bdef",
+      "id": "587d778b367417b2b2512aa8",
       "title": "Add an Accessible Date Picker",
       "description": [
         "Forms often include the <code>input</code> field, which can be used to create several different form controls. The <code>type</code> attribute on this element indicates what kind of input will be created.",
@@ -903,7 +903,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e94faeb5bdef",
+      "id": "587d778c367417b2b2512aa9",
       "title": "Standardize Times with the HTML5 Datetime Attribute",
       "description": [
         "Continuing with the date theme, HTML5 also introduced the <code>time</code> element along with a <code>datetime</code> attribute to standardize times. This is an inline element that can wrap a date or time on a page. A valid format of that date is held by the <code>datetime</code> attribute. This is the value accessed by assistive devices. It helps avoid confusion by stating a standardized version of a time, even if it's written in an informal or colloquial manner in the text.",
@@ -976,7 +976,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e95faeb5bdef",
+      "id": "587d778d367417b2b2512aaa",
       "title": "Make Elements Only Visible to a Screen Reader by Using Custom CSS",
       "description": [
         "Have you noticed that all of the applied accessibility challenges so far haven't used any CSS? This is to show the importance of a logical document outline, and using semantically meaningful tags around your content before introducing the visual design aspect.",
@@ -1109,7 +1109,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e93faeb5bdef",
+      "id": "587d778e367417b2b2512aab",
       "title": "Improve Readability with High Contrast Text",
       "description": [
         "Low contrast between the foreground and background colors can make text difficult to read. Sufficient contrast improves the readability of your content, but what exactly does \"sufficient\" mean?",
@@ -1167,7 +1167,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e92faeb5bdef",
+      "id": "587d778f367417b2b2512aac",
       "title": "Avoid Colorblindness Issues by Using Sufficient Contrast",
       "description": [
         "Color is a large part of visual design, but its use introduces two accessibility issues. First, color alone should not be used as the only way to convey important information because screen reader users won't see it. Second, foreground and background colors need sufficient contrast so colorblind users can distinguish them.",
@@ -1227,7 +1227,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e91faeb5bdef",
+      "id": "587d778f367417b2b2512aad",
       "title": "Avoid Colorblindness Issues by Carefully Choosing Colors that Convey Information",
       "description": [
         "There are various forms of colorblindness. These can range from a reduced sensitivity to a certain wavelength of light to the inability to see color at all. The most common form is a reduced sensitivity to detect greens.",
@@ -1283,7 +1283,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e90faeb5bdef",
+      "id": "587d778f367417b2b2512aae",
       "title": "Give Links Meaning by Using Descriptive Link Text",
       "description": [
         "Screen reader users have different options for what type of content their device reads. This includes skipping to (or over) landmark elements, jumping to the main content, or getting a page summary from the headings. Another option is to only hear the links available on a page.",
@@ -1331,7 +1331,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e89faeb5bdef",
+      "id": "587d7790367417b2b2512aaf",
       "title": "Make Links Navigatable with HTML Access Keys",
       "description": [
         "HTML offers the <code>accesskey</code> attribute to specify a shortcut key to activate or bring focus to an element. This can make navigation more efficient for keyboard-only users.",
@@ -1397,7 +1397,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e88faeb5bdef",
+      "id": "587d7790367417b2b2512ab0",
       "title": "Use Tabindex to Add keyboard Focus to an Element",
       "description": [
         "The HTML <code>tabindex</code> attribute has three distinct functions relating to an element's keyboard focus. When it's on a tag, it indicates that element can be focused on. The value (an integer that's positive, negative, or zero) determines the behavior.",
@@ -1486,7 +1486,7 @@
       }
     },
     {
-      "id": "ad7123c8c441e87faeb5bdef",
+      "id": "587d7790367417b2b2512ab1",
       "title": "Use Tabindex to Specify the Order of Keyboard Focus for Several Elements",
       "description": [
         "The <code>tabindex</code> attribute also specifies the exact tab order of elements. This is achieved when the value of the attribute is set to a positive number of 1 or higher.",

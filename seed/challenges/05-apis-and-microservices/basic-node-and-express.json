@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "9d764608c441dc2faeb5bdef",
+      "id": "587d7fb0367417b2b2512bec",
         "title": "Introduction to the Basic Node and Express Challenges",
         "description": [
           [
@@ -35,7 +35,7 @@
         ]
     },
     {
-      "id": "9d764608c441eaafaeb5bdef",
+      "id": "587d7fb0367417b2b2512bed",
       "title": "Meet the Node console",
       "description": [
         "During the development process, is important to be able to check what’s going on in your code. Node is just a javascript environment. Like client side javascript, you can use the console to display useful debug information. On your local machine, you would see the console output in a terminal. On HyperDev you can open the logs in the lower part of the screen. You can toggle the log panel if you push the button ‘Logs’ (top-left, under the app name).",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "9d764618c441eaafaeb5bdef",
+      "id": "587d7fb0367417b2b2512bee",
       "title": "Start a working Express Server",
       "description": [
         "In the first two lines of the file myApp.js you can see how it’s easy to create an Express app object. This object has several methods, and we will learn many of them in these challenges. One fundamental method is app.listen(<port>). It tells your server to listen on a given port, putting it in running state. You can see it at the bottom of the file. It is inside comments because for testing reasons we need the app to be running in background. All the code that you may want to add goes between these two fundamental parts. HyperDev stores the port number in the environemet variable process.env.PORT. Its value is 3000.",
@@ -115,7 +115,7 @@
       }
     },
     {
-      "id": "9d764628c441eaafaeb5bdef",
+      "id": "587d7fb0367417b2b2512bef",
       "title": "Serve an HTML file",
       "description": [
         "We can respond with a file using the method res.sendFile(<file>).",
@@ -155,7 +155,7 @@
       }
     },
     {
-      "id": "9d764638c441eaafaeb5bdef",
+      "id": "587d7fb0367417b2b2512bf0",
       "title": "Serve Static assets",
       "description": [
         "An HTML server usually has one or more directories that are accessible by the user. You can place there the static assets needed by your application (stylesheets, scripts, images). In Express you can put in place this functionality using the middleware express.static(<public-dir-absolute_path>). If don’t know what a midleware is, don’t worry. We’ll discuss about it later in details. Basically middleware are function that intercept route handlers, adding some kind of information. A middleware needs to be mounted using the method app.use([optional-path], <mware function>). The first path argument is optional. If you don’t pass it, the middleware will be executed for all the requests.",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "id": "9d764648c441eaafaeb5bdef",
+      "id": "587d7fb1367417b2b2512bf1",
       "title": "Serve JSON on a specific route",
       "description": [
         "While an HTML server serves (you guessed it ?) HTML, an API serves data. A REST API allows data exchange in a simple way, without the need for clients to know any detail about the server. The client only needs to know where the resource is (the URL), and the action it wants to perform on it (the verb). The GET verb is used when you are fetching some information, without modifying anything. In these days the preferred data format to move these informations around the web is JSON. In few words JSON is a convenient way to represent a JavaScript object as a string, so it can be easily transmitted.",
@@ -231,7 +231,7 @@
       }
     },
     {
-      "id": "9d764658c441eaafaeb5bdef",
+      "id": "587d7fb1367417b2b2512bf2",
       "title": "Use the .env file",
       "description": [
         "The .env file is an hidden file that is used to pass environment variables to your application. This file is secret, noone but you can access it. In this file you should store data that you want to keep secret. For example you can store API keys from external services or your database URI. You can also use it to store configuration options. Setting that options you can change the behavior of your application, without the need of rewriting some code. The environment variables are accessible from the app as process.env.VAR_NAME. The process.env object is a global Node object. The variables are passed as strings. By convention the variable names are all uppercase, with words separated by _. The .env is a shell file so you don’t need to quote names or values, and there cannot be space around the = e.g. VAR_NAME=value. Usually you will put each variable definition on a separate line.",
@@ -268,7 +268,7 @@
       }
     },
     {
-      "id": "9d764668c441eaafaeb5bdef",
+      "id": "587d7fb1367417b2b2512bf3",
       "title": "Implement a Root-level Request Logger Middleware",
       "description": [
         "Before we introduced the express.static() middleware function. Now it’s time to see what middleware is, in more detail. Middleware functions are functions that take 3 arguments: the request object, the response object, and the next function in the application’s request-response cycle. These functions execute some code that can have side effects on the app, and usually add informations to the request or response objects. They can also end the cycle sending the response, when some condition is met. If they don’t send the response, when they are done they start the execution of the next function in the stack. This is triggered calling the 3rd argument next(). More information here in the express documentation.",
@@ -313,7 +313,7 @@
       }
     },
     {
-      "id": "9d764678c441eaafaeb5bdef",
+      "id": "587d7fb1367417b2b2512bf4",
       "title": "Chain Middleware to Create a Time Server",
       "description": [
         "Middleware can be mounted at a specific route using app.METHOD('<path>', mware). Middleware can also be chained inside route definition.",
@@ -363,7 +363,7 @@
       }
     },
     {
-      "id": "9d764698c441eaafaeb5bdef",
+      "id": "587d7fb2367417b2b2512bf5",
       "title": "Get Route Parameter Input from the Client",
       "description": [
         "When building an API, we have to allow users to comunicate us what they want to get from our service. For example, if the client is requesting informations about a user stored in the database, she needs a way to let us know which user she is interested in. One possible way to get this result, is using route parameters. Route parameters are named segments of the URL, delimited by slashes (/). Each segment captures the value of the part of the URL which match its position. The captured values are populated in the req.params object.",
@@ -407,7 +407,7 @@
       }
     },
     {
-      "id": "9d7646a8c441eaafaeb5bdef",
+      "id": "587d7fb2367417b2b2512bf6",
       "title": "Get Query Parameter Input from the Client",
       "description": [
         "Another common way to get input from the client is by encoding the data after the route path, using a Query string. The query string is delimited by a question mark ?, and includes field=value couples. Each couple is separated by an ampersand &. Express can parse the data from the query string, and populate the object req.query. Some character cannot be in URLs, so the query string needs to be encoded. If you use the API from javascript, you can use specific methods to encode/decode the URL.",
@@ -452,7 +452,7 @@
       }
     },
     {
-      "id": "9d7646b8c441eaafaeb5bdef",
+      "id": "587d7fb2367417b2b2512bf7",
       "title": "Use Body-Parser to Parse POST Requests",
       "description": [
         "Besides GET there is another common http verb , it is POST. POST is the default method used to send client data with HTML forms. In the REST convention POST is used to send data to create new items in the database (a new user, or a new blog post). We don’t have a database in this project, but we are going to learn how to handle POST requests anyway.",
@@ -500,7 +500,7 @@
       }
     },
     {
-      "id": "9d7646d8c441eaafaeb5bdef",
+      "id": "587d7fb2367417b2b2512bf8",
       "title": "Get Data from POST Requests",
       "description": [
         "Mount a POST handler at the path /name. It’s the same path as before. We have prepared a form in the html frontpage. It will submit the same data of exercise 10 (Query string). If the body-parser is configured correctly, you should find the parameters in the object req.body. Have a look at the usual library example :",

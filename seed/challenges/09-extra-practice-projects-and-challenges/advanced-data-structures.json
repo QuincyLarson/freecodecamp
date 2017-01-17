@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "5d712311c441eddfaeb5bdef",
+      "id": "587d8250367417b2b2512c5e",
       "title": "Learn how a Stack Works",
       "description": [
         "You are probably familiar with stack of books on your table. You might have used the undo feature in your computer. You are also used to hitting the back button on your phone to go back to the previous view in your app.",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "id": "5d012311c441eddfaeb5bdef",
+      "id": "587d8250367417b2b2512c5f",
       "title": "Create a Stack Class",
       "description": [
         "In the last section, we talked about what a stack is and how we can use an array to represent a stack. In this section, we will be creating our own stack class.",
@@ -130,7 +130,7 @@
       }
     },
     {
-      "id": "5d022313c441eddfaeb5bdef",
+      "id": "587d8250367417b2b2512c60",
       "title": "Create a Queue Class",
       "description": [
         "Like stacks, queues are a collection of elements. But unlike stacks, queues follow the FIFO (First-In First-Out) principle. Elements added to a queue are pushed to the tail, or the end, of the queue, and only the element at the front of the queue is allowed to be removed.",
@@ -202,7 +202,7 @@
       }
     },
     {
-      "id": "5d032314c441eddfaeb5bdef",
+      "id": "587d8251367417b2b2512c61",
       "title": "Work with Nodes in a Linked List",
       "description": [
         "Another common data structure is the linked list. In a linked list, elements are stored in a node. The node contains two key pieces of information: the element itself, and a reference to the next node.",
@@ -261,7 +261,7 @@
       }
     },
     {
-      "id": "5d042315c441eddfaeb5bdef",
+      "id": "587d8251367417b2b2512c62",
       "title": "Create a Linked List Class",
       "description": [
         "Let's create a linked list class. Every linked list has a head and length. The head is the first node added to the linked list. The length is the size of the linked list. When an element is added to the linked list, the length should increment by one.",
@@ -340,7 +340,7 @@
       }
     },
     {
-      "id": "5d052316c441eddfaeb5bdef",
+      "id": "587d8251367417b2b2512c63",
       "title": "Remove Elements from a Linked List",
       "description": [
         "The next important method of a linked list is the remove method. The remove method takes an element and searches the linked list to find and remove the node containing that element. When a node is removed, the previous node that had reference to removed node, now has reference to the node that the removed node once referenced.",
@@ -439,7 +439,7 @@
       }
     },
     {
-      "id": "5d062317c441eddfaeb5bdef",
+      "id": "587d8251367417b2b2512c64",
       "title": "Search within a Linked List",
       "description": [
         "Let's add a few more useful methods to our linked list class. Like the stack and queue classes, we should add an isEmpty method to check if the linked list is empty.",
@@ -552,7 +552,7 @@
       }
     },
     {
-      "id": "5d072319c441eddfaeb5bdef",
+      "id": "587d8251367417b2b2512c65",
       "title": "Remove Elements from a Linked List by Index",
       "description": [
         "Now we need to create a remove method that removes the element at a given index. The method should be called removeAt(index). To remove an element at a certain index we need to keep count of each node as we move along the linked list. Starting at the head of the linked list, our currentIndex should be 0. The currentIndex should increment by one for each node we pass. Just like the remove(element) method, we need to reconnect the nodes. The node that has reference to the removed node should now have reference to the next node.",
@@ -668,7 +668,7 @@
       }
     },
     {
-      "id": "5d082320c441eddfaeb5bdef",
+      "id": "587d8252367417b2b2512c66",
       "title": "Learn how Binary Search Trees Work",
       "description": [
         "Lets look at one of the most popular Data Structures : Trees. Like the literal meaning, a tree can have many leaves and many brances. Here, lets see an example of a simple tree, a Binary Search Tree. This tree is special, as at any level it can have two child's, a left child and a right child. Although, it has another unique speciality : The left child's value must be less than the parent, and the parents value must be less than the right child. Sound's confusing at first? Well, this is a rule enforced for all Binary Search Trees (BST)'s around the world for one simple reason, fast searching. Yes, hence the name Search in the Tree!",
@@ -765,7 +765,7 @@
       }
     },
     {
-      "id": "5d092321c441eddfaeb5bdef",
+      "id": "587d8252367417b2b2512c67",
       "title": "Add Elements at a Specific Index in a Linked List",
       "description": [
         "Let's create a addAt(index,element) method that adds an element at a given index.",
@@ -861,7 +861,7 @@
       }
     },
     {
-      "id": "5d102322c441eddfaeb5bdef",
+      "id": "587d8252367417b2b2512c68",
       "title": "Traverse a Binary Search Tree In-order, Pre-order and Post-order",
       "description": [
         "When talking about trees, lets see how we can walk along a tree. There are three ways we can do so:",
@@ -1036,7 +1036,7 @@
       }
     },
     {
-      "id": "50812323c441eddfaeb5bdef",
+      "id": "587d8252367417b2b2512c69",
       "title": "Delete Leaf Nodes from a Binary Search Tree",
       "description": [
         "This is a long and complicated task, but very useful to know. Basically while deleting tree nodes we encounter the following three cases:",
@@ -1319,7 +1319,7 @@
       }
     },
     {
-      "id": "8d1223c8c441eddfaeb5bdef",
+      "id": "587d8253367417b2b2512c6a",
       "title": "Typed Arrays",
       "description": [
         "Arrays are JavaScript objects that can hold a lot of different elements.",
@@ -1424,7 +1424,7 @@
       "translations": {}
     },
     {
-      "id": "816123c8c441eddfaeb5bdef",
+      "id": "587d8253367417b2b2512c6b",
       "title": "Remove from a Set",
       "description": [
         "In this exercises we are going to create a delete function for our Set. The function should be named this.remove"
@@ -1520,7 +1520,7 @@
       "translations": {}
     },
     {
-      "id": "8d2023c8c441eddfaeb5bdef",
+      "id": "587d8253367417b2b2512c6c",
       "title": "Perform a union on 2 Sets of data",
       "description": [
         "In this exercise we are going to perform a union on 2 sets of data. We will create a method on our Set data structure called union. This method should take another set as an argument and update the set you called the method on to be the union of the two sets, excluding any duplicate values."
@@ -1581,7 +1581,7 @@
       "translations": {}
     },
     {
-      "id": "812123c8c441eddfaeb5bdef",
+      "id": "587d8253367417b2b2512c6d",
       "title": "Perform an Intersection on two Sets of Data",
       "description": [
         "In this exercise we are going to perform an intersection on 2 sets of data. An intersection of sets represents all values that are common to two or more sets. This method should be called this.intersection. This method should return a new set containing the intersection of the sets the method was called against."
@@ -1655,7 +1655,7 @@
       "translations": {}
     },
     {
-      "id": "8d2223c8c441eddfaeb5bdef",
+      "id": "587d8254367417b2b2512c6e",
       "title": "Perform a difference on two Sets of data",
       "description": [
         "In this exercise we are going to perform a difference on 2 sets of data. A difference of sets should compare two sets and return the items present in the first set that are absent in the second. This method should be called this.difference and should return a new set containing only the items that result from taking the difference of two sets."
@@ -1740,7 +1740,7 @@
       "translations": {}
     },
     {
-      "id": "8d2323c8c441eddfaeb5bdef",
+      "id": "587d8254367417b2b2512c6f",
       "title": "Perform a subset check on two Sets of data",
       "description": [
         "In this exercise we are going to perform a subset test on 2 sets of data. This will compare the first set, against the second and if the first set is fully contained within the Second then it will return true. This method should be called this.subset. At this point, we have added a lot of useful functionality to our Set data structure. This will complete the challenges for the set data structure."
@@ -1836,7 +1836,7 @@
       "translations": {}
     },
     {
-      "id": "8d2423c8c441eddfaeb5bdef",
+      "id": "587d8254367417b2b2512c70",
       "title": "Creating and adding to sets in ES6",
       "description": [
         "Now we have worked through ES5, we are going to perform similar actions in ES6. This will be considerably easier. Set is now now a provided data structure like Object, Array, etc. so many of the operations we wrote by hand are now included for us. Let's take a look:",
@@ -1871,7 +1871,7 @@
       "translations": {}
     },
     {
-      "id": "8d2523c8c441eddfaeb5bdef",
+      "id": "587d8254367417b2b2512c71",
       "title": "Removing items from a set in ES6",
       "description": [
         "Now we will see how we can remove items from an ES6 Set.",
@@ -1901,7 +1901,7 @@
       "translations": {}
     },
     {
-      "id": "8d8883c8c441eddfaeb5bdef",
+      "id": "587d8255367417b2b2512c72",
       "title": "Using .has and .size on an ES6 Set",
       "description": [
         "Now we will look at the .has and .size methods available on the Set object.",
@@ -1930,7 +1930,7 @@
       "translations": {}
     },
     {
-      "id": "8d7126c8c441eddfaeb5bdef",
+      "id": "587d8255367417b2b2512c73",
       "title": "Using Spread and Notes for ES5 Set() Integration",
       "description": [
         "Next up is one of the coolest things in ES6!",
@@ -1960,7 +1960,7 @@
       "translations": {}
     },
     {
-      "id": "8d9993c8c441eddfaeb5bdef",
+      "id": "587d8255367417b2b2512c74",
       "title": "Methods for queuing with priority using the Priority Queue",
       "description": [
         "In this challenge you will be creating a Priority Queue. A Priority Queue is a special type of Queue with one primary difference, that you can set the priority in the queue as either high represented by 0 or low represented by an integer greater than 0 during the enqueue process. Item priority will override the placement order: that is, an item enqueue with a higher priority than any preceding items will be moved to the front of the queue. If items have equal priority, then placement order will decide their dequeue order. For instance:",
@@ -2009,7 +2009,7 @@
       "translations": {}
     },
     {
-      "id": "8d7129c8c441eddfaeb5bdef",
+      "id": "587d8255367417b2b2512c75",
       "title": "How to Create a Circular Queue",
       "description": [
         "In this challenge you will be creating a Circular Queue. A circular queue is basically a queue that writes to the end of a collection then begins over writing itself at the beginning of the collection. This is type of data structure has some useful applications in certain situations. For example, a circular buffer can be used in streaming media. Once the queue is full, new media data simply begins to overwrite old data.",
@@ -2068,7 +2068,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123208441eddfaeb5bdef",
+      "id": "587d8255367417b2b2512c76",
       "title": "Directed and Undirected Graphs",
       "description": [
         "This challenge starts a series of challenges that will teach graph data structures and some algorithms involving graphs. You may be familiar with graphs with an x- and y-axis found in your math classes. However, here graphs mean a different thing.",
@@ -2095,7 +2095,7 @@
       "translations": {}
     },
     {
-      "id": "8d712328c441eddfaeb5bdef",
+      "id": "587d8256367417b2b2512c77",
       "title": "Adjacency List",
       "description": [
         "Graphs can be represented in different ways. Here we describe one way, which is called an adjacency list.",
@@ -2135,7 +2135,7 @@
       "translations": {}
     },
     {
-      "id": "8d3323c8c441eddfaeb5bdef",
+      "id": "587d8256367417b2b2512c78",
       "title": "Adjacency Matrix",
       "description": [
         "Another way to represent a graph is to put it in an adjacency matrix.",
@@ -2180,7 +2180,7 @@
       "translations": {}
     },
     {
-      "id": "8d7343c8c441eddfaeb5bdef",
+      "id": "587d8256367417b2b2512c79",
       "title": "Incidence matrix",
       "description": [
         "Yet another way to represent a graph is to put it in an incidence matrix.",
@@ -2235,7 +2235,7 @@
       "translations": {}
     },
     {
-      "id": "8d7135c8c441eddfaeb5bdef",
+      "id": "587d8256367417b2b2512c7a",
       "title": "Find the Minimum and Maximum Value in a Binary Search Tree",
       "description": [
         "This series of challenges will introduce the tree data structure. Trees are an important and versatile data structure in computer science. Of course, their name comes from the fact that when visualized they look much like the trees we are familiar with in the natural world. A tree data structure begins with one node, typically referred to as the root, and from here branches out to additional nodes, each of which may have more child nodes, and so on and so forth. The data structure is usually visualized with the root node at the top; you can think of it as a natural tree flipped upside down.",
@@ -2304,7 +2304,7 @@
       "translations": {}
     },
     {
-      "id": "8d3623c8c441eddfaeb5bdef",
+      "id": "587d8257367417b2b2512c7b",
       "title": "Add a New Element to a Binary Search Tree",
       "description": [
         "Now that we have an idea of the basics lets write a more complex method.",
@@ -2367,7 +2367,7 @@
       "translations": {}
     },
     {
-      "id": "8d3723c8c441eddfaeb5bdef",
+      "id": "587d8257367417b2b2512c7c",
       "title": "Check if an Element is Present in a Binary Search Tree",
       "description": [
         "Now that we have a general sense of what a binary search tree is let's talk about it in a little more detail. Binary search trees provide logarithmic time for the common operations of lookup, insertion, and deletion in the average case, and linear time in the worst case. Why is this? Each of those basic operations requires us to find an item in the tree (or in the case of insertion to find where it should go) and because of the tree structure at each parent node we are branching left or right and effectively excluding half the size of the remaining tree. This makes the search proportional to the logarithm of the number of nodes in the tree, which creates logarithmic time for these operations in the average case.",
@@ -2431,7 +2431,7 @@
       "translations": {}
     },
     {
-      "id": "8d3823c8c441eddfaeb5bdef",
+      "id": "587d8257367417b2b2512c7d",
       "title": "Find the Minimum and Maximum Height of a Binary Search Tree",
       "description": [
         "In the last challenge we described a scenario in which a tree could become unbalanced. To understand the concept of balance, let's take a look at another tree property: height. Height in a tree represents the distance from the root node to any given leaf node. Different paths in a highly branched tree structure may have different heights, but for a given tree there will be a minimum and maximum height. If the tree is balanced, these values will differ at most by one. This means that in a balanced tree, all the leaf nodes exist within the same level, or if they are not within the same level they are at most one level apart.",
@@ -2500,7 +2500,7 @@
       "translations": {}
     },
     {
-      "id": "8d3923c8c441eddfaeb5bdef",
+      "id": "587d8257367417b2b2512c7e",
       "title": "Use Depth First Search in a Binary Search Tree",
       "description": [
         "We know how to search a binary search tree for a specific value. But what if we just want to explore the entire tree? Or what if we don't have an ordered tree and we need to just search for a value? Here we will introduce some tree traversal methods which can be used to explore tree data structures. First up is depth-first search. In depth-first search, a given subtree is explored as deeply as possible before the search continues on to another subtree. There are three ways this can be done:",
@@ -2574,7 +2574,7 @@
       "translations": {}
     },
     {
-      "id": "8d4023c8c441eddfaeb5bdef",
+      "id": "587d8258367417b2b2512c7f",
       "title": "Use Breadth First Search in a Binary Search Tree",
       "description": [
         "Here we will introduce another tree traversal method: breadth-first search. In contrast to the depth-first search methods from the last challenge, breadth-first search explores all the nodes in a given level within a tree before continuing on to the next level. Typically, queues are utilized as helper data structures in the design of breadth-first search algorithms.",
@@ -2642,7 +2642,7 @@
       "translations": {}
     },
     {
-      "id": "8d4223c8c441eddfaeb5bdef",
+      "id": "587d8258367417b2b2512c80",
       "title": "Delete a Leaf Node in a Binary Search Tree",
       "description": [
         "This is the first of three challenges where we will implement a more difficult operation in binary search trees: deletion. Deletion is difficult because removing nodes breaks links in the tree. These links must be carefully reestablished to ensure the binary tree structure is maintained. For some deletions, this means the tree must be rearranged. In general, you will encounter one of three cases when trying to delete a node:",
@@ -2757,7 +2757,7 @@
       "translations": {}
     },
     {
-      "id": "8d4423c8c441eddfaeb5bdef",
+      "id": "587d8258367417b2b2512c81",
       "title": "Delete a Node with One Child in a Binary Search Tree",
       "description": [
         "Now that we can delete leaf nodes let's move on to the second case: deleting a node with one child. For this case, say we have a tree with the following nodes 1 — 2 — 3 where 1 is the root. To delete 2, we simply need to make the right reference in 1 point to 3. More generally,",
@@ -2910,7 +2910,7 @@
       "translations": {}
     },
     {
-      "id": "8d4523c8c441eddfaeb5bdef",
+      "id": "587d8258367417b2b2512c82",
       "title": "Delete a Node with Two Children in a Binary Search Tree",
       "description": [
         "Removing nodes that have two children is the hardest case to implement. Removing a node like this produces two subtrees that are no longer connected to the original tree structure. How can we reconnect them? One method is to find the smallest value in the right subtree of the target node and replace the target node with this value. Selecting the replacement in this way ensures that it is greater than every node in the left subtree it becomes the new parent of but also less than every node in the right subtree it becomes the new parent of.",
@@ -3079,7 +3079,7 @@
       "translations": {}
     },
     {
-      "id": "8d4923c8c441eddfaeb5bdef",
+      "id": "587d8259367417b2b2512c83",
       "title": "Invert a Binary Tree",
       "description": [
         "Here will we create a function to invert a binary tree. Given a binary tree, we want to produce a new tree that is equivalently the mirror image of this tree. Running an inorder traversal on an inverted tree will explore the nodes in reverse order when compared to the inorder traversal of the original tree. Write a method to do this called invert on our binary tree. Calling this method should invert the current tree structure. Ideally, we would like to do this in-place in linear time. That is, we only visit each node once and we modify the existing tree structure as we go, without using any additional memory. Good luck!"
@@ -3159,7 +3159,7 @@
       "translations": {}
     },
     {
-      "id": "8d5023c8c441eddfaeb5bdef",
+      "id": "587d8259367417b2b2512c84",
       "title": "Create a Trie Search Tree",
       "description": [
         "Here we will move on from binary search trees and take a look at another type of tree structure called a trie. A trie is an ordered search tree commonly used to hold strings, or more generically associative arrays or dynamic datasets in which the keys are strings. They are very good at storing sets of data when many keys will have overlapping prefixes, for example, all",
@@ -3238,7 +3238,7 @@
       "translations": {}
     },
     {
-      "id": "8d5323c8c441eddfaeb5bdef",
+      "id": "587d8259367417b2b2512c85",
       "title": "Implement Selection Sort",
       "description": [
         "Here we will implement selection sort. Selection sort works by selecting the minimum value in a list and swapping it with the first value in the list. It then starts at the second position, selects the smallest value in the remaining list, and swaps it with the second element. It continues iterating through the list and swapping elements until it reaches the end of the list. Now the list is sorted. Selection sort has quadratic time complexity in all cases.",
@@ -3273,7 +3273,7 @@
       "translations": {}
     },
     {
-      "id": "8d5423c8c441eddfaeb5bdef",
+      "id": "587d8259367417b2b2512c86",
       "title": "Implement Insertion Sort",
       "description": [
         "The next sorting method we'll look at is insertion sort. This method works by building up a sorted array at the beginning of the list. It begins the sorted array with the first element. Then it inspects the next element and swaps it backwards into the sorted array until it is in sorted position. It continues iterating through the list and swapping new items backwards into the sorted portion until it reaches the end. This algorithm has quadratic time complexity in the average and worst cases.",
@@ -3308,7 +3308,7 @@
       "translations": {}
     },
     {
-      "id": "8d5523c8c441eddfaeb5bdef",
+      "id": "587d825a367417b2b2512c87",
       "title": "Create a Doubly Linked List",
       "description": [
         "All of the linked lists we've created so far are singly linked lists. Here, we'll create",
@@ -3377,7 +3377,7 @@
       "translations": {}
     },
     {
-      "id": "8d5623c8c441eddfaeb5bdef",
+      "id": "587d825a367417b2b2512c88",
       "title": "Reverse a Doubly Linked List",
       "description": [
         "Let's create one more method for our doubly linked list called reverse which reverses the list in place. Once the method is executed the head should point to the previous tail and the tail should point to the previous head. Now, if we traverse the list from head to tail we should meet the nodes in a reverse order compared to the original list. Trying to reverse an empty list should return null."
@@ -3457,7 +3457,7 @@
       "translations": {}
     },
     {
-      "id": "8d5723c8c441eddfaeb5bdef",
+      "id": "587d825a367417b2b2512c89",
       "title": " Implement Quick Sort",
       "description": [
         "Here we will move on to an intermediate sorting algorithm: quick sort. Quick sort is an",
@@ -3530,7 +3530,7 @@
       "translations": {}
     },
     {
-      "id": "8d7593c8c441eddfaeb5bdef",
+      "id": "587d825a367417b2b2512c8a",
       "title": "Insert an Element into a Max Heap",
       "description": [
         "Now we will move on to another tree data structure, the binary heap. A binary heap is a partially ordered binary tree which satisfies the heap property. The heap property specifies a relationship between parent and child nodes. You may have a max heap, in which all parent nodes are greater than or equal to their child nodes, or a min heap, in which the reverse is true. Binary heaps are also complete binary trees. This means that all levels of the tree are fully filled and if the last level is partially filled it is filled from left to right.",
@@ -3567,7 +3567,7 @@
       "translations": {}
     },
     {
-      "id": "8d7603c8c441eddfaeb5bdef",
+      "id": "587d825b367417b2b2512c8b",
       "title": "Remove an Element from a Max Heap",
       "description": [
         "Now that we can add elements to our heap let's see how we can remove elements. Removing and inserting elements both require similar logic. In a max heap you will usually want to remove the greatest value, so this involves simply extracting it from the root of our tree. This will break the heap property of our tree, so we must reestablish it in some way. Typically, for a max heap this is done in the following way:",
@@ -3595,7 +3595,7 @@
       "translations": {}
     },
     {
-      "id": "8d0003c8c441eddfaeb5bdef",
+      "id": "587d825b367417b2b2512c8c",
       "title": "Implement Heap Sort with a Min Heap",
       "description": [
         "Now that we can add and remove elements let's see some of the applications heaps can be used for. Heaps are commonly used to implement priority queues because they always store an item of greatest or least value in first position. In addition, they are used to implement a sorting algorithm called heap sort. We'll see how to do this here. Heap sort uses a min heap, the reverse of a max heap. A min heap always stores the element of least value in the root position.",
@@ -3632,7 +3632,7 @@
       "translations": {}
     },
     {
-      "id": "8d712508c441eddfaeb5bdef",
+      "id": "587d825b367417b2b2512c8d",
       "title": "Create an ES6 JavaScript Map",
       "description": [
         "The new version of JavaScript provides us with a built-in Map object which provides much of the functionality we wrote by hand in the last challenge. This Map object, although similar to regular JavaScript objects, provides some useful functionality that normal objects lack. For example, an ES6 Map tracks the insertion order of items that are added to it. Here is a more complete overview of its methods:",
@@ -3658,7 +3658,7 @@
       "translations": {}
     },
     {
-      "id": "8d6323c8c441eddfaeb5bdef",
+      "id": "587d825b367417b2b2512c8e",
       "title": "Create a Hash Table",
       "description": [
         "In this challenge we will learn about hash tables. A Hash table is used to implement associative arrays, or mappings of key-value pairs, like the objects and Maps we have just been studying. A JavaScript object could be implemented as a hash table, for instance (its actual implementation will depend on the environment it's running in). The way a hash table works is that it takes a key input and hashes this key in a deterministic way to some numerical value. This numerical value is then used as the actual key the associated value is stored by. Then, if you try to access the same key again, the hashing function will process the key, return the same numerical result, which will then be used to look up the associated value. This provides very efficient O(n) lookup time on average.",
@@ -3697,7 +3697,7 @@
       "translations": {}
     },
     {
-      "id": "8d6123c8c441eddfaeb5bdef",
+      "id": "587d825c367417b2b2512c8f",
       "title": "Implement Merge Sort",
       "description": [
         "Another intermediate sorting algorithm that is very common is merge sort. Like quick sort, merge sort also uses a divide-and-conquer, recursive methodology to sort an array. It takes advantage of the fact that it is relatively easy to sort two arrays as long as each is sorted in the first place. But we'll start with only one array as input, so how do we get to two sorted arrays from that? Well, we can recursively divide the original input in two until we reach the base case of an array with one item. A single-item array is naturally sorted, so then we can start combining. This combination will unwind the recursive calls that split the original array, eventually producing a final sorted array of all the elements. The steps of merge sort, then, are:",
@@ -3732,7 +3732,7 @@
       "translations": {}
     },
     {
-      "id": "8d6423c8c441eddfaeb5bdef",
+      "id": "587d825c367417b2b2512c90",
       "title": "Breadth-First Search",
       "description": [
         "So far, we've learned different ways of creating representations of graphs. What now? One natural question to have is what are the distances between any two nodes in the graph? Enter graph traversal algorithms.",
@@ -3799,7 +3799,7 @@
       "translations": {}
     },
     {
-      "id": "8d6523c8c441eddfaeb5bdef",
+      "id": "587d825c367417b2b2512c91",
       "title": "Nodes in a Doubly Linked List",
       "description": [
         "A doubly linked list is similar to a linked list. The difference between these data structures is the information in the nodes, which store: the element, a reference to the previous node and a reference to the next node of the list.",
@@ -3834,7 +3834,7 @@
       "translations": {}
     },
     {
-      "id": "8d6623c8c441eddfaeb5bdef",
+      "id": "587d825c367417b2b2512c92",
       "title": "Inserting Nodes in a Doubly Linked List",
       "description": [
         "One of the most important methods in a Doubly Linked List implementation is the insert method. When a new node is inserted into the doubly linked list, the list's size is increased by one.",
@@ -3925,7 +3925,7 @@
       "translations": {}
     },
     {
-      "id": "8d6723c8c441eddfaeb5bdef",
+      "id": "587d825c367417b2b2512c93",
       "title": "Removing Nodes From a Doubly Linked List",
       "description": [
         "A method that removes items is an essential component of every Doubly Linked List implementation.",
@@ -4036,7 +4036,7 @@
       "translations": {}
     },
     {
-      "id": "8d6823c8c441eddfaeb5bdef",
+      "id": "587d825d367417b2b2512c94",
       "title": "Searching For Nodes In a Doubly Linked List",
       "description": [
         "When you have a lot of nodes in a Doubly Linked List, you'll likely need a method to search for a node in your list.",
@@ -4158,7 +4158,7 @@
       "translations": {}
     },
     {
-      "id": "8d6923c8c441eddfaeb5bdef",
+      "id": "587d825d367417b2b2512c96",
       "title": "Depth-First Search",
       "description": [
         "Similar to breadth-first search, here we will learn about another graph traversal algorithm called depth-first search.",

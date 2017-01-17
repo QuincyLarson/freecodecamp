@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "9d7123c01441eddf8635bdef",
+      "id": "587d7dac367417b2b2512b72",
         "title": "Introduction to the Object Oriented Programming Challenges",
         "description": [
           [
@@ -35,7 +35,7 @@
         ]
     },
     {
-      "id": "9d7123c01441eddfaeb5bdef",
+      "id": "587d7dac367417b2b2512b73",
       "title": "Create a Basic JavaScript Object",
       "description": [
         "Think about things people see everyday, like cars, shops, and birds. These are all <code>objects</code>: tangible things people can observe and interact with.",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "id": "9d7123c02441eddfaeb5bdef",
+      "id": "587d7dac367417b2b2512b74",
       "title": "Use Dot Notation to Access the Properties of an Object",
       "description": [
         "The last challenge created an <code>object</code> with various <code>properties</code>, now you'll see how to access the values of those <code>properties</code>. Here's an example:",
@@ -129,7 +129,7 @@
       }
     },
     {
-      "id": "9d7123c03441eddfaeb5bdef",
+      "id": "587d7dad367417b2b2512b75",
       "title": "Create a Method on an Object",
       "description": [
         "<code>Objects</code> can have a special type of <code>property</code>, called a <code>method</code>.",
@@ -179,7 +179,7 @@
       }
     },
     {
-      "id": "9d7123c04441eddfaeb5bdef",
+      "id": "587d7dad367417b2b2512b76",
       "title": "Make Code More Reusable with This",
       "description": [
         "The last challenge introduced a <code>method</code> to the <code>duck</code> object. It used <code>duck.name</code> dot notation to access the value for the <code>name</code> property within the return statement:",
@@ -232,7 +232,7 @@
       }
     },
     {
-      "id": "9d7123c20441eddfaeb5bdef",
+      "id": "587d7dad367417b2b2512b77",
       "title": "Define a Constructor Function",
       "description": [
         "<code>Constructors</code> are functions that create new objects. They define properties and behaviors that will belong to the new object. Think of them as a blueprint for the creation of new objects.",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "9d7123c21441eddfaeb5bdef",
+      "id": "587d7dad367417b2b2512b78",
       "title": "Use a Constructor to Create Objects",
       "description": [
         "Here's the <code>Bird</code> constructor from the previous challenge:",
@@ -337,7 +337,7 @@
       }
     },
     {
-      "id": "9d7123c23441eddfaeb5bdef",
+      "id": "587d7dae367417b2b2512b79",
       "title": "Extend Constructors to Receive Arguments",
       "description": [
         "The <code>Bird</code> and <code>Dog</code> constructors from last challenge worked well. However, notice that all <code>Birds</code> that are created with the <code>Bird</code> constructor are automatically named Albert, are blue in color, and have two legs. What if you want birds with different values for name and color? It's possible to change the properties of each bird manually but that would be a lot of work:",
@@ -393,7 +393,7 @@
       }
     },
     {
-      "id": "9d7123c24441eddfaeb5bdef",
+      "id": "587d7dae367417b2b2512b7a",
       "title": "Verify an Object's Constructor with instanceof",
       "description": [
         "Anytime a constructor function creates a new object, that object is said to be an <code>instance</code> of its constructor. JavaScript gives a convenient way to verify this with the <code>instanceof</code> operator. <code>instanceof</code> allows you to compare an object to a constructor, returning <code>true</code> or <code>false</code> based on whether or not that object was created with the constructor. Here's an example:",
@@ -442,7 +442,7 @@
       }
     },
     {
-      "id": "9d7123c14441eddfaeb5bdef",
+      "id": "587d7dae367417b2b2512b7b",
       "title": "Understand Own Properties",
       "description": [
         "In the following example, the <code>Bird</code> constructor defines two properties: <code>name</code> and <code>numLegs</code>:",
@@ -496,7 +496,7 @@
       }
     },
     {
-      "id": "9d7123c15441eddfaeb5bdef",
+      "id": "587d7dae367417b2b2512b7c",
       "title": "Use Prototype Properties to Reduce Duplicate Code",
       "description": [
         "Since <code>numLegs</code> will probably have the same value for all instances of <code>Bird</code>, you essentially have a duplicated variable <code>numLegs</code> inside each <code>Bird</code> instance.",
@@ -552,7 +552,7 @@
       }
     },
     {
-      "id": "9d7123c16441eddfaeb5bdef",
+      "id": "587d7daf367417b2b2512b7d",
       "title": "Iterate Over All Properties",
       "description": [
         "You have now seen two kinds of properties: <code>own</code> properties and <code>prototype</code> properties. <code>Own</code> properties are defined directly on the object instance itself. And <code>prototype</code> properties are defined on the <code>prototype</code>.",
@@ -609,7 +609,7 @@
       }
     },
     {
-      "id": "9d7123c17441eddfaeb5bdef",
+      "id": "587d7daf367417b2b2512b7e",
       "title": "Understand the Constructor Property",
       "description": [
         "There is a special <code>constructor</code> property located on the object instances <code>duck</code> and <code>beagle</code> that were created in the previous challenges:",
@@ -662,7 +662,7 @@
       }
     },
     {
-      "id": "9d7123c19441eddfaeb5bdef",
+      "id": "587d7daf367417b2b2512b7f",
       "title": "Change the Prototype to a New Object",
       "description": [
         "Up until now you have been adding properties to the <code>prototype</code> individually:",
@@ -716,7 +716,7 @@
       }
     },
     {
-      "id": "9d7123c19441e03faeb5bdef",
+      "id": "587d7daf367417b2b2512b80",
       "title": "Remember to Set the Constructor Property when Changing the Prototype",
       "description": [
         "There is one crucial side effect of manually setting the <code>prototype</code> to a new object. It erased the constructor property! The code in the previous challenge would print the following for <code>duck</code>:",
@@ -772,7 +772,7 @@
       }
     },
     {
-      "id": "9d7123c25441eddfaeb5bdef",
+      "id": "587d7db0367417b2b2512b81",
       "title": "Understand Where an Object’s Prototype Comes From",
       "description": [
         "Just like people inherit genes from their parents, an object inherits its <code>prototype</code> directly from the constructor function that created it. For example, here the <code>Bird</code> constructor creates the <code>duck</code> object:",
@@ -822,7 +822,7 @@
       }
     },
     {
-      "id": "9d7123c26441eddfaeb5bdef",
+      "id": "587d7db0367417b2b2512b82",
       "title": "Understand the Prototype Chain",
       "description": [
         "All objects in JavaScript (with a few exceptions) have a <code>prototype</code>. Also, an object’s <code>prototype</code> itself is an object.",
@@ -879,7 +879,7 @@
       }
     },
     {
-      "id": "9d7123c27441eddfaeb5bdef",
+      "id": "587d7db0367417b2b2512b83",
       "title": "Use Inheritance So You Don't Repeat Yourself",
       "description": [
         "There's a principle in programming called <code>Don't Repeat Yourself (DRY)</code>. The reason repeated code is a problem is because any change requires fixing code in multiple places. This usually means more work for programmers and more room for errors.",
@@ -953,7 +953,7 @@
       }
     },
     {
-      "id": "9d7123c10441eddfaeb5bdef",
+      "id": "587d7db0367417b2b2512b84",
       "title": "Inherit Behaviors from a Supertype",
       "description": [
         "In the previous challenge, you created a <code>supertype</code> called <code>Animal</code> that defined behaviors shared by all animals:",
@@ -1019,7 +1019,7 @@
       }
     },
     {
-      "id": "9d7123c09441eddfaeb5bdef",
+      "id": "587d7db1367417b2b2512b85",
       "title": "Set the Child's Prototype to an Instance of the Parent",
       "description": [
         "In the previous challenge you saw the first step for inheriting behavior from the <code>supertype</code> (or parent) <code>Animal</code>: making a new instance of <code>Animal</code>.",
@@ -1078,7 +1078,7 @@
       }
     },
     {
-      "id": "9d7123c13441eddfaeb5bdef",
+      "id": "587d7db1367417b2b2512b86",
       "title": "Reset an Inherited Constructor Property",
       "description": [
         "When an object inherits its <code>prototype</code> from another object, it also inherits the <code>supertype’s</code> constructor property.",
@@ -1136,7 +1136,7 @@
       }
     },
     {
-      "id": "9d7123c11441eddfaeb5bdef",
+      "id": "587d7db1367417b2b2512b87",
       "title": "Add Methods After Inheritance",
       "description": [
         "A constructor function that inherits its <code>prototype</code> object from a <code>supertype</code> constructor function can still have its own methods in addition to inherited methods.",
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "id": "9d7123c12441eddfaeb5bdef",
+      "id": "587d7db1367417b2b2512b88",
       "title": "Override Inherited Methods",
       "description": [
         "In previous lessons, you learned that an object can inherit its behavior (methods) from another object by cloning its <code>prototype</code> object:",
@@ -1267,7 +1267,7 @@
       }
     },
     {
-      "id": "9d7123c05441eddfaeb5bdef",
+      "id": "587d7db2367417b2b2512b89",
       "title": "Use a Mixin to Add Common Behavior Between Unrelated Objects",
       "description": [
         "As you have seen, behavior is shared through inheritance. However, there are cases when inheritance is not the best solution. Inheritance does not work well for unrelated objects like <code>Bird</code> and <code>Airplane</code>. They can both fly, but a <code>Bird</code> is not a type of <code>Airplane</code> and vice versa.",
@@ -1331,7 +1331,7 @@
       }
     },
     {
-      "id": "9d7123c06441eddfaeb5bdef",
+      "id": "587d7db2367417b2b2512b8a",
       "title": "Use Closure to Protect Properties Within an Object from Being Modified Externally",
       "description": [
         "In the previous challenge, <code>bird</code> had a public property <code>name</code>. It is considered public because it can be accessed and changed outside of <code>bird</code> definition.",
@@ -1381,7 +1381,7 @@
       }
     },
     {
-      "id": "9d7123c07441eddfaeb5bdef",
+      "id": "587d7db2367417b2b2512b8b",
       "title": "Understand the Immediately Invoked Function Expression (IIFE)",
       "description": [
         "A common pattern in JavaScript is to execute a function as soon as it is declared:",
@@ -1427,7 +1427,7 @@
       }
     },
     {
-      "id": "9d7123c08441eddfaeb5bdef",
+      "id": "587d7db2367417b2b2512b8c",
       "title": "Use an IIFE to Create a Module",
       "description": [
         "An <code>immediately invoked function expression</code> (<code>IIFE</code>) is often used to group related functionality into a single object or <code>module</code>. For example, an earlier challenge defined two mixins:",

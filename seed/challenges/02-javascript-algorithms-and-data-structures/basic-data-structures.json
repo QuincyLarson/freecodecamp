@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "9d7053c8c441eddfaeb012ef",
+      "id": "587d78b2367417b2b2512b0d",
       "title": "Introduction to the Debugging Challenges",
       "description": [
         [
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "id": "8d7123c8c441eddfaeb011ef",
+      "id": "587d78b2367417b2b2512b0e",
       "title": "Add items to an array with push() and unshift()",
       "description": [
         "An array's length, like the data types it can contain, is not fixed. Arrays can be defined with a length of any number of elements, and elements can be added or removed over time. In this challenge, we will look at two methods with which we can programmatically modify an array: Array.push() and Array.unshift(). ",
@@ -82,7 +82,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb013ef",
+      "id": "587d78b2367417b2b2512b0f",
       "title": "Remove items from an array with pop() and shift()",
       "description": [
         "Both push() and unshift() have corresponding methods that are nearly functional opposites: pop() and shift(). As you may have guessed by now, instead of adding, pop() removes an element from the end of an array, while shift() removes an element from the beginning. The key difference between pop() and shift() and their cousins push() and unshift(), is that neither method takes parameters, and each only allows an array to be modified by a single element at a time.",
@@ -119,7 +119,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb014ef",
+      "id": "587d78b2367417b2b2512b10",
       "title": "Remove items using splice()",
       "description": [
         "Ok, so we've learned how to remove elements from the beginning and end of arrays using pop() and shift(), but what if we want to remove an element from somewhere in the middle? Or remove more than one element at once? Well, that's where splice() comes in. splice() allows us to do just that: remove any numnber of consecutive",
@@ -155,7 +155,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb015ef",
+      "id": "587d78b3367417b2b2512b11",
       "title": "Add items using splice()",
       "description": [
         "Remember in the last challenge we mentioned that splice() can take up to three parameters? Well, we can go one step further with splice() — in addition to removing elements, we can use that third parameter, which represents one or more elements, to add them as well. This can be incredibly useful for quickly switching out an element, or a set of elements, for another. For instance, let's say you're storing a color scheme for a set of DOM elements in an array, and want to dynamically change a color based on some action:",
@@ -191,7 +191,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb016ef",
+      "id": "587d7b7a367417b2b2512b12",
       "title": "Copy an array with slice()",
       "description": [
         "The next method we will cover is slice(). slice(), rather than modifying an array, copies, or extracts, a given mumber of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index). Consider this:",
@@ -222,7 +222,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c4422ddfaeb016ef",
+      "id": "587d7b7b367417b2b2512b13",
       "title": "Copy an array with spread syntax",
       "description": [
         "While slice() allows us to be selective about what elements of an array to copy, ammong several other useful tasks, ES6's new spread syntax allows us to easily copy all of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: ...",
@@ -259,7 +259,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb017ef",
+      "id": "587d7b7b367417b2b2512b14",
       "title": "Check for the presence of an element with indexOf()",
       "description": [
         "Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, indexOf(), that allows us to quickly and easily check for the presence of an element on an array. indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array.",
@@ -293,7 +293,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb020ef",
+      "id": "587d7b7b367417b2b2512b15",
       "title": "Iterate through all the items in an array",
       "description": [
         "Sometimes when working with arrays, it is very handy to be able to iterate through each item to find one or more elements that we might need, or to manipulate an array based on which data items meet a certain set of requirements. JavaScript offers several built in methods that each iterate over arrays in slightly different ways to achieve different results (such as every(), forEach(), map(), etc.), however the technique which is most flexible and offers us the greatest amount of control is a simple for loop.",
@@ -335,7 +335,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb021ef",
+      "id": "587d7b7b367417b2b2512b16",
       "title": "Create complex nested arrays",
       "description": [
         "One of the most powerful features when thinking of arrays as data structures, is that arrays can contain, or even be completely made up of other arrays. We have seen arrays that contain arrays in previous challenges, but fairly simple ones. However, arrays can contain an infinite depth of arrays that can contain other arrays, each with their own arbitrary levels of depth, and so on. In this way, an array can very quickly become very complex data structure, Consider the following example:",
@@ -383,7 +383,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb022ef",
+      "id": "587d7b7b367417b2b2512b17",
       "title": "Combining arrays with spread syntax",
       "description": [
         "Another huge advantage of the spread syntax, is the ability to combine arrays, or to insert all the elements of one array into another, at any index. With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another. Spread syntax makes the following operation extremely simple:",
@@ -412,7 +412,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb023ef",
+      "id": "587d7b7c367417b2b2512b18",
       "title": "Add Key-Value Pairs to JavaScript Objects",
       "description": [
         "The next data structure we will discuss is the JavaScript object. Objects are a very fundamental part of JavaScript, in fact, you may have heard this line before: 'In JavaScript, everything is an object.' While an understanding of objects is important to understand the inner workings of JavaScript functions or JavaScript's object-oriented capabilities, JavaScript objects at a basic level are actually just key-value pair stores, a commonly used data structure. Here, we will confine our discussion to JavaScript objects in this capacity.",
@@ -446,7 +446,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb024ef",
+      "id": "587d7b7c367417b2b2512b19",
       "title": "",
       "description": [
         "Objects, and other similar key-value pair data structures, offer some very useful benefits. One clear benefit is that they allow us to structure our data in an intuitive way. They are also very flexible. For instance, you can have properties nested to an arbitrary depth. Values can also be anything, for example a key can store an array, or even another object. Objects are also the foundation for JavaScript Object Notation, JSON, which is a widely used method of sending data across the web.",
@@ -476,7 +476,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb026ef",
+      "id": "587d7b7c367417b2b2512b1a",
       "title": " Access Property Names with Bracket Notation",
       "description": [
         "In the first challenge we mentioned the use of bracket notation as a way access properties values using the evaluation of a variable. For instance, if you recall our foods object from that challenge, imagine that this object is being used in a program for a supermarket cash register. We have some function that sets the selectedFood and we want to check our foods object for the presence of that food. This might look like:",
@@ -510,7 +510,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb027ef",
+      "id": "587d7b7c367417b2b2512b1b",
       "title": "Use the Delete Keyword to Remove Object Properties",
       "description": [
         "Now you know what objects are and their basic features and advantages. In short, they are key-value stores which provide a flexible, intuitive way to structure data and they provide very fast lookup time. For the rest of these challenges, we will describe several common operations you can perform on objects so you can become comfortable applying these useful data structures in your programs.",
@@ -538,7 +538,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb028ef",
+      "id": "587d7b7d367417b2b2512b1c",
       "title": "Check if an Object has a Property",
       "description": [
         "Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? JavaScript provides two different ways to do this. One uses the hasOwnProperty method on the object and the other uses the in keyword. If we have an object users with a property of Alan, we could check for its presence in either of the following ways:",
@@ -582,7 +582,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb029ef",
+      "id": "587d7b7d367417b2b2512b1d",
       "title": " Iterate Through the Keys of an Object with a for...in Statement",
       "description": [
         "Sometimes you may need to iterate through all the keys within an object. This requires a specific syntax in JavaScript called a for...in statement. For our users object from the last challenge, this could look like:",
@@ -626,7 +626,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb030ef",
+      "id": "587d7b7d367417b2b2512b1e",
       "title": "Generate an Array of All Object Keys with Object.keys()",
       "description": [
         "We can also generate an array which contains all the keys stored in an object using the Object.keys() method and passing in an object as the argument. This will return an array with strings representing each property in the object. Again, there will be no specific order to the entries in the array.",
@@ -666,7 +666,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb031ef",
+      "id": "587d7b7d367417b2b2512b1f",
       "title": "Modify an Array Stored in an Object",
       "description": [
         "Now you've seen all the basic operations for JavaScript objects. You can add, modify, and remove key-value pairs, check if keys exist, and iterate over all the keys in an object. As you continue learning JavaScript you will see even more versatile applications of objects. Additionally, the optional Advanced Data Structures lessons later in the curriculum also cover the ES6 Map and Set objects, both of which are similar to ordinary objects but provide some additional features. Now that you've learned the basics of arrays and objects, you're fully prepared to begin tackling more complex problems using JavaScript!",
@@ -707,7 +707,7 @@
       "translations": {}
     },
     {
-      "id": "8d7123c8c441eddfaeb032ef",
+      "id": "587d7b7e367417b2b2512b20",
       "title": "Use an array to store a collection of data",
       "description": [
         "Arrays are JavaScript's most fundamental, and perhaps most common, data structure. An array is simply a collection of data, of any length (zero-indexed), arranged in a comma separated list and enclosed in brackets [ ]. While we often make the distinction in JavaScript between Objects and Arrays, it is important to note that technically, an array is a type of object.",

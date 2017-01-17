@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "9d7123c8c86aef0faeb5bdef",
+      "id": "587d7b8d367417b2b2512b5a",
         "title": "Introduction to the Functional Programming Challenges",
         "description": [
           [
@@ -34,7 +34,7 @@
         ]
     },
     {
-      "id": "9d7123c8c441ef0faeb5bdef",
+      "id": "587d7b8d367417b2b2512b5b",
       "title": "Learn About Functional Programming",
       "description": [
         "Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope.",
@@ -106,7 +106,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef1faeb5bdef",
+      "id": "587d7b8e367417b2b2512b5c",
       "title": "Understand Functional Programming Terminology",
       "description": [
         "The FCC Team had a mood swing and now wants two types of tea: green tea and black tea. General Fact: Client mood swings are pretty common.",
@@ -192,7 +192,7 @@
       }
     },
     {
-      "id": "9d7123c8c441efffaeb5bdef",
+      "id": "587d7b8e367417b2b2512b5d",
       "title": "Understand the Hazards of Using Imperative Code",
       "description": [
         "Functional programming is a good habit. It keeps your code easy to manage, and saves you from sneaky bugs. But before we get there, let's look at an imperative approach to programming to highlight where you may have issues.",
@@ -274,7 +274,7 @@
       }
     },
     {
-      "id": "9d7123c8c441efefaeb5bdef",
+      "id": "587d7b8e367417b2b2512b5e",
       "title": "Avoid Mutations and Side Effects Using Functional Programming",
       "description": [
         "If you haven't already figured it out, the issue in the previous challenge was with the <code>splice</code> call in the <code>tabClose()</code> function. Unfortunately, <code>splice</code> changes the original array it is called on, so the second call to it used a modified array, and gave unexpected results.",
@@ -328,7 +328,7 @@
       }
     },
     {
-      "id": "9d7123c8c441efdfaeb5bdef",
+      "id": "587d7b8e367417b2b2512b5f",
       "title": "Pass Arguments to Avoid External Dependence in a Function",
       "description": [
         "The last challenge was a step closer to functional programming principles, but there is still something missing.",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "9d7123c8c441efcfaeb5bdef",
+      "id": "587d7b8f367417b2b2512b60",
       "title": "Refactor Global Variables Out of Functions",
       "description": [
         "So far, we have seen two distinct principles for functional programming:",
@@ -462,7 +462,7 @@
       }
     },
     {
-      "id": "9d7123c8c441efbfaeb5bdef",
+      "id": "587d7b8f367417b2b2512b61",
       "title": "Use Map to Extract Data from an Array",
       "description": [
         "So far we have learned to use pure functions to avoid side effects in a program. Also, we have seen the value in having a function only depend on its input arguments.",
@@ -629,7 +629,7 @@
       }
     },
     {
-      "id": "9d7123c8c441efafaeb5bdef",
+      "id": "587d7b8f367417b2b2512b62",
       "title": "Implement Map on a Prototype",
       "description": [
         "As you have seen from applying <code>Array.prototype.map()</code>, or simply <code>map()</code> earlier, the <code>map</code> method returns an array of the same length as the one it was called on. It also doesn't alter the original array, as long as its callback function doesn't.",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef2faeb5bdef",
+      "id": "587d7b8f367417b2b2512b63",
       "title": "Use Filter to Extract Data from an Array",
       "description": [
         "Another useful array function is <code>Array.prototype.filter()</code>, or simply <code>filter()</code>. The <code>filter</code> method returns a new array which is at most as long as the original array, but usually has fewer items.",
@@ -845,7 +845,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef3faeb5bdef",
+      "id": "587d7b8f367417b2b2512b64",
       "title": "Implement the Filter Function on a Prototype",
       "description": [
         "It would teach us a lot about the <code>filter</code> method if we try to implement a version of it that behaves exactly like <code>Array.prototype.filter()</code>. It can use either a <code>for</code> loop or <code>Array.prototype.forEach()</code>.",
@@ -898,7 +898,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eebfaeb5bdef",
+      "id": "587d7b90367417b2b2512b65",
       "title": "Return Part of an Array Using the Slice Method",
       "description": [
         "The <code>slice</code> method returns a copy of certain elements of an array. It can take two arguments, the first gives the index of where to begin the slice, the second is the index for where to end the slice (and it's non-inclusive). If the arguments are not provided, the default is to start at the beginning of the array through the end, which is an easy way to make a copy of the entire array. The <code>slice</code> method does not mutate the original array, but returns a new one.",
@@ -998,7 +998,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eeffaeb5bdef",
+      "id": "587d7da9367417b2b2512b66",
       "title": "Combine Two Arrays Using the Concat Method",
       "description": [
         "<code>Concatenation</code> means to join items end to end. JavaScript offers the <code>concat</code> method for both strings and arrays that work in the same way. For arrays, the method is called on one, then another array is provided as the argument to <code>concat</code>, which is added to the end of the first array. It returns a new array and does not mutate either of the original arrays. Here's an example:",
@@ -1047,7 +1047,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eedfaeb5bdef",
+      "id": "587d7da9367417b2b2512b67",
       "title": "Add Elements to the End of an Array Using Concat Instead of Push",
       "description": [
         "Functional programming is all about creating and using non-mutating functions.",
@@ -1099,7 +1099,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef4faeb5bdef",
+      "id": "587d7da9367417b2b2512b68",
       "title": "Use the Reduce Method to Analyze Data",
       "description": [
         "<code>Array.prototype.reduce()</code>, or simply <code>reduce()</code>, is the most general of all array operations in JavaScript. You can solve almost any array processing problem using the <code>reduce</code> method.",
@@ -1266,7 +1266,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef8faeb5bdef",
+      "id": "587d7da9367417b2b2512b69",
       "title": "Sort an Array Alphabetically using the Sort Method",
       "description": [
         "The <code>sort</code> method sorts the elements of an array according to the callback function.",
@@ -1315,7 +1315,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef9faeb5bdef",
+      "id": "587d7da9367417b2b2512b6a",
       "title": "Return a Sorted Array Without Changing the Original Array",
       "description": [
         "A side effect of the <code>sort</code> method is that it changes the order of the elements in the original array. In other words, it mutates the array in place. One way to avoid this is to first concatenate an empty array to the one being sorted (remember that <code>concat</code> returns a new array), then run the <code>sort</code> method.",
@@ -1362,7 +1362,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eeefaeb5bdef",
+      "id": "587d7daa367417b2b2512b6b",
       "title": "Split a String into an Array Using the Split Method",
       "description": [
         "The <code>split</code> method splits a string into an array of strings. It takes an argument for the delimiter, which can be a character to use to break up the string or a regular expression. For example, if the delimiter is a space, you get an array of words, and if the delimiter is an empty string, you get an array of each character in the string.",
@@ -1413,7 +1413,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eecfaeb5bdef",
+      "id": "587d7daa367417b2b2512b6c",
       "title": "Combine an Array into a String Using the Join Method",
       "description": [
         "The <code>join</code> method is used to join the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.",
@@ -1465,7 +1465,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef5faeb5bdef",
+      "id": "587d7dab367417b2b2512b6d",
       "title": "Apply Functional Programming to Convert Strings to URL Slugs",
       "description": [
         "The last several challenges covered a number of useful array and string methods that follow functional programming principles. We've also learned about <code>reduce</code>, which is a powerful method used to reduce problems to simpler forms. From computing averages to sorting, any array operation can be achieved by applying it. Recall that <code>map</code> and <code>filter</code> are special cases of <code>reduce</code>.",
@@ -1526,7 +1526,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef6faeb5bdef",
+      "id": "587d7dab367417b2b2512b6e",
       "title": "Use the Every Method to Check that Every Element in an Array Meets a Criteria",
       "description": [
         "The <code>every</code> method works with arrays to check if <em>every</em> element passes a particular test. It returns a Boolean value - <code>true</code> if all values meet the criteria, <code>false</code> if not.",
@@ -1574,7 +1574,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ef7faeb5bdef",
+      "id": "587d7dab367417b2b2512b6f",
       "title": "Use the Some Method to Check that Any Elements in an Array Meet a Criteria",
       "description": [
         "The <code>some</code> method works with arrays to check if <em>any</em> element passes a particular test. It returns a Boolean value - <code>true</code> if any of the values meet the criteria, <code>false</code> if not.",
@@ -1622,7 +1622,7 @@
       }
     },
     {
-      "id": "9d7123c8c632ef7faeb5bdef",
+      "id": "587d7dab367417b2b2512b70",
       "title": "Introduction to Currying and Partial Application",
       "description": [
         "The <code>arity</code> of a function is the number of arguments it requires. <code>Currying</code> a function means to convert a function of N <code>arity</code> into N functions of <code>arity</code> 1.",

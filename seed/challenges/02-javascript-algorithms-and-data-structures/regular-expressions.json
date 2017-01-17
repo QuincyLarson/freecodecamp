@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "5d712323c439efdf9eb5bdef",
+      "id": "587d7db3367417b2b2512b8d",
         "title": "Introduction to the Regular Expression Challenges",
         "description": [
           [
@@ -35,7 +35,7 @@
         ]
     },
     {
-      "id": "5d712323c449eddfaeb5bdef",
+      "id": "587d7db3367417b2b2512b8e",
       "title": "Using the Test Method",
       "description": [
         "Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "id": "5d712324c441eddfaeb5bdef",
+      "id": "587d7db3367417b2b2512b8f",
       "title": "Match Literal Strings",
       "description": [
         "In the last challenge, you searched for the word <code>\"the\"</code> using the regular expression <code>/the/</code>. This regex is searching for a literal match of the string <code>\"the\"</code>. Here's another example:",
@@ -138,7 +138,7 @@
       }
     },
     {
-      "id": "5d712325c441eddfaeb5bdef",
+      "id": "587d7db4367417b2b2512b90",
       "title": "Match a Literal String with Different Possibilities",
       "description": [
         "Using regexes like <code>/coding/</code>, you can look for the pattern <code>\"coding\"</code> in another string.",
@@ -194,7 +194,7 @@
       }
     },
     {
-      "id": "5d712326c441eddfaeb5bdef",
+      "id": "587d7db4367417b2b2512b91",
       "title": "Ignore Case While Matching",
       "description": [
         "Up until now, you've looked at regexes to do literal matches of strings. But sometimes, you might want to also match case differences.",
@@ -253,7 +253,7 @@
       }
     },
     {
-      "id": "5d712328c441eddfaeb5bdef",
+      "id": "587d7db4367417b2b2512b92",
       "title": "Extract Matches",
       "description": [
         "So far, you have only been checking if a pattern exists or not within a string. You can also extract the actual matches you found with the <code>.match()</code> method.",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "5d712329c441eddfaeb5bdef",
+      "id": "587d7db4367417b2b2512b93",
       "title": "Find More Than the First Match",
       "description": [
         "So far, you have only been able to extract or search a pattern once.",
@@ -358,7 +358,7 @@
       }
     },
     {
-      "id": "5d712330c441eddfaeb5bdef",
+      "id": "587d7db5367417b2b2512b94",
       "title": "Match Anything with Wildcard Period",
       "description": [
         "Sometimes you won't (or don't need to) know the exact characters in your patterns. Thinking of all words that match, say, a misspelling would take a long time. Luckily, you can save time using the wildcard character: <code>.</code>",
@@ -416,7 +416,7 @@
       }
     },
     {
-      "id": "5d712331c441eddfaeb5bdef",
+      "id": "587d7db5367417b2b2512b95",
       "title": "Match Single Character with Multiple Possibilities",
       "description": [
         "You learned how to match literal patterns (<code>/literal/</code>) and wildcard character (<code>/./</code>). Those are the extremes of regular expressions, where one finds exact matches and the other matches everything. There are options that are a balance between the two extremes.",
@@ -471,7 +471,7 @@
       }
     },
     {
-      "id": "5d712334c441eddfaeb5bdef",
+      "id": "587d7db5367417b2b2512b96",
       "title": "Match Letters of the Alphabet",
       "description": [
         "You saw how you can use <code>character sets</code> to specify a group of characters to match, but that's a lot of typing when you need to match a large range of characters (for example, every letter in the alphabet). Fortunately, there is a built-in feature that makes this short and simple.",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "5d71235c441eddfaeb5bdef",
+      "id": "587d7db5367417b2b2512b97",
       "title": "Match Numbers and Letters of the Alphabet",
       "description": [
         "Using the hyphen (<code>-</code>) to match a range of characters is not limited to letters. It also works to match a range of numbers.",
@@ -576,7 +576,7 @@
       }
     },
     {
-      "id": "5d712368c441eddfaeb5bdef",
+      "id": "587d7db6367417b2b2512b98",
       "title": "Match Single Characters Not Specified",
       "description": [
         "So far, you have created a set of characters that you want to match, but you could also create a set of characters that you do not want to match. These types of character sets are called <code>negated character sets</code>.",
@@ -627,7 +627,7 @@
       }
     },
     {
-      "id": "5d712337c441eddfaeb5bdef",
+      "id": "587d7db6367417b2b2512b99",
       "title": "Match Characters that Occur One or More Times",
       "description": [
         "Sometimes, you need to match a character (or group of characters) that appears one or more times in a row. This means it occurs at least once, and may be repeated.",
@@ -678,7 +678,7 @@
       }
     },
     {
-      "id": "5d712338c441eddfaeb5bdef",
+      "id": "587d7db6367417b2b2512b9a",
       "title": "Match Characters that Occur Zero or More Times",
       "description": [
         "The last challenge used the plus <code>+</code> sign to look for characters that occur one or more times. There's also an option that matches characters that occur zero or more times.",
@@ -734,7 +734,7 @@
       }
     },
     {
-      "id": "5d712339c441eddfaeb5bdef",
+      "id": "587d7db6367417b2b2512b9b",
       "title": "Find Characters with Lazy Matching",
       "description": [
         "In regular expressions, a <code>greedy</code> match finds the longest possible part of a string that fits the regex pattern and returns it as a match. The alternative is called a <code>lazy</code> match, which finds the smallest possible part of the string that satisfies the regex pattern.",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "5d712340c441eddfaeb5bdef",
+      "id": "587d7db7367417b2b2512b9c",
       "title": "Find One or More Criminals in a Hunt",
       "description": [
         "Time to pause and test your new regex writing skills. A group of criminals escaped from jail and ran away, but you don't know how many. However, you do know that they stay close together when they are around other people. You are responsible for finding all of the criminals at once.",
@@ -846,7 +846,7 @@
       }
     },
     {
-      "id": "5d712342c441eddfaeb5bdef",
+      "id": "587d7db7367417b2b2512b9d",
       "title": "Match Beginning String Patterns",
       "description": [
         "Prior challenges showed that regular expressions can be used to look for a number of matches. They are also used to search for patterns in specific positions in strings.",
@@ -898,7 +898,7 @@
       }
     },
     {
-      "id": "5d712343c441eddfaeb5bdef",
+      "id": "587d7db7367417b2b2512b9e",
       "title": "Match Ending String Patterns",
       "description": [
         "In the last challenge, you learned to use the <code>caret</code> character to search for patterns at the beginning of strings. There is also a way to search for patterns at the end of strings.",
@@ -949,7 +949,7 @@
       }
     },
     {
-      "id": "5d712344c441eddfaeb5bdef",
+      "id": "587d7db7367417b2b2512b9f",
       "title": "Match All Letters and Numbers",
       "description": [
         "Using character classes, you were able to search for all letters of the alphabet with <code>[a-z]</code>. This kind of character class is common enough that there is a shortcut for it, although it includes a few extra characters as well.",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "5d712345c441eddfaeb5bdef",
+      "id": "587d7db8367417b2b2512ba0",
       "title": "Match Everything But Letters and Numbers",
       "description": [
         "You've learned that you can use a shortcut to match alphanumerics <code>[A-Za-z0-9_]</code> using <code>\\w</code>. A natural pattern you might want to search for is the opposite of alphanumerics.",
@@ -1112,7 +1112,7 @@
       }
     },
     {
-      "id": "5d712347c441eddfaeb5bdef",
+      "id": "587d7db8367417b2b2512ba1",
       "title": "Match All Non-Numbers",
       "description": [
         "The last challenge showed how to search for digits using the shortcut <code>\\d</code> with a lowercase <code>d</code>. You can also search for non-digits using a similar shortcut that uses an uppercase <code>D</code> instead.",
@@ -1167,7 +1167,7 @@
       }
     },
     {
-      "id": "5d712348c441eddfaeb5bdef",
+      "id": "587d7db8367417b2b2512ba2",
       "title": "Restrict Possible Usernames",
       "description": [
         "Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.",
@@ -1223,7 +1223,7 @@
       }
     },
     {
-      "id": "5d712349c441eddfaeb5bdef",
+      "id": "587d7db8367417b2b2512ba3",
       "title": "Match Whitespace",
       "description": [
         "The challenges so far have covered matching letters of the alphabet and numbers. You can also match the whitespace or spaces between letters.",
@@ -1275,7 +1275,7 @@
       }
     },
     {
-      "id": "5d712350c441eddfaeb5bdef",
+      "id": "587d7db9367417b2b2512ba4",
       "title": "Match Non-Whitespace Characters",
       "description": [
         "You learned about searching for whitespace using <code>\\s</code>, with a lowercase <code>s</code>. You can also search for everything except whitespace.",
@@ -1327,7 +1327,7 @@
       }
     },
     {
-      "id": "5d712351c441eddfaeb5bdef",
+      "id": "587d7db9367417b2b2512ba5",
       "title": "Specify Upper and Lower Number of Matches",
       "description": [
         "Recall that you use the plus sign <code>+</code> to look for one or more characters and the asterisk <code>*</code> to look for zero or more characters. These are convenient but sometimes you want to match a certain range of patterns.",
@@ -1383,7 +1383,7 @@
       }
     },
     {
-      "id": "5d712355c441eddfaeb5bdef",
+      "id": "587d7db9367417b2b2512ba6",
       "title": "Specify Only the Lower Number of Matches",
       "description": [
         "You can specify the lower and upper number of patterns with <code>quantity specifiers</code> using curly brackets. Sometimes you only want to specify the lower number of patterns with no upper limit.",
@@ -1439,7 +1439,7 @@
       }
     },
     {
-      "id": "5d712356c441eddfaeb5bdef",
+      "id": "587d7db9367417b2b2512ba7",
       "title": "Specify Exact Number of Matches",
       "description": [
         "You can specify the lower and upper number of patterns with <code>quantity specifiers</code> using curly brackets. Sometimes you only want a specific number of matches.",
@@ -1494,7 +1494,7 @@
       }
     },
     {
-      "id": "5d712357c441eddfaeb5bdef",
+      "id": "587d7dba367417b2b2512ba8",
       "title": "Check for All or None",
       "description": [
         "Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.",
@@ -1547,7 +1547,7 @@
       }
     },
     {
-      "id": "5d712359c441eddfaeb5bdef",
+      "id": "587d7dba367417b2b2512ba9",
       "title": "Positive and Negative Lookahead",
       "description": [
         "<code>Lookaheads</code> are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. This can be useful when you want to search for multiple patterns over the same string.",
@@ -1607,7 +1607,7 @@
       }
     },
     {
-      "id": "5d712359c56beddfaeb5bdef",
+      "id": "587d7dbb367417b2b2512baa",
       "title": "Reuse Patterns Using Capture Groups",
       "description": [
         "Some patterns you search for will occur multiple times in a string. It is wasteful to manually repeat that regex. There is a better way to specify when you have multiple repeat substrings in your string.",
@@ -1665,7 +1665,7 @@
       }
     },
     {
-      "id": "5d712359c56beddff7b5b3ef",
+      "id": "587d7dbb367417b2b2512bab",
       "title": "Use Capture Groups to Search and Replace",
       "description": [
         "Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.",
@@ -1719,7 +1719,7 @@
       }
     },
     {
-      "id": "5d712359c56bed8ff7b5b392",
+      "id": "587d7dbb367417b2b2512bac",
       "title": "Remove Whitespace from Start and End",
       "description": [
         "Sometimes whitespace characters around strings are not wanted but are there. Typical processing of strings is to remove the whitespace at the start and end of it.",

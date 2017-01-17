@@ -2249,7 +2249,7 @@
       }
     },
     {
-      "id": "bad87fdd4348bd9aedf08835",
+      "id": "587d78aa367417b2b2512aed",
       "title": "Declare the Doctype of an HTML Document",
       "description": [
         "The challenges so far have covered specific HTML tags and their uses. However, there are a few elements that give overall structure to your page, and should be included in every HTML document.",
@@ -2279,7 +2279,7 @@
       "translations": {}
     },
     {
-      "id": "bad87fcc3348bd9aedf08835",
+      "id": "587d78aa367417b2b2512aec",
       "title": "Define the Head and Body of an HTML Document",
       "description": [
         "You can add another level of organization in your HTML document within the html tags with the head and body elements. Any markup with information about your page would go into the head tag. Then any markup with the content of the page (what displays for a user) would go into the body tag.",

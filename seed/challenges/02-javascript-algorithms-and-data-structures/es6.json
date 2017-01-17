@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "017123c8c441ea92aeb5bdef",
+      "id": "587d7b86367417b2b2512b3e",
       "title": "Introduction to the ES6 Challenges",
       "description": [
         [
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "id": "027123c8c441eddfaeb5bdef",
+      "id": "587d7b87367417b2b2512b3f",
       "title": "Problems with the var keyword",
       "description": [
         "One of the biggest problems with declaring variables with the var keyword is that you can overwrite variable declarations without an error.",
@@ -70,7 +70,7 @@
       "translations": {}
     },
     {
-      "id": "037123c8c441eddfaeb5bdef",
+      "id": "587d7b87367417b2b2512b40",
       "title": "Scopes and the var keyword",
       "description": [
         "When you declare a variable with the var keyword, it is declared globally, or locally if inside a function.",
@@ -149,7 +149,7 @@
       "translations": {}
     },
     {
-      "id": "047123c8c441eddfaeb5bdef",
+      "id": "587d7b87367417b2b2512b41",
       "title": "Using the const keyword",
       "description": [
         "let is not the only new way to declared variables. In ES6, you can also declare variables using the const keyword.",
@@ -188,7 +188,7 @@
       "translations": {}
     },
     {
-      "id": "067123c8c441eddfaeb5bdef",
+      "id": "587d7b87367417b2b2512b42",
       "title": "An Immutable Object a const does not make",
       "description": [
         "const has many use-cases in modern JavaScript",
@@ -224,7 +224,7 @@
       "translations": {}
     },
     {
-      "id": "077123c8c441eddfaeb5bdef",
+      "id": "587d7b87367417b2b2512b43",
       "title": "Arrow functions",
       "description": [
         "In JS, we often, we often don't name our functions. Callback functions, for example.",
@@ -269,7 +269,7 @@
       "translations": {}
     },
     {
-      "id": "087123c8c441eddfaeb5bdef",
+      "id": "587d7b88367417b2b2512b44",
       "title": "Arrow functions with input parameters",
       "description": [
         "Just like a normal function, you can pass input parameters into arrow functions.",
@@ -302,7 +302,7 @@
       "translations": {}
     },
     {
-      "id": "097123c8c441eddfaeb5bdef",
+      "id": "587d7b88367417b2b2512b45",
       "title": "Arrow functions with higher order functions",
       "description": [
         "It's time we see in action how easily arrow function let us write complex data processing code",
@@ -348,7 +348,7 @@
       "translations": {}
     },
     {
-      "id": "107123c8c441eddfaeb5bdef",
+      "id": "587d7b88367417b2b2512b46",
       "title": "Default Parameters",
       "description": [
         "In order to help us create more flexible functions, ES2015 introduces default parameters for functions.",
@@ -381,7 +381,7 @@
       "translations": {}
     },
     {
-      "id": "117123c8c441eddfaeb5bdef",
+      "id": "587d7b88367417b2b2512b47",
       "title": "",
       "description": [
         "In order to help us create more flexible functions, ES2015 introduces the rest operator for function parameters. With the rest operator, you can create functions with variable number of arguments and then have those arguments available into an Array inside the function",
@@ -415,7 +415,7 @@
       "translations": {}
     },
     {
-      "id": "137123c8c441eddfaeb5bdef",
+      "id": "587d7b89367417b2b2512b48",
       "title": "Spread Operator",
       "description": [
         "With the Spread Operator in ES6 or ES2015; you can improve on the array literal syntax",
@@ -450,7 +450,7 @@
       "translations": {}
     },
     {
-      "id": "147123c8c441eddfaeb5bdef",
+      "id": "587d7b89367417b2b2512b49",
       "title": "",
       "description": [
         "We earlier saw how spread operator can effectively spread or unpack the contents of the array.",
@@ -484,7 +484,7 @@
       "translations": {}
     },
     {
-      "id": "157123c8c441eddfaeb5bdef",
+      "id": "587d7b89367417b2b2512b4a",
       "title": "Nested Object Destructuring",
       "description": [
         "We can similarly destructure nested objects",
@@ -515,7 +515,7 @@
       "translations": {}
     },
     {
-      "id": "167123c8c441eddfaeb5bdef",
+      "id": "587d7b89367417b2b2512b4b",
       "title": "Array Destructuring",
       "description": [
         "We can also destructure arrays as easily as objects.",
@@ -548,7 +548,7 @@
       "translations": {}
     },
     {
-      "id": "177123c8c441eddfaeb5bdef",
+      "id": "587d7b8a367417b2b2512b4c",
       "title": "Array Destructuring with Rest Operator",
       "description": [
         "There are situations with destructuring an array, where we might want to collect the rest of the elements into a separate array.",
@@ -580,7 +580,7 @@
       "translations": {}
     },
     {
-      "id": "187123c8c441eddfaeb5bdef",
+      "id": "587d7b8a367417b2b2512b4d",
       "title": "Destructuring Function Parameters",
       "description": [
         "In some cases, you can destructure the object in the function argument itself.",
@@ -621,7 +621,7 @@
       "translations": {}
     },
     {
-      "id": "197123c8c441eddfaeb5bdef",
+      "id": "587d7b8a367417b2b2512b4e",
       "title": "String Interpolation using Backquotes",
       "description": [
         "A new feature of ES6 or ES2015, is that it allows you to use string interpolation with back-ticks.",
@@ -673,7 +673,7 @@
       "translations": {}
     },
     {
-      "id": "207123c8c441eddfaeb5bdef",
+      "id": "587d7b8a367417b2b2512b4f",
       "title": "Enhanced Object Literals : Simple Fields",
       "description": [
         "ES6 adds some nice support for removing boiler-plate from object literals declaration.",
@@ -712,7 +712,7 @@
       "translations": {}
     },
     {
-      "id": "227123c8c441eddfaeb5bdef",
+      "id": "587d7b8b367417b2b2512b50",
       "title": "Enhanced Object Literals : Functions",
       "description": [
         "With ES6, it's possible to remove the keyword function as follows, from object literals",
@@ -760,7 +760,7 @@
       "translations": {}
     },
     {
-      "id": "247123c8c441eddfaeb5bdef",
+      "id": "587d7b8b367417b2b2512b51",
       "title": "Enhanced Object Literals Computed Fields",
       "description": [
         "With ES6, you can also create a field name dynamically, like this:",
@@ -793,7 +793,7 @@
       "translations": {}
     },
     {
-      "id": "268d7123c8c441eddfaeb5bdef",
+      "id": "587d7b8b367417b2b2512b52",
       "title": "Enhanced Object Literals Computed Fields",
       "description": [
         "With ES6, you can also create a field name dynamically, like this:",
@@ -826,7 +826,7 @@
       "translations": {}
     },
     {
-      "id": "308d7123c8c441eddfaeb5bdef",
+      "id": "587d7b8b367417b2b2512b53",
       "title": "class Syntax",
       "description": [
         "ES6 provides a new syntax to help create objects, using the keyword class.",
@@ -865,7 +865,7 @@
       "translations": {}
     },
     {
-      "id": "327123c8c441eddfaeb5bdef",
+      "id": "587d7b8c367417b2b2512b54",
       "title": "class getters and setters",
       "description": [
         "You can obtain values from an object, and set a value of a property within an object.",
@@ -919,7 +919,7 @@
       "translations": {}
     },
     {
-      "id": "337123c8c441eddfaeb5bdef",
+      "id": "587d7b8c367417b2b2512b55",
       "title": "Import vs. Require: What's the difference?",
       "description": [
         "In the past, the function require() would be used to import the functions and code in external files and modules. While handy, this presents a problem: some files and modules are rather large, and you may only need certain code from those external resources.",
@@ -945,7 +945,7 @@
       "translations": {}
     },
     {
-      "id": "347123c8c441eddfaeb5bdef",
+      "id": "587d7b8c367417b2b2512b56",
       "title": "Export: One of Import's siblings.",
       "description": [
         "In the previous challenge, you learned about import and how it can be leveraged to import small amounts of code from large files. In order for this to work, though, we must utilize one of the statements that goes with import, known as export. When we want some code-a function, or a variable-to be usable in another file, we must export it in order to import it into another file. Like import, export is a non-browser feature.",
@@ -978,7 +978,7 @@
       "translations": {}
     },
     {
-      "id": "357123c8c441eddfaeb5bdef",
+      "id": "587d7b8c367417b2b2512b57",
       "title": "Import Everything",
       "description": [
         "Suppose you have a file that you wish to import all of its contents into the current file. This can be done with the import * syntax.",
@@ -1005,7 +1005,7 @@
       "translations": {}
     },
     {
-      "id": "267123c8c441eddfaeb5bdef",
+      "id": "587d7b8c367417b2b2512b58",
       "title": "Export Default",
       "description": [
         "In the export lesson, you learned about the syntax referred to as a named export. This allowed you to make multiple functions and variables available for use in other files.",
@@ -1029,7 +1029,7 @@
       "translations": {}
     },
     {
-      "id": "377123c8c441eddfaeb5bdef",
+      "id": "587d7b8d367417b2b2512b59",
       "title": "Importing a Default Export",
       "description": [
         "In the last challenge, you learned about export default and its uses. It is important to note that, to import a default export, you need to use a different import syntax.",

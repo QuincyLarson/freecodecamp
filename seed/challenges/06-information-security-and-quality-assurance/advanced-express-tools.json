@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "01defc8c441eddfaeb5bde0",
+      "id": "587d7fb9367417b2b2512c13",
       "title": "Authenticate as a Guest User",
       "description": [
         "Cool, we can see messages now, but before we let people to write messages they need to authenticate first.",
@@ -65,7 +65,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde1",
+      "id": "587d7fc0367417b2b2512c33",
       "title": "Log the Guest User Out",
       "description": [
         "Lets continue by letting the user to logout from the app.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde2",
+      "id": "587d7fc0367417b2b2512c32",
       "title": "Signup a New User",
       "description": [
         "Lets continue by letting a user to register to the app.",
@@ -167,7 +167,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde3",
+      "id": "587d7fbf367417b2b2512c31",
       "title": "Send a New Message by Responding with a Model",
       "description": [
         "Lets continue by letting a user to send a message in the app.",
@@ -223,7 +223,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde4",
+      "id": "587d7fbf367417b2b2512c30",
       "title": "Send a New Message with a Partial Template Compilation",
       "description": [
         "On the previous challenge we were reloading the page after we pushed a new message into the chat",
@@ -271,7 +271,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde5",
+      "id": "587d7fbf367417b2b2512c2f",
       "title": "Send a New Message by Making the App Realtime with Websockets",
       "description": [
         "So we were able to create a message and responde with its partial html so that it can directly",
@@ -326,7 +326,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde6",
+      "id": "587d7fbf367417b2b2512c2d",
       "title": "Retrieve the Route of an Authenticated User",
       "description": [
         "Let's get rid of that duplicate message, shall we?",
@@ -371,7 +371,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde7",
+      "id": "587d7fbe367417b2b2512c2c",
       "title": "Use Geolocation by IP Route to Request Package for External Resources",
       "description": [
         "Things seem to work a lot better at this point, but our users would really like a message footer that would snitch each other's location.",
@@ -419,7 +419,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde8",
+      "id": "587d7fbe367417b2b2512c2b",
       "title": "Get Geodata from Cookies",
       "description": [
         "Right now the client requests for the geolocation data by their ip and sends it to the server every time they are creating a message.",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "01defc8c441eddfaeb5bde9",
+      "id": "587d8246367417b2b2512c34",
       "title": "Access the Default Avatar File Route",
       "description": [
         "Did you notice that broken avatar in the app?",

@@ -4,7 +4,7 @@
   "time": "5 minutes",
   "challenges": [
     {
-      "id": "561add10cb82ac39a17513bc",
+      "id": "587d7fa5367417b2b2512bbe",
       "title": "Claim Your Data Visualization Certificate",
       "description": [
         [
@@ -50,11 +50,11 @@
       ],
       "tests": [
         {
-          "id": "bd710888c242eddfaeb5bd13",
+          "id": "587d7fa6367417b2b2512bc0",
           "title": "Visualize Data with a Treemap Diagram"
         },
         {
-          "id": "bd7117d8c242eddfaeb5bd13",
+          "id": "587d7fa6367417b2b2512bbf",
           "title": "Visualize Data with a Choropleth Map"
         },
         {

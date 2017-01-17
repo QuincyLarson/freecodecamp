@@ -5,7 +5,7 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "9d7123c8ca62ee0faeb5bdef",
+      "id": "587d7fa6367417b2b2512bc1",
       "title": "Introduction to the Data Visualization with D3 Challenges",
       "description": [
         [
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "id": "9d7123c8c331ee0faeb5bdef",
+      "id": "587d7fa6367417b2b2512bc2",
       "title": "Add Document Elements with D3",
       "required": [
         {
@@ -99,7 +99,7 @@
       }
     },
     {
-      "id": "9d7123c8c3a9ee0faeb5bdef",
+      "id": "587d7fa6367417b2b2512bc3",
       "title": "Select a Group of Elements with D3",
       "required": [
         {
@@ -158,7 +158,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee9faeb5bdef",
+      "id": "587d7fa7367417b2b2512bc4",
       "title": "Work with Data in D3",
       "required": [
         {
@@ -219,7 +219,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee8faeb5bdef",
+      "id": "587d7fa7367417b2b2512bc5",
       "title": "Work with Dynamic Data in D3",
       "required": [
         {
@@ -286,7 +286,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee7faeb5bdef",
+      "id": "587d7fa7367417b2b2512bc6",
       "title": "Add Inline Styling to Elements",
       "required": [
         {
@@ -346,7 +346,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee5faeb5bdef",
+      "id": "587d7fa7367417b2b2512bc7",
       "title": "Change Styles Based on Data",
       "required": [
         {
@@ -415,7 +415,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee4faeb5bdef",
+      "id": "587d7fa7367417b2b2512bc8",
       "title": "Add Classes with D3",
       "required": [
         {
@@ -482,7 +482,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee3faeb5bdef",
+      "id": "587d7fa8367417b2b2512bc9",
       "title": "Update the Height of an Element Dynamically",
       "required": [
         {
@@ -559,7 +559,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee2faeb5bdef",
+      "id": "587d7fa8367417b2b2512bca",
       "title": "Change the Presentation of a Bar Chart",
       "required": [
         {
@@ -637,7 +637,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee1faeb5bdef",
+      "id": "587d7fa8367417b2b2512bcb",
       "title": "Learn About SVG in D3",
       "required": [
         {
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ee0faeb5bdef",
+      "id": "587d7fa8367417b2b2512bcc",
       "title": "Display Shapes with SVG",
       "required": [
         {
@@ -771,7 +771,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed9faeb5bdef",
+      "id": "587d7fa8367417b2b2512bcd",
       "title": "Create a Bar for Each Data Point in the Set",
       "required": [
         {
@@ -842,7 +842,7 @@
       }
     },
     {
-      "id": "9d7a76c8c441ed9faeb5bdef",
+      "id": "587d7fa9367417b2b2512bce",
       "title": "Dynamically Set the Coordinates for Each Bar",
       "required": [
         {
@@ -925,7 +925,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed8faeb5bdef",
+      "id": "587d7fa9367417b2b2512bcf",
       "title": "Dynamically Change the Height of Each Bar",
       "required": [
         {
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed7faeb5bdef",
+      "id": "587d7fa9367417b2b2512bd0",
       "title": "Invert SVG Elements",
       "required": [
         {
@@ -1086,7 +1086,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed6faeb5bdef",
+      "id": "587d7fa9367417b2b2512bd1",
       "title": "Change the Color of an SVG Element",
       "required": [
         {
@@ -1155,7 +1155,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed5faeb5bdef",
+      "id": "587d7faa367417b2b2512bd2",
       "title": "Add Labels to D3 Elements",
       "required": [
         {
@@ -1240,7 +1240,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed4faeb5bdef",
+      "id": "587d7faa367417b2b2512bd3",
       "title": "Style D3 Labels",
       "required": [
         {
@@ -1318,7 +1318,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed3faeb5bdef",
+      "id": "587d7faa367417b2b2512bd4",
       "title": "Add a Hover Effect to a D3 Element",
       "required": [
         {
@@ -1402,7 +1402,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed2faeb5bdef",
+      "id": "587d7faa367417b2b2512bd6",
       "title": "Add a Tooltip to a D3 Element",
       "required": [
         {
@@ -1496,7 +1496,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ed1faeb5bdef",
+      "id": "587d7fab367417b2b2512bd7",
       "title": "Create a Scatterplot with SVG Circles",
       "required": [
         {
@@ -1571,7 +1571,7 @@
       }
     },
     {
-      "id": "9d765bc8c441ed1faeb5bdef",
+      "id": "587d7fab367417b2b2512bd8",
       "title": "Add Attributes to the Circle Elements",
       "required": [
         {
@@ -1663,7 +1663,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ecdfaeb5bdef",
+      "id": "587d7fab367417b2b2512bd9",
       "title": "Add Labels to Scatter Plot Circles",
       "required": [
         {
@@ -1759,7 +1759,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ecffaeb5bdef",
+      "id": "587d7fab367417b2b2512bda",
       "title": "Create a Linear Scale with D3",
       "required": [
         {
@@ -1823,7 +1823,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ecefaeb5bdef",
+      "id": "587d7fac367417b2b2512bdb",
       "title": "Set a Domain and a Range on a Scale",
       "required": [
         {
@@ -1888,7 +1888,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ecdfbbb5bdef",
+      "id": "587d7fac367417b2b2512bdc",
       "title": "Use the D3 Max and Min Functions",
       "required": [
         {
@@ -1952,7 +1952,7 @@
       }
     },
     {
-      "id": "9d7123c8c441eccfaeb5bdef",
+      "id": "587d7fac367417b2b2512bdd",
       "title": "Use Dynamic Scales",
       "required": [
         {
@@ -2041,7 +2041,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ecbfaeb5bdef",
+      "id": "587d7fac367417b2b2512bde",
       "title": "Use a Pre-defined Scale to Place Elements",
       "required": [
         {
@@ -2162,7 +2162,7 @@
       }
     },
     {
-      "id": "9d7123c8c441ecafaeb5bdef",
+      "id": "587d7fad367417b2b2512bdf",
       "title": "Add Axes to a Visualization",
       "required": [
         {

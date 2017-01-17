@@ -4,7 +4,7 @@
   "time": "5 minutes",
   "challenges": [
     {
-      "id": "561add10cb82ac38a17513bc",
+      "id": "587d78aa367417b2b2512aee",
       "title": "Claim Your Responsive Web Design Certificate",
       "description": [
         [
@@ -50,7 +50,7 @@
       ],
       "tests": [
         {
-          "id": "bd7158d8c992eddfaeb5bd18",
+          "id": "587d78af367417b2b2512b03",
           "title": "Build a Survey Form"
         },
         {
@@ -58,11 +58,11 @@
           "title": "Build a Tribute Page"
         },
         {
-          "id": "bd7158d8c982eddfaeb5bd18",
+          "id": "587d78af367417b2b2512b04",
           "title": "Build a Product Landing Page"
         },
         {
-          "id": "bd7158d8c972eddfaeb5bd18",
+          "id": "587d78b0367417b2b2512b05",
           "title": "Build a Technical Documentation Page"
         },
         {
