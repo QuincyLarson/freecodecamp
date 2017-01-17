@@ -282,7 +282,7 @@
         "assert(code.match(/document\\.getElementsByClassName\\(\\s*?('|\")message\\1\\s*?\\)\\[0\\]\\.innerHTML\\s*?=\\s*?JSON\\.stringify\\(.+?\\)/g), 'message: Your code should get the element with class <code>message</code> and change its inner HTML to the string of JSON data.');"
       ],
       "solutions": [
-        "<script>\n        document.addEventListener('DOMContentLoaded',function(){\n            document.getElementById('getMessage').onclick=function(){\n               req=new XMLHttpRequest();\n               req.open(\"GET\",'/json/cats.json',true);\n               req.send();\n               req.onload=function(){\n                  json=JSON.parse(req.responseText);\n                  document.getElementsByClassName('message')[0].innerHTML=JSON.stringify(json);          \n              };\n          };\n     });\n     </script>\n    <div class=\"container-fluid\">\n      <div class = \"row text-center\">\n       <h2>Cat Photo Finder</h2>\n     </div>\n     <div class = \"row text-center\">\n       <div class = \"col-xs-12 well message\">\n         The message will go here\n       </div>\n     </div>\n     <div class = \"row text-center\">\n       <div class = \"col-xs-12\">\n         <button id = \"getMessage\" class = \"btn btn-primary\">\n          Get Message\n         </button>\n       </div>\n     </div>\n   </div>"
+
       ],
       "hints": [],
       "type": "waypoint",

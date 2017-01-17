@@ -63,9 +63,7 @@
       "tests": [
         "assert($('img').attr('alt'), 'message: Your <code>img</code> tag should have an <code>alt</code> attribute, and it should not be empty.');"
       ],
-      "solutions": [
-        "<img src=\"doingKarateWow.jpeg\" alt=\"Camper Cat doing karate\">"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -118,9 +116,7 @@
         "assert(!($('img').attr('alt') == undefined), 'message: Your <code>img</code> tag should have an <code>alt</code> attribute.');",
         "assert($('img').attr('alt') == '', 'message: The <code>alt</code> attribute should be set to an empty string.');"
       ],
-      "solutions": [
-        "<header>\n  <h1>Deep Thoughts with Master Camper Cat</h1>\n</header>\n<article>\n  <h2>Defeating your Foe: the Red Dot is Ours!</h2>\n  <p>To Come...</p>\n</article>\n\n<img src=\"samuraiSwords.jpeg\" alt=\"\">\n\n<article>\n  <h2>Is Chuck Norris a Cat Person?</h2>\n  <p>To Come...</p>\n</article>\n<footer></footer>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -176,9 +172,7 @@
         "assert($('h3').length === 6, 'message: Your code should have six <code>h3</code> tags.');",
         "assert($('h5').length === 0, 'message: Your code should not have any <code>h5</code> tags.');"
       ],
-      "solutions": [
-        "<header>\n  <h1>How to Become a Ninja</h1>\n</header>\n<main>\n  <h2>Learn the Art of Moving Stealthily</h2>\n  <h3>How to Hide in Plain Sight</h3>\n  <h3>How to Climb a Wall</h3>\n\n  <h2>Learn the Art of Battle</h2>\n  <h3>How to Strengthen your Body</h3>\n  <h3>How to Fight like a Ninja</h3>\n\n  <h2>Learn the Art of Living with Honor</h2>\n  <h3>How to Breathe Properly</h3>\n  <h3>How to Simplify your Life</h3>  \n</main>\n<footer></footer>"
-      ],
+      "solutions": [],
       "hints": [
         "All the h5 tags are siblings, and should be changed to the same new heading level."
       ],
@@ -227,9 +221,7 @@
         "assert($('main').length == 1, 'message: Your code should have one <code>main</code> tag.');",
         "assert(code.match(/<\\/header>\\s*?<main>\\s*?<\\/main>/gi), 'message: The <code>main</code> tags should be between the closing <code>header</code> tag and the opening <code>footer</code> tag.');"
       ],
-      "solutions": [
-        "<header>\n  <h1>Weapons of the Ninja</h1>\n</header>\n<main></main>\n<footer></footer>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -291,9 +283,7 @@
         "assert($('article').length == 3, 'message: Your code should have three <code>article</code> tags.');",
         "assert($('div').length == 0, 'message: Your code should not have any <code>div</code> tags.');"
       ],
-      "solutions": [
-        "<header>\n  <h1>Deep Thoughts with Master Camper Cat</h1>\n</header>\n<article>\n  <h2>The Garfield Files: Lasagna as Training Fuel?</h2>\n  <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>\n</article>\n\n<img src=\"samuraiSwords.jpeg\" alt=\"\">\n\n<article>\n  <h2>Defeating your Foe: the Red Dot is Ours!</h2>\n  <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>\n</article>\n\n<img src=\"samuraiSwords.jpeg\" alt=\"\">\n\n<article>\n  <h2>Is Chuck Norris a Cat Person?</h2>\n  <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>\n</article>\n<footer></footer>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -358,9 +348,7 @@
         "assert($('header').children('h1').length == 1, 'message: Your <code>header</code> tags should wrap around the <code>h1</code>.');",
         "assert($('div').length == 0, 'message: Your code should not have any <code>div</code> tags.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Training with Camper Cat</h1>\n  </header>\n  <section id=\"stealth\">\n    <h2>Stealth &amp; Agility Training</h2>\n    <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>\n    <article><h3>No training is NP-complete without parkour</h3></article>\n  </section>\n  <section id=\"combat\">\n    <h2>Combat Training</h2>\n    <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>\n    <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>\n  </section>\n  <section id=\"weapons\">\n    <h2>Weapons Training</h2>\n    <article><h3>Swords: the best tool to literally divide and conquer</h3></article>\n    <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>\n  </section>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -430,9 +418,7 @@
         "assert($('nav').children('ul').length == 1, 'message: Your <code>nav</code> tags should wrap around the <code>ul</code> and its list items.');",
         "assert($('div').length == 0, 'message: Your code should not have any <code>div</code> tags.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Training with Camper Cat</h1>\n    <nav>\n      <ul>\n        <li><a href=\"#stealth\">Stealth &amp; Agility</a></li>\n        <li><a href=\"#combat\">Combat</a></li>\n        <li><a href=\"#weapons\">Weapons</a></li>\n      </ul>\n    </nav>\n  </header>\n  <section id=\"stealth\">\n    <h2>Stealth &amp; Agility Training</h2>\n    <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>\n    <article><h3>No training is NP-complete without parkour</h3></article>\n  </section>\n  <section id=\"combat\">\n    <h2>Combat Training</h2>\n    <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>\n    <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>\n  </section>\n  <section id=\"weapons\">\n    <h2>Weapons Training</h2>\n    <article><h3>Swords: the best tool to literally divide and conquer</h3></article>\n    <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>\n  </section>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -503,9 +489,7 @@
         "assert($('footer').length == 1, 'message: Your code should have one <code>footer</code> tag.');",
         "assert($('div').length == 0, 'message: Your code should not have any <code>div</code> tags.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Training</h1>\n    <nav>\n      <ul>\n        <li><a href=\"#stealth\">Stealth &amp; Agility</a></li>\n        <li><a href=\"#combat\">Combat</a></li>\n        <li><a href=\"#weapons\">Weapons</a></li>\n      </ul>\n    </nav>\n  </header>\n  <section id=\"stealth\">\n    <h2>Stealth &amp; Agility Training</h2>\n    <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>\n    <article><h3>No training is NP-complete without parkour</h3></article>\n  </section>\n  <section id=\"combat\">\n    <h2>Combat Training</h2>\n    <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>\n    <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>\n  </section>\n  <section id=\"weapons\">\n    <h2>Weapons Training</h2>\n    <article><h3>Swords: the best tool to literally divide and conquer</h3></article>\n    <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>\n  </section>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -561,9 +545,7 @@
         "assert($('source').attr('src') === 'https://s3.amazonaws.com/freecodecamp/screen-reader.mp3', 'message: The value for the <code>src</code> attribute on the <code>source</code> tag should match the link in the instructions exactly.');",
         "assert($('source').attr('type') === 'audio/mpeg', 'message: Your code should include a <code>type</code> attribute on the <code>source</code> tag with a value of audio/mpeg.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Real Coding Ninjas</h1>\n  </header>\n  <p>A sound clip of Zersiax's screen reader in action.</p>\n  <audio controls>\n    <source src=\"https://s3.amazonaws.com/freecodecamp/screen-reader.mp3\" type=\"audio/mpeg\" />\n  </audio>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -647,9 +629,7 @@
         "assert($('p').length == 0, 'message: Your code should not have any <code>p</code> tags.');",
         "assert($('figure').children('figcaption').length == 1, 'message: The <code>figcaption</code> should be a child of the <code>figure</code> tag.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Training</h1>\n    <nav>\n      <ul>\n        <li><a href=\"#stealth\">Stealth &amp; Agility</a></li>\n        <li><a href=\"#combat\">Combat</a></li>\n        <li><a href=\"#weapons\">Weapons</a></li>\n      </ul>\n    </nav>\n  </header>\n  <section>\n    <!-- Add your code below this line -->\n    <figure>\n      <!-- Stacked bar chart will go here -->\n      <br />\n      <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>\n    </figure>\n    <!-- Add your code above this line -->\n  </section>\n  <section id=\"stealth\">\n    <h2>Stealth &amp; Agility Training</h2>\n    <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>\n    <article><h3>No training is NP-complete without parkour</h3></article>\n  </section>\n  <section id=\"combat\">\n    <h2>Combat Training</h2>\n    <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>\n    <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>\n  </section>\n  <section id=\"weapons\">\n    <h2>Weapons Training</h2>\n    <article><h3>Swords: the best tool to literally divide and conquer</h3></article>\n    <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>\n  </section>\n  <div>&copy; 2016 Camper Cat</div>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -721,9 +701,7 @@
         "assert($('label').attr('for'), 'message: Your code should have a <code>for</code> attribute on the <code>label</code> tag that is not empty.');",
         "assert($('label').attr('for') == 'email', 'message: Your <code>for</code> attribute value should match the <code>id</code> value on the email <code>input</code>.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Deep Thoughts with Master Camper Cat</h1>\n  </header>\n  <section>\n    <form>\n      <p>Sign up to receive Camper Cat's blog posts by email here!</p>\n      <label for=\"email\">Email:</label>\n      <input type=\"text\" id=\"email\" name=\"email\">\n      <input type=\"submit\" name=\"submit\" value=\"Submit\">\n    </form>\n  </section>\n  <article>\n    <h2>The Garfield Files: Lasagna as Training Fuel?</h2>\n    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>\n  </article>\n  <img src=\"samuraiSwords.jpeg\" alt=\"\">\n  <article>\n    <h2>Defeating your Foe: the Red Dot is Ours!</h2>\n    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>\n  </article>\n  <img src=\"samuraiSwords.jpeg\" alt=\"\">\n  <article>\n    <h2>Is Chuck Norris a Cat Person?</h2>\n    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>\n  </article>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -809,9 +787,7 @@
         "assert($('div').length == 0, 'message: Your code should not have any <code>div</code> tags.');",
         "assert($('p').length == 4, 'message: Your code should no longer have a <code>p</code> tag around the text asking what level ninja a user is.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Deep Thoughts with Master Camper Cat</h1>\n  </header>\n  <section>\n    <form>\n      <p>Sign up to receive Camper Cat's blog posts by email here!</p>\n      <label for=\"email\">Email:</label>\n      <input type=\"text\" id=\"email\" name=\"email\">\n      <!-- Add your code below this line -->\n      <fieldset>\n        <legend>What level ninja are you?</legend>\n        <input id=\"newbie\" type=\"radio\" name=\"levels\" value=\"newbie\">\n        <label for=\"newbie\">Newbie Kitten</label><br>\n        <input id=\"intermediate\" type=\"radio\" name=\"levels\" value=\"intermediate\">\n        <label for=\"intermediate\">Developing Student</label><br>\n        <input id=\"master\" type=\"radio\" name=\"levels\" value=\"master\">\n        <label for=\"master\">Master</label>\n      </fieldset>\n      <!-- Add your code above this line -->\n      <input type=\"submit\" name=\"submit\" value=\"Submit\">\n    </form>\n  </section>\n  <article>\n    <h2>The Garfield Files: Lasagna as Training Fuel?</h2>\n    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>\n  </article>\n  <img src=\"samuraiSwords.jpeg\" alt=\"\">\n  <article>\n    <h2>Defeating your Foe: the Red Dot is Ours!</h2>\n    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near...</p>\n  </article>\n  <img src=\"samuraiSwords.jpeg\" alt=\"\">\n  <article>\n    <h2>Is Chuck Norris a Cat Person?</h2>\n    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>\n  </article>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -877,9 +853,7 @@
         "assert($('input').attr('id') == 'pickdate', 'message: Your <code>input</code> tag should have an <code>id</code> attribute with a value of pickdate.');",
         "assert($('input').attr('name') == 'date', 'message: Your <code>input</code> tag should have a <code>name</code> attribute with a value of date.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Tournaments</h1>\n  </header>\n  <section>\n    <h2>Mortal Combat Tournament Survey</h2>\n    <form>\n      <p>Tell us the best date for the competition</p>\n      <label for=\"pickdate\">Preferred Date:</label>\n      <!-- Add your code below this line -->\n      <input type=\"date\" id=\"pickdate\" name=\"date\">\n      <!-- Add your code above this line -->\n      <input type=\"submit\" name=\"submit\" value=\"Submit\">\n    </form>\n  </section>\n  <br>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -950,9 +924,7 @@
         "assert($('time').attr('datetime'), 'message: Your <code>time</code> tag should have a <code>datetime</code> attribute that is not empty.');",
         "assert($('time').attr('datetime') === \"2016-09-15\", 'message: Your <code>datetime</code> attribute should be set to a value of 2016-09-15.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Tournaments</h1>\n  </header>\n  <article>\n    <h2>Mortal Combat Tournament Survey Results</h2>\n    <p>Thank you to everyone for responding to Master Camper Cat's survey. The best day to host the vaunted Mortal Combat tournament is <time datetime=\"2016-09-15\">Thursday, September 15<sup>th</sup></time>. May the best ninja win!</p>\n    <section>\n      <h3>Comments:</h3>\n      <article>\n        <p>Posted by: Sub-Zero on <time datetime=\"2016-08-13T20:01Z\">August 13<sup>th</sup></time></p>\n        <p>Johnny Cage better be there, I'll finish him!</p>\n      </article>\n      <article>\n        <p>Posted by: Doge on <time datetime=\"2016-08-15T08:12Z\">August 15<sup>th</sup></time></p>\n        <p>Wow, much combat, so mortal.</p>\n      </article>\n      <article>\n        <p>Posted by: The Grim Reaper on <time datetime=\"2016-08-16T00:00Z\">August 16<sup>th</sup></time></p>\n        <p>Looks like I'll be busy that day.</p>\n      </article>\n    </section>\n  </article>\n  <br>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1083,9 +1055,7 @@
         "assert(code.match(/width:\\s*?1px/gi), 'message: Your code should set the <code>width</code> property of the <code>sr-only</code> class to a value of 1 pixel.');",
         "assert(code.match(/height:\\s*?1px/gi), 'message: Your code should set the <code>height</code> property of the <code>sr-only</code> class to a value of 1 pixel.');"
       ],
-      "solutions": [
-        "<head>\n  <style>\n  .sr-only {\n    position: absolute;\n    left: -10000px;\n    width: 1px;\n    height: 1px;\n    top: auto;\n    overflow: hidden;\n  }\n  </style>\n</head>\n<body>\n  <header>\n    <h1>Training</h1>\n    <nav>\n      <ul>\n        <li><a href=\"#stealth\">Stealth &amp; Agility</a></li>\n        <li><a href=\"#combat\">Combat</a></li>\n        <li><a href=\"#weapons\">Weapons</a></li>\n      </ul>\n    </nav>\n  </header>\n  <section>\n    <h2>Master Camper Cat's Beginner Three Week Training Program</h2>\n    <figure>\n      <!-- Stacked bar chart of weekly training-->\n      <p>[Stacked bar chart]</p>\n      <br />\n      <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>\n    </figure>\n    <table class=\"sr-only\">\n      <caption>Hours of Weekly Training in Stealth, Combat, and Weapons</caption>\n      <thead>\n        <tr>\n          <th></th>\n          <th scope=\"col\">Stealth &amp; Agility</th>\n          <th scope=\"col\">Combat</th>\n          <th scope=\"col\">Weapons</th>\n          <th scope=\"col\">Total</th>                                        \n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <th scope=\"row\">Week One</th>\n          <td>3</td>\n          <td>5</td>\n          <td>2</td>\n          <td>10</td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Week Two</th>\n          <td>4</td>\n          <td>5</td>\n          <td>3</td>\n          <td>12</td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Week Three</th>\n          <td>4</td>\n          <td>6</td>\n          <td>3</td>\n          <td>13</td>\n        </tr>\n      </tbody>\n    </table>\n  </section>\n  <section id=\"stealth\">\n    <h2>Stealth &amp; Agility Training</h2>\n    <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>\n    <article><h3>No training is NP-complete without parkour</h3></article>\n  </section>\n  <section id=\"combat\">\n    <h2>Combat Training</h2>\n    <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>\n    <article><h3>Goodbye, world: 5 proven ways to knock out an opponent</h3></article>\n  </section>\n  <section id=\"weapons\">\n    <h2>Weapons Training</h2>\n    <article><h3>Swords: the best tool to literally divide and conquer</h3></article>\n    <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>\n  </section>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1141,9 +1111,7 @@
         "assert($('body').css('color') == 'rgb(99, 99, 99)', 'message: Your code should change the text <code>color</code> for the <code>body</code> to the darker gray.');",
         "assert($('body').css('background-color') == 'rgb(255, 255, 255)', 'message: Your code should not change the <code>background-color</code> for the <code>body</code>.');"
       ],
-      "solutions": [
-        "<head>\n  <style>\n  body {\n    color: #636363;\n    background-color: #FFF;\n  }\n  </style>\n</head>\n<body>\n  <header>\n    <h1>Deep Thoughts with Master Camper Cat</h1>\n  </header>\n  <article>\n    <h2>A Word on the Recent Catnip Doping Scandal</h2>\n    <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at the Claw of Fury tournament.</p>\n    <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external influences. My own catnip use shall continue as purely recreational.</p>\n  </article>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1201,9 +1169,7 @@
         "assert(code.match(/color:\\s*?hsl\\(0,\\s*?55%,\\s*?15%\\)/gi), 'message: Your code should only change the lightness value for the text <code>color</code> property to a value of 15%.');",
         "assert(code.match(/background-color:\\s*?hsl\\(120,\\s*?25%,\\s*?55%\\)/gi), 'message: Your code should only change the lightness value for the <code>background-color</code> property to a value of 55%.');"
       ],
-      "solutions": [
-        "<head>\n  <style>\n  body {\n    color: hsl(0, 55%, 15%);\n    background-color: hsl(120, 25%, 55%);\n  }\n  </style>\n</head>\n<body>\n  <header>\n    <h1>Deep Thoughts with Master Camper Cat</h1>\n  </header>\n  <article>\n    <h2>A Word on the Recent Catnip Doping Scandal</h2>\n    <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at the Claw of Fury tournament.</p>\n    <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external influences. My own catnip use shall continue as purely recreational.</p>\n  </article>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1257,9 +1223,7 @@
       "tests": [
         "assert($('button').css('color') == 'rgb(0, 51, 102)', 'message: Your code should change the text <code>color</code> for the <code>button</code> to the dark blue.');"
       ],
-      "solutions": [
-        "<head>\n  <style>\n  button {\n    color: #003366;\n    background-color: #FFFF33;\n    font-size: 14px;\n    padding: 10px;\n  }\n  </style>\n</head>\n<body>\n  <header>\n    <h1>Danger!</h1>\n  </header>\n  <button>Delete Internet</button>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1305,9 +1269,7 @@
       "tests": [
         "assert($('a').text().match(/information about batteries/g), 'message: Your code should move the anchor <code>a</code> tags from around the words \"Click here\" to wrap around the words \"information about batteries\".');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Deep Thoughts with Master Camper Cat</h1>\n  </header>\n  <article>\n    <h2>Defeating your Foe: the Red Dot is Ours!</h2>\n    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightening speed. But chin up, fellow fighters, our time for victory may soon be near. Click here for <a href=\"\">information about batteries</a></p>\n  </article>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1371,9 +1333,7 @@
         "assert($('#first').attr('accesskey') == 'g', 'message: Your code should set the <code>accesskey</code> attribute on the <code>a</code> tag with the <code>id</code> of \"first\" to \"g\". Note that case matters.');",
         "assert($('#second').attr('accesskey') == 'c', 'message: Your code should set the <code>accesskey</code> attribute on the <code>a</code> tag with the <code>id</code> of \"second\" to \"c\". Note that case matters.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Deep Thoughts with Master Camper Cat</h1>\n  </header>\n  <article>\n    <h2><a accesskey=\"g\" id=\"first\" href=\"\">The Garfield Files: Lasagna as Training Fuel?</a></h2>\n    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>\n  </article>\n  <article>\n    <h2><a accesskey=\"c\" id=\"second\" href=\"\">Is Chuck Norris a Cat Person?</a></h2>\n    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>\n  </article>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1460,9 +1420,7 @@
         "assert($('p').attr('tabindex'), 'message: Your code should add a <code>tabindex</code> attribute to the <code>p</code> tag that holds the form instructions.');",
         "assert($('p').attr('tabindex') == '0', 'message: Your code should set the <code>tabindex</code> attribute on the <code>p</code> tag to a value of 0.');"
       ],
-      "solutions": [
-        "<head>\n  <style>\n  p:focus {\n    background-color: yellow;\n  }\n  </style>\n</head>\n<body>\n  <header>\n    <h1>Ninja Survey</h1>\n  </header>\n  <section>\n    <form>\n      <p tabindex=\"0\">Instructions: Fill in ALL your information then click <b>Submit</b></p>\n      <label for=\"username\">Username:</label>\n      <input type=\"text\" id=\"username\" name=\"username\"><br>\n      <fieldset>\n        <legend>What level ninja are you?</legend>\n        <input id=\"newbie\" type=\"radio\" name=\"levels\" value=\"newbie\">\n        <label for=\"newbie\">Newbie Kitten</label><br>\n        <input id=\"intermediate\" type=\"radio\" name=\"levels\" value=\"intermediate\">\n        <label for=\"intermediate\">Developing Student</label><br>\n        <input id=\"master\" type=\"radio\" name=\"levels\" value=\"master\">\n        <label for=\"master\">9th Life Master</label>\n      </fieldset>\n      <br>\n      <fieldset>\n      <legend>Select your favorite weapons:</legend>\n      <input id=\"stars\" type=\"checkbox\" name=\"weapons\" value=\"stars\">\n      <label for=\"stars\">Throwing Stars</label><br>\n      <input id=\"nunchucks\" type=\"checkbox\" name=\"weapons\" value=\"nunchucks\">\n      <label for=\"nunchucks\">Nunchucks</label><br>\n      <input id=\"sai\" type=\"checkbox\" name=\"weapons\" value=\"sai\">\n      <label for=\"sai\">Sai Set</label><br>\n      <input id=\"sword\" type=\"checkbox\" name=\"weapons\" value=\"sword\">\n      <label for=\"sword\">Sword</label>\n      </fieldset>\n      <br>\n      <input type=\"submit\" name=\"submit\" value=\"Submit\">\n    </form><br>\n  </section>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1537,9 +1495,7 @@
         "assert($('#search').attr('tabindex') == '1', 'message: Your code should set the <code>tabindex</code> attribute on the search <code>input</code> tag to a value of 1.');",
         "assert($('#submit').attr('tabindex') == '2', 'message: Your code should set the <code>tabindex</code> attribute on the submit <code>input</code> tag to a value of 2.');"
       ],
-      "solutions": [
-        "<body>\n  <header>\n    <h1>Even Deeper Thoughts with Master Camper Cat</h1>\n    <nav>\n      <ul>\n        <li><a href=\"\">Home</a></li>\n        <li><a href=\"\">Blog</a></li>\n        <li><a href=\"\">Training</a></li>\n      </ul>\n    </nav>\n  </header>\n  <form>\n    <label for=\"search\">Search:</label>\n    <input type=\"search\" name=\"search\" id=\"search\" tabindex=\"1\">\n    <input type=\"submit\" name=\"submit\" value=\"Submit\" id=\"submit\" tabindex=\"2\">\n  </form>\n  <h2>Inspirational Quotes</h2>\n  <blockquote>\n    <p>&ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br>\n    - Chuck Norris</p>\n  </blockquote>\n  <blockquote>\n    <p>&ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br>\n    - TMNT</p>\n  </blockquote>\n  <footer>&copy; 2016 Camper Cat</footer>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,

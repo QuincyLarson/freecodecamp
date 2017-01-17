@@ -1442,9 +1442,7 @@
       "tests": [
         "assert($('p').css('line-height') == '25px', 'message: Your code should set the <code>line-height</code> of the <code>p</code> tag to 25 pixels.');"
       ],
-      "solutions": [
-        "<style>\n  p {\n    font-size: 16px;\n    line-height: 25px;\n  }\n</style>\n\n<p>\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n</p>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1486,9 +1484,7 @@
       "tests": [
         "assert($('a').css('color') == 'rgb(0, 0, 0)', 'message: The <code>color</code> of the anchor tag text should be black.')"
       ],
-      "solutions": [
-        "<style>\n    a {\n        color: #000;\n    }\n</style>\n<a href=\"https://atjonathan.github.io/catphotoapp\">CatPhotoApp</a>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1535,9 +1531,7 @@
         "assert($('a').css('color') == 'rgb(0, 0, 0)', 'message: The anchor tag <code>color</code> should remain black, only add CSS rules for the <code>:hover</code> state.');",
         "assert(code.match(/(?:a:hover\\s*?{\\s*?color:\\s*?blue;\\s*?text-decoration:\\s*?none;\\s*?}|a:hover\\s*?{\\s*?text-decoration:\\s*?none;\\s*?color:\\s*?blue;\\s*?})/gi), 'message: The anchor tag should have a <code>color</code> of blue and no underline on hover.');"
       ],
-      "solutions": [
-        "<style>\n    a {\n        color: #000;\n    }\n    a:hover {\n        color: blue;\n        text-decoration: none;\n    }\n</style>\n<a href=\"https://atjonathan.github.io/catphotoapp\">CatPhotoApp</a>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1589,9 +1583,7 @@
         "assert($('h2').css('position') == 'relative', 'message: The <code>h2</code> element should have a <code>position</code> property set to <code>relative</code>.');",
         "assert($('h2').css('top') == '15px', 'message: Your code should use a CSS offset to relatively position the <code>h2</code> 15px away from the <code>top</code> of where it normally sits.');"
       ],
-      "solutions": [
-        "<style>\n  h2 {\n    position: relative;\n    top: 15px;\n  }\n  </style>\n<body>\n  <h1>On Being Well-Positioned</h1>\n  <h2>Move me!</h2>\n  <p>I still think the h2 is where it normally sits.</p>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1642,9 +1634,7 @@
         "assert($('h2').css('bottom') == '10px', 'message: Your code should use a CSS offset to relatively position the <code>h2</code> 10px upwards. In other words, move it 10px away from the <code>bottom</code> of where it normally sits.');",
         "assert($('h2').css('left') == '15px', 'message: Your code should use a CSS offset to relatively position the <code>h2</code> 15px towards the right. In other words, move it 15px away from the <code>left</code> of where it normally sits.');"
       ],
-      "solutions": [
-        "<head>\n  <style>\n  h2 {\n    position: relative;\n    bottom: 10px;\n    left: 15px;\n  }\n  </style>\n</head>\n<body>\n  <h1>On Being Well-Positioned</h1>\n  <h2>Move me!</h2>\n  <p>I still think the h2 is where it normally sits.</p>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1703,9 +1693,7 @@
         "assert($('#searchbar').css('top') == '0px', 'message: Your code should use the <code>top</code> CSS offset of 0 pixels on the <code>#searchbar</code> element.');",
         "assert($('#searchbar').css('right') == '0px', 'message: Your code should use the <code>right</code> CSS offset of 0 pixels on the <code>#searchbar</code> element.');"
       ],
-      "solutions": [
-        "<style>\n  #searchbar {\n    position: absolute;\n    top: 0px;\n    right: 0px;\n  }\n  section {\n    position: relative;\n  }\n</style>\n<body>\n  <h1>Welcome!</h1>\n  <section>\n    <p>Stuff</p>\n    <form id=\"searchbar\">\n      <label for=\"search\">Search:</label>\n      <input type=\"search\" id=\"search\" name=\"search\">\n      <input type=\"submit\" name=\"submit\" value=\"Go!\">\n    </form>\n  </section>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1776,9 +1764,7 @@
         "assert($('#navbar').css('top') == '0px', 'message: Your code should use the <code>top</code> CSS offset of 0 pixels on the <code>#navbar</code> element.');",
         "assert($('#navbar').css('left') == '0px', 'message: Your code should use the <code>left</code> CSS offset of 0 pixels on the <code>#navbar</code> element.');"
       ],
-      "solutions": [
-        "<style>\n  #navbar {\n    position: fixed;\n    top: 0px;\n    left: 0px;\n    width: 100%;\n    background-color: #767676;\n  }\n  nav ul {\n    margin: 0px;\n    padding: 5px 0px 5px 30px;\n  }\n  nav li {\n    display: inline;\n    margin-right: 20px;\n  }\n  a {\n    text-decoration: none;\n  }\n</style>\n<body>\n  <header>\n    <h1>Welcome!</h1>\n    <nav id=\"navbar\">\n      <ul>\n        <li><a href=\"\">Home</a></li>\n        <li><a href=\"\">Contact</a></li>\n      </ul>\n    </nav>\n  </header>\n  <p>I shift up when the #navbar is fixed to the browser window.</p>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -1844,9 +1830,7 @@
         "assert($('#left').css('float') == 'left', 'message: The element with id <code>left</code> should have a <code>float</code> value of <code>left</code>.');",
         "assert($('#right').css('float') == 'right', 'message: The element with id <code>right</code> should have a <code>float</code> value of <code>right</code>.');"
       ],
-      "solutions": [
-        "<head>\n  <style>\n  #left {\n    float: left;\n    width: 60%;\n  }\n  #right {\n    float: right;\n    width: 30%;\n  }\n  aside, section {\n    padding: 5px;\n    background-color: #ccc;\n  }\n  </style>\n</head>\n<body>\n  <header>\n    <h1>Welcome!</h1>\n  </header>\n  <section id=\"left\">\n    <h2>Content</h2>\n    <p>Prepare to be wowed!</p>\n  </section>\n  <aside id=\"right\">\n    <h2>Sidebar</h2>\n    <p>Relevant links</p>\n  </aside>\n</body>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2075,9 +2059,7 @@
         "assert($('.cyan').css('background-color') == 'rgb(0, 255, 255)', 'message: The <code>div</code> element with class <code>cyan</code> should have a <code>background-color</code> of cyan.');",
         "assert($('.raspberry').css('background-color') == 'rgb(255, 0, 125)', 'message: The <code>div</code> element with class <code>raspberry</code> should have a <code>background-color</code> of raspberry.');"
       ],
-      "solutions": [
-        "<style>\n  body {\n    background-color: #FFFFFF;\n  }\n  .orange {\n    background-color: #FF7D00;\n  }\n  .cyan {\n    background-color: #00FFFF;\n  }\n  .raspberry {\n    background-color: #FF007D;\n  }  \n  div {\n    display: inline-block;\n    height: 100px;\n    width: 100px;\n  }\n</style>\n<div class=\"orange\"></div>\n<div class=\"cyan\"></div>\n<div class=\"raspberry\"></div>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2154,9 +2136,7 @@
         "assert($('h2').css('color') == 'rgb(9, 167, 161)', 'message: The <code>h2</code> element should have a <code>color</code> of #09A7A1.');",
         "assert($('button').css('background-color') == 'rgb(255, 121, 14)', 'message: The <code>button</code> element should have a <code>background-color</code> of #FF790E.');"
       ],
-      "solutions": [
-        "<style>\n  header {\n    background-color: #09A7A1;\n    color: #FFFFFF;\n    padding: 0.25em;\n  }\n  h2 {\n    color: #09A7A1;\n  }  \n  button {\n    background-color: #FF790E;\n  }\n  footer {\n    background-color: #09A7A1;\n    color: #FFFFFF;\n    padding: 0.5em;\n  }\n</style>\n<header>\n  <h1>Cooking with FCC!</h1>\n</header>\n<main>\n  <article>\n    <h2 id=\"h2-one\">Machine Learning in the Kitchen</h2>\n    <p>Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms. Coding usually involves writing exact instructions, but sometimes you need your computer to execute flexible commands, like <code>fetch Pringles</code>.</p>\n      <button id=\"b1\">Sign Up</button>\n  </article>\n  <article>\n    <h2 id=\"h2-two\">Bisection Vegetable Chopping</h2>\n    <p>This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will have you chopping carrots in O(log n) time before you know it.</p>\n    <button id=\"b2\">Sign Up</button>\n  </article>\n</main>\n<br>\n<footer>&copy;2016 FCC Kitchen</footer>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2225,9 +2205,7 @@
         "assert($('.cyan').css('background-color') == 'rgb(0, 255, 255)', 'message: The <code>div</code> element with class <code>cyan</code> should have a <code>background-color</code> of cyan.');",
         "assert($('.blue').css('background-color') == 'rgb(0, 0, 255)', 'message: The <code>div</code> element with class <code>blue</code> should have a <code>background-color</code> blue.');"
       ],
-      "solutions": [
-        "<style>\n  body {\n    background-color: #FFFFFF;\n  }\n  .green {\n    background-color: hsl(120, 100%, 50%);\n  }\n  .cyan {\n    background-color: hsl(180, 100%, 50%);\n  }\n  .blue {\n    background-color: hsl(240, 100%, 50%);\n  }\n\n  div {\n    display: inline-block;\n    height: 100px;\n    width: 100px;\n  }\n</style>\n<div class=\"green\"></div>\n<div class=\"cyan\"></div>\n<div class=\"blue\"></div>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2298,9 +2276,7 @@
       "tests": [
         "assert(code.match(/nav\\s*?{\\s*?background-color:\\s*?hsl\\(178,\\s*?80%,\\s*?25%\\)/gi), 'message: The <code>nav</code> element should have a <code>background-color</code> of the adjusted teal and make sure to use the <code>hsl()</code> property.');"
       ],
-      "solutions": [
-        "<style>\n  header {\n    background-color: hsl(178, 90%, 35%);\n    color: #FFFFFF;\n  }\n  nav {\n    background-color: hsl(178, 80%, 25%);\n  }\n  h1 {\n    text-indent: 10px;\n    padding-top: 10px;\n  }\n  nav ul {\n    margin: 0px;\n    padding: 5px 0px 5px 30px;\n  }\n  nav li {\n    display: inline;\n    margin-right: 20px;\n  }\n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n</style>\n<header>\n  <h1>Cooking with FCC!</h1>\n  <nav>\n    <ul>\n      <li><a href=\"\">Home</a></li>\n      <li><a href=\"\">Classes</a></li>\n      <li><a href=\"\">Contact</a></li>\n    </ul>\n  </nav>\n</header>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2353,9 +2329,7 @@
       "tests": [
         "assert(code.match(/background:\\s*?linear-gradient\\(35deg,\\s*?#CCFFFF,\\s*?#FFCCCC\\);/gi), 'message: The <code>div</code> element should have a <code>linear-gradient</code> <code>background</code> with the specified direction and colors.');"
       ],
-      "solutions": [
-        "<style>\n\n  div{ \n    border-radius: 20px;\n    width: 70%;\n    height: 400px;\n    margin:  50 auto;\n    background: linear-gradient(\n    35deg,\n    #ccffff,\n    #ffcccc\n  );       \n  }\n\n</style>\n\n<div></div>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2420,9 +2394,7 @@
         "assert(code.match(/yellow\\s+?40px,\\s*?black\\s+?40px/gi), 'message: The second color stop at 40 pixels should be <code>black</code>.');",
         "assert(code.match(/black\\s+?80px/gi), 'message: The last color stop at 80 pixels should be <code>black</code>.');"
       ],
-      "solutions": [
-        "<style>\n\n  div{ \n    border-radius: 20px;\n    width: 70%;\n    height: 400px;\n    margin:  50 auto;\n    background: repeating-linear-gradient(\n      45deg,\n      yellow 0px,\n      yellow 40px,\n      black 40px,\n      black 80px\n    );\n  }\n\n</style>\n\n<div></div>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2463,9 +2435,7 @@
       "tests": [
         "assert(code.match(/background:\\s*?url\\((\"|')https:\\/\\/i\\.imgur\\.com\\/MJAkxbh\\.png(\"|')\\)/gi), 'message: Your <code>body</code> element should have a <code>background</code> property set to a <code>url()</code> with the given link.');"
       ],
-      "solutions": [
-        "<style>\n    background: url('https://i.imgur.com/MJAkxbh.png');\n</style>"
-      ],
+      "solutions": [],
       "hints": [
         "Remember to wrap the address in quotes within the url() function."
       ],
@@ -2586,9 +2556,7 @@
       "tests": [
         "assert(code.match(/div:hover\\s*?{\\s*?transform:\\s*?scale\\(1\\.1\\);/gi), 'message: The size of the <code>div</code> element should scale 1.1 times when the user hovers over it.');"
       ],
-      "solutions": [
-        "<style>\n\n  div{ \n    width: 70%;\n    height: 100px;\n    margin:  50 auto;\n    background: linear-gradient(\n    53deg,\n    #ccfffc,\n    #ffcccf\n  );        \n  }\n\n  div:hover {transform: scale(1.1);}\n\n</style>\n\n<div></div>"
-      ],
+      "solutions": [],
       "hints": [
         "Make sure to apply the CSS rule to the hover state of the div, using div:hover"
       ],
@@ -2763,9 +2731,7 @@
         "assert(code.match(/border-radius:\\s*?50%;/gi), 'message: The value of the <code>border-radius</code> property should be set to <code>50%</code>.');",
         "assert(code.match(/box-shadow:\\s*?25px\\s+?10px\\s+?0(px)?\\s+?0(px)?\\s+?blue\\s*?;/gi), 'message: The value of the <code>box-shadow</code> property should be set to 25px for <code>offset-x</code>, 10px for <code>offset-y</code>, 0 for <code>blur-radius</code>, 0 for <code>spread-radius</code>, and finally blue for the color.');"
       ],
-      "solutions": [
-        "<style>\n.center\n{\n  position: absolute;\n  margin: auto;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  width: 100px;\n  height: 100px;\n  background-color: transparent;\n  border-radius: 50%;\n  box-shadow: 25px 10px 0 0 blue; \n}\n\n</style>\n<div class = \"center\"></div>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2844,9 +2810,7 @@
         "assert(code.match(/transform:\\s*?rotate\\(-45deg\\)/gi), 'message: The <code>transform</code> property for the <code>heart</code> class should use a <code>rotate()</code> function set to -45 degrees.');",
         "assert(code.match(/\\.heart:before\\s*?{\\s*?content:\\s*?(\"|')\\1;/gi), 'message: The <code>content</code> of the <code>heart:before</code> selector should be an empty string.');"
       ],
-      "solutions": [
-        "<style>\n.heart {\n  position: absolute;\n  margin: auto;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: pink;\n  height: 50px;\n  transform: rotate(-45deg);\n  width: 50px;\n}\n.heart:before {\n  content: \"\";\n  background-color: pink;\n  border-radius: 50%;\n  height: 50px;\n  position: absolute;\n  width: 50px;\n  top: -25px;\n  left: 0;\n}\n.heart:after {\n  content: \"\";\n  background-color: pink;\n  border-radius: 50%;\n  height: 50px;\n  position: absolute;\n  width: 50px;\n  left: 25px;\n  top: 0;\n}\n</style>\n<div class = \"heart\"></div>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -2911,9 +2875,7 @@
         "assert(code.match(/50%\\s*?{\\s*?background-color:\\s*?green;\\s*?}/gi), 'message: The <code>@keyframes</code> rule for rainbow should use a <code>background-color</code> of green at 50%.');",
         "assert(code.match(/100%\\s*?{\\s*?background-color:\\s*?yellow;\\s*?}/gi), 'message: The <code>@keyframes</code> rule for rainbow should use a <code>background-color</code> of yellow at 100%.');"
       ],
-      "solutions": [
-        "<style>\n  div{\n    height:40px;\n    width: 70%;\n    background:black;\n    margin: 50 auto;\n    border-radius: 5px;\n  }\n\n#rect {\n  animation-name: rainbow;\n  animation-duration: 4s;\n}\n\n@keyframes rainbow {\n  0% {\n   background-color: blue;\n  }\n   50% {\n   background-color: green;\n  }\n  100% {\n    background-color: yellow;\n  }\n}\n\n</style>\n<div id = \"rect\"></div>"
-      ],
+      "solutions": [],
       "hints": [
         "Make sure the @keyframes rule links to the animation-name."
       ],
@@ -3044,9 +3006,7 @@
         "assert(code.match(/50%\\s*?{\\s*?background-color:\\s*?green;\\s*?top:\\s*?50px;\\s*?left:\\s*?25px;\\s*?}/gi), 'message: The <code>@keyframes</code> rule for <code>50%</code> should use the <code>left</code> offset of 25px.');",
         "assert(code.match(/100%\\s*?{\\s*?background-color:\\s*?yellow;\\s*?top:\\s*?0px;\\s*?left:\\s*?-25px;\\s*?}/gi), 'message: The <code>@keyframes</code> rule for <code>100%</code> should use the <code>left</code> offset of -25px.');"
       ],
-      "solutions": [
-        "<style>\n  div{\n    height:40px;\n    width: 70%;\n    background:black;\n    margin: 50 auto;\n    border-radius: 5px;\n    position: relative;\n  }\n\n#rect {\n  animation-name: rainbow;\n  animation-duration: 4s;\n}\n\n@keyframes rainbow {\n  0% {\n   background-color: blue;\n   top: 0px;\n   left:0px;\n  }\n   50% {\n   background-color: green;\n   top: 50px;\n   left:25px;\n  }\n  100% {\n    background-color: yellow;\n    top: 0px;\n    left:-25px;\n  }\n}\n\n</style>\n<div id = \"rect\"></div>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,
@@ -3111,9 +3071,7 @@
       "tests": [
         "assert(code.match(/opacity:\\s*?0?\\.1;/gi), 'message: The <code>keyframes</code> rule for fade should set the <code>opacity</code> property to 0.1 at 50%.');"
       ],
-      "solutions": [
-        "<style>\n\n  #ball{ \n    width: 70px;\n    height: 70px;\n    margin: 50 auto;\n    position: fixed;\n    left:20%;\n    background: linear-gradient(\n    35deg,\n    #ccffff,\n    #ffcccc\n  );       \n  }\n\n#ball {\n  animation-name: fade;\n  animation-duration: 3s;\n  animation-iteration-count: infinite;\n}\n\n@keyframes fade{\n  50% {\n    left:60%;\n    opacity:.1;\n  }\n} \n\n\n</style>\n\n<div id= \"ball\"></div>"
-      ],
+      "solutions": [],
       "hints": [],
       "type": "waypoint",
       "challengeType": 0,

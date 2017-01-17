@@ -77,16 +77,12 @@
       ],
       "challengeSeed": [],
       "tests": [
-        {
-          "text": "",
-          "testString": ""
-        }
       ],
-      "solutions": [
+      "solutions": [],
+      "hints": [
         "passport repo: https://github.com/jaredhanson/passport",
         "res.redirect: https://expressjs.com/en/4x/api.html#res.redirect"
       ],
-      "hints": [],
       "type": "waypoint",
       "challengeType": 0,
       "translations": {
