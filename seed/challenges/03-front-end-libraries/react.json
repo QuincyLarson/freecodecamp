@@ -39,6 +39,6657 @@
       "descriptionDe": [
         []
       ]
-    }
+    },
+    {
+      "id": "Create a Simple JSX Element",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+React is an Open Source view library created and maintained by Facebook. It's a great tool to render the User Interface (UI) of modern web applications.<br><br>
+React uses a syntax extension of JavaScript called JSX that allows you to write HTML directly within JavaScript. This has several benefits. It lets you use the full programmatic power of JavaScript within HTML, and helps to keep your code readable. For the most part, JSX is similar to the HTML that you have already learned, however there are a few key differences that will be covered throughout these challenges.<br><br>
+For instance, because JSX is a syntactic extension of JavaScript, you can actually write JavaScript directly within JSX. To do this, you simply include the code you want to be treated as JavaScript within curly braces: <code>{ 'this is treated as JavaScript code' }</code>. Keep this in mind, since it's used in several future challenges.<br><br>
+However, because JSX is not valid JavaScript, JSX code must be compiled into JavaScript. The transpiler Babel is a popular tool for this process. For your convenience, it's already added behind the scenes for these challenges. If you happen to write syntactically invalid JSX,
+you will see the first test in these challenges fail.`
+
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>
+The current code uses JSX to assign a <code>div</code> element to the constant <code>JSX</code>. Replace the <code>div</code> with an <code>h1</code> element
+and add the text <code>Hello JSX!</code> inside it.`
+      ],
+      "challengeSeed": [
+export const seedCode = `const JSX = <div></div>;`
+      ],
+      "tests": [
+    assert.strictEqual(jsx.type, 'h1', 'The constant JSX should return an h1 element.');
+    assert.strictEqual(jsx.props.children, 'Hello JSX!', true, 'The h1 tag should include the text \'Hello JSX!\'');
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Create a Complex JSX Element",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+The last challenge was a simple example of JSX, but it can include complex nested HTML as well.
+One important thing to know about nested JSX is that it ultimately needs to return only one outer element. This single parent element would wrap all of the other levels of nested elements. For instance, several JSX elements written as siblings with no parent wrapper element will not transpile. Here's an example:
+<br><br>
+<b>Valid JSX:</b>
+<pre>
+<code class="codeBlock">&lt;div&gt;
+  &lt;p&gt;Paragraph One&lt;/p&gt;
+  &lt;p&gt;Paragraph Two&lt;/p&gt;
+  &lt;p&gt;Paragraph Three&lt;/p&gt;
+&lt;/div&gt;</code>
+</pre>
+<br>
+<b>Invalid JSX:</b>
+<pre>
+<code class="codeBlock">&lt;p&gt;Paragraph One&lt;/p&gt;
+&lt;p&gt;Paragraph Two&lt;/p&gt;
+&lt;p&gt;Paragraph Three&lt;/p&gt;
+</code>
+</pre>`
+
+//<code><blockquote>const JSXValid = (<br>&lt;section&gt;<br>&nbsp;&nbsp;&lt;article&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;First article&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/article&gt;<br>&nbsp;&nbsp;&lt;article&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Second article&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/article&gt;<br>&lt;/section&gt;);const JSXNotValid = (<br>&lt;article&gt;<br>&nbsp;&nbsp;&lt;p&gt;First article&lt;/p&gt;<br>&lt;/article&gt;<br>&lt;article&gt;<br>&nbsp;&nbsp;&lt;p&gt;Second article&lt;/p&gt;<br>&lt;/article&gt;);</blockquote></code>
+// ^^Multi-line code example follows current FCC formatting once the code tags (wrapping the blockquote) are removed
+
+      ],
+      "challengeSeed": [
+export const seedCode = `// write your code here
+      ],
+      "tests": [
+    assert.strictEqual(jsx.type, 'div', 'The constant JSX should return a div element.');
+    assert.strictEqual(jsx.props.children[0].type, 'h1', 'The div should contain an h1 tag as the first element.');
+    assert.strictEqual(jsx.props.children[1].type, 'p', 'The div should contain a p tag as the second element.');
+    assert.strictEqual(jsx.props.children[2].type, 'ul', 'The div should contain a ul tag as the third element.');
+    assert.strictEqual(jsx.props.children[2].props.children.length, 3, 'The ul should contain three li elements.');
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Add Comments in JSX",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readability, you might need to add comments to your code. Like most programming languages, JSX has its own way to do this.<br><br>
+To put comments inside JSX, you use the syntax <code>{/* */}</code> to wrap around the comment text.`
+
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>
+The code editor has a JSX element similar to what you created in the last challenge. Add a comment somewhere within the provided <code>div</code> element, without
+modifying the existing <code>h1</code> or <code>p</code> elements.`
+      ],
+      "challengeSeed": [
+`const JSX = (
+<div>
+  <h1>This is a block of JSX</h1>
+  <p>Here's a subtitle</p>
+</div>);`
+      ],
+      "tests": [
+    assert.strictEqual(jsx.type, 'div', 'The constant JSX should return a div element.');
+    assert.strictEqual(jsx.props.children[0].type, 'h1', 'The div should contain an h1 tag as the first element.');
+    assert.strictEqual(jsx.props.children[1].type, 'p', 'The div should contain a p tag as the second element.');
+    assert.strictEqual(modifiedCode.includes('/*'), true, 'The JSX should include a comment.');
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Render HTML Elements to the DOM",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+So far, you've learned that JSX is a convenient tool to write readable HTML in a JavaScript file. React allows you to render your JSX as HTML to the DOM. To do this, you use React's rendering API known as ReactDOM.<br><br>
+ReactDOM offers a simple method to render React elements to the DOM which looks like this: <code>ReactDOM.render(componentToRender, targetNode)</code>.
+<ul>
+<li>The first argument is the React element or component that you want to render.</li>
+<li>The second argument is the DOM node that you want to render the component within.</li>
+</ul>
+As you would expect, <code>ReactDOM.render()</code> must be called after the JSX element declarations, just like how you must declare variables before using them.`
+
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>
+The code editor has a simple JSX component. Use the <code>ReactDOM.render()</code> method to render this component to the page. You can pass defined JSX elements directly in as the first argument and use <code>document.getElementById()</code>
+to select the DOM node to render them to. There is a <code>div</code> with <code>id='challenge-node'</code> available for you to use. Make sure you don't change the <code>JSX</code> constant.`
+
+      ],
+      "challengeSeed": [
+const JSX = (
+<div>
+  <h1>Hello World</h1>
+  <p>Lets render this to the DOM</p>
+</div>
+);
+// change code below this line
+      ],
+      "tests": [
+    assert.strictEqual(jsx.type, 'div', 'The constant JSX should return a div element.');
+    assert.strictEqual(jsx.props.children[0].type, 'h1', 'The div should contain an h1 tag as the first element.');
+    assert.strictEqual(jsx.props.children[1].type, 'p', 'The div should contain a p tag as the second element.');
+    assert.strictEqual(document.getElementById('challenge-node').childNodes[0].innerHTML, '<h1>Hello World</h1><p>Lets render this to the DOM</p>', 'The provided JSX element should render to the DOM node with id \'challenge-node\'.');
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Define an HTML Class in JSX",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.
+So far, it may seem that HTML and JSX are exactly the same.<br><br>
+One key difference in JSX is that you can no longer use the word <code>class</code> to define HTML classes. This is because <code>class</code> is a reserved word in JavaScript. Instead, JSX uses <code>className</code>.<br><br>
+In fact, the naming convention for all HTML attributes and event references in JSX become camelCase. For example, a click event in JSX is <code>onClick</code>, instead of <code>onclick</code>. Likewise, <code>onchange</code> becomes <code>onChange</code>. While this is a subtle difference, it is an important one to keep in mind moving forward.`
+
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>
+Apply a class of <code>myDiv</code> to the <code>div</code> provided in the JSX code.`
+
+      ],
+      "challengeSeed": [
+const JSX = (
+<div>
+  <h1>Add a class to this div</h1>
+</div>);
+      ],
+      "tests": [
+    assert.strictEqual(jsx.type, 'div', 'The constant JSX should return a div element.');
+    assert.strictEqual(jsx.props.className, 'myDiv', 'The div has a class of \'myDiv\'.');
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Learn About Self-Closing JSX Tags",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+So far, you’ve seen how JSX differs from HTML in a key way with the use of <code>className</code> vs. <code>class</code> for defining HTML classes.
+Another important way in which JSX differs from HTML is in the idea of the self-closing tag.<br><br>
+In HTML, almost all tags have both an opening and closing tag: <code>&lt;div&gt;&lt;/div&gt;</code>; the closing tag always has a forward slash before the tag name that you are closing. However, there are special instances in HTML called “self-closing tags”, or tags that don’t require both an opening and closing tag before another tag can start.
+For example the line-break tag can be written as <code>&lt;br&gt;</code> or as <code>&lt;br /&gt;</code>, but should never be written as <code>&lt;br&gt;&lt;/br&gt;</code>, since it doesn't contain any content.<br><br>
+In JSX, the rules are a little different. Any JSX element can be written with a self-closing tag, and every element must be closed. The line-break tag, for example, must always be written as <code>&lt;br /&gt;</code> in order to be valid JSX that can be transpiled. A <code>&lt;div&gt;</code>, on the other hand, can be written as <code>&lt;div /&gt;</code> or <code>&lt;div&gt;&lt;/div&gt;</code>. The difference is that in the first syntax version there is no way to include anything in the <code>&lt;div /&gt;</code>. You will see in later challenges that this syntax is useful when rendering React components.`
+
+// ---------------------------- challenge instructions ----------------------------
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>
+Fix the errors in the code editor so that it is valid JSX and successfully transpiles. Make sure you don't change any of the content - you only need to close tags where
+they are needed.`
+      ],
+      "challengeSeed": [
+const JSX = (
+<div>
+  {/* change code below this line */}
+  <h2>Welcome to React!</h2> <br >
+  <p>Be sure to close all tags!</p>
+  <hr >
+  {/* change code above this line */}
+</div>
+);
+ReactDOM.render(JSX, document.getElementById('challenge-node'));`
+      ],
+      "tests": [
+    assert.strictEqual(jsx.type, 'div', 'The constant JSX should return a div element.');
+    assert.strictEqual(jsx.props.children[2].type, 'br', 'The div should contain a br tag.');
+    assert.strictEqual(jsx.props.children[4].type, 'hr', 'The div should contain an hr tag.');
+{
+  let testDiv = document.getElementById('challenge-node').childNodes[0].innerHTML.replace(/\s/g,'');
+    assert(
+      testDiv.includes('<h2>WelcometoReact!</h2>') &&
+      testDiv.includes('<p>Besuretoclosealltags!</p>'),
+      'The provided JSX element should render as is to the DOM node with id \'challenge-node\'.'
+    );
+    testResults[4].status = true;
+}
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Create a Stateless Functional Component",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+export const challengeText = `<span class = 'default'>Intro: </span>Components are the core of React. Everything in React is a component and here you will learn how to create one.
+<br /><br />
+There are two ways to create a React component. The first way is to use a JavaScript function. Defining a component in this way creates a <em>stateless functional component</em>. The concept of state in an application will be covered in later challenges. For now, think of a stateless component as one that can receive data and render it, but does not manage or track changes to that data.
+<br /><br />
+To create a component with a function, you simply write a JavaScript function that returns either JSX or <code>null</code>. One important thing to note is that React requires your function name to begin with a capital letter. Here's an example of a stateless functional component that assigns an HTML class in JSX:
+<pre>
+<code class="codeBlock">// After being transpiled, the &lt;div&gt; will have a CSS class of 'customClass'
+const DemoComponent = function() {
+  return (
+    &lt;div className='customClass' /&gt;
+  );
+};</code>
+</pre>
+Because a JSX component represents HTML, you could put several components together to create a more complex HTML page. This is one of the key advantages of the component architecture React provides. It allows you to compose your UI from many separate, isolated components. This makes it easier to build and maintain complex user interfaces.`
+
+// ---------------------------- challenge instructions ----------------------------
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>The code editor has a function called <code>MyComponent</code>. Complete this function so it returns a single <code>div</code> element which contains some string of text.
+<br /><br />
+<strong>Note</strong><br />The text is considered a child of the <code>div</code> element, so you will not be able to use a self-closing tag.`
+
+      ],
+      "challengeSeed": [
+const MyComponent = function() {
+  // change code below this line
+  // change code above this line
+}
+      ],
+      "tests": [
+    assert.strictEqual(typeof jsx, 'function', 'MyComponent should be a function.');
+    assert.strictEqual(typeof testRender, 'object', 'MyComponent should return a React element.');
+    assert.strictEqual(testRender.type, 'div', 'MyComponent should return a div element.');
+    assert.notStrictEqual(testRender.props.children.length, 0, 'The div element should contain a string of text.');
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Create a React Component",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+`<span class = 'default'>Intro: </span>The other way to define a React component is with the ES6 <code>class</code> syntax. In the following example, <code>Kitten</code> extends <code>React.Component</code>:
+<pre>
+<code class="codeBlock">class Kitten extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      &lt;h1&gt;Hi&lt;/h1&gt;
+    );
+  }
+}</code>
+</pre>
+This creates an ES6 class <code>Kitten</code> which extends the <code>React.Component</code> class. So the <code>Kitten</code> class now has access to many useful React features, such as local state and lifecycle hooks. Don't worry if you aren't familiar with these terms yet, they will be covered in greater detail in later challenges.
+<br><br>
+Also notice the <code>Kitten</code> class has a <code>constructor</code> defined within it that calls <code>super()</code>. It uses <code>super()</code> to call the constructor of the parent class, in this case <code>React.Component</code>. The constructor is a special method used during the initialization of objects that are created with the <code>class</code> keyword. It is best practice to call a component's <code>constructor</code> with <code>super</code>, and pass <code>props</code> to both. This makes sure the component is initialized properly. For now, know that it is standard for this code to be included. Soon you will see other uses for the constructor as well as <code>props</code>.`
+
+export const challengeInstructions = `
+  <span class = 'default'>Instructions: </span><code>MyComponent</code> is defined in the code editor using class syntax. Finish writing the <code>render</code> method so it returns a <code>div</code> element that contains an <code>h1</code> with the text <code>Hello React!</code>.'
+`
+      ],
+      "challengeSeed": [
+export const seedCode = `
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // change code below this line
+    // change code above this line
+  }
+};`
+      ],
+      "tests": [
+    assert.strictEqual(shallowRender.type(), 'div', 'The React component should return a <div> element.');
+    assert.strictEqual(shallowRender.children().type(), 'h1', 'The returned div should render an h1 tag within it.');
+    assert.strictEqual(shallowRender.contains(<h1>Hello React!</h1>), true, 'The h1 tag should include the string \'Hello React!\'');
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Create a Component with Composition",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+export const challengeText = `<span class = 'default'>Intro: </span>Now we will look at how we can compose multiple React components together. Imagine you are building an App and have created three components, a <code>Navbar</code>, <code>Dashboard</code>, and <code>Footer</code>.
+To compose these components together, you could create an <code>App</code> <i>parent</i> component which renders each of these three components as <i>children</i>. To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX. For example, in the <code>render</code> method you could write:
+<pre>
+<code class="codeBlock">return (
+ &lt;App&gt;
+  &lt;Navbar /&gt;
+  &lt;Dashboard /&gt;
+  &lt;Footer /&gt;
+ &lt;/App&gt;
+)</code>
+</pre>
+When React encounters a custom HTML tag that references another component (a component name wrapped in <code>&lt; /&gt;</code> like in this example), it renders the markup for that component in the location of the tag. This should illustrate the parent/child relationship between the <code>App</code> component and the <code>Navbar</code>, <code>Dashboard</code>, and <code>Footer</code>.`
+
+export const challengeInstructions = `
+<span class = 'default'>Instructions: </span>In the code editor, there is a simple functional component called <code>ChildComponent</code> and a React component called <code>ParentComponent</code>. Compose the two together by rendering the <code>ChildComponent</code> within the <code>ParentComponent</code>. Make sure to close the <code>ChildComponent</code> tag with a forward slash.
+<br /><br />
+<strong>Note</strong><br /><code>ChildComponent</code> is defined with an ES6 arrow function because this is a very common practice when using React. However, know that this is just a function. If you aren't familiar with the arrow function syntax, please refer to the JavaScript section.`
+
+      ],
+      "challengeSeed": [
+`const ChildComponent = () => {
+  return (
+    <div>
+      <p>I am the child</p>
+    </div>
+  );
+};
+class ParentComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>I am the parent</h1>
+        { /* change code below this line */ }
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};`
+      ],
+      "tests": [
+    shallowRender = shallow(React.createElement(eval(es5)));
+    assert.strictEqual(shallowRender.type(), 'div', error_1);
+    assert.strictEqual(shallowRender.children().length, 2, error_2);
+    assert.strictEqual(shallowRender.node.props.children[1].type.name, 'ChildComponent', error_3);
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Use React to Render Nested Components",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+export const challengeText = `<span class = 'default'>Intro: </span>
+The last challenge showed a simple way to compose two components, but there are many different ways you can compose components with React.<br><br>
+Component composition is one of React's powerful features. When you work with React, it is important to start thinking about your user interface in terms of components like the App example in the last challenge. You break down your UI into its basic building blocks, and those pieces become the components. This helps to separate the code responsible for the UI from the code responsible for handling your application logic. It can greatly simplify the development and maintenance of complex projects.`
+
+export const challengeInstructions = `
+<span class = 'default'>Instructions: </span>
+There are two functional components defined in the code editor, called <code>TypesOfFruit</code> and <code>Fruits</code>. Take the <code>TypesOfFruit</code> component and compose it, or <em>nest</em> it, within the <code>Fruits</code> component. Then take the <code>Fruits</code> component and nest it within the <code>TypesOfFood</code> component. The result should be a child component, nested within a parent component, which is nested within a parent component of its own!`
+
+      ],
+      "challengeSeed": [
+const TypesOfFruit = () => {
+  return (
+    <div>
+      <h2>Fruits:</h2>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
+    </div>
+  );
+};
+const Fruits = () => {
+  return (
+    <div>
+      { /* change code below this line */ }
+      { /* change code above this line */ }
+    </div>
+  );
+};
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        { /* change code below this line */ }
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};
+      ],
+      "tests": [
+    mockRender = mount(React.createElement(eval(es5)));
+{
+      shallowRender = shallow(React.createElement(eval(es5)));
+    assert.strictEqual(shallowRender.type(), 'div', error_1);
+    },
+    assert.strictEqual(shallowRender.nodes[0].props.children[1].type.name, 'Fruits', error_2);
+    assert.strictEqual(mockRender.find('h2').node.innerHTML, 'Fruits:', error_3);
+    assert.strictEqual(mockRender.find('ul').node.innerText, 'ApplesBlueberriesStrawberriesBananas', error_4);
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Compose React Components",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+As the challenges continue to use more complex compositions with React components and JSX, there is one important point to note. Rendering ES6 style class components within other components is no different than rendering the simple components you used in the last few challenges. You can render JSX elements, stateless functional components, and ES6 class components within other components.`
+
+// ---------------------------- challenge instructions ----------------------------
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>
+In the code editor, the <code>TypesOfFood</code> component is already rendering a component called <code>Vegetables</code>. Also, there is the <code>Fruits</code> component from the last challenge.
+Nest two components inside of <code>Fruits</code> &mdash; first <code>NonCitrus</code>, and then <code>Citrus</code>. Both of these components are provided for you in the background. Next, nest the <code>Fruits</code> class component into the the <code>TypesOfFood</code> component, below the <code>h1</code> header and above <code>Vegetables</code>. The result should be a series of nested components, which uses two different component types.`
+
+      ],
+      "challengeSeed": [
+class Fruits extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h2>Fruits:</h2>
+        { /* change code below this line */ }
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        { /* change code below this line */ }
+        { /* change code above this line */ }
+        <Vegetables />
+      </div>
+    );
+  }
+};`
+      ],
+      "tests": [
+    assert.strictEqual(mockRender.node.type, 'div', error_1);
+    assert.strictEqual(mockRender.nodes[0].props.children[1].type.name, 'Fruits', error_2);
+{
+    mockRender = shallow(React.createElement(eval(es5)));
+    mockedComponent = mount(React.createElement(eval(es5)));
+},
+    assert.strictEqual(mockRender.nodes[0].props.children[2].type.name, 'Vegetables', error_4);
+
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Render a Class Component to the DOM",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+You may remember using the ReactDOM API in an earlier challenge to render JSX elements to the DOM. The process for rendering React components will look very similar. The past few challenges focused on components and composition, so the rendering was done for you behind the scenes. However, none of the React code you write will render to the DOM without making a call to the ReactDOM API.<br><br>
+Here's a refresher on the syntax: <code>ReactDOM.render(componentToRender, targetNode)</code>. The first argument is the React component that you want to render. The second argument is the DOM node that you want to render that component within.<br><br>
+React components are passed into <code>ReactDOM.render()</code> a little differently than JSX elements. For JSX elements, you pass in the name of the element that you want to render. However, for React components, you need to use the same syntax as if you were rendering a nested component, for example <code>ReactDOM.render(&lt;ComponentToRender /&gt;, targetNode)</code>. You use this syntax for both ES6 class components and functional components.`
+
+// ---------------------------- challenge instructions ----------------------------
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>Both the <code>Fruits</code> and <code>Vegetables</code> components are defined for you behind the scenes. Render both components as children of the <code>TypesOfFood</code> component,
+then render <code>TypesOfFood</code> to the DOM. There is a <code>div</code> with <code>id='challenge-node'</code> available for you to use.`
+
+      ],
+      "challengeSeed": [
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        {/* change code below this line */}
+        {/* change code above this line */}
+      </div>
+    );
+  }
+};
+// change code below this line
+      ],
+      "tests": [
+    mockedComponent = shallow(React.createElement(eval(es5)));
+    assert.strictEqual(mockedComponent.type(), 'div', error_1)
+    assert.strictEqual(mockedComponent.nodes[0].props.children[1].type.name,'Fruits', error_2)
+    assert.strictEqual(mockedComponent.nodes[0].props.children[2].type.name, 'Vegetables', error_3)
+assert(document.getElementById('challenge-node').childNodes[0].innerHTML ===
+    '<div><h2>Fruits:</h2><ul><li>Apples</li><li>Blueberries</li><li>Strawberries</li><li>Bananas</li></ul></div><div><h2>Vegetables:</h2><ul><li>Brussel Sprouts</li><li>Broccoli</li><li>Squash</li></ul></div>'
+    || '<div><h2>Vegetables:</h2><ul><li>Brussel Sprouts</li><li>Broccoli</li><li>Squash</li></ul></div><div><h2>Fruits:</h2><ul><li>Apples</li><li>Blueberries</li><li>Strawberries</li><li>Bananas</li></ul></div>',
+    error_4)
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Write a React Component from Scratch",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+export const challengeText = `<span class = 'default'>Intro: </span>Now that you've learned the basics of JSX and React components, it's time to write a component on your own. React components are the core building blocks of React applications so it's important to become very familiar with writing them. Remember, a typical React component is an ES6 <code>class</code> which extends <code>React.Component</code>. It has a render method that returns HTML (from JSX) or <code>null</code>. This is the basic form of a React component. Once you understand this well, you will be prepared to start building more complex React projects.`
+
+// ---------------------------- challenge instructions ----------------------------
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>Define a class <code>MyComponent</code> that extends <code>React.Component</code>. Its render method should return a <code>div</code> that contains an <code>h1</code> tag with the text: <code>My First React Component!</code> in it. Use this text exactly, the case and punctuation matter. Make sure to call the constructor for your component, too.<br><br>
+Render this component to the DOM using <code>ReactDOM.render()</code>. There is a <code>div</code> with <code>id='challenge-node'</code> available for you to use.`
+
+      ],
+      "challengeSeed": [
+export const seedCode = `// change code below this line
+
+      ],
+      "tests": [
+    assert.strictEqual(mockedComponent.find('div').length, 1, error_1);
+    assert.strictEqual(mockedComponent.contains(<h1>My First React Component!</h1>), true, error_2);
+    assert.strictEqual(document.getElementById('challenge-node').childNodes.length, 1, error_3);
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "Pass Props to a Stateless Functional Component",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+export const challengeText = `<span class = 'default'>Intro: </span>The previous challenges covered a lot about creating and composing JSX elements, functional components, and ES6 style class components in React. With this foundation, it's time to look at another feature very common in React: <b>props</b>. In React, you can pass props, or properties, to child components. Say you have an <code>App</code> component which renders a child component called <code>Welcome</code> that is a stateless functional component. You can pass <code>Welcome</code> a <code>user</code> property by writing:
+<pre>
+<code class="codeBlock">&lt;App&gt;
+  &lt;Welcome user='Mark' /&gt;
+ &lt;/App&gt;</code>
+</pre>
+You use <strong>custom HTML attributes</strong> that React provides support for to pass the property <code>user</code> to the component <code>Welcome</code>. Since <code>Welcome</code> is a stateless functional component, it has access to this value like so:
+<pre>
+<code>const Welcome = (props) => &lt;h1&gt;Hello, {props.user}!&lt;/h1&gt;</code>
+</pre>
+It is standard to call this value <code>props</code> and when dealing with stateless functional components, you basically consider it as an argument to a function which returns JSX. You can access the value of the argument in the function body. With class components, you will see this is a little different.
+`
+
+// ---------------------------- challenge instructions ----------------------------
+export const challengeInstructions = `<span class = 'default'>Instructions: </span>There is a <code>Calendar</code> and <code>CurrentDate</code> component in the code editor. When rendering <code>CurrentDate</code> from the <code>Calendar</code> component, pass in a property of <code>date</code> assigned to the current date from JavaScript's <code>Date</code> object. Then access this <code>prop</code> in the <code>CurrentDate</code> component, showing its value within the <code>p</code> tags. Note that for <code>prop</code> values to be evaluated as JavaScript, they must be enclosed in curly brackets, for instance <code>date={Date()}</code>.`
+
+      ],
+      "challengeSeed": [
+const CurrentDate = (props) => {
+  return (
+    <div>
+      { /* change code below this line */ }
+      <p>The current date is: </p>
+      { /* change code above this line */ }
+    </div>
+  );
+};
+class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h3>What date is it?</h3>
+        { /* change code below this line */ }
+        <CurrentDate />
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};`
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+    {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+
   ]
 }

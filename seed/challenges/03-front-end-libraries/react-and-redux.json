@@ -33,6 +33,2779 @@
       "descriptionDe": [
         []
       ]
-    }
+    },
+            {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+        {
+      "id": "",
+      "title": "",
+      "required": [
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"
+        },
+        {
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.2/react-redux.min.js"
+        }
+      ],
+      "description": [
+
+      ],
+      "challengeSeed": [
+
+      ],
+      "tests": [
+
+      ],
+      "solutions": [],
+      "hints": [],
+      "type": "waypoint",
+      "challengeType": 0,
+      "releasedOn": "January 22, 2017",
+      "translations": {
+        "de": {
+          "description": [],
+          "title": ""
+        },
+        "fr": {
+          "description": [],
+          "title": ""
+        },
+        "pt-br": {
+          "description": [],
+          "title": ""
+        },
+        "ru": {
+          "description": [],
+          "title": ""
+        }
+      }
+    },
+
   ]
 }
