@@ -73,7 +73,7 @@ export default class extends React.Component {
       <FCCNavItem
         className='brownie-points-nav'
         href={ '/' + username }>
-        [ { points } ]
+        { points } Points
       </FCCNavItem>
     );
   }
