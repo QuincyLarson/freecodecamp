@@ -16,11 +16,15 @@
         }
       }
     },
-    "newEmail":{
+    "newEmail": {
       "type": "string"
     },
     "emailVerifyTTL": {
       "type": "date"
+    },
+    "emailVerified": {
+      "type": "boolean",
+      "default": false
     },
     "emailAuthLinkTTL": {
       "type": "date"
@@ -284,6 +288,14 @@
       "type": "hasOne",
       "model": "pledge",
       "foreignKey": ""
+    },
+    "authTokens": {
+      "type": "hasMany",
+      "model": "AuthToken",
+      "foreignKey": "userId",
+      "options": {
+        "disableInclude": true
+      }
     }
   },
   "acls": [
@@ -292,6 +304,32 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "login"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "verify"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "resetPassword"
     },
     {
       "accessType": "EXECUTE",
@@ -319,13 +357,6 @@
       "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW",
-      "property": "requestUpdateEmail"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW",
       "property": "updateTheme"
     },
     {
@@ -334,13 +365,6 @@
       "principalId": "$owner",
       "permission": "ALLOW",
       "property": "updateLanguage"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "ALLOW",
-      "property": "requestAuthEmail"
     }
   ],
   "methods": {}
