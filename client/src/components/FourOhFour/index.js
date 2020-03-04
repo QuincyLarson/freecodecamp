@@ -4,7 +4,7 @@ import Spinner from 'react-spinkit';
 import { Link } from 'gatsby';
 
 import notFoundLogo from '../../assets/images/freeCodeCamp-404.svg';
-import { quotes } from '../../resources/quotes.json';
+import words from '../../../../utils/words.json';
 
 import './404.css';
 
@@ -22,7 +22,7 @@ class NotFoundPage extends Component {
 
   updateQuote() {
     this.setState({
-      randomQuote: quotes[Math.floor(Math.random() * quotes.length)]
+      randomQuote: words[Math.floor(Math.random() * quotes.length)]
     });
   }
 
