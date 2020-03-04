@@ -1,30 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { createSelector } from 'reselect';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import format from 'date-fns/format';
-import { find, reverse, sortBy, isEmpty } from 'lodash';
+import { find, reverse, sortBy } from 'lodash';
 import { Button, Modal, Table } from '@freecodecamp/react-bootstrap';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 
-import {
-  challengeIdToNameMapSelector,
-  fetchIdToNameMap
-} from '../../../templates/Challenges/redux';
-import { blockNameify } from '../../../../utils/blockNameify';
+import TimelinePagination from './TimelinePagination';
 import { FullWidthRow } from '../../helpers';
 import SolutionViewer from '../../settings/SolutionViewer';
-
-const mapStateToProps = createSelector(
-  challengeIdToNameMapSelector,
-  idToNameMap => ({
-    idToNameMap
-  })
-);
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ fetchIdToNameMap }, dispatch);
+import { challengeTypes } from '../../../../utils/challengeTypes';
+// Items per page in timeline.
+const ITEMS_PER_PAGE = 15;
 
 const propTypes = {
   completedMap: PropTypes.arrayOf(
@@ -41,42 +27,59 @@ const propTypes = {
       )
     })
   ),
-  fetchIdToNameMap: PropTypes.func.isRequired,
-  idToNameMap: PropTypes.objectOf(PropTypes.string),
   username: PropTypes.string
 };
 
-class Timeline extends Component {
+const innerPropTypes = {
+  ...propTypes,
+  idToNameMap: PropTypes.objectOf(
+    PropTypes.shape({
+      challengePath: PropTypes.string,
+      challengeTitle: PropTypes.string
+    })
+  ).isRequired,
+  sortedTimeline: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      completedDate: PropTypes.number,
+      files: PropTypes.arrayOf(
+        PropTypes.shape({
+          ext: PropTypes.string,
+          contents: PropTypes.string
+        })
+      )
+    })
+  ).isRequired,
+  totalPages: PropTypes.number.isRequired
+};
+
+class TimelineInner extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       solutionToView: null,
-      solutionOpen: false
+      solutionOpen: false,
+      pageNo: 1
     };
 
     this.closeSolution = this.closeSolution.bind(this);
     this.renderCompletion = this.renderCompletion.bind(this);
     this.viewSolution = this.viewSolution.bind(this);
-  }
-
-  componentDidMount() {
-    if (isEmpty(this.props.idToNameMap)) {
-      return this.props.fetchIdToNameMap();
-    }
-    return null;
+    this.firstPage = this.firstPage.bind(this);
+    this.prevPage = this.prevPage.bind(this);
+    this.nextPage = this.nextPage.bind(this);
+    this.lastPage = this.lastPage.bind(this);
   }
 
   renderCompletion(completed) {
     const { idToNameMap } = this.props;
     const { id, completedDate } = completed;
-    const challengeDashedName = idToNameMap[id];
+    const { challengeTitle, challengePath } = idToNameMap.get(id);
     return (
-      <tr key={id}>
+      <tr className='timeline-row' key={id}>
         <td>
-          <a href={`/challenges/${challengeDashedName}`}>
-            {blockNameify(challengeDashedName)}
-          </a>
+          <Link to={challengePath}>{challengeTitle}</Link>
         </td>
         <td className='text-center'>
           <time dateTime={format(completedDate, 'YYYY-MM-DDTHH:MM:SSZ')}>
@@ -103,12 +106,39 @@ class Timeline extends Component {
     }));
   }
 
+  firstPage() {
+    this.setState({
+      pageNo: 1
+    });
+  }
+  nextPage() {
+    this.setState(state => ({
+      pageNo: state.pageNo + 1
+    }));
+  }
+
+  prevPage() {
+    this.setState(state => ({
+      pageNo: state.pageNo - 1
+    }));
+  }
+  lastPage() {
+    this.setState((_, props) => ({
+      pageNo: props.totalPages
+    }));
+  }
   render() {
-    const { completedMap, idToNameMap, username } = this.props;
-    const { solutionToView: id, solutionOpen } = this.state;
-    if (isEmpty(idToNameMap)) {
-      return null;
-    }
+    const {
+      completedMap,
+      idToNameMap,
+      username,
+      sortedTimeline,
+      totalPages = 1
+    } = this.props;
+    const { solutionToView: id, solutionOpen, pageNo = 1 } = this.state;
+    const startIndex = (pageNo - 1) * ITEMS_PER_PAGE;
+    const endIndex = pageNo * ITEMS_PER_PAGE;
+
     return (
       <FullWidthRow>
         <h2 className='text-center'>Timeline</h2>
@@ -123,14 +153,13 @@ class Timeline extends Component {
               <tr>
                 <th>Challenge</th>
                 <th className='text-center'>Completed</th>
+                <th />
               </tr>
             </thead>
             <tbody>
-              {reverse(
-                sortBy(completedMap, ['completedDate']).filter(
-                  ({ id }) => id in idToNameMap
-                )
-              ).map(this.renderCompletion)}
+              {sortedTimeline
+                .slice(startIndex, endIndex)
+                .map(this.renderCompletion)}
             </tbody>
           </Table>
         )}
@@ -139,10 +168,12 @@ class Timeline extends Component {
             aria-labelledby='contained-modal-title'
             onHide={this.closeSolution}
             show={solutionOpen}
-            >
+          >
             <Modal.Header closeButton={true}>
               <Modal.Title id='contained-modal-title'>
-                {`${username}'s Solution to ${blockNameify(idToNameMap[id])}`}
+                {`${username}'s Solution to ${
+                  idToNameMap.get(id).challengeTitle
+                }`}
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -158,15 +189,76 @@ class Timeline extends Component {
             </Modal.Footer>
           </Modal>
         )}
+        {totalPages > 1 && (
+          <TimelinePagination
+            firstPage={this.firstPage}
+            lastPage={this.lastPage}
+            nextPage={this.nextPage}
+            pageNo={pageNo}
+            prevPage={this.prevPage}
+            totalPages={totalPages}
+          />
+        )}
       </FullWidthRow>
     );
   }
 }
 
-Timeline.displayName = 'Timeline';
+TimelineInner.propTypes = innerPropTypes;
+
+function useIdToNameMap() {
+  const {
+    allChallengeNode: { edges }
+  } = useStaticQuery(graphql`
+    query challengeNodes {
+      allChallengeNode {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            id
+            title
+          }
+        }
+      }
+    }
+  `);
+  const idToNameMap = new Map();
+  edges.forEach(({ node: { id, title, fields: { slug } } }) => {
+    idToNameMap.set(id, { challengeTitle: title, challengePath: slug });
+  });
+  return idToNameMap;
+}
+
+const Timeline = props => {
+  const idToNameMap = useIdToNameMap();
+  const { completedMap } = props;
+  // Get the sorted timeline along with total page count.
+  const { sortedTimeline, totalPages } = useMemo(() => {
+    const sortedTimeline = reverse(
+      sortBy(completedMap, ['completedDate']).filter(challenge => {
+        return (
+          challenge.challengeType !== challengeTypes.step &&
+          idToNameMap.has(challenge.id)
+        );
+      })
+    );
+    const totalPages = Math.ceil(sortedTimeline.length / ITEMS_PER_PAGE);
+    return { sortedTimeline, totalPages };
+  }, [completedMap, idToNameMap]);
+  return (
+    <TimelineInner
+      idToNameMap={idToNameMap}
+      sortedTimeline={sortedTimeline}
+      totalPages={totalPages}
+      {...props}
+    />
+  );
+};
+
 Timeline.propTypes = propTypes;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Timeline);
+Timeline.displayName = 'Timeline';
+
+export default Timeline;

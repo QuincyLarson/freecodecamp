@@ -2,18 +2,19 @@
 id: 587d824e367417b2b2512c58
 title: Run Functional Tests on API Endpoints using Chai-HTTP
 challengeType: 2
+forumTopicId: 301593
 ---
 
 ## Description
 <section id='description'>
-As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.
-Replace assert.fail(). Test the status and the text.response. Make the test pass.
-Don't send a name in the query, the endpoint with responds with 'hello Guest'.
+As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/edit/#!/remix/clone-from-repo?REPO_URL=https://github.com/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.
+
 </section>
 
 ## Instructions
 <section id='instructions'>
-
+Replace <code>assert.fail()</code>. Test the status and the text.response. Make the test pass.
+Don't send a name in the query, the endpoint with responds with <code>'hello Guest'</code>.
 </section>
 
 ## Tests
@@ -41,6 +42,11 @@ tests:
 <section id='solution'>
 
 ```js
-// solution required
+/**
+  Backend challenges don't need solutions, 
+  because they would need to be tested against a full working project. 
+  Please check our contributing guidelines to learn more.
+*/
 ```
+
 </section>

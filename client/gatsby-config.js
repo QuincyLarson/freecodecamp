@@ -6,12 +6,6 @@ const {
   localeChallengesRootDir
 } = require('./utils/buildChallenges');
 
-const { NODE_ENV: env, LOCALE: locale = 'english' } = process.env;
-
-const selectedGuideDir = `../${
-  env === 'production' ? 'guide' : 'mock-guide'
-}/${locale}`;
-const guideRoot = path.resolve(__dirname, selectedGuideDir);
 const curriculumIntroRoot = path.resolve(__dirname, './src/pages');
 
 module.exports = {
@@ -19,12 +13,9 @@ module.exports = {
     title: 'freeCodeCamp',
     siteUrl: 'https://www.freecodecamp.org'
   },
-  proxy: {
-    prefix: '/internal',
-    url: 'http://localhost:3000'
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-plugin-create-client-paths',
       options: {
@@ -44,19 +35,6 @@ module.exports = {
         source: buildChallenges,
         onSourceChange: replaceChallengeNode,
         curriculumPath: localeChallengesRootDir
-      }
-    },
-    {
-      resolve: 'fcc-source-news',
-      options: {
-        maximumStaticRenderCount: 100
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'guides',
-        path: guideRoot
       }
     },
     {
@@ -102,19 +80,6 @@ module.exports = {
     {
       resolve: 'gatsby-remark-node-identity',
       options: {
-        identity: 'guideMarkdown',
-        predicate: ({ frontmatter }) => {
-          if (!frontmatter) {
-            return false;
-          }
-          const { title, block, superBlock } = frontmatter;
-          return title && !block && !superBlock;
-        }
-      }
-    },
-    {
-      resolve: 'gatsby-remark-node-identity',
-      options: {
         identity: 'blockIntroMarkdown',
         predicate: ({ frontmatter }) => {
           if (!frontmatter) {
@@ -138,7 +103,20 @@ module.exports = {
         }
       }
     },
-    { resolve: 'fcc-create-nav-data' },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback`,
+          `/learn`,
+          /(\/)learn(\/)\S*/
+        ],
+        addUncaughtPages: true
+      }
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -146,13 +124,13 @@ module.exports = {
         /* eslint-disable camelcase */
         short_name: 'fCC',
         start_url: '/',
-        theme_color: '#006400',
+        theme_color: '#0a0a23',
         background_color: '#fff',
         /* eslint-enable camelcase */
         display: 'minimal-ui',
-        icon: 'src/images/square_puck.png'
+        icon: 'src/assets/images/square_puck.png'
       }
     },
-    'gatsby-plugin-sitemap'
+    'gatsby-plugin-remove-serviceworker'
   ]
 };

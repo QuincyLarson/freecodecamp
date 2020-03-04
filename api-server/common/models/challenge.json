@@ -107,7 +107,7 @@
             },
             "crossDomain": {
               "type": "boolean",
-              "description": "Files coming from FreeCodeCamp must mark this true"
+              "description": "Files coming from freeCodeCamp must mark this true"
             }
           }
         }
@@ -133,13 +133,6 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "ALLOW"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "ALLOW",
-      "property": "getIdToNameMap"
     }
   ],
   "methods": {}

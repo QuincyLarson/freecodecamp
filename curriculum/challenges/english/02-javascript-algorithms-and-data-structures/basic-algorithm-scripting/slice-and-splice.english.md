@@ -4,6 +4,7 @@ title: Slice and Splice
 isRequired: true
 isBeta: true
 challengeType: 5
+forumTopicId: 301148
 ---
 
 ## Description
@@ -12,7 +13,7 @@ You are given two arrays and an index.
 Use the array methods <code>slice</code> and <code>splice</code> to copy each element of the first array into the second array, in order.
 Begin inserting elements at index <code>n</code> of the second array.
 Return the resulting array. The input arrays should remain the same after the function runs.
-Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.
+Remember to use <a href="https://www.freecodecamp.org/forum/t/how-to-get-help-when-you-are-stuck-coding/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.
 </section>
 
 ## Instructions
@@ -26,17 +27,17 @@ Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-yo
 ```yml
 tests:
   - text: <code>frankenSplice([1, 2, 3], [4, 5], 1)</code> should return <code>[4, 1, 2, 3, 5]</code>.
-    testString: assert.deepEqual(frankenSplice([1, 2, 3], [4, 5], 1), [4, 1, 2, 3, 5], '<code>frankenSplice([1, 2, 3], [4, 5], 1)</code> should return <code>[4, 1, 2, 3, 5]</code>.');
+    testString: assert.deepEqual(frankenSplice([1, 2, 3], [4, 5], 1), [4, 1, 2, 3, 5]);
   - text: <code>frankenSplice([1, 2], ["a", "b"], 1)</code> should return <code>["a", 1, 2, "b"]</code>.
-    testString: assert.deepEqual(frankenSplice(testArr1, testArr2, 1), ["a", 1, 2, "b"], '<code>frankenSplice([1, 2], ["a", "b"], 1)</code> should return <code>["a", 1, 2, "b"]</code>.');
+    testString: assert.deepEqual(frankenSplice(testArr1, testArr2, 1), ["a", 1, 2, "b"]);
   - text: <code>frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)</code> should return <code>["head", "shoulders", "claw", "tentacle", "knees", "toes"]</code>.
-    testString: assert.deepEqual(frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2), ["head", "shoulders", "claw", "tentacle", "knees", "toes"], '<code>frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)</code> should return <code>["head", "shoulders", "claw", "tentacle", "knees", "toes"]</code>.');
+    testString: assert.deepEqual(frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2), ["head", "shoulders", "claw", "tentacle", "knees", "toes"]);
   - text: All elements from the first array should be added to the second array in their original order.
-    testString: assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4], 'All elements from the first array should be added to the second array in their original order.');
+    testString: assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4]);
   - text: The first array should remain the same after the function runs.
-    testString: assert(testArr1[0] === 1 && testArr1[1] === 2, 'The first array should remain the same after the function runs.');
+    testString: assert(testArr1[0] === 1 && testArr1[1] === 2);
   - text: The second array should remain the same after the function runs.
-    testString: assert(testArr2[0] === "a" && testArr2[1] === "b", 'The second array should remain the same after the function runs.');
+    testString: assert(testArr2[0] === "a" && testArr2[1] === "b");
 
 ```
 

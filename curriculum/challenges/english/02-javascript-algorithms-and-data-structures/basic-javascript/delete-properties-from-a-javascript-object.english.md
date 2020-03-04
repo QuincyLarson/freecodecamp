@@ -2,6 +2,8 @@
 id: 56bbb991ad1ed5201cd392d3
 title: Delete Properties from a JavaScript Object
 challengeType: 1
+videoUrl: 'https://scrimba.com/c/cDqKdTv'
+forumTopicId: 17560
 ---
 
 ## Description
@@ -20,10 +22,10 @@ Delete the <code>"tails"</code> property from <code>myDog</code>. You may use ei
 
 ```yml
 tests:
-  - text: Delete the property <code>"tails"</code> from <code>myDog</code>.
-    testString: assert(typeof myDog === "object" && myDog.tails === undefined, 'Delete the property <code>"tails"</code> from <code>myDog</code>.');
-  - text: Do not modify the <code>myDog</code> setup
-    testString: 'assert(code.match(/"tails": 1/g).length > 1, ''Do not modify the <code>myDog</code> setup'');'
+  - text: You should delete the property <code>"tails"</code> from <code>myDog</code>.
+    testString: assert(typeof myDog === "object" && myDog.tails === undefined);
+  - text: You should not modify the <code>myDog</code> setup.
+    testString: 'assert(code.match(/"tails": 1/g).length > 1);'
 
 ```
 

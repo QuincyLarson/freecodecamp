@@ -3,6 +3,7 @@ id: 587d78b0367417b2b2512b05
 title: Build a Technical Documentation Page
 isRequired: true
 challengeType: 3
+forumTopicId: 301146
 ---
 
 ## Description
@@ -13,7 +14,7 @@ You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is rec
 <strong>User Story #1:</strong> I can see a <code>main</code> element with a corresponding <code>id="main-doc"</code>, which contains the page's main content (technical documentation).
 <strong>User Story #2:</strong> Within the <code>#main-doc</code> element, I can see several <code>section</code> elements, each with a class of <code>main-section</code>. There should be a minimum of 5.
 <strong>User Story #3:</strong> The first element within each <code>.main-section</code> should be a <code>header</code> element which contains text that describes the topic of that section.
-<strong>User Story #4:</strong> Each <code>section</code> element with the class of <code>main-section</code> should also have an id that corresponds with the text of each <code>header</code> contained within it. Any spaces should be replaced with underscores (e.g. The <code>section</code> that contains the header "Javascript and Java" should have a corresponding <code>id="Javascript_and_Java"</code>).
+<strong>User Story #4:</strong> Each <code>section</code> element with the class of <code>main-section</code> should also have an id that corresponds with the text of each <code>header</code> contained within it. Any spaces should be replaced with underscores (e.g. The <code>section</code> that contains the header "JavaScript and Java" should have a corresponding <code>id="JavaScript_and_Java"</code>).
 <strong>User Story #5:</strong> The <code>.main-section</code> elements should contain at least 10 <code>p</code> elements total (not each).
 <strong>User Story #6:</strong> The <code>.main-section</code> elements should contain at least 5 <code>code</code> elements total (not each).
 <strong>User Story #7:</strong> The <code>.main-section</code> elements should contain at least 5 <code>li</code> items total (not each).
@@ -27,7 +28,7 @@ You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is rec
 <strong>User Story #15:</strong> My Technical Documentation page should use at least one media query.
 You can build your project by forking <a href='http://codepen.io/freeCodeCamp/pen/MJjpwO' target='_blank'>this CodePen pen</a>. Or you can use this CDN link to run the tests in any environment you like: <code>https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js</code>
 Once you're done, submit the URL to your working project with all its tests passing.
-Remember to use the <a href='https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> method if you get stuck.
+Remember to use the <a href='https://www.freecodecamp.org/forum/t/how-to-get-help-when-you-are-stuck-coding/19514' target='_blank'>Read-Search-Ask</a> method if you get stuck.
 </section>
 
 ## Instructions
@@ -56,4 +57,5 @@ tests: []
 ```js
 // solution required
 ```
+
 </section>

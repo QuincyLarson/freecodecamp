@@ -3,6 +3,7 @@ id: 587d78af367417b2b2512b04
 title: Build a Product Landing Page
 isRequired: true
 challengeType: 3
+forumTopicId: 301144
 ---
 
 ## Description
@@ -27,7 +28,7 @@ You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is rec
 <strong>User Story #15:</strong> My product landing page should utilize CSS flexbox at least once.
 You can build your project by forking <a href='http://codepen.io/freeCodeCamp/full/MJjpwO' target='_blank'>this CodePen pen</a>. Or you can use this CDN link to run the tests in any environment you like: <code>https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js</code>
 Once you're done, submit the URL to your working project with all its tests passing.
-Remember to use the <a href='https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> method if you get stuck.
+Remember to use the <a href='https://www.freecodecamp.org/forum/t/how-to-get-help-when-you-are-stuck-coding/19514' target='_blank'>Read-Search-Ask</a> method if you get stuck.
 </section>
 
 ## Instructions
@@ -56,4 +57,5 @@ tests: []
 ```js
 // solution required
 ```
+
 </section>

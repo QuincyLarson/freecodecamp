@@ -11,24 +11,33 @@ import moment from 'moment';
 import dedent from 'dedent';
 import debugFactory from 'debug';
 import { isEmail } from 'validator';
-import path from 'path';
-import loopback from 'loopback';
 import _ from 'lodash';
-import jwt from 'jsonwebtoken';
 import generate from 'nanoid/generate';
 
-import { homeLocation, apiLocation } from '../../../config/env';
+import { apiLocation } from '../../../config/env';
 
-import { fixCompletedChallengeItem } from '../utils';
-import { saveUser, observeMethod } from '../../server/utils/rx.js';
+import {
+  fixCompletedChallengeItem,
+  getEncodedEmail,
+  getWaitMessage,
+  renderEmailChangeEmail,
+  renderSignUpEmail,
+  renderSignInEmail
+} from '../utils';
+
 import { blacklistedUsernames } from '../../server/utils/constants.js';
 import { wrapHandledError } from '../../server/utils/create-handled-error.js';
-import { getEmailSender } from '../../server/utils/url-utils.js';
+import { saveUser, observeMethod } from '../../server/utils/rx.js';
+import { getEmailSender } from '../../server/utils/url-utils';
 import {
   normaliseUserFields,
   getProgress,
   publicUserProps
 } from '../../server/utils/publicUserProps';
+import {
+  setAccessTokenToResponse,
+  removeCookies
+} from '../../server/utils/getSetAccessToken';
 
 const log = debugFactory('fcc:models:user');
 const BROWNIEPOINTS_TIMEOUT = [1, 'hour'];
@@ -44,6 +53,10 @@ const createEmailError = redirectTo =>
 
 function destroyAll(id, Model) {
   return Observable.fromNodeCallback(Model.destroyAll, Model)({ userId: id });
+}
+
+function ensureLowerCaseString(maybeString) {
+  return (maybeString && maybeString.toLowerCase()) || '';
 }
 
 function buildCompletedChallengesUpdate(completedChallenges, project) {
@@ -93,42 +106,6 @@ function isTheSame(val1, val2) {
   return val1 === val2;
 }
 
-const renderSignUpEmail = loopback.template(
-  path.join(
-    __dirname,
-    '..',
-    '..',
-    'server',
-    'views',
-    'emails',
-    'user-request-sign-up.ejs'
-  )
-);
-
-const renderSignInEmail = loopback.template(
-  path.join(
-    __dirname,
-    '..',
-    '..',
-    'server',
-    'views',
-    'emails',
-    'user-request-sign-in.ejs'
-  )
-);
-
-const renderEmailChangeEmail = loopback.template(
-  path.join(
-    __dirname,
-    '..',
-    '..',
-    'server',
-    'views',
-    'emails',
-    'user-request-update-email.ejs'
-  )
-);
-
 function getAboutProfile({
   username,
   githubProfile: github,
@@ -147,37 +124,34 @@ function nextTick(fn) {
   return process.nextTick(fn);
 }
 
-function getWaitPeriod(ttl) {
-  const fiveMinutesAgo = moment().subtract(5, 'minutes');
-  const lastEmailSentAt = moment(new Date(ttl || null));
-  const isWaitPeriodOver = ttl
-    ? lastEmailSentAt.isBefore(fiveMinutesAgo)
-    : true;
-
-  if (!isWaitPeriodOver) {
-    const minutesLeft = 5 - (moment().minutes() - lastEmailSentAt.minutes());
-    return minutesLeft;
-  }
-
-  return 0;
-}
-
-function getWaitMessage(ttl) {
-  const minutesLeft = getWaitPeriod(ttl);
-  if (minutesLeft <= 0) {
-    return null;
-  }
-  const timeToWait = minutesLeft
-    ? `${minutesLeft} minute${minutesLeft > 1 ? 's' : ''}`
-    : 'a few seconds';
-
-  return dedent`
-    Please wait ${timeToWait} to resend an authentication link.
-  `;
-}
 const getRandomNumber = () => Math.random();
 
-module.exports = function(User) {
+function populateRequiredFields(user) {
+  user.username = user.username.trim().toLowerCase();
+  user.email =
+    typeof user.email === 'string'
+      ? user.email.trim().toLowerCase()
+      : user.email;
+
+  if (!user.progressTimestamps) {
+    user.progressTimestamps = [];
+  }
+
+  if (user.progressTimestamps.length === 0) {
+    user.progressTimestamps.push(Date.now());
+  }
+
+  if (!user.externalId) {
+    user.externalId = uuid();
+  }
+
+  if (!user.unsubscribeId) {
+    user.unsubscribeId = generate(nanoidCharSet, 20);
+  }
+  return;
+}
+
+export default function(User) {
   // set salt factor for passwords
   User.settings.saltWorkFactor = 5;
   // set user.rand to random number
@@ -217,29 +191,13 @@ module.exports = function(User) {
           throw createEmailError();
         }
         // assign random username to new users
-        // actual usernames will come from github
-        // use full uuid to ensure uniqueness
         user.username = 'fcc' + uuid();
-
-        if (!user.externalId) {
-          user.externalId = uuid();
-        }
-        if (!user.unsubscribeId) {
-          user.unsubscribeId = generate(nanoidCharSet, 20);
-        }
-
-        if (!user.progressTimestamps) {
-          user.progressTimestamps = [];
-        }
-
-        if (user.progressTimestamps.length === 0) {
-          user.progressTimestamps.push(Date.now());
-        }
+        populateRequiredFields(user);
         return Observable.fromPromise(User.doesExist(null, user.email)).do(
           exists => {
             if (exists) {
               throw wrapHandledError(new Error('user already exists'), {
-                redirectTo: `${homeLocation}/signin`,
+                redirectTo: `${apiLocation}/signin`,
                 message: dedent`
         The ${user.email} email address is already associated with an account.
         Try signing in with it here instead.
@@ -263,28 +221,7 @@ module.exports = function(User) {
         if (user.email && !isEmail(user.email)) {
           throw createEmailError();
         }
-
-        user.username = user.username.trim().toLowerCase();
-        user.email =
-          typeof user.email === 'string'
-            ? user.email.trim().toLowerCase()
-            : user.email;
-
-        if (!user.progressTimestamps) {
-          user.progressTimestamps = [];
-        }
-
-        if (user.progressTimestamps.length === 0) {
-          user.progressTimestamps.push(Date.now());
-        }
-
-        if (!user.externalId) {
-          user.externalId = uuid();
-        }
-
-        if (!user.unsubscribeId) {
-          user.unsubscribeId = generate(nanoidCharSet, 20);
-        }
+        populateRequiredFields(user);
       })
       .ignoreElements();
     return Observable.merge(beforeCreate, updateOrSave).toPromise();
@@ -364,32 +301,13 @@ module.exports = function(User) {
     });
   };
 
-  function manualReload() {
-    this.reload((err, instance) => {
-      if (err) {
-        throw Error('failed to reload user instance');
-      }
-      Object.assign(this, instance);
-      log('user reloaded from db');
-    });
-  }
-  User.prototype.manualReload = manualReload;
-
   User.prototype.loginByRequest = function loginByRequest(req, res) {
     const {
       query: { emailChange }
     } = req;
     const createToken = this.createAccessToken$().do(accessToken => {
-      const config = {
-        signed: !!req.signedCookies,
-        maxAge: accessToken.ttl,
-        domain: process.env.COOKIE_DOMAIN || 'localhost'
-      };
       if (accessToken && accessToken.id) {
-        const jwtAccess = jwt.sign({ accessToken }, process.env.JWT_SECRET);
-        res.cookie('jwt_access_token', jwtAccess, config);
-        res.cookie('access_token', accessToken.id, config);
-        res.cookie('userId', accessToken.userId, config);
+        setAccessTokenToResponse({ accessToken }, req, res);
       }
     });
     let data = {
@@ -421,14 +339,7 @@ module.exports = function(User) {
   };
 
   User.afterRemote('logout', function({ req, res }, result, next) {
-    const config = {
-      signed: !!req.signedCookies,
-      domain: process.env.COOKIE_DOMAIN || 'localhost'
-    };
-    res.clearCookie('jwt_access_token', config);
-    res.clearCookie('access_token', config);
-    res.clearCookie('userId', config);
-    res.clearCookie('_csrf', config);
+    removeCookies(req, res);
     next();
   });
 
@@ -533,14 +444,11 @@ module.exports = function(User) {
     );
   };
 
-  User.prototype.getEncodedEmail = function getEncodedEmail(email) {
-    if (!email) {
-      return null;
-    }
-    return Buffer(email).toString('base64');
-  };
+  function requestCompletedChallenges() {
+    return this.getCompletedChallenges$();
+  }
 
-  User.decodeEmail = email => Buffer(email, 'base64').toString();
+  User.prototype.requestCompletedChallenges = requestCompletedChallenges;
 
   function requestAuthEmail(isSignUp, newEmail) {
     return Observable.defer(() => {
@@ -569,7 +477,7 @@ module.exports = function(User) {
           `;
         }
         const { id: loginToken, created: emailAuthLinkTTL } = token;
-        const loginEmail = this.getEncodedEmail(newEmail ? newEmail : null);
+        const loginEmail = getEncodedEmail(newEmail ? newEmail : null);
         const host = apiLocation;
         const mailOptions = {
           type: 'email',
@@ -605,10 +513,14 @@ module.exports = function(User) {
 
   User.prototype.requestAuthEmail = requestAuthEmail;
 
-  User.prototype.requestUpdateEmail = function requestUpdateEmail(newEmail) {
-    const currentEmail = this.email;
+  function requestUpdateEmail(requestedEmail) {
+    const newEmail = ensureLowerCaseString(requestedEmail);
+    const currentEmail = ensureLowerCaseString(this.email);
     const isOwnEmail = isTheSame(newEmail, currentEmail);
-    const isResendUpdateToSameEmail = isTheSame(newEmail, this.newEmail);
+    const isResendUpdateToSameEmail = isTheSame(
+      newEmail,
+      ensureLowerCaseString(this.newEmail)
+    );
     const isLinkSentWithinLimit = getWaitMessage(this.emailVerifyTTL);
     const isVerifiedEmail = this.emailVerified;
 
@@ -679,13 +591,9 @@ module.exports = function(User) {
     } else {
       return 'Something unexpected happened while updating your email.';
     }
-  };
-
-  function requestCompletedChallenges() {
-    return this.getCompletedChallenges$();
   }
 
-  User.prototype.requestCompletedChallenges = requestCompletedChallenges;
+  User.prototype.requestUpdateEmail = requestUpdateEmail;
 
   User.prototype.requestUpdateFlags = async function requestUpdateFlags(
     values
@@ -914,7 +822,7 @@ module.exports = function(User) {
         const allUser = {
           ..._.pick(user, publicUserProps),
           isGithub: !!user.githubProfile,
-          isLinkedIn: !!user.linkedIn,
+          isLinkedIn: !!user.linkedin,
           isTwitter: !!user.twitter,
           isWebsite: !!user.website,
           points: progressTimestamps.length,
@@ -1075,6 +983,12 @@ module.exports = function(User) {
   });
 
   User.prototype.getPoints$ = function getPoints$() {
+    if (
+      Array.isArray(this.progressTimestamps) &&
+      this.progressTimestamps.length
+    ) {
+      return Observable.of(this.progressTimestamps);
+    }
     const id = this.getId();
     const filter = {
       where: { id },
@@ -1086,6 +1000,12 @@ module.exports = function(User) {
     });
   };
   User.prototype.getCompletedChallenges$ = function getCompletedChallenges$() {
+    if (
+      Array.isArray(this.completedChallenges) &&
+      this.completedChallenges.length
+    ) {
+      return Observable.of(this.completedChallenges);
+    }
     const id = this.getId();
     const filter = {
       where: { id },
@@ -1117,4 +1037,4 @@ module.exports = function(User) {
       }
     ]
   });
-};
+}

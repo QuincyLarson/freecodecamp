@@ -2,6 +2,8 @@
 id: 56533eb9ac21ba0edf2244ac
 title: Increment a Number with JavaScript
 challengeType: 1
+videoUrl: 'https://scrimba.com/c/ca8GLT9'
+forumTopicId: 18201
 ---
 
 ## Description
@@ -24,14 +26,14 @@ Change the code to use the <code>++</code> operator on <code>myVar</code>.
 
 ```yml
 tests:
-  - text: <code>myVar</code> should equal <code>88</code>
-    testString: assert(myVar === 88, '<code>myVar</code> should equal <code>88</code>');
-  - text: <code>myVar = myVar + 1;</code> should be changed
-    testString: assert(/var\s*myVar\s*=\s*87;\s*\/*.*\s*([+]{2}\s*myVar|myVar\s*[+]{2});/.test(code), '<code>myVar = myVar + 1;</code> should be changed');
-  - text: Use the <code>++</code> operator
-    testString: assert(/[+]{2}\s*myVar|myVar\s*[+]{2}/.test(code), 'Use the <code>++</code> operator');
-  - text: Do not change code above the line
-    testString: assert(/var myVar = 87;/.test(code), 'Do not change code above the line');
+  - text: <code>myVar</code> should equal <code>88</code>.
+    testString: assert(myVar === 88);
+  - text: <code>myVar = myVar + 1;</code> should be changed.
+    testString: assert(/var\s*myVar\s*=\s*87;\s*\/*.*\s*([+]{2}\s*myVar|myVar\s*[+]{2});/.test(code));
+  - text: You should use the <code>++</code> operator.
+    testString: assert(/[+]{2}\s*myVar|myVar\s*[+]{2}/.test(code));
+  - text: You should not change code above the specified comment.
+    testString: assert(/var myVar = 87;/.test(code));
 
 ```
 

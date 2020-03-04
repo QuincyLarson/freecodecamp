@@ -1,7 +1,15 @@
-import axios from 'axios';
-import qs from 'query-string';
+import { apiLocation } from '../../config/env.json';
 
-const base = '/internal';
+import axios from 'axios';
+
+const base = apiLocation + '/internal';
+const baseUnauthenticated = apiLocation + '/unauthenticated';
+
+axios.defaults.withCredentials = true;
+
+export function postUnauthenticated(path, body) {
+  return axios.post(`${baseUnauthenticated}${path}`, body);
+}
 
 function get(path) {
   return axios.get(`${base}${path}`);
@@ -25,10 +33,6 @@ export function getSessionUser() {
   return get('/user/get-session-user');
 }
 
-export function getIdToNameMap() {
-  return get('/api/challenges/get-id-to-name');
-}
-
 export function getUserProfile(username) {
   return get(`/api/users/get-public-profile?username=${username}`);
 }
@@ -42,32 +46,34 @@ export function getUsernameExists(username) {
 }
 
 export function getArticleById(shortId) {
-  return get(
-    `/n/${shortId}`
-  );
-}
-
-export function getFeaturedList(skip = 0) {
-  return get(
-    `/api/articles?${qs.stringify({
-      filter: JSON.stringify({
-        where: { featured: true, published: true },
-        order: 'firstPublishedDate DESC',
-        limit: 10,
-        skip
-      })
-    })}`
-  );
+  return get(`/n/${shortId}`);
 }
 
 /** POST **/
+export function postChargeStripe(yearEndGift, body) {
+  return yearEndGift
+    ? postUnauthenticated('/donate/charge-stripe-year-end', body)
+    : post('/donate/charge-stripe', body);
+}
 
-export function postPopularityEvent(event) {
-  return post('/p', event);
+export function postCreateHmacHash(body) {
+  return post(`/donate/create-hmac-hash`, body);
+}
+
+export function putUpdateLegacyCert(body) {
+  return post('/update-my-projects', body);
 }
 
 export function postReportUser(body) {
   return post('/user/report-user', body);
+}
+
+export function postDeleteAccount(body) {
+  return post('/account/delete', body);
+}
+
+export function postResetProgress(body) {
+  return post('/account/reset-progress', body);
 }
 
 /** PUT **/

@@ -1,7 +1,18 @@
-import { put, select, call, takeLatest } from 'redux-saga/effects';
+import {
+  delay,
+  put,
+  select,
+  call,
+  takeLatest,
+  takeEvery,
+  fork,
+  getContext
+} from 'redux-saga/effects';
+import { channel } from 'redux-saga';
+import escape from 'lodash/escape';
 
 import {
-  challengeMetaSelector,
+  challengeDataSelector,
   challengeTestsSelector,
   initConsole,
   updateConsole,
@@ -9,76 +20,106 @@ import {
   updateLogs,
   logsToConsole,
   updateTests,
-  challengeFilesSelector
+  isBuildEnabledSelector,
+  disableBuildOnError
 } from './';
 
-import { buildJSFromFiles } from '../utils/build';
+import {
+  buildChallenge,
+  canBuildChallenge,
+  getTestRunner,
+  challengeHasPreview,
+  updatePreview,
+  isJavaScriptChallenge
+} from '../utils/build';
 
-import { challengeTypes } from '../../../../utils/challengeTypes';
+export function* executeChallengeSaga() {
+  const isBuildEnabled = yield select(isBuildEnabledSelector);
+  if (!isBuildEnabled) {
+    return;
+  }
 
-import WorkerExecutor from '../utils/worker-executor';
+  const consoleProxy = yield channel();
 
-const testWorker = new WorkerExecutor('test-evaluator');
-const testTimeout = 5000;
-
-function* ExecuteChallengeSaga() {
   try {
-    const { js, bonfire, backend } = challengeTypes;
-    const { challengeType } = yield select(challengeMetaSelector);
-
-    // TODO: ExecuteBackendChallengeSaga and ExecuteDOMChallengeSaga
-    if (challengeType !== js && challengeType !== bonfire) {
-      return;
-    }
-
     yield put(initLogs());
     yield put(initConsole('// running tests'));
+    // reset tests to initial state
+    const tests = (yield select(challengeTestsSelector)).map(
+      ({ text, testString }) => ({ text, testString })
+    );
+    yield put(updateTests(tests));
 
-    const tests = yield select(challengeTestsSelector);
-    let testResults;
-    switch (challengeType) {
-      case js:
-      case bonfire:
-        testResults = yield ExecuteJSChallengeSaga(tests);
-        break;
-      case backend:
-        // yield ExecuteBackendChallengeSaga();
-        break;
-      default:
-      // yield ExecuteDOMChallengeSaga();
-    }
+    yield fork(takeEveryLog, consoleProxy);
+    const proxyLogger = args => consoleProxy.put(args);
+
+    const challengeData = yield select(challengeDataSelector);
+    const buildData = yield buildChallengeData(challengeData);
+    const document = yield getContext('document');
+    const testRunner = yield call(
+      getTestRunner,
+      buildData,
+      { proxyLogger },
+      document
+    );
+    const testResults = yield executeTests(testRunner, tests);
 
     yield put(updateTests(testResults));
     yield put(updateConsole('// tests completed'));
     yield put(logsToConsole('// console output'));
   } catch (e) {
     yield put(updateConsole(e));
+  } finally {
+    consoleProxy.close();
   }
 }
 
-function* ExecuteJSChallengeSaga(tests) {
-  const testResults = [];
-  const files = yield select(challengeFilesSelector);
-  const { code, solution } = yield call(buildJSFromFiles, files);
+function* takeEveryLog(channel) {
+  // TODO: move all stringifying and escaping into the reducer so there is a
+  // single place responsible for formatting the logs.
+  yield takeEvery(channel, function*(args) {
+    yield put(updateLogs(escape(args)));
+  });
+}
 
-  for (const { text, testString } of tests) {
+function* takeEveryConsole(channel) {
+  // TODO: move all stringifying and escaping into the reducer so there is a
+  // single place responsible for formatting the console output.
+  yield takeEvery(channel, function*(args) {
+    yield put(updateConsole(escape(args)));
+  });
+}
+
+function* buildChallengeData(challengeData) {
+  try {
+    return yield call(buildChallenge, challengeData);
+  } catch (e) {
+    yield put(disableBuildOnError());
+    throw e;
+  }
+}
+
+function* executeTests(testRunner, tests, testTimeout = 5000) {
+  const testResults = [];
+  for (let i = 0; i < tests.length; i++) {
+    const { text, testString } = tests[i];
     const newTest = { text, testString };
+    // only the last test outputs console.logs to avoid log duplication.
+    const firstTest = i === 1;
     try {
-      const { pass, err, logs } = yield call(
-        testWorker.execute,
-        { script: solution + '\n' + testString, code },
-        testTimeout
+      const { pass, err } = yield call(
+        testRunner,
+        testString,
+        testTimeout,
+        firstTest
       );
-      for (const log of logs) {
-        yield put(updateLogs(log));
-      }
       if (pass) {
         newTest.pass = true;
       } else {
         throw err;
       }
     } catch (err) {
-      newTest.message = text.replace(/<code>(.*?)<\/code>/g, '$1');
+      newTest.message = text;
       if (err === 'timeout') {
         newTest.err = 'Test timed out';
         newTest.message = `${newTest.message} (${newTest.err})`;
@@ -90,12 +131,58 @@ function* ExecuteJSChallengeSaga(tests) {
       yield put(updateConsole(newTest.message));
     } finally {
       testResults.push(newTest);
-      yield call(testWorker.killWorker);
     }
   }
   return testResults;
 }
 
+// updates preview frame and the fcc console.
+function* previewChallengeSaga() {
+  yield delay(700);
+
+  const isBuildEnabled = yield select(isBuildEnabledSelector);
+  if (!isBuildEnabled) {
+    return;
+  }
+
+  const logProxy = yield channel();
+  const proxyLogger = args => logProxy.put(args);
+
+  try {
+    yield put(initLogs());
+    yield put(initConsole(''));
+    yield fork(takeEveryConsole, logProxy);
+
+    const challengeData = yield select(challengeDataSelector);
+    if (canBuildChallenge(challengeData)) {
+      const buildData = yield buildChallengeData(challengeData);
+      // evaluate the user code in the preview frame or in the worker
+      if (challengeHasPreview(challengeData)) {
+        const document = yield getContext('document');
+        yield call(updatePreview, buildData, document, proxyLogger);
+      } else if (isJavaScriptChallenge(challengeData)) {
+        const runUserCode = getTestRunner(buildData, { proxyLogger });
+        // without a testString the testRunner just evaluates the user's code
+        yield call(runUserCode, null, 5000);
+      }
+    }
+  } catch (err) {
+    console.log(err);
+    yield put(updateConsole(escape(err)));
+  }
+}
+
 export function createExecuteChallengeSaga(types) {
-  return [takeLatest(types.executeChallenge, ExecuteChallengeSaga)];
+  return [
+    takeLatest(types.executeChallenge, executeChallengeSaga),
+    takeLatest(
+      [
+        types.updateFile,
+        types.previewMounted,
+        types.challengeMounted,
+        types.resetChallenge
+      ],
+      previewChallengeSaga
+    )
+  ];
 }

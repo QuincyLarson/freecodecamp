@@ -1,20 +1,16 @@
-require('dotenv').config();
+const env = require('../config/env');
 
 const { createFilePath } = require('gatsby-source-filesystem');
 
-const { dasherize } = require('./utils');
+const { dasherize } = require('../utils/slugs');
 const { blockNameify } = require('./utils/blockNameify');
 const {
   createChallengePages,
   createBlockIntroPages,
-  createSuperBlockIntroPages,
-  createGuideArticlePages,
-  createNewsArticle
+  createSuperBlockIntroPages
 } = require('./utils/gatsby');
-const { createArticleSlug } = require('./utils/news');
 
 const createByIdentityMap = {
-  guideMarkdown: createGuideArticlePages,
   blockIntroMarkdown: createBlockIntroPages,
   superBlockIntroMarkdown: createSuperBlockIntroPages
 };
@@ -32,23 +28,42 @@ exports.onCreateNode = function onCreateNode({ node, actions, getNode }) {
   }
 
   if (node.internal.type === 'MarkdownRemark') {
-    let slug = createFilePath({ node, getNode });
+    const slug = createFilePath({ node, getNode });
     if (!slug.includes('LICENSE')) {
+      const {
+        frontmatter: { component = '' }
+      } = node;
       createNodeField({ node, name: 'slug', value: slug });
+      createNodeField({ node, name: 'component', value: component });
     }
-  }
-  if (node.internal.type === 'NewsArticleNode') {
-    const {
-      author: { username },
-      slugPart,
-      shortId
-    } = node;
-    const slug = createArticleSlug({ username, shortId, slugPart });
-    createNodeField({ node, name: 'slug', value: slug });
   }
 };
 
-exports.createPages = function createPages({ graphql, actions }) {
+exports.createPages = function createPages({ graphql, actions, reporter }) {
+  if (!env.algoliaAPIKey || !env.algoliaAppId) {
+    if (process.env.FREECODECAMP_NODE_ENV === 'production') {
+      throw new Error(
+        'Algolia App id and API key are required to start the client!'
+      );
+    } else {
+      reporter.info(
+        'Algolia keys missing or invalid. Required for search to yield results.'
+      );
+    }
+  }
+
+  if (!env.stripePublicKey || !env.servicebotId) {
+    if (process.env.FREECODECAMP_NODE_ENV === 'production') {
+      throw new Error(
+        'Stripe public key and Servicebot id are required to start the client!'
+      );
+    } else {
+      reporter.info(
+        'Stripe public key or Servicebot id missing or invalid. Required for' +
+          ' donations.'
+      );
+    }
+  }
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
@@ -85,6 +100,7 @@ exports.createPages = function createPages({ graphql, actions }) {
                 fields {
                   slug
                   nodeIdentity
+                  component
                 }
                 frontmatter {
                   block
@@ -94,19 +110,6 @@ exports.createPages = function createPages({ graphql, actions }) {
                 htmlAst
                 id
                 excerpt
-              }
-            }
-          }
-          allNewsArticleNode(
-            sort: { fields: firstPublishedDate, order: DESC }
-          ) {
-            edges {
-              node {
-                id
-                shortId
-                fields {
-                  slug
-                }
               }
             }
           }
@@ -150,38 +153,16 @@ exports.createPages = function createPages({ graphql, actions }) {
           return null;
         });
 
-        // Create news article pages
-        result.data.allNewsArticleNode.edges.forEach(
-          createNewsArticle(createPage)
-        );
-
         return null;
       })
     );
   });
 };
 
-const RmServiceWorkerPlugin = require('webpack-remove-serviceworker-plugin');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
-exports.onCreateWebpackConfig = ({ stage, rules, plugins, actions }) => {
+exports.onCreateWebpackConfig = ({ plugins, actions }) => {
   actions.setWebpackConfig({
-    module: {
-      rules: [
-        rules.js({
-          /* eslint-disable max-len */
-          exclude: modulePath => {
-            return (
-              (/node_modules/).test(modulePath) &&
-              !(/(ansi-styles|chalk|strict-uri-encode|react-freecodecamp-search)/).test(
-                modulePath
-              )
-            );
-          }
-          /* eslint-enable max-len*/
-        })
-      ]
-    },
     node: {
       fs: 'empty'
     },
@@ -192,27 +173,14 @@ exports.onCreateWebpackConfig = ({ stage, rules, plugins, actions }) => {
         ),
         STRIPE_PUBLIC_KEY: JSON.stringify(process.env.STRIPE_PUBLIC_KEY || ''),
         ROLLBAR_CLIENT_ID: JSON.stringify(process.env.ROLLBAR_CLIENT_ID || ''),
-        ENVIRONMENT: JSON.stringify(process.env.NODE_ENV || 'development'),
+        ENVIRONMENT: JSON.stringify(
+          process.env.FREECODECAMP_NODE_ENV || 'development'
+        ),
         PAYPAL_SUPPORTERS: JSON.stringify(process.env.PAYPAL_SUPPORTERS || 404)
       }),
-      new RmServiceWorkerPlugin()
+      new MonacoWebpackPlugin()
     ]
   });
-  if (stage !== 'build-html') {
-    actions.setWebpackConfig({
-      plugins: [new MonacoWebpackPlugin()]
-    });
-  }
-  if (stage === 'build-html') {
-    actions.setWebpackConfig({
-      plugins: [
-        plugins.normalModuleReplacement(
-          /react-monaco-editor/,
-          require.resolve('./src/__mocks__/monacoEditorMock.js')
-        )
-      ]
-    });
-  }
 };
 
 exports.onCreateBabelConfig = ({ actions }) => {
