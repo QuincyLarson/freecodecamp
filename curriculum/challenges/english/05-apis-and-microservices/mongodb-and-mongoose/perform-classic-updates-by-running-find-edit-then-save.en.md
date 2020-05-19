@@ -37,6 +37,19 @@ tests:
 <section id='solution'>
 
 ```js
-// solution required
+const findEditThenSave = function (personId, done) {
+  const foodToAdd = "hamburger";
+
+  Person.findById(personId, function (err, data) {
+    if (err) return console.log(err);
+    
+    data.favoriteFoods.push(foodToAdd);
+    data.save((err, dataNext) => {
+      if (err) return console.log(err);
+      
+      done(null, dataNext);
+    });
+  });
+};
 ```
 </section>
