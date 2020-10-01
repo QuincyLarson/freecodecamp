@@ -88,4 +88,22 @@ We can confirm this analysis using this handy big-O cheat sheet</a> that feature
 It is very apparent that while for small use cases this time complexity might be alright, at a large scale bubble sort is simply not a good solution for sorting.  
 This is the power of big-O notation: it allows developers to easily see the potential bottlenecks of their application, and take steps to make these more scalable.
 
+Few properties related to these notations are:
+
+1. **Transitivity**:
+          f(n)=Θ(g(n)) and g(n)=Θ(h(n)) implies f(n)=Θ(h(n))
+          f(n)=O(g(n)) and g(n)=O(h(n)) implies f(n)=O(h(n))
+          f(n)=Ω(g(n)) and g(n)=Ω(h(n)) implies f(n)=Ω(h(n))
+          
+2. **Reflexivity**:
+          f(n)=Θ(f(n))
+          f(n)=O(f(n))
+          f(n)=Ω(f(n))
+          
+3. **Symmetry**:
+          f(n)=Θ(g(n)) if and only if g(n)=Θ(f(n))
+ 
+4. **Transpose Symmetry**:
+          f(n)=O(g(n)) if and only if g(n)=Ω(f(n))
+          
 For more information on why big-O notation and algorithm analysis is important visit this <a href='https://www.freecodecamp.com/videos/big-o-notation-what-it-is-and-why-you-should-care' target='_blank' rel='nofollow'>video challenge</a>!
