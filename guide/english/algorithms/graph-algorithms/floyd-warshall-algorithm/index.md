@@ -3,7 +3,7 @@ title: Floyd Warshall Algorithm
 ---
 ## Floyd Warshall Algorithm
 
-Floyd Warshall algorithm is a great algorithm for finding shortest distance between all vertices in graph. It has a very concise algorithm and O(V^3) time complexity (where V is number of vertices). It can be used with negative weights, although negative weight cycles must not be present in the graph.
+Floyd Warshall algorithm is a great algorithm for finding shortest distance between all vertices in graph. It has a very concise algorithm and O(V^3) time complexity (where V is number of vertices). It can be used with negative weights, although negative weight cycles must not be present in the graph.This algorithm uses dynamic programming approach to find the shortest paths.
 
 ### Evaluation
 
