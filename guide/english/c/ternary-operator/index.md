@@ -78,3 +78,16 @@ The output of both of the above codes should be:
 ```c
 3
 ```
+### Note
+
+`expression1? expression2: expression3`
+
+If expression2 and expression3 are of different datatypes,the datatype of the result is determined by the conversion rules.
+
+**Example**
+        
+        `(n>0)?f:n`
+        If f is a float datatype and n is an int datatype then the result of the above expression would be of datatype float regardless of whether n is positive or not.  
+        
+   
+   
