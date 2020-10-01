@@ -116,6 +116,13 @@ Another way you can resolve hash collisions is using open addressing. In this me
 
 The major setback of open addressing lies in the fact that when needing to look for values, they might not be in the place you expect them to be (the key mapping). Therefore you have to traverse parts of the hash table in order to find the value you are looking for, thus resulting in increased time complexity.
 
+##### Resolving Collisions by Open Addressing
+**Probing**:
+   Hash functions specifies order of slots to probe for a key (for insert/search/delete)
+   Two of the probing strategies are 
+   1.linear Probing :It is easy to implement ,but it usually suffers from a problem called *primary clustering*.
+   2.Quadratic Probing: This property leads to milder form of clustering ,called *secondary clustering*.
+
 #### Time Complexity
 It is very important to note that hash tables have amortised constant complexity i.e. on an average case the complexity will be O(1). 
 In worst case, If too many elements were hashed into the same key, it can have a time complexity of O(n).
