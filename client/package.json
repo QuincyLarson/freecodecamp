@@ -105,7 +105,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "autoprefixer": "^9.8.6",
-    "babel-plugin-transform-imports": "^1.5.1",
+    "babel-plugin-transform-imports": "^2.0.0",
     "chokidar": "^2.1.5",
     "copy-webpack-plugin": "^5.1.2",
     "jest": "^24.9.0",
