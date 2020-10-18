@@ -50,7 +50,7 @@
     "joi-objectid": "^2.0.0",
     "jquery": "^3.5.1",
     "js-yaml": "^3.14.0",
-    "jsdom": "^12.2.0",
+    "jsdom": "^16.4.0",
     "live-server": "^1.2.1",
     "lodash": "^4.17.20",
     "mocha": "5.2.0",
