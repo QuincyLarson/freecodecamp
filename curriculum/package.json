@@ -55,7 +55,7 @@
     "lodash": "^4.17.20",
     "mocha": "5.2.0",
     "puppeteer": "^5.3.1",
-    "readdirp-walk": "^1.7.0",
+    "readdirp-walk": "^2.1.4",
     "rx": "^4.1.0",
     "string-similarity": "^4.0.2"
   }
